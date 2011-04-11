@@ -1,0 +1,27 @@
+<area shape="rect" href="../chtml/tos.chips.stm25p.Stm25pBlockP.html" title="Stm25pBlockP" alt="" coords="156,120,289,168">
+<area shape="poly" href="../ihtml/tos.interfaces.BlockRead.html" title="BlockRead" alt="" coords="98,49 154,94 177,110 175,114 150,98 94,53">
+<area shape="rect" href="../ihtml/tos.interfaces.BlockRead.html" title="BlockRead" alt="" coords="92,47,100,55">
+<area shape="rect" href="../ihtml/tos.interfaces.BlockRead.html" title="BlockRead" alt="" coords="183,116,191,124">
+<area shape="rect" href="../ihtml/tos.interfaces.BlockRead.html" title="BlockRead" alt="" coords="153,78,218,95">
+<area shape="rect" href="../chtml/tos.chips.stm25p.Stm25pSectorC.html" title="Stm25pSectorC" alt="" coords="217,235,372,293">
+<area shape="poly" href="../ihtml/tos.interfaces.Resource.html" title="Resource[uint8_t]" alt="" coords="175,170 155,189 152,199 156,209 174,224 205,238 203,242 171,228 151,212 147,199 151,186 171,166">
+<area shape="rect" href="../ihtml/tos.interfaces.Resource.html" title="Resource[uint8_t]" alt="" coords="169,164,177,172">
+<area shape="rect" href="../ihtml/tos.interfaces.Resource.html" title="Resource[uint8_t]" alt="" coords="213,240,221,248">
+<area shape="rect" href="../ihtml/tos.interfaces.Resource.html" title="Resource[uint8_t]" alt="" coords="153,193,265,210">
+<area shape="poly" href="../ihtml/tos.chips.stm25p.Stm25pSector.html" title="Stm25pSector[uint8_t]" alt="" coords="249,166 268,191 282,220 278,223 263,193 245,170">
+<area shape="rect" href="../ihtml/tos.chips.stm25p.Stm25pSector.html" title="Stm25pSector[uint8_t]" alt="" coords="243,164,251,172">
+<area shape="rect" href="../ihtml/tos.chips.stm25p.Stm25pSector.html" title="Stm25pSector[uint8_t]" alt="" coords="280,231,288,239">
+<area shape="rect" href="../ihtml/tos.chips.stm25p.Stm25pSector.html" title="Stm25pSector[uint8_t]" alt="" coords="271,193,417,210">
+<area shape="poly" href="../ihtml/tos.interfaces.BlockWrite.html" title="BlockWrite" alt="" coords="225,53 225,107 220,107 220,53">
+<area shape="rect" href="../ihtml/tos.interfaces.BlockWrite.html" title="BlockWrite" alt="" coords="219,49,227,57">
+<area shape="rect" href="../ihtml/tos.interfaces.BlockWrite.html" title="BlockWrite" alt="" coords="219,116,227,124">
+<area shape="rect" href="../ihtml/tos.interfaces.BlockWrite.html" title="BlockWrite" alt="" coords="222,78,287,95">
+<area shape="poly" href="../ihtml/tos.chips.stm25p.StorageMap.html" title="StorageMap" alt="" coords="356,54 295,98 271,114 268,110 292,94 353,50">
+<area shape="rect" href="../ihtml/tos.chips.stm25p.StorageMap.html" title="StorageMap" alt="" coords="351,48,359,56">
+<area shape="rect" href="../ihtml/tos.chips.stm25p.StorageMap.html" title="StorageMap" alt="" coords="255,116,263,124">
+<area shape="rect" href="../ihtml/tos.chips.stm25p.StorageMap.html" title="StorageMap" alt="" coords="318,78,397,95">
+<area shape="rect" href="../chtml/tos.chips.stm25p.Stm25pBinderP.html" title="Stm25pBinderP\n(BinderP)" alt="" coords="401,120,543,168">
+<area shape="poly" href="../ihtml/tos.chips.stm25p.Stm25pVolume.html" title="Stm25pVolume" alt="" coords="461,170 445,192 424,213 385,237 383,232 421,209 441,189 456,166">
+<area shape="rect" href="../ihtml/tos.chips.stm25p.Stm25pVolume.html" title="Stm25pVolume" alt="" coords="455,164,463,172">
+<area shape="rect" href="../ihtml/tos.chips.stm25p.Stm25pVolume.html" title="Stm25pVolume" alt="" coords="368,236,376,244">
+<area shape="rect" href="../ihtml/tos.chips.stm25p.Stm25pVolume.html" title="Stm25pVolume" alt="" coords="441,193,540,210">

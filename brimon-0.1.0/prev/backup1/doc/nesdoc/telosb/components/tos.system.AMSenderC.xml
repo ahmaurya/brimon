@@ -1,0 +1,183 @@
+<?xml version="1.0" ?><component abstract="" loc="39:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/AMSenderC.nc" nicename="tos.system.AMSenderC" qname="AMSenderC">
+      <documentation loc="25:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/AMSenderC.nc">
+        <short>
+ The virtualized active message send abstraction.</short>
+        <long>
+ The virtualized active message send abstraction. Each instantiation
+ of AMSenderC has its own queue of depth one. Therefore, it does not
+ have to contend with other AMSenderC instantiations for queue space.
+ The underlying implementation schedules the packets in these queues
+ using some form of fair-share queueing.
+
+ @author Philip Levis
+ @date   Jan 16 2006
+ @see    TEP 116: Packet Protocols
+</long>
+      </documentation>
+      <parameters>
+        <constant loc="39:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/AMSenderC.nc" name="AMId" ref="0x2ae8df02a020">
+          <component-ref nicename="tos.system.AMSenderC" qname="AMSenderC"/>
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="am_id_t" ref="0x2ae8dd9db970"/></typename>
+          </type-int>
+        </constant>
+      </parameters>
+      <configuration/>
+      <wiring>
+        <wire loc="56:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/AMSenderC.nc">
+          <from><interface-ref name="AMSend" ref="0x2ae8df02a490" scoped=""/></from>
+          <to><interface-ref name="AMSend" ref="0x2ae8df068370" scoped=""/></to>
+        </wire>
+        <wire loc="57:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/AMSenderC.nc">
+          <from><interface-ref name="Packet" ref="0x2ae8df0290c0" scoped=""/></from>
+          <to><interface-ref name="Packet" ref="0x2ae8df066020" scoped=""/></to>
+        </wire>
+        <wire loc="58:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/AMSenderC.nc">
+          <from><interface-ref name="AMPacket" ref="0x2ae8df029cd0" scoped=""/></from>
+          <to><interface-ref name="AMPacket" ref="0x2ae8df066bd8" scoped=""/></to>
+        </wire>
+        <wire loc="59:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/AMSenderC.nc">
+          <from><interface-ref name="Acks" ref="0x2ae8df0273b8" scoped=""/></from>
+          <to><interface-ref name="Acks" ref="0x2ae8df0642a8" scoped=""/></to>
+        </wire>
+      </wiring>
+    <specification><interface loc="41:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/AMSenderC.nc" name="AMSend" provided="1" ref="0x2ae8df02a490">
+      <component-ref nicename="tos.system.AMSenderC" qname="AMSenderC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="AMSend" ref="0x2ae8df02a490" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.AMSend" qname="AMSend"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="send" ref="0x2ae8df02a7e0" scoped=""/>
+        <function-ref name="getPayload" ref="0x2ae8df02a968" scoped=""/>
+        <function-ref name="maxPayloadLength" ref="0x2ae8df02aaf0" scoped=""/>
+        <function-ref name="cancel" ref="0x2ae8df02ac78" scoped=""/>
+        <function-ref name="sendDone" ref="0x2ae8df02ae00" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="42:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/AMSenderC.nc" name="Packet" provided="1" ref="0x2ae8df0290c0">
+      <component-ref nicename="tos.system.AMSenderC" qname="AMSenderC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Packet" ref="0x2ae8df0290c0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Packet" qname="Packet"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="clear" ref="0x2ae8df029410" scoped=""/>
+        <function-ref name="payloadLength" ref="0x2ae8df029598" scoped=""/>
+        <function-ref name="getPayload" ref="0x2ae8df029720" scoped=""/>
+        <function-ref name="maxPayloadLength" ref="0x2ae8df0298a8" scoped=""/>
+        <function-ref name="setPayloadLength" ref="0x2ae8df029a30" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="43:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/AMSenderC.nc" name="AMPacket" provided="1" ref="0x2ae8df029cd0">
+      <component-ref nicename="tos.system.AMSenderC" qname="AMSenderC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="AMPacket" ref="0x2ae8df029cd0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.AMPacket" qname="AMPacket"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="group" ref="0x2ae8df0280a0" scoped=""/>
+        <function-ref name="source" ref="0x2ae8df028228" scoped=""/>
+        <function-ref name="address" ref="0x2ae8df0283b0" scoped=""/>
+        <function-ref name="destination" ref="0x2ae8df028538" scoped=""/>
+        <function-ref name="setSource" ref="0x2ae8df0286c0" scoped=""/>
+        <function-ref name="setDestination" ref="0x2ae8df028848" scoped=""/>
+        <function-ref name="type" ref="0x2ae8df0289d0" scoped=""/>
+        <function-ref name="setType" ref="0x2ae8df028b58" scoped=""/>
+        <function-ref name="isForMe" ref="0x2ae8df028ce0" scoped=""/>
+        <function-ref name="setGroup" ref="0x2ae8df028e68" scoped=""/>
+        <function-ref name="localGroup" ref="0x2ae8df027020" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="44:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/AMSenderC.nc" name="Acks" provided="1" ref="0x2ae8df0273b8">
+      <component-ref nicename="tos.system.AMSenderC" qname="AMSenderC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Acks" ref="0x2ae8df0273b8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.PacketAcknowledgements" qname="PacketAcknowledgements"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="requestAck" ref="0x2ae8df027708" scoped=""/>
+        <function-ref name="noAck" ref="0x2ae8df027890" scoped=""/>
+        <function-ref name="wasAcked" ref="0x2ae8df027a18" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced><interface loc="41:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/DirectAMSenderC.nc" name="AMSend" provided="1" ref="0x2ae8df068370">
+      <component-ref nicename="tos.system.DirectAMSenderC" qname="AMSenderC.SenderC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="AMSend" ref="0x2ae8df068370" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.AMSend" qname="AMSend"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="send" ref="0x2ae8df0686c0" scoped=""/>
+        <function-ref name="getPayload" ref="0x2ae8df068848" scoped=""/>
+        <function-ref name="maxPayloadLength" ref="0x2ae8df0689d0" scoped=""/>
+        <function-ref name="cancel" ref="0x2ae8df068b58" scoped=""/>
+        <function-ref name="sendDone" ref="0x2ae8df068ce0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="44:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/DirectAMSenderC.nc" name="Acks" provided="1" ref="0x2ae8df0642a8">
+      <component-ref nicename="tos.system.DirectAMSenderC" qname="AMSenderC.SenderC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Acks" ref="0x2ae8df0642a8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.PacketAcknowledgements" qname="PacketAcknowledgements"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="requestAck" ref="0x2ae8df0645f8" scoped=""/>
+        <function-ref name="noAck" ref="0x2ae8df064780" scoped=""/>
+        <function-ref name="wasAcked" ref="0x2ae8df064908" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="43:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/DirectAMSenderC.nc" name="AMPacket" provided="1" ref="0x2ae8df066bd8">
+      <component-ref nicename="tos.system.DirectAMSenderC" qname="AMSenderC.SenderC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="AMPacket" ref="0x2ae8df066bd8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.AMPacket" qname="AMPacket"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="group" ref="0x2ae8df065020" scoped=""/>
+        <function-ref name="source" ref="0x2ae8df0651a8" scoped=""/>
+        <function-ref name="address" ref="0x2ae8df065330" scoped=""/>
+        <function-ref name="destination" ref="0x2ae8df0654b8" scoped=""/>
+        <function-ref name="setSource" ref="0x2ae8df065640" scoped=""/>
+        <function-ref name="setDestination" ref="0x2ae8df0657c8" scoped=""/>
+        <function-ref name="type" ref="0x2ae8df065950" scoped=""/>
+        <function-ref name="setType" ref="0x2ae8df065ad8" scoped=""/>
+        <function-ref name="isForMe" ref="0x2ae8df065c60" scoped=""/>
+        <function-ref name="setGroup" ref="0x2ae8df065de8" scoped=""/>
+        <function-ref name="localGroup" ref="0x2ae8df064020" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="42:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/DirectAMSenderC.nc" name="Packet" provided="1" ref="0x2ae8df066020">
+      <component-ref nicename="tos.system.DirectAMSenderC" qname="AMSenderC.SenderC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Packet" ref="0x2ae8df066020" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Packet" qname="Packet"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="clear" ref="0x2ae8df066370" scoped=""/>
+        <function-ref name="payloadLength" ref="0x2ae8df0664f8" scoped=""/>
+        <function-ref name="getPayload" ref="0x2ae8df066680" scoped=""/>
+        <function-ref name="maxPayloadLength" ref="0x2ae8df066808" scoped=""/>
+        <function-ref name="setPayloadLength" ref="0x2ae8df066990" scoped=""/>
+      </interface-functions>
+    </interface><component abstract="" loc="39(AMSenderC.SenderC):/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/DirectAMSenderC.nc" nicename="tos.system.DirectAMSenderC" qname="AMSenderC.SenderC">
+      <documentation loc="25:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/DirectAMSenderC.nc">
+        <short>
+ The virtualized active message send abstraction.</short>
+        <long>
+ The virtualized active message send abstraction. Each instantiation
+ of AMSenderC has its own queue of depth one. Therefore, it does not
+ have to contend with other AMSenderC instantiations for queue space.
+ The underlying implementation schedules the packets in these queues
+ using some form of fair-share queueing.
+
+ @author Philip Levis
+ @date   Jan 16 2006
+ @see    TEP 116: Packet Protocols
+</long>
+      </documentation>
+      <instance>
+        <component-ref nicename="tos.system.DirectAMSenderC" qname="DirectAMSenderC"/>
+        <arguments>
+          <value cst="U:">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="am_id_t" ref="0x2ae8dd9db970"/></typename>
+            </type-int>
+          </value>
+        </arguments>
+      </instance>
+      <configuration/>
+    </component></referenced></component>

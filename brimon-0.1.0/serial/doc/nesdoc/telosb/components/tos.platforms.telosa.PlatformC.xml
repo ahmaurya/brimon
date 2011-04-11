@@ -1,0 +1,98 @@
+<?xml version="1.0" ?><component loc="29:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/platforms/telosa/PlatformC.nc" nicename="tos.platforms.telosa.PlatformC" qname="PlatformC">
+      <documentation loc="23:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/platforms/telosa/PlatformC.nc">
+        <short>
+ </short>
+        <long>
+ @author Joe Polastre and Cory Sharp
+ @version $Revision: 1.5 $ $Date: 2007/07/10 00:24:31 $
+</long>
+      </documentation>
+      <configuration/>
+      <wiring>
+        <wire loc="37:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/platforms/telosa/PlatformC.nc">
+          <from><interface-ref name="Init" ref="0x2af767dd0e40" scoped=""/></from>
+          <to><interface-ref name="Init" ref="0x2af767db9d10" scoped=""/></to>
+        </wire>
+        <wire loc="38:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/platforms/telosa/PlatformC.nc">
+          <from><interface-ref name="MoteClockInit" ref="0x2af767db6420" scoped=""/></from>
+          <to><interface-ref name="MoteClockInit" ref="0x2af767ddb0e8" scoped=""/></to>
+        </wire>
+        <wire loc="39:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/platforms/telosa/PlatformC.nc">
+          <from><interface-ref name="MoteInit" ref="0x2af767db6ac0" scoped=""/></from>
+          <to><interface-ref name="Init" ref="0x2af767dc92b0" scoped=""/></to>
+        </wire>
+      </wiring>
+    <specification><interface loc="31:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/platforms/telosa/PlatformC.nc" name="Init" provided="1" ref="0x2af767dd0e40">
+      <component-ref nicename="tos.platforms.telosa.PlatformC" qname="PlatformC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Init" ref="0x2af767dd0e40" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x2af767dcc1c0" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced><interface loc="6:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/platforms/telosa/PlatformP.nc" name="MoteInit" provided="0" ref="0x2af767db6ac0">
+      <component-ref nicename="tos.platforms.telosa.PlatformP" qname="PlatformP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="MoteInit" ref="0x2af767db6ac0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x2af767db6e10" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="2:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/platforms/telosb/MotePlatformC.nc" name="Init" provided="1" ref="0x2af767dc92b0">
+      <component-ref nicename="tos.platforms.telosb.MotePlatformC" qname="MotePlatformC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Init" ref="0x2af767dc92b0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x2af767dc9600" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="5:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/platforms/telosa/PlatformP.nc" name="MoteClockInit" provided="0" ref="0x2af767db6420">
+      <component-ref nicename="tos.platforms.telosa.PlatformP" qname="PlatformP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="MoteClockInit" ref="0x2af767db6420" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x2af767db6770" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="39:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/platforms/telosb/MoteClockC.nc" name="MoteClockInit" provided="1" ref="0x2af767ddb0e8">
+      <component-ref nicename="tos.platforms.telosb.MoteClockC" qname="MoteClockC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="MoteClockInit" ref="0x2af767ddb0e8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x2af767ddb438" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="4:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/platforms/telosa/PlatformP.nc" name="Init" provided="1" ref="0x2af767db9d10">
+      <component-ref nicename="tos.platforms.telosa.PlatformP" qname="PlatformP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Init" ref="0x2af767db9d10" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x2af767db60a0" scoped=""/>
+      </interface-functions>
+    </interface><component loc="3:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/platforms/telosa/PlatformP.nc" nicename="tos.platforms.telosa.PlatformP" qname="PlatformP" safe="">
+      <module/>
+    </component><component loc="1:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/platforms/telosb/MotePlatformC.nc" nicename="tos.platforms.telosb.MotePlatformC" qname="MotePlatformC" safe="">
+      <module/>
+    </component><component loc="37:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/platforms/telosb/MoteClockC.nc" nicename="tos.platforms.telosb.MoteClockC" qname="MoteClockC">
+      <documentation loc="33:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/platforms/telosb/MoteClockC.nc">
+        <short>
+ </short>
+        <long>
+ @author Vlado Handziski &lt;handzisk@tkn.tu-berlind.de&gt;
+</long>
+      </documentation>
+      <configuration/>
+      <wiring>
+        <wire loc="46:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/platforms/telosb/MoteClockC.nc">
+          <from><interface-ref name="MoteClockInit" ref="0x2af767ddb0e8" scoped=""/></from>
+          <to><interface-ref name="Init" ref="0x2af767dd8020" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component></referenced></component>

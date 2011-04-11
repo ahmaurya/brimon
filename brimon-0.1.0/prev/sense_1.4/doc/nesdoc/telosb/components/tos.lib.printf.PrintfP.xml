@@ -1,0 +1,119 @@
+<?xml version="1.0" ?><component loc="84:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/lib/printf/PrintfP.nc" nicename="tos.lib.printf.PrintfP" qname="PrintfP" safe="">
+      <documentation loc="23:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/lib/printf/printf.h">
+        <short>
+
+ </short>
+        <long>
+
+ @author Kevin Klues (klueska@cs.wustl.edu)
+ @version $Revision: 1.16 $
+ @date $Date: 2010/02/22 05:29:57 $
+</long>
+      </documentation>
+      <module/>
+    <specification><interface loc="86:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/lib/printf/PrintfP.nc" name="Boot" provided="1" ref="0x2b3677b66298">
+      <component-ref nicename="tos.lib.printf.PrintfP" qname="PrintfP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Boot" ref="0x2b3677b66298" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Boot" qname="Boot"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="booted" ref="0x2b3677b665e8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="90:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/lib/printf/PrintfP.nc" name="SerialControl" provided="0" ref="0x2b3677b650e8">
+      <component-ref nicename="tos.lib.printf.PrintfP" qname="PrintfP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="SerialControl" ref="0x2b3677b650e8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.SplitControl" qname="SplitControl"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="startDone" ref="0x2b3677b65438" scoped=""/>
+        <function-ref name="stopDone" ref="0x2b3677b655c0" scoped=""/>
+        <function-ref name="start" ref="0x2b3677b65748" scoped=""/>
+        <function-ref name="stop" ref="0x2b3677b658d0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="91:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/lib/printf/PrintfP.nc" name="Queue" provided="0" ref="0x2b3677b65d18">
+      <component-ref nicename="tos.lib.printf.PrintfP" qname="PrintfP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Queue" ref="0x2b3677b65d18" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Queue" qname="Queue"/>
+        <arguments>
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="uint8_t" ref="0x2b3676396318"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="head" ref="0x2b3677b63610" scoped=""/>
+        <function-ref name="enqueue" ref="0x2b3677b61300" scoped=""/>
+        <function-ref name="element" ref="0x2b3677b61930" scoped=""/>
+        <function-ref name="maxSize" ref="0x2b3677b631c0" scoped=""/>
+        <function-ref name="dequeue" ref="0x2b3677b63c70" scoped=""/>
+        <function-ref name="empty" ref="0x2b3677b648b8" scoped=""/>
+        <function-ref name="size" ref="0x2b3677b64d08" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="93:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/lib/printf/PrintfP.nc" name="AMSend" provided="0" ref="0x2b3677b60020">
+      <component-ref nicename="tos.lib.printf.PrintfP" qname="PrintfP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="AMSend" ref="0x2b3677b60020" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.AMSend" qname="AMSend"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="send" ref="0x2b3677b60370" scoped=""/>
+        <function-ref name="getPayload" ref="0x2b3677b604f8" scoped=""/>
+        <function-ref name="maxPayloadLength" ref="0x2b3677b60680" scoped=""/>
+        <function-ref name="cancel" ref="0x2b3677b60808" scoped=""/>
+        <function-ref name="sendDone" ref="0x2b3677b60990" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="94:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/lib/printf/PrintfP.nc" name="Packet" provided="0" ref="0x2b3677b60c18">
+      <component-ref nicename="tos.lib.printf.PrintfP" qname="PrintfP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Packet" ref="0x2b3677b60c18" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Packet" qname="Packet"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="clear" ref="0x2b3677b5f020" scoped=""/>
+        <function-ref name="payloadLength" ref="0x2b3677b5f1a8" scoped=""/>
+        <function-ref name="getPayload" ref="0x2b3677b5f330" scoped=""/>
+        <function-ref name="maxPayloadLength" ref="0x2b3677b5f4b8" scoped=""/>
+        <function-ref name="setPayloadLength" ref="0x2b3677b5f640" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="127:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/lib/printf/PrintfP.nc" name="retrySend" provided="0" ref="0x2b3677b55020">
+      <component-ref nicename="tos.lib.printf.PrintfP" qname="PrintfP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="retrySend" ref="0x2b3677b55020" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.TaskBasic" qname="TaskBasic"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="postTask" ref="0x2b3677b55370" scoped=""/>
+        <function-ref name="runTask" ref="0x2b3677b554f8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="95:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/lib/printf/PrintfP.nc" name="Leds" provided="0" ref="0x2b3677b5f8b8">
+      <component-ref nicename="tos.lib.printf.PrintfP" qname="PrintfP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Leds" ref="0x2b3677b5f8b8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Leds" qname="Leds"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="led0Off" ref="0x2b3677b5fc08" scoped=""/>
+        <function-ref name="led0Toggle" ref="0x2b3677b5fd90" scoped=""/>
+        <function-ref name="led1On" ref="0x2b3677b5e020" scoped=""/>
+        <function-ref name="led1Toggle" ref="0x2b3677b5e1a8" scoped=""/>
+        <function-ref name="led2Toggle" ref="0x2b3677b5e330" scoped=""/>
+        <function-ref name="get" ref="0x2b3677b5e4b8" scoped=""/>
+        <function-ref name="led1Off" ref="0x2b3677b5e640" scoped=""/>
+        <function-ref name="led2Off" ref="0x2b3677b5ec60" scoped=""/>
+        <function-ref name="set" ref="0x2b3677b5e7c8" scoped=""/>
+        <function-ref name="led0On" ref="0x2b3677b5e950" scoped=""/>
+        <function-ref name="led2On" ref="0x2b3677b5ead8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="89:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/lib/printf/PrintfP.nc" name="MainBoot" provided="0" ref="0x2b3677b66978">
+      <component-ref nicename="tos.lib.printf.PrintfP" qname="PrintfP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="MainBoot" ref="0x2b3677b66978" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Boot" qname="Boot"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="booted" ref="0x2b3677b66cc8" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced/></component>

@@ -1,0 +1,1276 @@
+<?xml version="1.0" ?><component loc="13:SenseC.nc" nicename="SenseC" qname="SenseC">
+      <configuration/>
+      <wiring>
+        <wire loc="35:SenseC.nc">
+          <from><interface-ref name="Boot" ref="0x2b36770a6d88" scoped=""/></from>
+          <to><interface-ref name="Boot" ref="0x2b3677185878" scoped=""/></to>
+        </wire>
+        <wire loc="36:SenseC.nc">
+          <from><interface-ref name="Leds" ref="0x2b36770c1760" scoped=""/></from>
+          <to><interface-ref name="Leds" ref="0x2b367792e760" scoped=""/></to>
+        </wire>
+        <wire loc="37:SenseC.nc">
+          <from><interface-ref name="Timer" ref="0x2b36770b64f8" scoped=""/></from>
+          <to><interface-ref name="Timer" ref="0x2b3677b84a60" scoped=""/></to>
+        </wire>
+        <wire loc="38:SenseC.nc">
+          <from><interface-ref name="Summary" ref="0x2b36770ad528" scoped=""/></from>
+          <to><interface-ref name="Summary" ref="0x2b36770d7020" scoped=""/></to>
+        </wire>
+        <wire loc="39:SenseC.nc">
+          <from><interface-ref name="Sample" ref="0x2b36770af8d0" scoped=""/></from>
+          <to><interface-ref name="Sample" ref="0x2b3677149c80" scoped=""/></to>
+        </wire>
+        <wire loc="41:SenseC.nc">
+          <from><interface-ref name="AccelX" ref="0x2b36771611d0" scoped=""/></from>
+          <to><interface-ref name="ReadStream" ref="0x2b36782127b8" scoped=""/></to>
+        </wire>
+        <wire loc="42:SenseC.nc">
+          <from><interface-ref name="AccelY" ref="0x2b3677158d78" scoped=""/></from>
+          <to><interface-ref name="ReadStream" ref="0x2b36785c5a68" scoped=""/></to>
+        </wire>
+        <wire loc="43:SenseC.nc">
+          <from><interface-ref name="AccelZ" ref="0x2b3677174938" scoped=""/></from>
+          <to><interface-ref name="ReadStream" ref="0x2b36785a6020" scoped=""/></to>
+        </wire>
+        <wire loc="45:SenseC.nc">
+          <from><interface-ref name="BlockReadX" ref="0x2b3677170388" scoped=""/></from>
+          <to><interface-ref name="BlockRead" ref="0x2b36781bec08" scoped=""/></to>
+        </wire>
+        <wire loc="46:SenseC.nc">
+          <from><interface-ref name="BlockReadY" ref="0x2b367716f0c8" scoped=""/></from>
+          <to><interface-ref name="BlockRead" ref="0x2b36781b9790" scoped=""/></to>
+        </wire>
+        <wire loc="47:SenseC.nc">
+          <from><interface-ref name="BlockReadZ" ref="0x2b367716fdc8" scoped=""/></from>
+          <to><interface-ref name="BlockRead" ref="0x2b36781b51f0" scoped=""/></to>
+        </wire>
+        <wire loc="49:SenseC.nc">
+          <from><interface-ref name="BlockWriteX" ref="0x2b3677165948" scoped=""/></from>
+          <to><interface-ref name="BlockWrite" ref="0x2b36781bd8c8" scoped=""/></to>
+        </wire>
+        <wire loc="50:SenseC.nc">
+          <from><interface-ref name="BlockWriteY" ref="0x2b367716d858" scoped=""/></from>
+          <to><interface-ref name="BlockWrite" ref="0x2b36781b8430" scoped=""/></to>
+        </wire>
+        <wire loc="51:SenseC.nc">
+          <from><interface-ref name="BlockWriteZ" ref="0x2b367716c858" scoped=""/></from>
+          <to><interface-ref name="BlockWrite" ref="0x2b36781b5de8" scoped=""/></to>
+        </wire>
+        <wire loc="53:SenseC.nc">
+          <from><interface-ref name="LogWrite" ref="0x2b3677183798" scoped=""/></from>
+          <to><interface-ref name="LogWrite" ref="0x2b367817a020" scoped=""/></to>
+        </wire>
+        <wire loc="54:SenseC.nc">
+          <from><interface-ref name="Leds" ref="0x2b3677148460" scoped=""/></from>
+          <to><interface-ref name="Leds" ref="0x2b367792e760" scoped=""/></to>
+        </wire>
+        <wire loc="55:SenseC.nc">
+          <from><interface-ref name="Timer" ref="0x2b3677147bd0" scoped=""/></from>
+          <to><interface-ref name="Timer" ref="0x2b3677b84a60" scoped=""/></to>
+        </wire>
+        <wire loc="57:SenseC.nc">
+          <from><interface-ref name="BlockRead" ref="0x2b36770d6020" scoped=""/></from>
+          <to><interface-ref name="BlockRead" ref="0x2b36781bec08" scoped=""/></to>
+        </wire>
+        <wire loc="58:SenseC.nc">
+          <from><interface-ref name="LogWrite" ref="0x2b36770d5020" scoped=""/></from>
+          <to><interface-ref name="LogWrite" ref="0x2b367817a020" scoped=""/></to>
+        </wire>
+      </wiring>
+    <specification/><referenced><interface loc="28:SamplerC.nc" name="BlockWriteX" provided="0" ref="0x2b3677165948">
+      <component-ref nicename="SamplerC" qname="SamplerC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="BlockWriteX" ref="0x2b3677165948" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.BlockWrite" qname="BlockWrite"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="syncDone" ref="0x2b3677165c98" scoped=""/>
+        <function-ref name="writeDone" ref="0x2b3677165e20" scoped=""/>
+        <function-ref name="erase" ref="0x2b367716d020" scoped=""/>
+        <function-ref name="eraseDone" ref="0x2b367716d1a8" scoped=""/>
+        <function-ref name="write" ref="0x2b367716d330" scoped=""/>
+        <function-ref name="sync" ref="0x2b367716d4b8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="14:SummarizerC.nc" name="BlockRead" provided="0" ref="0x2b36770d6020">
+      <component-ref nicename="SummarizerC" qname="SummarizerC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="BlockRead" ref="0x2b36770d6020" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.BlockRead" qname="BlockRead"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="read" ref="0x2b36770d6370" scoped=""/>
+        <function-ref name="computeCrcDone" ref="0x2b36770d64f8" scoped=""/>
+        <function-ref name="computeCrc" ref="0x2b36770d6680" scoped=""/>
+        <function-ref name="getSize" ref="0x2b36770d6808" scoped=""/>
+        <function-ref name="readDone" ref="0x2b36770d6990" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="16:SenseP.nc" name="Boot" provided="0" ref="0x2b36770a6d88">
+      <component-ref nicename="SenseP" qname="SenseP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Boot" ref="0x2b36770a6d88" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Boot" qname="Boot"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="booted" ref="0x2b36770a5170" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="22:SamplerC.nc" name="AccelZ" provided="0" ref="0x2b3677174938">
+      <component-ref nicename="SamplerC" qname="SamplerC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="AccelZ" ref="0x2b3677174938" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.ReadStream" qname="ReadStream"/>
+        <arguments>
+          <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned="">
+            <typename><typedef-ref name="uint16_t" ref="0x2b36763969f0"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="bufferDone" ref="0x2b3677171278" scoped=""/>
+        <function-ref name="postBuffer" ref="0x2b36771734a8" scoped=""/>
+        <function-ref name="read" ref="0x2b3677173db0" scoped=""/>
+        <function-ref name="readDone" ref="0x2b3677171cb0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="19:SenseP.nc" name="Summary" provided="0" ref="0x2b36770ad528">
+      <component-ref nicename="SenseP" qname="SenseP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Summary" ref="0x2b36770ad528" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="Summary" qname="Summary"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="summarize" ref="0x2b36770ad878" scoped=""/>
+        <function-ref name="summarized" ref="0x2b36770ada00" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="20:SamplerC.nc" name="AccelX" provided="0" ref="0x2b36771611d0">
+      <component-ref nicename="SamplerC" qname="SamplerC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="AccelX" ref="0x2b36771611d0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.ReadStream" qname="ReadStream"/>
+        <arguments>
+          <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned="">
+            <typename><typedef-ref name="uint16_t" ref="0x2b36763969f0"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="bufferDone" ref="0x2b3677160b10" scoped=""/>
+        <function-ref name="postBuffer" ref="0x2b3677161d18" scoped=""/>
+        <function-ref name="read" ref="0x2b3677160670" scoped=""/>
+        <function-ref name="readDone" ref="0x2b3677158598" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="45:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/stm25p/BlockStorageC.nc" name="BlockWrite" provided="1" ref="0x2b36781b5de8">
+      <component-ref nicename="tos.chips.stm25p.BlockStorageC" qname="SenseC.BlockStorageZC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="BlockWrite" ref="0x2b36781b5de8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.BlockWrite" qname="BlockWrite"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="syncDone" ref="0x2b36781b4170" scoped=""/>
+        <function-ref name="writeDone" ref="0x2b36781b42f8" scoped=""/>
+        <function-ref name="erase" ref="0x2b36781b4480" scoped=""/>
+        <function-ref name="eraseDone" ref="0x2b36781b4608" scoped=""/>
+        <function-ref name="write" ref="0x2b36781b4790" scoped=""/>
+        <function-ref name="sync" ref="0x2b36781b4918" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="24:SamplerC.nc" name="BlockReadX" provided="0" ref="0x2b3677170388">
+      <component-ref nicename="SamplerC" qname="SamplerC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="BlockReadX" ref="0x2b3677170388" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.BlockRead" qname="BlockRead"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="read" ref="0x2b36771706d8" scoped=""/>
+        <function-ref name="computeCrcDone" ref="0x2b3677170860" scoped=""/>
+        <function-ref name="computeCrc" ref="0x2b36771709e8" scoped=""/>
+        <function-ref name="getSize" ref="0x2b3677170b70" scoped=""/>
+        <function-ref name="readDone" ref="0x2b3677170cf8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="17:SamplerC.nc" name="Leds" provided="0" ref="0x2b3677148460">
+      <component-ref nicename="SamplerC" qname="SamplerC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Leds" ref="0x2b3677148460" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Leds" qname="Leds"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="led0Off" ref="0x2b36771487b0" scoped=""/>
+        <function-ref name="led0Toggle" ref="0x2b3677148938" scoped=""/>
+        <function-ref name="led1On" ref="0x2b3677148ac0" scoped=""/>
+        <function-ref name="led1Toggle" ref="0x2b3677148c48" scoped=""/>
+        <function-ref name="led2Toggle" ref="0x2b3677148dd0" scoped=""/>
+        <function-ref name="get" ref="0x2b3677147020" scoped=""/>
+        <function-ref name="led1Off" ref="0x2b36771471a8" scoped=""/>
+        <function-ref name="led2Off" ref="0x2b36771477c8" scoped=""/>
+        <function-ref name="set" ref="0x2b3677147330" scoped=""/>
+        <function-ref name="led0On" ref="0x2b36771474b8" scoped=""/>
+        <function-ref name="led2On" ref="0x2b3677147640" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="48:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/stm25p/LogStorageC.nc" name="LogWrite" provided="1" ref="0x2b367817a020">
+      <component-ref nicename="tos.chips.stm25p.LogStorageC" qname="SenseC.LogStorageC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="LogWrite" ref="0x2b367817a020" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.LogWrite" qname="LogWrite"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="currentOffset" ref="0x2b367817a370" scoped=""/>
+        <function-ref name="syncDone" ref="0x2b367817a4f8" scoped=""/>
+        <function-ref name="erase" ref="0x2b367817a680" scoped=""/>
+        <function-ref name="eraseDone" ref="0x2b367817a808" scoped=""/>
+        <function-ref name="appendDone" ref="0x2b367817a990" scoped=""/>
+        <function-ref name="append" ref="0x2b367817ab18" scoped=""/>
+        <function-ref name="sync" ref="0x2b367817aca0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="29:SamplerC.nc" name="BlockWriteY" provided="0" ref="0x2b367716d858">
+      <component-ref nicename="SamplerC" qname="SamplerC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="BlockWriteY" ref="0x2b367716d858" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.BlockWrite" qname="BlockWrite"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="syncDone" ref="0x2b367716dba8" scoped=""/>
+        <function-ref name="writeDone" ref="0x2b367716dd30" scoped=""/>
+        <function-ref name="erase" ref="0x2b367716c020" scoped=""/>
+        <function-ref name="eraseDone" ref="0x2b367716c1a8" scoped=""/>
+        <function-ref name="write" ref="0x2b367716c330" scoped=""/>
+        <function-ref name="sync" ref="0x2b367716c4b8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="35:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/LedsC.nc" name="Leds" provided="1" ref="0x2b367792e760">
+      <component-ref nicename="tos.system.LedsC" qname="LedsC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Leds" ref="0x2b367792e760" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Leds" qname="Leds"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="led0Off" ref="0x2b367792eab0" scoped=""/>
+        <function-ref name="led0Toggle" ref="0x2b367792ec38" scoped=""/>
+        <function-ref name="led1On" ref="0x2b367792edc0" scoped=""/>
+        <function-ref name="led1Toggle" ref="0x2b367795b020" scoped=""/>
+        <function-ref name="led2Toggle" ref="0x2b367795b1a8" scoped=""/>
+        <function-ref name="get" ref="0x2b367795b330" scoped=""/>
+        <function-ref name="led1Off" ref="0x2b367795b4b8" scoped=""/>
+        <function-ref name="led2Off" ref="0x2b367795bad8" scoped=""/>
+        <function-ref name="set" ref="0x2b367795b640" scoped=""/>
+        <function-ref name="led0On" ref="0x2b367795b7c8" scoped=""/>
+        <function-ref name="led2On" ref="0x2b367795b950" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="37:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/TimerMilliC.nc" name="Timer" provided="1" ref="0x2b3677b84a60">
+      <component-ref nicename="tos.system.TimerMilliC" qname="SenseC.TimerMilliC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Timer" ref="0x2b3677b84a60" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.timer.Timer" qname="Timer"/>
+        <arguments>
+          <type-tag alignment="I:2" size="I:2"><struct-ref ref="0x2b36770a5970"/>
+            <typename><typedef-ref name="TMilli" ref="0x2b36770a5cc8"/></typename>
+          </type-tag>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="getNow" ref="0x2b3677cf9d60" scoped=""/>
+        <function-ref name="fired" ref="0x2b3677cfb470" scoped=""/>
+        <function-ref name="startPeriodicAt" ref="0x2b3677cf91c0" scoped=""/>
+        <function-ref name="isOneShot" ref="0x2b3677cfbd10" scoped=""/>
+        <function-ref name="getdt" ref="0x2b3677cf8648" scoped=""/>
+        <function-ref name="gett0" ref="0x2b3677cf81f8" scoped=""/>
+        <function-ref name="isRunning" ref="0x2b3677cfb8c0" scoped=""/>
+        <function-ref name="startPeriodic" ref="0x2b3677cfc620" scoped=""/>
+        <function-ref name="startOneShotAt" ref="0x2b3677cf9790" scoped=""/>
+        <function-ref name="startOneShot" ref="0x2b3677cfcac0" scoped=""/>
+        <function-ref name="stop" ref="0x2b3677cfb020" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="44:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/stm25p/BlockStorageC.nc" name="BlockRead" provided="1" ref="0x2b36781b51f0">
+      <component-ref nicename="tos.chips.stm25p.BlockStorageC" qname="SenseC.BlockStorageZC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="BlockRead" ref="0x2b36781b51f0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.BlockRead" qname="BlockRead"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="read" ref="0x2b36781b5540" scoped=""/>
+        <function-ref name="computeCrcDone" ref="0x2b36781b56c8" scoped=""/>
+        <function-ref name="computeCrc" ref="0x2b36781b5850" scoped=""/>
+        <function-ref name="getSize" ref="0x2b36781b59d8" scoped=""/>
+        <function-ref name="readDone" ref="0x2b36781b5b60" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="18:SenseP.nc" name="Sample" provided="0" ref="0x2b36770af8d0">
+      <component-ref nicename="SenseP" qname="SenseP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Sample" ref="0x2b36770af8d0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="Sample" qname="Sample"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="sampled" ref="0x2b36770afc20" scoped=""/>
+        <function-ref name="sample" ref="0x2b36770afda8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="18:SamplerC.nc" name="Timer" provided="0" ref="0x2b3677147bd0">
+      <component-ref nicename="SamplerC" qname="SamplerC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Timer" ref="0x2b3677147bd0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.timer.Timer" qname="Timer"/>
+        <arguments>
+          <type-tag alignment="I:2" size="I:2"><struct-ref ref="0x2b36770a5970"/>
+            <typename><typedef-ref name="TMilli" ref="0x2b36770a5cc8"/></typename>
+          </type-tag>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="getNow" ref="0x2b3677163dd8" scoped=""/>
+        <function-ref name="fired" ref="0x2b3677145510" scoped=""/>
+        <function-ref name="startPeriodicAt" ref="0x2b3677163238" scoped=""/>
+        <function-ref name="isOneShot" ref="0x2b3677145db0" scoped=""/>
+        <function-ref name="getdt" ref="0x2b36771626c8" scoped=""/>
+        <function-ref name="gett0" ref="0x2b3677162278" scoped=""/>
+        <function-ref name="isRunning" ref="0x2b3677145960" scoped=""/>
+        <function-ref name="startPeriodic" ref="0x2b3677146740" scoped=""/>
+        <function-ref name="startOneShotAt" ref="0x2b3677163808" scoped=""/>
+        <function-ref name="startOneShot" ref="0x2b3677146be0" scoped=""/>
+        <function-ref name="stop" ref="0x2b36771450c0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="15:SummarizerC.nc" name="LogWrite" provided="0" ref="0x2b36770d5020">
+      <component-ref nicename="SummarizerC" qname="SummarizerC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="LogWrite" ref="0x2b36770d5020" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.LogWrite" qname="LogWrite"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="currentOffset" ref="0x2b36770d5370" scoped=""/>
+        <function-ref name="syncDone" ref="0x2b36770d54f8" scoped=""/>
+        <function-ref name="erase" ref="0x2b36770d5680" scoped=""/>
+        <function-ref name="eraseDone" ref="0x2b36770d5808" scoped=""/>
+        <function-ref name="appendDone" ref="0x2b36770d5990" scoped=""/>
+        <function-ref name="append" ref="0x2b36770d5b18" scoped=""/>
+        <function-ref name="sync" ref="0x2b36770d5ca0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="30:SamplerC.nc" name="BlockWriteZ" provided="0" ref="0x2b367716c858">
+      <component-ref nicename="SamplerC" qname="SamplerC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="BlockWriteZ" ref="0x2b367716c858" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.BlockWrite" qname="BlockWrite"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="syncDone" ref="0x2b367716cba8" scoped=""/>
+        <function-ref name="writeDone" ref="0x2b367716cd30" scoped=""/>
+        <function-ref name="erase" ref="0x2b3677183020" scoped=""/>
+        <function-ref name="eraseDone" ref="0x2b36771831a8" scoped=""/>
+        <function-ref name="write" ref="0x2b3677183330" scoped=""/>
+        <function-ref name="sync" ref="0x2b36771834b8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="44:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/stm25p/BlockStorageC.nc" name="BlockRead" provided="1" ref="0x2b36781b9790">
+      <component-ref nicename="tos.chips.stm25p.BlockStorageC" qname="SenseC.BlockStorageYC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="BlockRead" ref="0x2b36781b9790" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.BlockRead" qname="BlockRead"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="read" ref="0x2b36781b9ae0" scoped=""/>
+        <function-ref name="computeCrcDone" ref="0x2b36781b9c68" scoped=""/>
+        <function-ref name="computeCrc" ref="0x2b36781b9df0" scoped=""/>
+        <function-ref name="getSize" ref="0x2b36781b8020" scoped=""/>
+        <function-ref name="readDone" ref="0x2b36781b81a8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="13:SummarizerC.nc" name="Summary" provided="1" ref="0x2b36770d7020">
+      <component-ref nicename="SummarizerC" qname="SummarizerC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Summary" ref="0x2b36770d7020" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="Summary" qname="Summary"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="summarize" ref="0x2b36770d7370" scoped=""/>
+        <function-ref name="summarized" ref="0x2b36770d74f8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="16:SamplerC.nc" name="Sample" provided="1" ref="0x2b3677149c80">
+      <component-ref nicename="SamplerC" qname="SamplerC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Sample" ref="0x2b3677149c80" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="Sample" qname="Sample"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="sampled" ref="0x2b3677148020" scoped=""/>
+        <function-ref name="sample" ref="0x2b36771481a8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="19:AccelXStreamC.nc" name="ReadStream" provided="1" ref="0x2b36782127b8">
+      <component-ref nicename="AccelXStreamC" qname="SenseC.AccelXStreamC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ReadStream" ref="0x2b36782127b8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.ReadStream" qname="ReadStream"/>
+        <arguments>
+          <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned="">
+            <typename><typedef-ref name="uint16_t" ref="0x2b36763969f0"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="bufferDone" ref="0x2b36785c8158" scoped=""/>
+        <function-ref name="postBuffer" ref="0x2b36785ca370" scoped=""/>
+        <function-ref name="read" ref="0x2b36785cac78" scoped=""/>
+        <function-ref name="readDone" ref="0x2b36785c8b90" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="21:SamplerC.nc" name="AccelY" provided="0" ref="0x2b3677158d78">
+      <component-ref nicename="SamplerC" qname="SamplerC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="AccelY" ref="0x2b3677158d78" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.ReadStream" qname="ReadStream"/>
+        <arguments>
+          <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned="">
+            <typename><typedef-ref name="uint16_t" ref="0x2b36763969f0"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="bufferDone" ref="0x2b36771556d8" scoped=""/>
+        <function-ref name="postBuffer" ref="0x2b36771578f0" scoped=""/>
+        <function-ref name="read" ref="0x2b3677155238" scoped=""/>
+        <function-ref name="readDone" ref="0x2b3677174158" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="32:SamplerC.nc" name="LogWrite" provided="0" ref="0x2b3677183798">
+      <component-ref nicename="SamplerC" qname="SamplerC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="LogWrite" ref="0x2b3677183798" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.LogWrite" qname="LogWrite"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="currentOffset" ref="0x2b3677183be8" scoped=""/>
+        <function-ref name="syncDone" ref="0x2b3677183d70" scoped=""/>
+        <function-ref name="erase" ref="0x2b3677182020" scoped=""/>
+        <function-ref name="eraseDone" ref="0x2b36771821a8" scoped=""/>
+        <function-ref name="appendDone" ref="0x2b3677182330" scoped=""/>
+        <function-ref name="append" ref="0x2b36771824b8" scoped=""/>
+        <function-ref name="sync" ref="0x2b3677182640" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="45:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/stm25p/BlockStorageC.nc" name="BlockWrite" provided="1" ref="0x2b36781b8430">
+      <component-ref nicename="tos.chips.stm25p.BlockStorageC" qname="SenseC.BlockStorageYC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="BlockWrite" ref="0x2b36781b8430" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.BlockWrite" qname="BlockWrite"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="syncDone" ref="0x2b36781b8780" scoped=""/>
+        <function-ref name="writeDone" ref="0x2b36781b8908" scoped=""/>
+        <function-ref name="erase" ref="0x2b36781b8a90" scoped=""/>
+        <function-ref name="eraseDone" ref="0x2b36781b8c18" scoped=""/>
+        <function-ref name="write" ref="0x2b36781b8da0" scoped=""/>
+        <function-ref name="sync" ref="0x2b36781b7020" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="26:SamplerC.nc" name="BlockReadZ" provided="0" ref="0x2b367716fdc8">
+      <component-ref nicename="SamplerC" qname="SamplerC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="BlockReadZ" ref="0x2b367716fdc8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.BlockRead" qname="BlockRead"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="read" ref="0x2b367716e170" scoped=""/>
+        <function-ref name="computeCrcDone" ref="0x2b367716e2f8" scoped=""/>
+        <function-ref name="computeCrc" ref="0x2b367716e480" scoped=""/>
+        <function-ref name="getSize" ref="0x2b367716e608" scoped=""/>
+        <function-ref name="readDone" ref="0x2b367716e790" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="19:AccelYStreamC.nc" name="ReadStream" provided="1" ref="0x2b36785c5a68">
+      <component-ref nicename="AccelYStreamC" qname="SenseC.AccelYStreamC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ReadStream" ref="0x2b36785c5a68" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.ReadStream" qname="ReadStream"/>
+        <arguments>
+          <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned="">
+            <typename><typedef-ref name="uint16_t" ref="0x2b36763969f0"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="bufferDone" ref="0x2b36785b74c0" scoped=""/>
+        <function-ref name="postBuffer" ref="0x2b36785b8620" scoped=""/>
+        <function-ref name="read" ref="0x2b36785b7020" scoped=""/>
+        <function-ref name="readDone" ref="0x2b36785b5020" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="17:SenseP.nc" name="Timer" provided="0" ref="0x2b36770b64f8">
+      <component-ref nicename="SenseP" qname="SenseP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Timer" ref="0x2b36770b64f8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.timer.Timer" qname="Timer"/>
+        <arguments>
+          <type-tag alignment="I:2" size="I:2"><struct-ref ref="0x2b36770a5970"/>
+            <typename><typedef-ref name="TMilli" ref="0x2b36770a5cc8"/></typename>
+          </type-tag>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="getNow" ref="0x2b36770b4768" scoped=""/>
+        <function-ref name="fired" ref="0x2b36770a4e18" scoped=""/>
+        <function-ref name="startPeriodicAt" ref="0x2b36770b5b78" scoped=""/>
+        <function-ref name="isOneShot" ref="0x2b36770b5728" scoped=""/>
+        <function-ref name="getdt" ref="0x2b36770b3088" scoped=""/>
+        <function-ref name="gett0" ref="0x2b36770b4bb8" scoped=""/>
+        <function-ref name="isRunning" ref="0x2b36770b52d8" scoped=""/>
+        <function-ref name="startPeriodic" ref="0x2b36770a4088" scoped=""/>
+        <function-ref name="startOneShotAt" ref="0x2b36770b4198" scoped=""/>
+        <function-ref name="startOneShot" ref="0x2b36770a4528" scoped=""/>
+        <function-ref name="stop" ref="0x2b36770a49c8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="44:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/stm25p/BlockStorageC.nc" name="BlockRead" provided="1" ref="0x2b36781bec08">
+      <component-ref nicename="tos.chips.stm25p.BlockStorageC" qname="SenseC.BlockStorageXC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="BlockRead" ref="0x2b36781bec08" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.BlockRead" qname="BlockRead"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="read" ref="0x2b36781bd020" scoped=""/>
+        <function-ref name="computeCrcDone" ref="0x2b36781bd1a8" scoped=""/>
+        <function-ref name="computeCrc" ref="0x2b36781bd330" scoped=""/>
+        <function-ref name="getSize" ref="0x2b36781bd4b8" scoped=""/>
+        <function-ref name="readDone" ref="0x2b36781bd640" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="45:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/stm25p/BlockStorageC.nc" name="BlockWrite" provided="1" ref="0x2b36781bd8c8">
+      <component-ref nicename="tos.chips.stm25p.BlockStorageC" qname="SenseC.BlockStorageXC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="BlockWrite" ref="0x2b36781bd8c8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.BlockWrite" qname="BlockWrite"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="syncDone" ref="0x2b36781bdc18" scoped=""/>
+        <function-ref name="writeDone" ref="0x2b36781bdda0" scoped=""/>
+        <function-ref name="erase" ref="0x2b36781bc020" scoped=""/>
+        <function-ref name="eraseDone" ref="0x2b36781bc1a8" scoped=""/>
+        <function-ref name="write" ref="0x2b36781bc330" scoped=""/>
+        <function-ref name="sync" ref="0x2b36781bc4b8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="19:AccelZStreamC.nc" name="ReadStream" provided="1" ref="0x2b36785a6020">
+      <component-ref nicename="AccelZStreamC" qname="SenseC.AccelZStreamC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ReadStream" ref="0x2b36785a6020" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.ReadStream" qname="ReadStream"/>
+        <arguments>
+          <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned="">
+            <typename><typedef-ref name="uint16_t" ref="0x2b36763969f0"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="bufferDone" ref="0x2b36785a5970" scoped=""/>
+        <function-ref name="postBuffer" ref="0x2b36785a6b68" scoped=""/>
+        <function-ref name="read" ref="0x2b36785a54d0" scoped=""/>
+        <function-ref name="readDone" ref="0x2b36785a4408" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="46:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/lib/printf/MainC.nc" name="Boot" provided="1" ref="0x2b3677185878">
+      <component-ref nicename="tos.lib.printf.MainC" qname="MainC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Boot" ref="0x2b3677185878" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Boot" qname="Boot"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="booted" ref="0x2b3677185bc8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="20:SenseP.nc" name="Leds" provided="0" ref="0x2b36770c1760">
+      <component-ref nicename="SenseP" qname="SenseP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Leds" ref="0x2b36770c1760" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Leds" qname="Leds"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="led0Off" ref="0x2b36770c1ab0" scoped=""/>
+        <function-ref name="led0Toggle" ref="0x2b36770c1c38" scoped=""/>
+        <function-ref name="led1On" ref="0x2b36770c1dc0" scoped=""/>
+        <function-ref name="led1Toggle" ref="0x2b36770b1020" scoped=""/>
+        <function-ref name="led2Toggle" ref="0x2b36770b11a8" scoped=""/>
+        <function-ref name="get" ref="0x2b36770b1330" scoped=""/>
+        <function-ref name="led1Off" ref="0x2b36770b14b8" scoped=""/>
+        <function-ref name="led2Off" ref="0x2b36770b1ad8" scoped=""/>
+        <function-ref name="set" ref="0x2b36770b1640" scoped=""/>
+        <function-ref name="led0On" ref="0x2b36770b17c8" scoped=""/>
+        <function-ref name="led2On" ref="0x2b36770b1950" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="25:SamplerC.nc" name="BlockReadY" provided="0" ref="0x2b367716f0c8">
+      <component-ref nicename="SamplerC" qname="SamplerC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="BlockReadY" ref="0x2b367716f0c8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.BlockRead" qname="BlockRead"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="read" ref="0x2b367716f418" scoped=""/>
+        <function-ref name="computeCrcDone" ref="0x2b367716f5a0" scoped=""/>
+        <function-ref name="computeCrc" ref="0x2b367716f728" scoped=""/>
+        <function-ref name="getSize" ref="0x2b367716f8b0" scoped=""/>
+        <function-ref name="readDone" ref="0x2b367716fa38" scoped=""/>
+      </interface-functions>
+    </interface><component loc="13:SenseP.nc" nicename="SenseP" qname="SenseP">
+      <module/>
+    </component><component loc="45(SenseC.LogStorageC):/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/stm25p/LogStorageC.nc" nicename="tos.chips.stm25p.LogStorageC" qname="SenseC.LogStorageC">
+      <instance number="0">
+        <component-ref nicename="tos.chips.stm25p.LogStorageC" qname="LogStorageC"/>
+        <arguments>
+          <value cst="I:100">
+            <type-int alignment="I:2" cname="int" size="I:2"/>
+          </value>
+          <value cst="I:1">
+            <type-int alignment="I:2" cname="int" size="I:2"/>
+          </value>
+        </arguments>
+      </instance>
+      <configuration/>
+      <wiring>
+        <wire>
+          <from><interface-ref name="LogRead" ref="0x2b367817b1a8" scoped=""/></from>
+          <to><interface-ref name="Read" ref="0x2b3677d2f348" scoped=""/>
+          <arguments>
+            <value cst="I:0">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire>
+          <from><interface-ref name="LogWrite" ref="0x2b367817a020" scoped=""/></from>
+          <to><interface-ref name="Write" ref="0x2b3677d2e6e0" scoped=""/>
+          <arguments>
+            <value cst="I:0">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire>
+          <from><interface-ref name="ClientResource" ref="0x2b3677d1b1c8" scoped=""/>
+          <arguments>
+            <value cst="I:0">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </from>
+          <to><interface-ref name="ClientResource" ref="0x2b3677df63c8" scoped=""/>
+          <arguments>
+            <value cst="I:0">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire>
+          <from><interface-ref name="Sector" ref="0x2b3677d2c610" scoped=""/>
+          <arguments>
+            <value cst="I:0">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </from>
+          <to><interface-ref name="Sector" ref="0x2b3677df45f0" scoped=""/>
+          <arguments>
+            <value cst="I:0">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire>
+          <from><interface-ref name="Volume" ref="0x2b3678c28da0" scoped=""/></from>
+          <to><interface-ref name="Volume" ref="0x2b3677df2510" scoped=""/>
+          <arguments>
+            <value cst="I:0">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire>
+          <from><interface-ref name="Circular" ref="0x2b3677d19690" scoped=""/>
+          <arguments>
+            <value cst="I:0">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </from>
+          <to><interface-ref name="Circular" ref="0x2b3678c269d0" scoped=""/></to>
+        </wire>
+        <wire>
+          <from><interface-ref name="SoftwareInit" ref="0x2b36771fcca0" scoped=""/></from>
+          <to><interface-ref name="Init" ref="0x2b3677d30778" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component><component loc="18(SenseC.AccelZStreamC):AccelZStreamC.nc" nicename="AccelZStreamC" qname="SenseC.AccelZStreamC">
+      <documentation loc="10:AccelZStreamC.nc">
+        <short>
+ AccelXdiode of the basicsb sensor board.</short>
+        <long>
+ AccelXdiode of the basicsb sensor board.
+
+ @author David Gay
+</long>
+      </documentation>
+      <instance number="0">
+        <component-ref nicename="AccelZStreamC" qname="AccelZStreamC"/>
+      </instance>
+      <configuration/>
+      <wiring>
+        <wire>
+          <from><interface-ref name="ReadStream" ref="0x2b36785a6020" scoped=""/></from>
+          <to><interface-ref name="ReadStreamZ" ref="0x2b3678203e00" scoped=""/>
+          <arguments>
+            <value cst="I:2">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire>
+          <from><interface-ref name="ActualZ" ref="0x2b36781f62b0" scoped=""/>
+          <arguments>
+            <value cst="I:2">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </from>
+          <to><interface-ref name="ReadStream" ref="0x2b3678f31b18" scoped=""/></to>
+        </wire>
+        <wire>
+          <from><interface-ref name="AdcConfigure" ref="0x2b3678f2e730" scoped=""/></from>
+          <to><interface-ref name="ConfigZ" ref="0x2b367823acd8" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component><component loc="45:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/lib/printf/MainC.nc" nicename="tos.lib.printf.MainC" qname="MainC">
+      <documentation loc="34:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/lib/printf/MainC.nc">
+        <short>
+ MainC is the system interface the TinyOS boot sequence.</short>
+        <long>
+ MainC is the system interface the TinyOS boot sequence. It wires the
+ boot sequence implementation to the scheduler and hardware resources.
+
+ @author Philip Levis
+ @author Kevin Klues
+ @date   August 6 2005
+</long>
+      </documentation>
+      <configuration/>
+      <wiring>
+        <wire loc="59:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/lib/printf/MainC.nc">
+          <from><interface-ref name="Boot" ref="0x2b3677185878" scoped=""/></from>
+          <to><interface-ref name="Boot" ref="0x2b36773dd3d8" scoped=""/></to>
+        </wire>
+        <wire loc="53:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/lib/printf/MainC.nc">
+          <from><interface-ref name="Scheduler" ref="0x2b36773bc020" scoped=""/></from>
+          <to><interface-ref name="Scheduler" ref="0x2b3676bfc0f0" scoped=""/></to>
+        </wire>
+        <wire loc="54:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/lib/printf/MainC.nc">
+          <from><interface-ref name="PlatformInit" ref="0x2b36773bc9f8" scoped=""/></from>
+          <to><interface-ref name="Init" ref="0x2b367721eaf0" scoped=""/></to>
+        </wire>
+        <wire loc="55:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/lib/printf/MainC.nc">
+          <from><interface-ref name="MainBoot" ref="0x2b36773da020" scoped=""/></from>
+          <to><interface-ref name="Boot" ref="0x2b367721d9c0" scoped=""/></to>
+        </wire>
+        <wire loc="58:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/lib/printf/MainC.nc">
+          <from><interface-ref name="SoftwareInit" ref="0x2b36773bb140" scoped=""/></from>
+          <to><interface-ref name="SoftwareInit" ref="0x2b36771fcca0" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component><component loc="12:SummarizerC.nc" nicename="SummarizerC" qname="SummarizerC">
+      <module/>
+    </component><component loc="36(SenseC.TimerMilliC):/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/TimerMilliC.nc" nicename="tos.system.TimerMilliC" qname="SenseC.TimerMilliC">
+      <documentation loc="25:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/TimerMilliC.nc">
+        <short>
+ The virtualized millisecond timer abstraction.</short>
+        <long>
+ The virtualized millisecond timer abstraction. Instantiating this 
+ component gives an independent millisecond granularity timer.
+
+ @author Philip Levis
+ @date   January 16 2006
+ @see    TEP 102: Timers
+</long>
+      </documentation>
+      <instance number="0">
+        <component-ref nicename="tos.system.TimerMilliC" qname="TimerMilliC"/>
+      </instance>
+      <configuration/>
+      <wiring>
+        <wire>
+          <from><interface-ref name="Timer" ref="0x2b3677b84a60" scoped=""/></from>
+          <to><interface-ref name="TimerMilli" ref="0x2b3677b7b510" scoped=""/>
+          <arguments>
+            <value cst="I:0">
+              <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned=""/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+      </wiring>
+    </component><component loc="42(SenseC.BlockStorageXC):/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/stm25p/BlockStorageC.nc" nicename="tos.chips.stm25p.BlockStorageC" qname="SenseC.BlockStorageXC">
+      <documentation loc="1:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/stm25p/Stm25p.h">
+        <short>
+ Copyright (c) 2005-2006 Arch Rock Corporation
+ All rights reserved.</short>
+        <long>
+ Copyright (c) 2005-2006 Arch Rock Corporation
+ All rights reserved.
+
+ Redistribution and use in source and binary forms, with or without
+ modification, are permitted provided that the following conditions
+ are met:
+ - Redistributions of source code must retain the above copyright
+   notice, this list of conditions and the following disclaimer.
+ - Redistributions in binary form must reproduce the above copyright
+   notice, this list of conditions and the following disclaimer in the
+   documentation and/or other materials provided with the
+   distribution.
+ - Neither the name of the Arch Rock Corporation nor the names of
+   its contributors may be used to endorse or promote products derived
+   from this software without specific prior written permission.
+
+ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+ ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+ LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
+ FOR A PARTICULAR PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE
+ ARCHED ROCK OR ITS CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
+ INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+ (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+ SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+ HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT,
+ STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED
+ OF THE POSSIBILITY OF SUCH DAMAGE
+
+ @author Jonathan Hui &lt;jhui@archrock.com&gt;
+ @version $Revision: 1.4 $ $Date: 2006/12/12 18:23:12 $
+</long>
+      </documentation>
+      <instance number="0">
+        <component-ref nicename="tos.chips.stm25p.BlockStorageC" qname="BlockStorageC"/>
+        <arguments>
+          <value cst="I:101">
+            <type-int alignment="I:2" cname="int" size="I:2"/>
+          </value>
+        </arguments>
+      </instance>
+      <configuration/>
+      <wiring>
+        <wire>
+          <from><interface-ref name="BlockRead" ref="0x2b36781bec08" scoped=""/></from>
+          <to><interface-ref name="Read" ref="0x2b3678171b18" scoped=""/>
+          <arguments>
+            <value cst="I:0">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire>
+          <from><interface-ref name="BlockWrite" ref="0x2b36781bd8c8" scoped=""/></from>
+          <to><interface-ref name="Write" ref="0x2b367816bd10" scoped=""/>
+          <arguments>
+            <value cst="I:0">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire>
+          <from><interface-ref name="StorageMap" ref="0x2b36781bc740" scoped=""/></from>
+          <to><interface-ref name="StorageMap" ref="0x2b3678168050" scoped=""/>
+          <arguments>
+            <value cst="I:0">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire>
+          <from><interface-ref name="ClientResource" ref="0x2b36781666d8" scoped=""/>
+          <arguments>
+            <value cst="I:0">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </from>
+          <to><interface-ref name="ClientResource" ref="0x2b3677df63c8" scoped=""/>
+          <arguments>
+            <value cst="I:1">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire>
+          <from><interface-ref name="Sector" ref="0x2b3678168c18" scoped=""/>
+          <arguments>
+            <value cst="I:0">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </from>
+          <to><interface-ref name="Sector" ref="0x2b3677df45f0" scoped=""/>
+          <arguments>
+            <value cst="I:1">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire>
+          <from><interface-ref name="Volume" ref="0x2b3678dbf3b8" scoped=""/></from>
+          <to><interface-ref name="Volume" ref="0x2b3677df2510" scoped=""/>
+          <arguments>
+            <value cst="I:1">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+      </wiring>
+    </component><component loc="42(SenseC.BlockStorageYC):/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/stm25p/BlockStorageC.nc" nicename="tos.chips.stm25p.BlockStorageC" qname="SenseC.BlockStorageYC">
+      <documentation loc="1:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/stm25p/Stm25p.h">
+        <short>
+ Copyright (c) 2005-2006 Arch Rock Corporation
+ All rights reserved.</short>
+        <long>
+ Copyright (c) 2005-2006 Arch Rock Corporation
+ All rights reserved.
+
+ Redistribution and use in source and binary forms, with or without
+ modification, are permitted provided that the following conditions
+ are met:
+ - Redistributions of source code must retain the above copyright
+   notice, this list of conditions and the following disclaimer.
+ - Redistributions in binary form must reproduce the above copyright
+   notice, this list of conditions and the following disclaimer in the
+   documentation and/or other materials provided with the
+   distribution.
+ - Neither the name of the Arch Rock Corporation nor the names of
+   its contributors may be used to endorse or promote products derived
+   from this software without specific prior written permission.
+
+ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+ ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+ LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
+ FOR A PARTICULAR PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE
+ ARCHED ROCK OR ITS CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
+ INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+ (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+ SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+ HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT,
+ STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED
+ OF THE POSSIBILITY OF SUCH DAMAGE
+
+ @author Jonathan Hui &lt;jhui@archrock.com&gt;
+ @version $Revision: 1.4 $ $Date: 2006/12/12 18:23:12 $
+</long>
+      </documentation>
+      <instance number="1">
+        <component-ref nicename="tos.chips.stm25p.BlockStorageC" qname="BlockStorageC"/>
+        <arguments>
+          <value cst="I:102">
+            <type-int alignment="I:2" cname="int" size="I:2"/>
+          </value>
+        </arguments>
+      </instance>
+      <configuration/>
+      <wiring>
+        <wire>
+          <from><interface-ref name="BlockRead" ref="0x2b36781b9790" scoped=""/></from>
+          <to><interface-ref name="Read" ref="0x2b3678171b18" scoped=""/>
+          <arguments>
+            <value cst="I:1">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire>
+          <from><interface-ref name="BlockWrite" ref="0x2b36781b8430" scoped=""/></from>
+          <to><interface-ref name="Write" ref="0x2b367816bd10" scoped=""/>
+          <arguments>
+            <value cst="I:1">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire>
+          <from><interface-ref name="StorageMap" ref="0x2b36781b72a8" scoped=""/></from>
+          <to><interface-ref name="StorageMap" ref="0x2b3678168050" scoped=""/>
+          <arguments>
+            <value cst="I:1">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire>
+          <from><interface-ref name="ClientResource" ref="0x2b36781666d8" scoped=""/>
+          <arguments>
+            <value cst="I:1">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </from>
+          <to><interface-ref name="ClientResource" ref="0x2b3677df63c8" scoped=""/>
+          <arguments>
+            <value cst="I:2">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire>
+          <from><interface-ref name="Sector" ref="0x2b3678168c18" scoped=""/>
+          <arguments>
+            <value cst="I:1">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </from>
+          <to><interface-ref name="Sector" ref="0x2b3677df45f0" scoped=""/>
+          <arguments>
+            <value cst="I:2">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire>
+          <from><interface-ref name="Volume" ref="0x2b3678db1cd0" scoped=""/></from>
+          <to><interface-ref name="Volume" ref="0x2b3677df2510" scoped=""/>
+          <arguments>
+            <value cst="I:2">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+      </wiring>
+    </component><component loc="18(SenseC.AccelYStreamC):AccelYStreamC.nc" nicename="AccelYStreamC" qname="SenseC.AccelYStreamC">
+      <documentation loc="10:AccelYStreamC.nc">
+        <short>
+ AccelXdiode of the basicsb sensor board.</short>
+        <long>
+ AccelXdiode of the basicsb sensor board.
+
+ @author David Gay
+</long>
+      </documentation>
+      <instance number="0">
+        <component-ref nicename="AccelYStreamC" qname="AccelYStreamC"/>
+      </instance>
+      <configuration/>
+      <wiring>
+        <wire>
+          <from><interface-ref name="ReadStream" ref="0x2b36785c5a68" scoped=""/></from>
+          <to><interface-ref name="ReadStreamY" ref="0x2b3678207d08" scoped=""/>
+          <arguments>
+            <value cst="I:1">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire>
+          <from><interface-ref name="ActualY" ref="0x2b36781fa1c8" scoped=""/>
+          <arguments>
+            <value cst="I:1">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </from>
+          <to><interface-ref name="ReadStream" ref="0x2b3678ec0938" scoped=""/></to>
+        </wire>
+        <wire>
+          <from><interface-ref name="AdcConfigure" ref="0x2b3678ebc3f8" scoped=""/></from>
+          <to><interface-ref name="ConfigY" ref="0x2b367823d998" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component><component loc="34:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/LedsC.nc" nicename="tos.system.LedsC" qname="LedsC">
+      <documentation loc="23:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/LedsC.nc">
+        <short>
+
+ The basic TinyOS LEDs abstraction.</short>
+        <long>
+
+ The basic TinyOS LEDs abstraction.
+
+ @author Phil Buonadonna
+ @author David Gay
+ @author Philip Levis
+ @author Joe Polastre
+</long>
+      </documentation>
+      <configuration/>
+      <wiring>
+        <wire loc="40:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/LedsC.nc">
+          <from><interface-ref name="Leds" ref="0x2b367792e760" scoped=""/></from>
+          <to><interface-ref name="Leds" ref="0x2b3677957020" scoped=""/></to>
+        </wire>
+        <wire loc="42:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/LedsC.nc">
+          <from><interface-ref name="Init" ref="0x2b3677970020" scoped=""/></from>
+          <to><interface-ref name="Init" ref="0x2b367795a9e0" scoped=""/></to>
+        </wire>
+        <wire loc="43:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/LedsC.nc">
+          <from><interface-ref name="Led0" ref="0x2b367794f348" scoped=""/></from>
+          <to><interface-ref name="Led0" ref="0x2b3677958ab8" scoped=""/></to>
+        </wire>
+        <wire loc="44:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/LedsC.nc">
+          <from><interface-ref name="Led1" ref="0x2b36779554c0" scoped=""/></from>
+          <to><interface-ref name="Led1" ref="0x2b3677973ca8" scoped=""/></to>
+        </wire>
+        <wire loc="45:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/LedsC.nc">
+          <from><interface-ref name="Led2" ref="0x2b3677954648" scoped=""/></from>
+          <to><interface-ref name="Led2" ref="0x2b3677972e30" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component><component loc="42(SenseC.BlockStorageZC):/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/stm25p/BlockStorageC.nc" nicename="tos.chips.stm25p.BlockStorageC" qname="SenseC.BlockStorageZC">
+      <documentation loc="1:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/stm25p/Stm25p.h">
+        <short>
+ Copyright (c) 2005-2006 Arch Rock Corporation
+ All rights reserved.</short>
+        <long>
+ Copyright (c) 2005-2006 Arch Rock Corporation
+ All rights reserved.
+
+ Redistribution and use in source and binary forms, with or without
+ modification, are permitted provided that the following conditions
+ are met:
+ - Redistributions of source code must retain the above copyright
+   notice, this list of conditions and the following disclaimer.
+ - Redistributions in binary form must reproduce the above copyright
+   notice, this list of conditions and the following disclaimer in the
+   documentation and/or other materials provided with the
+   distribution.
+ - Neither the name of the Arch Rock Corporation nor the names of
+   its contributors may be used to endorse or promote products derived
+   from this software without specific prior written permission.
+
+ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+ ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+ LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
+ FOR A PARTICULAR PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE
+ ARCHED ROCK OR ITS CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
+ INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+ (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+ SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+ HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT,
+ STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED
+ OF THE POSSIBILITY OF SUCH DAMAGE
+
+ @author Jonathan Hui &lt;jhui@archrock.com&gt;
+ @version $Revision: 1.4 $ $Date: 2006/12/12 18:23:12 $
+</long>
+      </documentation>
+      <instance number="2">
+        <component-ref nicename="tos.chips.stm25p.BlockStorageC" qname="BlockStorageC"/>
+        <arguments>
+          <value cst="I:103">
+            <type-int alignment="I:2" cname="int" size="I:2"/>
+          </value>
+        </arguments>
+      </instance>
+      <configuration/>
+      <wiring>
+        <wire>
+          <from><interface-ref name="BlockRead" ref="0x2b36781b51f0" scoped=""/></from>
+          <to><interface-ref name="Read" ref="0x2b3678171b18" scoped=""/>
+          <arguments>
+            <value cst="I:2">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire>
+          <from><interface-ref name="BlockWrite" ref="0x2b36781b5de8" scoped=""/></from>
+          <to><interface-ref name="Write" ref="0x2b367816bd10" scoped=""/>
+          <arguments>
+            <value cst="I:2">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire>
+          <from><interface-ref name="StorageMap" ref="0x2b36781b4ba0" scoped=""/></from>
+          <to><interface-ref name="StorageMap" ref="0x2b3678168050" scoped=""/>
+          <arguments>
+            <value cst="I:2">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire>
+          <from><interface-ref name="ClientResource" ref="0x2b36781666d8" scoped=""/>
+          <arguments>
+            <value cst="I:2">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </from>
+          <to><interface-ref name="ClientResource" ref="0x2b3677df63c8" scoped=""/>
+          <arguments>
+            <value cst="I:3">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire>
+          <from><interface-ref name="Sector" ref="0x2b3678168c18" scoped=""/>
+          <arguments>
+            <value cst="I:2">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </from>
+          <to><interface-ref name="Sector" ref="0x2b3677df45f0" scoped=""/>
+          <arguments>
+            <value cst="I:3">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire>
+          <from><interface-ref name="Volume" ref="0x2b3678da4808" scoped=""/></from>
+          <to><interface-ref name="Volume" ref="0x2b3677df2510" scoped=""/>
+          <arguments>
+            <value cst="I:3">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+      </wiring>
+    </component><component loc="18(SenseC.AccelXStreamC):AccelXStreamC.nc" nicename="AccelXStreamC" qname="SenseC.AccelXStreamC">
+      <documentation loc="10:AccelXStreamC.nc">
+        <short>
+ AccelXdiode of the basicsb sensor board.</short>
+        <long>
+ AccelXdiode of the basicsb sensor board.
+
+ @author David Gay
+</long>
+      </documentation>
+      <instance number="0">
+        <component-ref nicename="AccelXStreamC" qname="AccelXStreamC"/>
+      </instance>
+      <configuration/>
+      <wiring>
+        <wire>
+          <from><interface-ref name="ReadStream" ref="0x2b36782127b8" scoped=""/></from>
+          <to><interface-ref name="ReadStreamX" ref="0x2b367820db70" scoped=""/>
+          <arguments>
+            <value cst="I:0">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire>
+          <from><interface-ref name="ActualX" ref="0x2b36781fe020" scoped=""/>
+          <arguments>
+            <value cst="I:0">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </from>
+          <to><interface-ref name="ReadStream" ref="0x2b3678d99020" scoped=""/></to>
+        </wire>
+        <wire>
+          <from><interface-ref name="AdcConfigure" ref="0x2b3678d97b18" scoped=""/></from>
+          <to><interface-ref name="ConfigX" ref="0x2b367823b630" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component><component loc="14:SamplerC.nc" nicename="SamplerC" qname="SamplerC">
+      <module/>
+    </component></referenced></component>

@@ -1,0 +1,17 @@
+digraph "tos.lib.printf.MainC" {
+  n0x2ae8dd9fe3e0 [shape=ellipse, style=filled, label="Boot", fontsize=12];
+  "PrintfC" [fontsize=12, shape=box,peripheries=2, URL="../chtml/tos.lib.printf.PrintfC.html"];
+  "RealMainP" [fontsize=12, shape=box, URL="../chtml/tos.system.RealMainP.html"];
+  "TinySchedulerC" [fontsize=12, shape=box,peripheries=2, URL="../chtml/tos.system.TinySchedulerC.html"];
+  "RealMainP" [fontsize=12, shape=box, URL="../chtml/tos.system.RealMainP.html"];
+  "PlatformC" [fontsize=12, shape=box,peripheries=2, URL="../chtml/tos.platforms.telosa.PlatformC.html"];
+  "PrintfC" [fontsize=12, shape=box,peripheries=2, URL="../chtml/tos.lib.printf.PrintfC.html"];
+  "RealMainP" [fontsize=12, shape=box, URL="../chtml/tos.system.RealMainP.html"];
+  "RealMainP" [fontsize=12, shape=box, URL="../chtml/tos.system.RealMainP.html"];
+  n0x2ae8dd9fd808 [shape=ellipse, style=filled, label="SoftwareInit", fontsize=12];
+  "n0x2ae8dd9fe3e0" -> "PrintfC" [label="Boot", URL="../ihtml/tos.interfaces.Boot.html", fontsize=10];
+  "RealMainP" -> "TinySchedulerC" [label="Scheduler", URL="../ihtml/tos.interfaces.Scheduler.html", fontsize=10];
+  "RealMainP" -> "PlatformC" [label="Init", URL="../ihtml/tos.interfaces.Init.html", fontsize=10];
+  "PrintfC" -> "RealMainP" [label="Boot", URL="../ihtml/tos.interfaces.Boot.html", fontsize=10];
+  "RealMainP" -> "n0x2ae8dd9fd808" [label="Init", URL="../ihtml/tos.interfaces.Init.html", fontsize=10];
+}

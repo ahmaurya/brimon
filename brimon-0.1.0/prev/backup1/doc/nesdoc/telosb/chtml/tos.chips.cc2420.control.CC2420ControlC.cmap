@@ -1,0 +1,113 @@
+<area shape="rect" href="../chtml/tos.chips.cc2420.control.CC2420ControlP.html" title="CC2420ControlP" alt="" coords="1184,131,1333,179">
+<area shape="poly" href="../ihtml/tos.chips.cc2420.interfaces.CC2420Config.html" title="CC2420Config" alt="" coords="956,55 990,81 1030,104 1101,128 1171,143 1170,148 1100,133 1028,109 988,86 953,59">
+<area shape="rect" href="../ihtml/tos.chips.cc2420.interfaces.CC2420Config.html" title="CC2420Config" alt="" coords="951,53,959,61">
+<area shape="rect" href="../ihtml/tos.chips.cc2420.interfaces.CC2420Config.html" title="CC2420Config" alt="" coords="1180,143,1188,151">
+<area shape="rect" href="../ihtml/tos.chips.cc2420.interfaces.CC2420Config.html" title="CC2420Config" alt="" coords="1029,89,1120,106">
+<area shape="rect" href="../chtml/tos.chips.cc2420.alarm.AlarmMultiplexC.html" title="AlarmMultiplexC" alt="" coords="5,245,160,304">
+<area shape="poly" href="../ihtml/tos.lib.timer.Alarm.html" title="Alarm&lt;T32khz, uint32_t&gt;" alt="" coords="1184,159 917,163 568,171 258,185 154,194 123,199 107,205 97,218 90,233 86,231 93,215 104,201 121,194 154,189 257,180 568,166 916,157 1184,153">
+<area shape="rect" href="../ihtml/tos.lib.timer.Alarm.html" title="Alarm&lt;T32khz, uint32_t&gt;" alt="" coords="1180,152,1188,160">
+<area shape="rect" href="../ihtml/tos.lib.timer.Alarm.html" title="Alarm&lt;T32khz, uint32_t&gt;" alt="" coords="81,241,89,249">
+<area shape="rect" href="../ihtml/tos.lib.timer.Alarm.html" title="Alarm&lt;T32khz, uint32_t&gt;" alt="" coords="112,203,277,221">
+<area shape="rect" href="../chtml/tos.platforms.telosa.chips.cc2420.HplCC2420PinsC.html" title="HplCC2420PinsC" alt="" coords="268,245,431,304">
+<area shape="poly" href="../ihtml/tos.interfaces.GeneralIO.html" title="GeneralIO" alt="" coords="1184,159 953,163 660,171 403,185 319,194 294,199 282,205 278,212 278,219 286,235 282,237 272,220 273,210 278,201 292,194 318,189 403,180 660,166 953,157 1184,153">
+<area shape="rect" href="../ihtml/tos.interfaces.GeneralIO.html" title="GeneralIO" alt="" coords="1180,152,1188,160">
+<area shape="rect" href="../ihtml/tos.interfaces.GeneralIO.html" title="GeneralIO" alt="" coords="291,241,299,249">
+<area shape="rect" href="../ihtml/tos.interfaces.GeneralIO.html" title="GeneralIO" alt="" coords="286,203,349,221">
+<area shape="poly" href="../ihtml/tos.interfaces.GeneralIO.html" title="GeneralIO" alt="" coords="1184,159 713,175 485,189 410,197 375,205 364,218 357,233 352,231 360,215 372,200 409,191 485,183 713,170 1184,153">
+<area shape="rect" href="../ihtml/tos.interfaces.GeneralIO.html" title="GeneralIO" alt="" coords="1180,152,1188,160">
+<area shape="rect" href="../ihtml/tos.interfaces.GeneralIO.html" title="GeneralIO" alt="" coords="348,241,356,249">
+<area shape="rect" href="../ihtml/tos.interfaces.GeneralIO.html" title="GeneralIO" alt="" coords="386,203,449,221">
+<area shape="poly" href="../ihtml/tos.interfaces.GeneralIO.html" title="GeneralIO" alt="" coords="1184,159 1026,163 829,171 640,185 562,194 503,205 457,221 414,241 412,236 456,216 502,200 562,189 640,180 829,166 1026,157 1184,153">
+<area shape="rect" href="../ihtml/tos.interfaces.GeneralIO.html" title="GeneralIO" alt="" coords="1180,152,1188,160">
+<area shape="rect" href="../ihtml/tos.interfaces.GeneralIO.html" title="GeneralIO" alt="" coords="397,241,405,249">
+<area shape="rect" href="../ihtml/tos.interfaces.GeneralIO.html" title="GeneralIO" alt="" coords="515,203,578,221">
+<area shape="rect" href="../chtml/tos.platforms.telosa.chips.cc2420.HplCC2420InterruptsC.html" title="HplCC2420InterruptsC" alt="" coords="455,245,663,304">
+<area shape="poly" href="../ihtml/tos.interfaces.GpioInterrupt.html" title="GpioInterrupt" alt="" coords="1184,157 1026,161 838,169 672,183 614,193 583,205 573,218 566,233 562,231 569,215 580,201 613,188 671,178 837,164 1026,156 1184,152">
+<area shape="rect" href="../ihtml/tos.interfaces.GpioInterrupt.html" title="GpioInterrupt" alt="" coords="1180,151,1188,159">
+<area shape="rect" href="../ihtml/tos.interfaces.GpioInterrupt.html" title="GpioInterrupt" alt="" coords="557,241,565,249">
+<area shape="rect" href="../ihtml/tos.interfaces.GpioInterrupt.html" title="GpioInterrupt" alt="" coords="589,203,673,221">
+<area shape="rect" href="../chtml/tos.chips.cc2420.spi.CC2420SpiC.html" title="CC2420SpiC\n(Spi)" alt="" coords="1327,245,1455,304">
+<area shape="poly" href="../ihtml/tos.interfaces.Resource.html" title="Resource" alt="" coords="1184,159 1046,161 887,169 748,183 701,193 677,204 673,212 676,219 702,227 759,236 935,250 1313,269 1313,275 934,255 758,241 701,233 673,223 668,213 673,201 700,188 747,178 886,164 1046,156 1184,153">
+<area shape="rect" href="../ihtml/tos.interfaces.Resource.html" title="Resource" alt="" coords="1180,152,1188,160">
+<area shape="rect" href="../ihtml/tos.interfaces.Resource.html" title="Resource" alt="" coords="1323,268,1331,276">
+<area shape="rect" href="../ihtml/tos.interfaces.Resource.html" title="Resource" alt="" coords="679,203,737,221">
+<area shape="poly" href="../ihtml/tos.chips.cc2420.interfaces.CC2420Strobe.html" title="CC2420Strobe" alt="" coords="1184,159 935,173 823,186 786,195 766,204 763,212 766,219 793,232 844,244 993,259 1165,268 1313,272 1313,277 1165,273 992,265 843,249 791,238 762,223 757,213 762,201 784,190 822,181 935,168 1184,153">
+<area shape="rect" href="../ihtml/tos.chips.cc2420.interfaces.CC2420Strobe.html" title="CC2420Strobe" alt="" coords="1180,152,1188,160">
+<area shape="rect" href="../ihtml/tos.chips.cc2420.interfaces.CC2420Strobe.html" title="CC2420Strobe" alt="" coords="1323,271,1331,279">
+<area shape="rect" href="../ihtml/tos.chips.cc2420.interfaces.CC2420Strobe.html" title="CC2420Strobe" alt="" coords="768,203,861,221">
+<area shape="poly" href="../ihtml/tos.chips.cc2420.interfaces.CC2420Strobe.html" title="CC2420Strobe" alt="" coords="1184,160 1082,165 976,176 933,185 902,195 887,207 886,213 890,219 910,230 948,239 1061,254 1314,271 1313,276 1060,259 947,245 908,235 886,223 881,214 882,204 899,190 932,180 976,171 1081,160 1184,155">
+<area shape="rect" href="../ihtml/tos.chips.cc2420.interfaces.CC2420Strobe.html" title="CC2420Strobe" alt="" coords="1180,153,1188,161">
+<area shape="rect" href="../ihtml/tos.chips.cc2420.interfaces.CC2420Strobe.html" title="CC2420Strobe" alt="" coords="1323,269,1331,277">
+<area shape="rect" href="../ihtml/tos.chips.cc2420.interfaces.CC2420Strobe.html" title="CC2420Strobe" alt="" coords="891,203,984,221">
+<area shape="poly" href="../ihtml/tos.chips.cc2420.interfaces.CC2420Strobe.html" title="CC2420Strobe" alt="" coords="1184,161 1083,176 1040,188 1014,204 1011,212 1014,220 1027,227 1053,235 1131,248 1314,267 1313,272 1130,253 1052,240 1025,232 1010,223 1006,213 1010,201 1038,184 1081,171 1184,156">
+<area shape="rect" href="../ihtml/tos.chips.cc2420.interfaces.CC2420Strobe.html" title="CC2420Strobe" alt="" coords="1180,155,1188,163">
+<area shape="rect" href="../ihtml/tos.chips.cc2420.interfaces.CC2420Strobe.html" title="CC2420Strobe" alt="" coords="1323,267,1331,275">
+<area shape="rect" href="../ihtml/tos.chips.cc2420.interfaces.CC2420Strobe.html" title="CC2420Strobe" alt="" coords="1016,203,1109,221">
+<area shape="poly" href="../ihtml/tos.chips.cc2420.interfaces.CC2420Strobe.html" title="CC2420Strobe" alt="" coords="1185,172 1160,181 1141,192 1133,205 1133,212 1138,220 1149,229 1164,237 1208,251 1314,267 1313,272 1207,256 1162,242 1145,233 1134,223 1128,213 1127,204 1137,188 1157,176 1183,167">
+<area shape="rect" href="../ihtml/tos.chips.cc2420.interfaces.CC2420Strobe.html" title="CC2420Strobe" alt="" coords="1180,165,1188,173">
+<area shape="rect" href="../ihtml/tos.chips.cc2420.interfaces.CC2420Strobe.html" title="CC2420Strobe" alt="" coords="1323,267,1331,275">
+<area shape="rect" href="../ihtml/tos.chips.cc2420.interfaces.CC2420Strobe.html" title="CC2420Strobe" alt="" coords="1136,203,1229,221">
+<area shape="poly" href="../ihtml/tos.chips.cc2420.interfaces.CC2420Register.html" title="CC2420Register" alt="" coords="1256,179 1255,200 1262,220 1285,243 1315,258 1312,262 1282,247 1258,223 1250,201 1251,179">
+<area shape="rect" href="../ihtml/tos.chips.cc2420.interfaces.CC2420Register.html" title="CC2420Register" alt="" coords="1249,175,1257,183">
+<area shape="rect" href="../ihtml/tos.chips.cc2420.interfaces.CC2420Register.html" title="CC2420Register" alt="" coords="1323,260,1331,268">
+<area shape="rect" href="../ihtml/tos.chips.cc2420.interfaces.CC2420Register.html" title="CC2420Register" alt="" coords="1260,203,1361,221">
+<area shape="poly" href="../ihtml/tos.chips.cc2420.interfaces.CC2420Register.html" title="CC2420Register" alt="" coords="1330,177 1363,201 1374,215 1381,232 1376,234 1369,218 1359,205 1326,181">
+<area shape="rect" href="../ihtml/tos.chips.cc2420.interfaces.CC2420Register.html" title="CC2420Register" alt="" coords="1324,175,1332,183">
+<area shape="rect" href="../ihtml/tos.chips.cc2420.interfaces.CC2420Register.html" title="CC2420Register" alt="" coords="1380,241,1388,249">
+<area shape="rect" href="../ihtml/tos.chips.cc2420.interfaces.CC2420Register.html" title="CC2420Register" alt="" coords="1372,203,1473,221">
+<area shape="poly" href="../ihtml/tos.chips.cc2420.interfaces.CC2420Register.html" title="CC2420Register" alt="" coords="1334,159 1421,173 1457,185 1481,201 1486,213 1484,224 1467,243 1463,240 1480,222 1481,214 1477,204 1455,190 1420,179 1333,164">
+<area shape="rect" href="../ihtml/tos.chips.cc2420.interfaces.CC2420Register.html" title="CC2420Register" alt="" coords="1329,157,1337,165">
+<area shape="rect" href="../ihtml/tos.chips.cc2420.interfaces.CC2420Register.html" title="CC2420Register" alt="" coords="1451,245,1459,253">
+<area shape="rect" href="../ihtml/tos.chips.cc2420.interfaces.CC2420Register.html" title="CC2420Register" alt="" coords="1483,203,1584,221">
+<area shape="poly" href="../ihtml/tos.chips.cc2420.interfaces.CC2420Register.html" title="CC2420Register" alt="" coords="1334,157 1490,175 1556,187 1578,193 1591,201 1601,218 1599,233 1588,244 1571,254 1523,266 1468,273 1468,268 1522,261 1569,249 1585,240 1594,230 1596,219 1587,205 1576,198 1554,192 1489,180 1333,163">
+<area shape="rect" href="../ihtml/tos.chips.cc2420.interfaces.CC2420Register.html" title="CC2420Register" alt="" coords="1329,156,1337,164">
+<area shape="rect" href="../ihtml/tos.chips.cc2420.interfaces.CC2420Register.html" title="CC2420Register" alt="" coords="1451,268,1459,276">
+<area shape="rect" href="../ihtml/tos.chips.cc2420.interfaces.CC2420Register.html" title="CC2420Register" alt="" coords="1596,203,1697,221">
+<area shape="poly" href="../ihtml/tos.chips.cc2420.interfaces.CC2420Register.html" title="CC2420Register" alt="" coords="1334,155 1554,169 1652,182 1686,191 1705,201 1709,213 1705,223 1672,238 1613,250 1468,269 1468,264 1612,245 1671,232 1701,219 1704,212 1701,204 1684,196 1651,188 1554,175 1333,160">
+<area shape="rect" href="../ihtml/tos.chips.cc2420.interfaces.CC2420Register.html" title="CC2420Register" alt="" coords="1329,153,1337,161">
+<area shape="rect" href="../ihtml/tos.chips.cc2420.interfaces.CC2420Register.html" title="CC2420Register" alt="" coords="1451,264,1459,272">
+<area shape="rect" href="../ihtml/tos.chips.cc2420.interfaces.CC2420Register.html" title="CC2420Register" alt="" coords="1707,203,1808,221">
+<area shape="poly" href="../ihtml/tos.chips.cc2420.interfaces.CC2420Ram.html" title="CC2420Ram" alt="" coords="1333,153 1465,157 1616,165 1746,178 1790,188 1815,201 1821,212 1820,222 1813,231 1800,238 1762,250 1710,259 1586,271 1468,276 1468,271 1586,265 1709,254 1760,245 1798,233 1809,227 1815,220 1816,213 1812,205 1789,193 1745,184 1615,170 1464,162 1333,159">
+<area shape="rect" href="../ihtml/tos.chips.cc2420.interfaces.CC2420Ram.html" title="CC2420Ram" alt="" coords="1329,152,1337,160">
+<area shape="rect" href="../ihtml/tos.chips.cc2420.interfaces.CC2420Ram.html" title="CC2420Ram" alt="" coords="1451,269,1459,277">
+<area shape="rect" href="../ihtml/tos.chips.cc2420.interfaces.CC2420Ram.html" title="CC2420Ram" alt="" coords="1817,203,1895,221">
+<area shape="poly" href="../ihtml/tos.chips.cc2420.interfaces.CC2420Register.html" title="CC2420Register" alt="" coords="1333,155 1672,172 1828,185 1879,193 1903,201 1908,213 1903,223 1881,235 1841,245 1725,259 1468,276 1468,271 1725,254 1840,239 1879,230 1899,220 1903,212 1900,205 1877,198 1827,191 1672,178 1333,160">
+<area shape="rect" href="../ihtml/tos.chips.cc2420.interfaces.CC2420Register.html" title="CC2420Register" alt="" coords="1329,153,1337,161">
+<area shape="rect" href="../ihtml/tos.chips.cc2420.interfaces.CC2420Register.html" title="CC2420Register" alt="" coords="1451,269,1459,277">
+<area shape="rect" href="../ihtml/tos.chips.cc2420.interfaces.CC2420Register.html" title="CC2420Register" alt="" coords="1905,203,2007,221">
+<area shape="poly" href="../ihtml/tos.chips.cc2420.interfaces.CC2420Register.html" title="CC2420Register" alt="" coords="1333,155 1734,170 1922,184 1984,191 2014,201 2019,213 2014,223 1985,238 1934,249 1786,265 1615,273 1468,277 1468,272 1615,268 1785,259 1933,244 1984,232 2010,219 2013,212 2010,205 1983,197 1922,189 1734,176 1333,160">
+<area shape="rect" href="../ihtml/tos.chips.cc2420.interfaces.CC2420Register.html" title="CC2420Register" alt="" coords="1329,153,1337,161">
+<area shape="rect" href="../ihtml/tos.chips.cc2420.interfaces.CC2420Register.html" title="CC2420Register" alt="" coords="1451,271,1459,279">
+<area shape="rect" href="../ihtml/tos.chips.cc2420.interfaces.CC2420Register.html" title="CC2420Register" alt="" coords="2016,203,2117,221">
+<area shape="rect" href="../chtml/tos.chips.cc2420.spi.CC2420SpiC.html" title="CC2420SpiC\n(SyncSpiC)" alt="" coords="2191,245,2319,304">
+<area shape="poly" href="../ihtml/tos.interfaces.Resource.html" title="Resource" alt="" coords="1333,155 1773,172 1995,185 2075,193 2123,200 2164,216 2201,236 2199,241 2162,221 2122,205 2075,198 1995,191 1773,178 1333,160">
+<area shape="rect" href="../ihtml/tos.interfaces.Resource.html" title="Resource" alt="" coords="1329,153,1337,161">
+<area shape="rect" href="../ihtml/tos.interfaces.Resource.html" title="Resource" alt="" coords="2208,241,2216,249">
+<area shape="rect" href="../ihtml/tos.interfaces.Resource.html" title="Resource" alt="" coords="2163,203,2221,221">
+<area shape="rect" href="../chtml/tos.chips.cc2420.spi.CC2420SpiC.html" title="CC2420SpiC\n(RssiResource)" alt="" coords="2343,245,2492,304">
+<area shape="poly" href="../ihtml/tos.interfaces.Resource.html" title="Resource" alt="" coords="1333,153 1790,165 2043,178 2148,188 2227,200 2286,216 2344,238 2342,242 2285,221 2226,205 2147,193 2042,184 1789,170 1333,159">
+<area shape="rect" href="../ihtml/tos.interfaces.Resource.html" title="Resource" alt="" coords="1329,152,1337,160">
+<area shape="rect" href="../ihtml/tos.interfaces.Resource.html" title="Resource" alt="" coords="2351,241,2359,249">
+<area shape="rect" href="../ihtml/tos.interfaces.Resource.html" title="Resource" alt="" coords="2283,203,2341,221">
+<area shape="rect" href="../chtml/tos.system.ActiveMessageAddressC.html" title="ActiveMessageAddressC" alt="" coords="2516,251,2727,299">
+<area shape="poly" href="../ihtml/tos.interfaces.ActiveMessageAddress.html" title="ActiveMessageAddress" alt="" coords="1333,153 1846,167 2136,181 2256,190 2347,200 2443,220 2533,244 2531,249 2442,225 2346,205 2255,195 2135,186 1846,172 1333,159">
+<area shape="rect" href="../ihtml/tos.interfaces.ActiveMessageAddress.html" title="ActiveMessageAddress" alt="" coords="1329,152,1337,160">
+<area shape="rect" href="../ihtml/tos.interfaces.ActiveMessageAddress.html" title="ActiveMessageAddress" alt="" coords="2541,247,2549,255">
+<area shape="rect" href="../ihtml/tos.interfaces.ActiveMessageAddress.html" title="ActiveMessageAddress" alt="" coords="2427,203,2575,221">
+<area shape="poly" href="../ihtml/tos.interfaces.Read.html" title="Read&lt;uint16_t&gt;" alt="" coords="1109,57 1126,81 1150,105 1176,122 1173,126 1146,109 1122,85 1105,60">
+<area shape="rect" href="../ihtml/tos.interfaces.Read.html" title="Read&lt;uint16_t&gt;" alt="" coords="1103,55,1111,63">
+<area shape="rect" href="../ihtml/tos.interfaces.Read.html" title="Read&lt;uint16_t&gt;" alt="" coords="1183,127,1191,135">
+<area shape="rect" href="../ihtml/tos.interfaces.Read.html" title="Read&lt;uint16_t&gt;" alt="" coords="1147,89,1253,106">
+<area shape="poly" href="../ihtml/tos.chips.cc2420.interfaces.CC2420Power.html" title="CC2420Power" alt="" coords="1261,59 1261,117 1256,117 1256,59">
+<area shape="rect" href="../ihtml/tos.chips.cc2420.interfaces.CC2420Power.html" title="CC2420Power" alt="" coords="1255,55,1263,63">
+<area shape="rect" href="../ihtml/tos.chips.cc2420.interfaces.CC2420Power.html" title="CC2420Power" alt="" coords="1255,127,1263,135">
+<area shape="rect" href="../ihtml/tos.chips.cc2420.interfaces.CC2420Power.html" title="CC2420Power" alt="" coords="1259,89,1347,106">
+<area shape="poly" href="../ihtml/tos.interfaces.Resource.html" title="Resource" alt="" coords="1407,59 1382,84 1354,109 1327,126 1324,122 1350,105 1379,80 1403,55">
+<area shape="rect" href="../ihtml/tos.interfaces.Resource.html" title="Resource" alt="" coords="1401,53,1409,61">
+<area shape="rect" href="../ihtml/tos.interfaces.Resource.html" title="Resource" alt="" coords="1309,127,1317,135">
+<area shape="rect" href="../ihtml/tos.interfaces.Resource.html" title="Resource" alt="" coords="1373,89,1432,106">
+<area shape="rect" href="../chtml/tos.lib.printf.MainC.html" title="MainC" alt="" coords="1509,5,1592,64">
+<area shape="poly" href="../ihtml/tos.interfaces.Init.html" title="Init" alt="" coords="1512,66 1438,109 1393,127 1347,140 1346,135 1391,121 1436,104 1509,62">
+<area shape="rect" href="../ihtml/tos.interfaces.Init.html" title="Init" alt="" coords="1507,60,1515,68">
+<area shape="rect" href="../ihtml/tos.interfaces.Init.html" title="Init" alt="" coords="1329,136,1337,144">
+<area shape="rect" href="../ihtml/tos.interfaces.Init.html" title="Init" alt="" coords="1473,89,1492,106">

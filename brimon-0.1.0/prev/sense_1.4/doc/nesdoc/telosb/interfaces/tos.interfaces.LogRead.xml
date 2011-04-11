@@ -1,0 +1,229 @@
+<?xml version="1.0" ?><interfacedef loc="51:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/interfaces/LogRead.nc" nicename="tos.interfaces.LogRead" qname="LogRead">
+      <documentation loc="40:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/interfaces/LogRead.nc">
+        <short>
+ Read interface for the log storage abstraction described in
+ TEP103.</short>
+        <long>
+ Read interface for the log storage abstraction described in
+ TEP103.
+
+ @author Jonathan Hui &lt;jhui@archrock.com&gt;
+ @author David Gay
+ @version $Revision: 1.5 $ $Date: 2008/06/04 03:00:29 $
+</long>
+      </documentation>
+      <function command="" loc="105:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/interfaces/LogRead.nc" name="seek" provided="0" ref="0x2b3677ce8e80">
+        <documentation loc="93:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/interfaces/LogRead.nc">
+          <short>
+ Set the read position in the log, using a cookie returned by the
+ &lt;code&gt;currentOffset&lt;/code&gt; commands of &lt;code&gt;LogRead&lt;/code&gt; or
+ &lt;code&gt;LogWrite&lt;/code&gt;, or the special value &lt;code&gt;SEEK_BEGINNING&lt;/code&gt;.</short>
+          <long>
+ Set the read position in the log, using a cookie returned by the
+ &lt;code&gt;currentOffset&lt;/code&gt; commands of &lt;code&gt;LogRead&lt;/code&gt; or
+ &lt;code&gt;LogWrite&lt;/code&gt;, or the special value &lt;code&gt;SEEK_BEGINNING&lt;/code&gt;.
+
+ If the specified position has been overwritten, the read position
+ will be set to the beginning of the log.
+
+ @return 
+   &lt;li&gt;SUCCESS if the request was accepted, 
+   &lt;li&gt;EBUSY if a request is already being processed.
+</long>
+        </documentation>
+        <interfacedef-ref nicename="tos.interfaces.LogRead" qname="LogRead"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="error_t" ref="0x2b3676c015d8"/></typename>
+          </type-int>
+          <function-parameters>
+            <type-int alignment="I:2" cname="unsigned long" size="I:4" unsigned="">
+              <typename><typedef-ref name="storage_cookie_t" ref="0x2b36770d3a00"/></typename>
+            </type-int>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="105:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/interfaces/LogRead.nc" name="offset" ref="0x2b3677ce8c10">
+            <type-int alignment="I:2" cname="unsigned long" size="I:4" unsigned="">
+              <typename><typedef-ref name="storage_cookie_t" ref="0x2b36770d3a00"/></typename>
+            </type-int>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="91:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/interfaces/LogRead.nc" name="currentOffset" provided="0" ref="0x2b3677ce8258">
+        <documentation loc="77:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/interfaces/LogRead.nc">
+          <short>
+ Return a &quot;cookie&quot; representing the current read offset within the
+ log.</short>
+          <long>
+ Return a &quot;cookie&quot; representing the current read offset within the
+ log. This cookie can be used in a subsequent seek operation to
+ return to the same place in the log (if it hasn't been overwritten).
+
+ @return Cookie representing current offset. 
+   &lt;code&gt;SEEK_BEGINNING&lt;/code&gt; will be returned if:&lt;ul&gt;
+   &lt;li&gt; a write in a circular log overwrote the previous read position
+   &lt;li&gt; seek was passed a cookie representing a position before the
+        current beginning of a circular log
+   &lt;/ul&gt;
+   Note that &lt;code&gt;SEEK_BEGINNING&lt;/code&gt; can also be returned at
+   other times (just after erasing a log, etc).
+</long>
+        </documentation>
+        <interfacedef-ref nicename="tos.interfaces.LogRead" qname="LogRead"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:2" cname="unsigned long" size="I:4" unsigned="">
+            <typename><typedef-ref name="storage_cookie_t" ref="0x2b36770d3a00"/></typename>
+          </type-int>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+        <parameters>
+        </parameters>
+      </function>
+      <function command="" loc="63:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/interfaces/LogRead.nc" name="read" provided="0" ref="0x2b3677cec9d8">
+        <documentation loc="52:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/interfaces/LogRead.nc">
+          <short>
+ Initiate a read operation from the current position within a given log
+ volume.</short>
+          <long>
+ Initiate a read operation from the current position within a given log
+ volume. On SUCCESS, the &lt;code&gt;readDone&lt;/code&gt; event will signal
+ completion of the operation.
+ 
+ @param 'void* COUNT(len) buf' buffer to place read data.
+ @param len number of bytes to read.
+ @return 
+   &lt;li&gt;SUCCESS if the request was accepted, 
+   &lt;li&gt;EBUSY if a request is already being processed.
+</long>
+        </documentation>
+        <interfacedef-ref nicename="tos.interfaces.LogRead" qname="LogRead"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="error_t" ref="0x2b3676c015d8"/></typename>
+          </type-int>
+          <function-parameters>
+            <type-pointer alignment="I:2" size="I:2">
+              <type-void alignment="I:1" size="I:1"/>
+            </type-pointer>
+            <type-int alignment="I:2" cname="unsigned long" size="I:4" unsigned="">
+              <typename><typedef-ref name="storage_len_t" ref="0x2b36770d3600"/></typename>
+            </type-int>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="63:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/interfaces/LogRead.nc" name="buf" ref="0x2b3677cec408">
+            <type-pointer alignment="I:2" size="I:2">
+              <type-void alignment="I:1" size="I:1"/>
+            </type-pointer>
+          </variable>
+          <variable loc="63:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/interfaces/LogRead.nc" name="len" ref="0x2b3677cec758">
+            <type-int alignment="I:2" cname="unsigned long" size="I:4" unsigned="">
+              <typename><typedef-ref name="storage_len_t" ref="0x2b36770d3600"/></typename>
+            </type-int>
+          </variable>
+        </parameters>
+      </function>
+      <function event="" loc="115:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/interfaces/LogRead.nc" name="seekDone" provided="0" ref="0x2b3677ce7a10">
+        <documentation loc="107:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/interfaces/LogRead.nc">
+          <short>
+ Report success of seek operation.</short>
+          <long>
+ Report success of seek operation. If &lt;code&gt;SUCCESS&lt;/code&gt; is returned,
+ the read position has been changed as requested. If other values are
+ returned, the read position is undefined.
+
+ @param error SUCCESS if the seek was succesful, EINVAL if the cookie
+   was invalid and FAIL for other errors.
+</long>
+        </documentation>
+        <interfacedef-ref nicename="tos.interfaces.LogRead" qname="LogRead"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="error_t" ref="0x2b3676c015d8"/></typename>
+            </type-int>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="115:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/interfaces/LogRead.nc" name="error" ref="0x2b3677ce77a0">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="error_t" ref="0x2b3676c015d8"/></typename>
+            </type-int>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="124:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/interfaces/LogRead.nc" name="getSize" provided="0" ref="0x2b3677ce62a8">
+        <documentation loc="117:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/interfaces/LogRead.nc">
+          <short>
+ Report approximate log capacity in bytes.</short>
+          <long>
+ Report approximate log capacity in bytes. Note that use of
+ &lt;code&gt;sync&lt;/code&gt;, failures and general overhead may reduce the number
+ of bytes available to the log. 
+
+ @return Volume size.
+</long>
+        </documentation>
+        <interfacedef-ref nicename="tos.interfaces.LogRead" qname="LogRead"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:2" cname="unsigned long" size="I:4" unsigned="">
+            <typename><typedef-ref name="storage_len_t" ref="0x2b36770d3600"/></typename>
+          </type-int>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+        <parameters>
+        </parameters>
+      </function>
+      <function event="" loc="75:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/interfaces/LogRead.nc" name="readDone" provided="0" ref="0x2b3677ceb2b0">
+        <documentation loc="65:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/interfaces/LogRead.nc">
+          <short>
+ Signals the completion of a read operation.</short>
+          <long>
+ Signals the completion of a read operation. The current read position is
+ advanced by &lt;code&gt;len&lt;/code&gt; bytes.
+
+ @param addr starting address of read.
+ @param 'void* COUNT(len) buf' buffer where read data was placed.
+ @param len number of bytes read - this may be less than requested
+    (even equal to 0) if the end of the log was reached
+ @param error SUCCESS if read was possible, FAIL otherwise
+</long>
+        </documentation>
+        <interfacedef-ref nicename="tos.interfaces.LogRead" qname="LogRead"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+            <type-pointer alignment="I:2" size="I:2">
+              <type-void alignment="I:1" size="I:1"/>
+            </type-pointer>
+            <type-int alignment="I:2" cname="unsigned long" size="I:4" unsigned="">
+              <typename><typedef-ref name="storage_len_t" ref="0x2b36770d3600"/></typename>
+            </type-int>
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="error_t" ref="0x2b3676c015d8"/></typename>
+            </type-int>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="75:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/interfaces/LogRead.nc" name="buf" ref="0x2b3677cea820">
+            <type-pointer alignment="I:2" size="I:2">
+              <type-void alignment="I:1" size="I:1"/>
+            </type-pointer>
+          </variable>
+          <variable loc="75:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/interfaces/LogRead.nc" name="len" ref="0x2b3677ceab70">
+            <type-int alignment="I:2" cname="unsigned long" size="I:4" unsigned="">
+              <typename><typedef-ref name="storage_len_t" ref="0x2b36770d3600"/></typename>
+            </type-int>
+          </variable>
+          <variable loc="75:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/interfaces/LogRead.nc" name="error" ref="0x2b3677ceb020">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="error_t" ref="0x2b3676c015d8"/></typename>
+            </type-int>
+          </variable>
+        </parameters>
+      </function>
+    </interfacedef>

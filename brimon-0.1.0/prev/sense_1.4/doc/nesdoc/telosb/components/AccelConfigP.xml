@@ -1,0 +1,253 @@
+<?xml version="1.0" ?><component loc="21:AccelConfigP.nc" nicename="AccelConfigP" qname="AccelConfigP">
+      <configuration/>
+      <wiring>
+        <wire loc="34:AccelConfigP.nc">
+          <from><interface-ref name="ConfigY" ref="0x2b367823d998" scoped=""/></from>
+          <to><interface-ref name="ConfigY" ref="0x2b3678235cd8" scoped=""/></to>
+        </wire>
+        <wire loc="35:AccelConfigP.nc">
+          <from><interface-ref name="ConfigZ" ref="0x2b367823acd8" scoped=""/></from>
+          <to><interface-ref name="ConfigZ" ref="0x2b36782320a8" scoped=""/></to>
+        </wire>
+        <wire loc="33:AccelConfigP.nc">
+          <from><interface-ref name="ConfigX" ref="0x2b367823b630" scoped=""/></from>
+          <to><interface-ref name="ConfigX" ref="0x2b3678238950" scoped=""/></to>
+        </wire>
+        <wire loc="32:AccelConfigP.nc">
+          <from><interface-ref name="Resource" ref="0x2b367823f1c8" scoped=""/></from>
+          <to><interface-ref name="Resource" ref="0x2b3678254020" scoped=""/></to>
+        </wire>
+      </wiring>
+    <specification><interface loc="25:AccelConfigP.nc" name="ConfigY" provided="1" ref="0x2b367823d998">
+      <component-ref nicename="AccelConfigP" qname="AccelConfigP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ConfigY" ref="0x2b367823d998" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.AdcConfigure" qname="AdcConfigure"/>
+        <arguments>
+          <type-pointer alignment="I:2" size="I:2">
+            <type-qualified const="">
+                <typename><typedef-ref name="msp430adc12_channel_config_t" ref="0x2b36781ed0c8"/></typename>
+              <type-tag alignment="I:2" size="I:4"><struct-ref ref="0x2b36781ee7c8"/></type-tag>
+            </type-qualified>
+          </type-pointer>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="getConfiguration" ref="0x2b367823a560" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="26:AccelConfigP.nc" name="ConfigZ" provided="1" ref="0x2b367823acd8">
+      <component-ref nicename="AccelConfigP" qname="AccelConfigP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ConfigZ" ref="0x2b367823acd8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.AdcConfigure" qname="AdcConfigure"/>
+        <arguments>
+          <type-pointer alignment="I:2" size="I:2">
+            <type-qualified const="">
+                <typename><typedef-ref name="msp430adc12_channel_config_t" ref="0x2b36781ed0c8"/></typename>
+              <type-tag alignment="I:2" size="I:4"><struct-ref ref="0x2b36781ee7c8"/></type-tag>
+            </type-qualified>
+          </type-pointer>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="getConfiguration" ref="0x2b36782398f0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="24:AccelConfigP.nc" name="ConfigX" provided="1" ref="0x2b367823b630">
+      <component-ref nicename="AccelConfigP" qname="AccelConfigP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ConfigX" ref="0x2b367823b630" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.AdcConfigure" qname="AdcConfigure"/>
+        <arguments>
+          <type-pointer alignment="I:2" size="I:2">
+            <type-qualified const="">
+                <typename><typedef-ref name="msp430adc12_channel_config_t" ref="0x2b36781ed0c8"/></typename>
+              <type-tag alignment="I:2" size="I:4"><struct-ref ref="0x2b36781ee7c8"/></type-tag>
+            </type-qualified>
+          </type-pointer>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="getConfiguration" ref="0x2b367823d220" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="23:AccelConfigP.nc" name="Resource" provided="1" ref="0x2b367823f1c8">
+      <component-ref nicename="AccelConfigP" qname="AccelConfigP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Resource" ref="0x2b367823f1c8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Resource" qname="Resource"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x2b3676396318"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="release" ref="0x2b367823f518" scoped=""/>
+        <function-ref name="immediateRequest" ref="0x2b367823f6a0" scoped=""/>
+        <function-ref name="request" ref="0x2b367823f828" scoped=""/>
+        <function-ref name="granted" ref="0x2b367823f9b0" scoped=""/>
+        <function-ref name="isOwner" ref="0x2b367823fb38" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced><interface loc="23:AccelP.nc" name="ConfigY" provided="1" ref="0x2b3678235cd8">
+      <component-ref nicename="AccelP" qname="AccelP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ConfigY" ref="0x2b3678235cd8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.AdcConfigure" qname="AdcConfigure"/>
+        <arguments>
+          <type-pointer alignment="I:2" size="I:2">
+            <type-qualified const="">
+                <typename><typedef-ref name="msp430adc12_channel_config_t" ref="0x2b36781ed0c8"/></typename>
+              <type-tag alignment="I:2" size="I:4"><struct-ref ref="0x2b36781ee7c8"/></type-tag>
+            </type-qualified>
+          </type-pointer>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="getConfiguration" ref="0x2b36782338f0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="22:AccelP.nc" name="ConfigX" provided="1" ref="0x2b3678238950">
+      <component-ref nicename="AccelP" qname="AccelP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ConfigX" ref="0x2b3678238950" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.AdcConfigure" qname="AdcConfigure"/>
+        <arguments>
+          <type-pointer alignment="I:2" size="I:2">
+            <type-qualified const="">
+                <typename><typedef-ref name="msp430adc12_channel_config_t" ref="0x2b36781ed0c8"/></typename>
+              <type-tag alignment="I:2" size="I:4"><struct-ref ref="0x2b36781ee7c8"/></type-tag>
+            </type-qualified>
+          </type-pointer>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="getConfiguration" ref="0x2b3678235560" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="24:AccelP.nc" name="ConfigZ" provided="1" ref="0x2b36782320a8">
+      <component-ref nicename="AccelP" qname="AccelP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ConfigZ" ref="0x2b36782320a8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.AdcConfigure" qname="AdcConfigure"/>
+        <arguments>
+          <type-pointer alignment="I:2" size="I:2">
+            <type-qualified const="">
+                <typename><typedef-ref name="msp430adc12_channel_config_t" ref="0x2b36781ed0c8"/></typename>
+              <type-tag alignment="I:2" size="I:4"><struct-ref ref="0x2b36781ee7c8"/></type-tag>
+            </type-qualified>
+          </type-pointer>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="getConfiguration" ref="0x2b3678232c28" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="81:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/RoundRobinArbiterC.nc" name="Resource" provided="1" ref="0x2b3678254020">
+      <component-ref nicename="tos.system.RoundRobinArbiterC" qname="AccelConfigP.Arbiter"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Resource" ref="0x2b3678254020" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Resource" qname="Resource"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x2b3676396318"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="release" ref="0x2b3678254390" scoped=""/>
+        <function-ref name="immediateRequest" ref="0x2b3678254518" scoped=""/>
+        <function-ref name="request" ref="0x2b36782546a0" scoped=""/>
+        <function-ref name="granted" ref="0x2b3678254828" scoped=""/>
+        <function-ref name="isOwner" ref="0x2b36782549b0" scoped=""/>
+      </interface-functions>
+    </interface><component loc="79(AccelConfigP.Arbiter):/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/RoundRobinArbiterC.nc" nicename="tos.system.RoundRobinArbiterC" qname="AccelConfigP.Arbiter">
+      <documentation loc="59:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/RoundRobinArbiterC.nc">
+        <short>
+ Please refer to TEP 108 for more information about this component and its
+ intended use.&lt;br&gt;&lt;br&gt;
+
+ This component provides the Resource, ArbiterInfo, and ResourceDefaultOwner
+ interfaces and uses the ResourceConfigure interface as
+ described in TEP 108.</short>
+        <long>
+ Please refer to TEP 108 for more information about this component and its
+ intended use.&lt;br&gt;&lt;br&gt;
+
+ This component provides the Resource, ArbiterInfo, and ResourceDefaultOwner
+ interfaces and uses the ResourceConfigure interface as
+ described in TEP 108.  It provides arbitration to a shared resource in
+ a Round Robin fashion.  An array is used to keep track of which users have 
+ put in requests for the resource.  Upon the release of the resource by one
+ of these users, the array is checked and the next user (in Round Robin order)
+ that has a pending request will ge granted control of the resource.  If
+ there are no pending requests, then the resource is granted to the default 
+ user.  If a new request is made, the default user will release the resource, 
+ and it will be granted to the requesting cleint.
+
+ @param &lt;b&gt;resourceName&lt;/b&gt; -- The name of the Resource being shared
+ 
+ @author Kevin Klues (klues@tkn.tu-berlin.de)
+</long>
+      </documentation>
+      <instance number="0">
+        <component-ref nicename="tos.system.RoundRobinArbiterC" qname="RoundRobinArbiterC"/>
+        <arguments>
+          <value cst="S:msp430.accel">
+            <type-pointer alignment="I:2" size="I:2">
+              <type-int alignment="I:1" cname="char" size="I:1"/>
+            </type-pointer>
+          </value>
+        </arguments>
+      </instance>
+      <configuration/>
+      <wiring>
+        <wire>
+          <from><interface-ref name="ResourceRequested" ref="0x2b3678254d18" scoped=""/></from>
+          <to><interface-ref name="ResourceRequested" ref="0x2b3678d88dc0" scoped=""/></to>
+        </wire>
+        <wire>
+          <from><interface-ref name="ResourceDefaultOwner" ref="0x2b36782534a8" scoped=""/></from>
+          <to><interface-ref name="ResourceDefaultOwner" ref="0x2b3678d87540" scoped=""/></to>
+        </wire>
+        <wire>
+          <from><interface-ref name="Resource" ref="0x2b3678254020" scoped=""/></from>
+          <to><interface-ref name="Resource" ref="0x2b3678d880c8" scoped=""/></to>
+        </wire>
+        <wire>
+          <from><interface-ref name="ArbiterInfo" ref="0x2b36782510e0" scoped=""/></from>
+          <to><interface-ref name="ArbiterInfo" ref="0x2b3678d86268" scoped=""/></to>
+        </wire>
+        <wire>
+          <from><interface-ref name="SoftwareInit" ref="0x2b36771fcca0" scoped=""/></from>
+          <to><interface-ref name="Init" ref="0x2b3678d8caa8" scoped=""/></to>
+        </wire>
+        <wire>
+          <from><interface-ref name="ResourceConfigure" ref="0x2b3678d86b08" scoped=""/></from>
+          <to><interface-ref name="ResourceConfigure" ref="0x2b3678251960" scoped=""/></to>
+        </wire>
+        <wire>
+          <from><interface-ref name="Queue" ref="0x2b3678d852b8" scoped=""/></from>
+          <to><interface-ref name="RoundRobinQueue" ref="0x2b3678d8b0c0" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component><component loc="19:AccelP.nc" nicename="AccelP" qname="AccelP">
+      <documentation loc="11:AccelP.nc">
+        <short>
+ ADXL202JE accelerometer ADC configuration and power management.</short>
+        <long>
+ ADXL202JE accelerometer ADC configuration and power management.
+ @author David Gay &lt;david.e.gay@intel.com&gt;
+</long>
+      </documentation>
+      <configuration/>
+      <wiring>
+        <wire loc="32:AccelP.nc">
+          <from><interface-ref name="ConfigY" ref="0x2b3678235cd8" scoped=""/></from>
+          <to><interface-ref name="AdcConfigure" ref="0x2b3678228020" scoped=""/></to>
+        </wire>
+        <wire loc="33:AccelP.nc">
+          <from><interface-ref name="ConfigZ" ref="0x2b36782320a8" scoped=""/></from>
+          <to><interface-ref name="AdcConfigure" ref="0x2b3678222438" scoped=""/></to>
+        </wire>
+        <wire loc="31:AccelP.nc">
+          <from><interface-ref name="ConfigX" ref="0x2b3678238950" scoped=""/></from>
+          <to><interface-ref name="AdcConfigure" ref="0x2b3678231b58" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component></referenced></component>

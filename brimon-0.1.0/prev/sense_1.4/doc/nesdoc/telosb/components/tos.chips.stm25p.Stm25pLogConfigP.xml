@@ -1,0 +1,33 @@
+<?xml version="1.0" ?><component abstract="" loc="37:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/stm25p/Stm25pLogConfigP.nc" nicename="tos.chips.stm25p.Stm25pLogConfigP" qname="Stm25pLogConfigP">
+      <documentation loc="32:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/stm25p/Stm25pLogConfigP.nc">
+        <short>
+ </short>
+        <long>
+ @author Jonathan Hui &lt;jhui@archrock.com&gt;
+ @version $Revision: 1.4 $ $Date: 2006/12/12 18:23:12 $
+</long>
+      </documentation>
+      <parameters>
+        <constant loc="37:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/stm25p/Stm25pLogConfigP.nc" name="IS_CIRCULAR" ref="0x2b3678126978">
+          <component-ref nicename="tos.chips.stm25p.Stm25pLogConfigP" qname="Stm25pLogConfigP"/>
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="bool" ref="0x2b3676bf7178"/></typename>
+          </type-int>
+        </constant>
+      </parameters>
+      <module/>
+    <specification><interface loc="39:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/stm25p/Stm25pLogConfigP.nc" name="Circular" provided="1" ref="0x2b3678123020">
+      <component-ref nicename="tos.chips.stm25p.Stm25pLogConfigP" qname="Stm25pLogConfigP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Circular" ref="0x2b3678123020" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Get" qname="Get"/>
+        <arguments>
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="bool" ref="0x2b3676bf7178"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="get" ref="0x2b3678123b68" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced/></component>

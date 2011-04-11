@@ -1,0 +1,169 @@
+<?xml version="1.0" ?><component abstract="" loc="57:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/lib/power/AsyncStdControlPowerManagerC.nc" nicename="tos.lib.power.AsyncStdControlPowerManagerC" qname="AsyncStdControlPowerManagerC">
+      <documentation loc="31:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/lib/power/AsyncStdControlPowerManagerC.nc">
+        <short>
+ Please refer to TEP 115 for more information about this component and its
+ intended use.&lt;br&gt;&lt;br&gt;
+
+ This is the internal implementation of the standard power management
+ policy for managing the power states of non-virtualized devices.</short>
+        <long>
+ Please refer to TEP 115 for more information about this component and its
+ intended use.&lt;br&gt;&lt;br&gt;
+
+ This is the internal implementation of the standard power management
+ policy for managing the power states of non-virtualized devices.
+ Non-virtualized devices are shared using a parameterized Resource
+ interface, and are powered down according to some policy whenever there
+ are no more pending requests to that Resource.  The policy implemented
+ by this component is to power down a device as soon as it becomes free.
+ Such a policy is useful whenever a device has a negligible wake-up
+ latency.  There is no cost associated with waiting for the device to
+ power up, so it can be powered on and off as often as possible.&lt;br&gt;&lt;br&gt;
+
+ Powerdown of the device is done through the &lt;code&gt;AsyncStdControl&lt;/code&gt;
+ interface, so this component can only be used with those devices that
+ provide that interface.&lt;br&gt;&lt;br&gt;
+
+ For devices providing either the &lt;code&gt;StdControl&lt;/code&gt; or
+ &lt;code&gt;SplitControl&lt;/code&gt; interfaces, please use either the
+ &lt;code&gt;StdControlPowerManagerC&lt;/code&gt; component or the
+ &lt;code&gt;SplitControlPowerManagerC&lt;/code&gt; component respectively.
+ 
+ @author Kevin Klues (klueska@cs.wustl.edu)
+</long>
+      </documentation>
+      <parameters>
+      </parameters>
+      <configuration/>
+      <wiring>
+        <wire loc="70:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/lib/power/AsyncStdControlPowerManagerC.nc">
+          <from><interface-ref name="AsyncStdControl" ref="0x2ae8de262b38" scoped=""/></from>
+          <to><interface-ref name="AsyncStdControl" ref="0x2ae8de269cc8" scoped=""/></to>
+        </wire>
+        <wire loc="72:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/lib/power/AsyncStdControlPowerManagerC.nc">
+          <from><interface-ref name="PowerDownCleanup" ref="0x2ae8de2603f0" scoped=""/></from>
+          <to><interface-ref name="PowerDownCleanup" ref="0x2ae8de2634c8" scoped=""/></to>
+        </wire>
+        <wire loc="74:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/lib/power/AsyncStdControlPowerManagerC.nc">
+          <from><interface-ref name="ResourceDefaultOwner" ref="0x2ae8de260988" scoped=""/></from>
+          <to><interface-ref name="ResourceDefaultOwner" ref="0x2ae8de263b30" scoped=""/></to>
+        </wire>
+        <wire loc="75:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/lib/power/AsyncStdControlPowerManagerC.nc">
+          <from><interface-ref name="ArbiterInfo" ref="0x2ae8de255578" scoped=""/></from>
+          <to><interface-ref name="ArbiterInfo" ref="0x2ae8de265780" scoped=""/></to>
+        </wire>
+      </wiring>
+    <specification><interface loc="62:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/lib/power/AsyncStdControlPowerManagerC.nc" name="PowerDownCleanup" provided="0" ref="0x2ae8de2634c8">
+      <component-ref nicename="tos.lib.power.AsyncStdControlPowerManagerC" qname="AsyncStdControlPowerManagerC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="PowerDownCleanup" ref="0x2ae8de2634c8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.power.PowerDownCleanup" qname="PowerDownCleanup"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="cleanup" ref="0x2ae8de263818" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="63:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/lib/power/AsyncStdControlPowerManagerC.nc" name="ResourceDefaultOwner" provided="0" ref="0x2ae8de263b30">
+      <component-ref nicename="tos.lib.power.AsyncStdControlPowerManagerC" qname="AsyncStdControlPowerManagerC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ResourceDefaultOwner" ref="0x2ae8de263b30" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.ResourceDefaultOwner" qname="ResourceDefaultOwner"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="release" ref="0x2ae8de263e80" scoped=""/>
+        <function-ref name="requested" ref="0x2ae8de265030" scoped=""/>
+        <function-ref name="granted" ref="0x2ae8de2651b8" scoped=""/>
+        <function-ref name="isOwner" ref="0x2ae8de265340" scoped=""/>
+        <function-ref name="immediateRequested" ref="0x2ae8de2654c8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="60:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/lib/power/AsyncStdControlPowerManagerC.nc" name="AsyncStdControl" provided="0" ref="0x2ae8de269cc8">
+      <component-ref nicename="tos.lib.power.AsyncStdControlPowerManagerC" qname="AsyncStdControlPowerManagerC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="AsyncStdControl" ref="0x2ae8de269cc8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.AsyncStdControl" qname="AsyncStdControl"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="start" ref="0x2ae8de2660a0" scoped=""/>
+        <function-ref name="stop" ref="0x2ae8de266228" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="64:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/lib/power/AsyncStdControlPowerManagerC.nc" name="ArbiterInfo" provided="0" ref="0x2ae8de265780">
+      <component-ref nicename="tos.lib.power.AsyncStdControlPowerManagerC" qname="AsyncStdControlPowerManagerC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ArbiterInfo" ref="0x2ae8de265780" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.ArbiterInfo" qname="ArbiterInfo"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="inUse" ref="0x2ae8de265ad0" scoped=""/>
+        <function-ref name="userId" ref="0x2ae8de265c58" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced><interface loc="50:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/lib/power/AsyncPowerManagerP.nc" name="AsyncStdControl" provided="0" ref="0x2ae8de262b38">
+      <component-ref nicename="tos.lib.power.AsyncPowerManagerP" qname="AsyncStdControlPowerManagerC.PowerManager"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="AsyncStdControl" ref="0x2ae8de262b38" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.AsyncStdControl" qname="AsyncStdControl"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="start" ref="0x2ae8de260020" scoped=""/>
+        <function-ref name="stop" ref="0x2ae8de2601a8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="54:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/lib/power/AsyncPowerManagerP.nc" name="ArbiterInfo" provided="0" ref="0x2ae8de255578">
+      <component-ref nicename="tos.lib.power.AsyncPowerManagerP" qname="AsyncStdControlPowerManagerC.PowerManager"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ArbiterInfo" ref="0x2ae8de255578" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.ArbiterInfo" qname="ArbiterInfo"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="inUse" ref="0x2ae8de2558c8" scoped=""/>
+        <function-ref name="userId" ref="0x2ae8de255a50" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="53:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/lib/power/AsyncPowerManagerP.nc" name="ResourceDefaultOwner" provided="0" ref="0x2ae8de260988">
+      <component-ref nicename="tos.lib.power.AsyncPowerManagerP" qname="AsyncStdControlPowerManagerC.PowerManager"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ResourceDefaultOwner" ref="0x2ae8de260988" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.ResourceDefaultOwner" qname="ResourceDefaultOwner"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="release" ref="0x2ae8de260cd8" scoped=""/>
+        <function-ref name="requested" ref="0x2ae8de260e60" scoped=""/>
+        <function-ref name="granted" ref="0x2ae8de255020" scoped=""/>
+        <function-ref name="isOwner" ref="0x2ae8de2551a8" scoped=""/>
+        <function-ref name="immediateRequested" ref="0x2ae8de255330" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="52:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/lib/power/AsyncPowerManagerP.nc" name="PowerDownCleanup" provided="0" ref="0x2ae8de2603f0">
+      <component-ref nicename="tos.lib.power.AsyncPowerManagerP" qname="AsyncStdControlPowerManagerC.PowerManager"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="PowerDownCleanup" ref="0x2ae8de2603f0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.power.PowerDownCleanup" qname="PowerDownCleanup"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="cleanup" ref="0x2ae8de260740" scoped=""/>
+      </interface-functions>
+    </interface><component abstract="" loc="48(AsyncStdControlPowerManagerC.PowerManager):/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/lib/power/AsyncPowerManagerP.nc" nicename="tos.lib.power.AsyncPowerManagerP" qname="AsyncStdControlPowerManagerC.PowerManager">
+      <documentation loc="31:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/lib/power/AsyncPowerManagerP.nc">
+        <short>
+ Please refer to TEP 115 for more information about this component and its
+ intended use.&lt;br&gt;&lt;br&gt;
+
+ This is the internal implementation of the standard power management
+ policy for managing the power states of non-virtualized devices.</short>
+        <long>
+ Please refer to TEP 115 for more information about this component and its
+ intended use.&lt;br&gt;&lt;br&gt;
+
+ This is the internal implementation of the standard power management
+ policy for managing the power states of non-virtualized devices.
+ Non-virtualized devices are shared using a parameterized Resource
+ interface, and are powered down according to some policy whenever there
+ are no more pending requests to that Resource.  The policy implemented
+ by this component is to power down a device as soon as it becomes free.
+ Such a policy is useful whenever a device has a negligible wake-up
+ latency.  There is no cost associated with waiting for the device to
+ power up, so it can be powered on and off as often as possible.
+ 
+ @author Kevin Klues (klueska@cs.wustl.edu)
+</long>
+      </documentation>
+      <instance>
+        <component-ref nicename="tos.lib.power.AsyncPowerManagerP" qname="AsyncPowerManagerP"/>
+      </instance>
+      <module/>
+    </component></referenced></component>

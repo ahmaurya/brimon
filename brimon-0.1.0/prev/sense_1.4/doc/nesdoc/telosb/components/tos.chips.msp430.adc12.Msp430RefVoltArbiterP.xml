@@ -1,0 +1,438 @@
+<?xml version="1.0" ?><component loc="50:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/adc12/Msp430RefVoltArbiterP.nc" nicename="tos.chips.msp430.adc12.Msp430RefVoltArbiterP" qname="Msp430RefVoltArbiterP">
+      <documentation loc="36:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/adc12/Msp430RefVoltArbiterP.nc">
+        <short> 
+ This component is meant to intercept requests to the &lt;code&gt;Resource&lt;/code&gt;
+ interface on their way to the adc arbiter.</short>
+        <long> 
+ This component is meant to intercept requests to the &lt;code&gt;Resource&lt;/code&gt;
+ interface on their way to the adc arbiter. It checks whether the client's
+ adc configuration requires the internal reference voltage generator of the
+ MSP430 to be enabled during the conversion by inspecting the client's
+ configuration data (using the &lt;code&gt;AdcConfigure&lt;/code&gt; interface). If so it
+ makes sure that Resource.granted() is held back until the reference voltage
+ is stable. Clients SHOULD NOT wire to &lt;code&gt;Msp430RefVoltArbiterP&lt;/code&gt; but
+ to the Resource interface provided by
+ &lt;code&gt;Msp430Adc12ClientAutoRVGC&lt;/code&gt;.
+ 
+ @author Jan Hauer
+</long>
+      </documentation>
+      <configuration/>
+      <wiring>
+        <wire loc="63:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/adc12/Msp430RefVoltArbiterP.nc">
+          <from><interface-ref name="ClientResource" ref="0x2b36784c4328" scoped=""/></from>
+          <to><interface-ref name="ClientResource" ref="0x2b36784bdbb8" scoped=""/></to>
+        </wire>
+        <wire loc="64:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/adc12/Msp430RefVoltArbiterP.nc">
+          <from><interface-ref name="AdcResource" ref="0x2b367854b020" scoped=""/></from>
+          <to><interface-ref name="AdcResource" ref="0x2b36784c35e8" scoped=""/></to>
+        </wire>
+        <wire loc="65:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/adc12/Msp430RefVoltArbiterP.nc">
+          <from><interface-ref name="Config" ref="0x2b3678549ca0" scoped=""/></from>
+          <to><interface-ref name="Config" ref="0x2b36784c2b18" scoped=""/></to>
+        </wire>
+        <wire loc="67:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/adc12/Msp430RefVoltArbiterP.nc">
+          <from><interface-ref name="RefVolt_1_5V" ref="0x2b367854bd18" scoped=""/></from>
+          <to><interface-ref name="RefVolt_1_5V" ref="0x2b36784bf578" scoped=""/></to>
+        </wire>
+        <wire loc="68:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/adc12/Msp430RefVoltArbiterP.nc">
+          <from><interface-ref name="RefVolt_2_5V" ref="0x2b367854a8c0" scoped=""/></from>
+          <to><interface-ref name="RefVolt_2_5V" ref="0x2b36784bc140" scoped=""/></to>
+        </wire>
+        <wire loc="69:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/adc12/Msp430RefVoltArbiterP.nc">
+          <from><interface-ref name="SwitchOnTimer" ref="0x2b36784babd0" scoped=""/></from>
+          <to><interface-ref name="Timer" ref="0x2b367858be08" scoped=""/></to>
+        </wire>
+        <wire loc="70:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/adc12/Msp430RefVoltArbiterP.nc">
+          <from><interface-ref name="SwitchOffTimer" ref="0x2b3678525cf0" scoped=""/></from>
+          <to><interface-ref name="Timer" ref="0x2b3678584350" scoped=""/></to>
+        </wire>
+        <wire loc="71:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/adc12/Msp430RefVoltArbiterP.nc">
+          <from><interface-ref name="HplAdc12" ref="0x2b36784bcc48" scoped=""/></from>
+          <to><interface-ref name="HplAdc12" ref="0x2b3678479278" scoped=""/></to>
+        </wire>
+      </wiring>
+    <specification><interface loc="55:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/adc12/Msp430RefVoltArbiterP.nc" name="Config" provided="0" ref="0x2b36784c2b18">
+      <component-ref nicename="tos.chips.msp430.adc12.Msp430RefVoltArbiterP" qname="Msp430RefVoltArbiterP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Config" ref="0x2b36784c2b18" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.AdcConfigure" qname="AdcConfigure"/>
+        <arguments>
+          <type-pointer alignment="I:2" size="I:2">
+            <type-qualified const="">
+                <typename><typedef-ref name="msp430adc12_channel_config_t" ref="0x2b36781ed0c8"/></typename>
+              <type-tag alignment="I:2" size="I:4"><struct-ref ref="0x2b36781ee7c8"/></type-tag>
+            </type-qualified>
+          </type-pointer>
+        </arguments>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x2b3676396318"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="getConfiguration" ref="0x2b36784c0728" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="54:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/adc12/Msp430RefVoltArbiterP.nc" name="AdcResource" provided="0" ref="0x2b36784c35e8">
+      <component-ref nicename="tos.chips.msp430.adc12.Msp430RefVoltArbiterP" qname="Msp430RefVoltArbiterP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="AdcResource" ref="0x2b36784c35e8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Resource" qname="Resource"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x2b3676396318"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="release" ref="0x2b36784c3938" scoped=""/>
+        <function-ref name="immediateRequest" ref="0x2b36784c3ac0" scoped=""/>
+        <function-ref name="request" ref="0x2b36784c3c48" scoped=""/>
+        <function-ref name="granted" ref="0x2b36784c3dd0" scoped=""/>
+        <function-ref name="isOwner" ref="0x2b36784c2020" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="52:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/adc12/Msp430RefVoltArbiterP.nc" name="ClientResource" provided="1" ref="0x2b36784c4328">
+      <component-ref nicename="tos.chips.msp430.adc12.Msp430RefVoltArbiterP" qname="Msp430RefVoltArbiterP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ClientResource" ref="0x2b36784c4328" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Resource" qname="Resource"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x2b3676396318"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="release" ref="0x2b36784c4678" scoped=""/>
+        <function-ref name="immediateRequest" ref="0x2b36784c4800" scoped=""/>
+        <function-ref name="request" ref="0x2b36784c4988" scoped=""/>
+        <function-ref name="granted" ref="0x2b36784c4b10" scoped=""/>
+        <function-ref name="isOwner" ref="0x2b36784c4c98" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced><interface loc="43:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/adc12/Msp430RefVoltArbiterImplP.nc" name="Config" provided="0" ref="0x2b3678549ca0">
+      <component-ref nicename="tos.chips.msp430.adc12.Msp430RefVoltArbiterImplP" qname="Msp430RefVoltArbiterImplP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Config" ref="0x2b3678549ca0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.AdcConfigure" qname="AdcConfigure"/>
+        <arguments>
+          <type-pointer alignment="I:2" size="I:2">
+            <type-qualified const="">
+                <typename><typedef-ref name="msp430adc12_channel_config_t" ref="0x2b36781ed0c8"/></typename>
+              <type-tag alignment="I:2" size="I:4"><struct-ref ref="0x2b36781ee7c8"/></type-tag>
+            </type-qualified>
+          </type-pointer>
+        </arguments>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x2b3676396318"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="getConfiguration" ref="0x2b3678548858" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="38:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/adc12/Msp430RefVoltArbiterImplP.nc" name="ClientResource" provided="1" ref="0x2b36784bdbb8">
+      <component-ref nicename="tos.chips.msp430.adc12.Msp430RefVoltArbiterImplP" qname="Msp430RefVoltArbiterImplP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ClientResource" ref="0x2b36784bdbb8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Resource" qname="Resource"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x2b3676396318"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="release" ref="0x2b367854d020" scoped=""/>
+        <function-ref name="immediateRequest" ref="0x2b367854d1a8" scoped=""/>
+        <function-ref name="request" ref="0x2b367854d330" scoped=""/>
+        <function-ref name="granted" ref="0x2b367854d4b8" scoped=""/>
+        <function-ref name="isOwner" ref="0x2b367854d640" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="37:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/TimerMilliC.nc" name="Timer" provided="1" ref="0x2b3678584350">
+      <component-ref nicename="tos.system.TimerMilliC" qname="Msp430RefVoltArbiterP.SwitchOffDelayTimer"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Timer" ref="0x2b3678584350" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.timer.Timer" qname="Timer"/>
+        <arguments>
+          <type-tag alignment="I:2" size="I:2"><struct-ref ref="0x2b36770a5970"/>
+            <typename><typedef-ref name="TMilli" ref="0x2b36770a5cc8"/></typename>
+          </type-tag>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="getNow" ref="0x2b36785806c8" scoped=""/>
+        <function-ref name="fired" ref="0x2b3678583db0" scoped=""/>
+        <function-ref name="startPeriodicAt" ref="0x2b3678581ad8" scoped=""/>
+        <function-ref name="isOneShot" ref="0x2b3678581688" scoped=""/>
+        <function-ref name="getdt" ref="0x2b367857f020" scoped=""/>
+        <function-ref name="gett0" ref="0x2b3678580b18" scoped=""/>
+        <function-ref name="isRunning" ref="0x2b3678581238" scoped=""/>
+        <function-ref name="startPeriodic" ref="0x2b3678583020" scoped=""/>
+        <function-ref name="startOneShotAt" ref="0x2b36785800f8" scoped=""/>
+        <function-ref name="startOneShot" ref="0x2b36785834c0" scoped=""/>
+        <function-ref name="stop" ref="0x2b3678583960" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="38:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/adc12/Msp430RefVoltGeneratorP.nc" name="RefVolt_1_5V" provided="1" ref="0x2b36784bf578">
+      <component-ref nicename="tos.chips.msp430.adc12.Msp430RefVoltGeneratorP" qname="Msp430RefVoltGeneratorP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="RefVolt_1_5V" ref="0x2b36784bf578" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.SplitControl" qname="SplitControl"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="startDone" ref="0x2b36784bf8c8" scoped=""/>
+        <function-ref name="stopDone" ref="0x2b36784bfa50" scoped=""/>
+        <function-ref name="start" ref="0x2b36784bfbd8" scoped=""/>
+        <function-ref name="stop" ref="0x2b36784bfd60" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="41:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/adc12/Msp430RefVoltArbiterImplP.nc" name="RefVolt_1_5V" provided="0" ref="0x2b367854bd18">
+      <component-ref nicename="tos.chips.msp430.adc12.Msp430RefVoltArbiterImplP" qname="Msp430RefVoltArbiterImplP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="RefVolt_1_5V" ref="0x2b367854bd18" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.SplitControl" qname="SplitControl"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="startDone" ref="0x2b367854a0a0" scoped=""/>
+        <function-ref name="stopDone" ref="0x2b367854a228" scoped=""/>
+        <function-ref name="start" ref="0x2b367854a3b0" scoped=""/>
+        <function-ref name="stop" ref="0x2b367854a538" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="42:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/adc12/Msp430RefVoltArbiterImplP.nc" name="RefVolt_2_5V" provided="0" ref="0x2b367854a8c0">
+      <component-ref nicename="tos.chips.msp430.adc12.Msp430RefVoltArbiterImplP" qname="Msp430RefVoltArbiterImplP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="RefVolt_2_5V" ref="0x2b367854a8c0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.SplitControl" qname="SplitControl"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="startDone" ref="0x2b367854ac10" scoped=""/>
+        <function-ref name="stopDone" ref="0x2b367854ad98" scoped=""/>
+        <function-ref name="start" ref="0x2b3678549020" scoped=""/>
+        <function-ref name="stop" ref="0x2b36785491a8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="39:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/adc12/Msp430RefVoltGeneratorP.nc" name="RefVolt_2_5V" provided="1" ref="0x2b36784bc140">
+      <component-ref nicename="tos.chips.msp430.adc12.Msp430RefVoltGeneratorP" qname="Msp430RefVoltGeneratorP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="RefVolt_2_5V" ref="0x2b36784bc140" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.SplitControl" qname="SplitControl"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="startDone" ref="0x2b36784bc490" scoped=""/>
+        <function-ref name="stopDone" ref="0x2b36784bc618" scoped=""/>
+        <function-ref name="start" ref="0x2b36784bc7a0" scoped=""/>
+        <function-ref name="stop" ref="0x2b36784bc928" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="45:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/adc12/Msp430RefVoltGeneratorP.nc" name="SwitchOffTimer" provided="0" ref="0x2b3678525cf0">
+      <component-ref nicename="tos.chips.msp430.adc12.Msp430RefVoltGeneratorP" qname="Msp430RefVoltGeneratorP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="SwitchOffTimer" ref="0x2b3678525cf0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.timer.Timer" qname="Timer"/>
+        <arguments>
+          <type-tag alignment="I:2" size="I:2"><struct-ref ref="0x2b36770a5970"/>
+            <typename><typedef-ref name="TMilli" ref="0x2b36770a5cc8"/></typename>
+          </type-tag>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="getNow" ref="0x2b3678520088" scoped=""/>
+        <function-ref name="fired" ref="0x2b3678523688" scoped=""/>
+        <function-ref name="startPeriodicAt" ref="0x2b3678521470" scoped=""/>
+        <function-ref name="isOneShot" ref="0x2b3678521020" scoped=""/>
+        <function-ref name="getdt" ref="0x2b3678520928" scoped=""/>
+        <function-ref name="gett0" ref="0x2b36785204d8" scoped=""/>
+        <function-ref name="isRunning" ref="0x2b3678523ad8" scoped=""/>
+        <function-ref name="startPeriodic" ref="0x2b36785248b8" scoped=""/>
+        <function-ref name="startOneShotAt" ref="0x2b3678521a40" scoped=""/>
+        <function-ref name="startOneShot" ref="0x2b3678524d58" scoped=""/>
+        <function-ref name="stop" ref="0x2b3678523238" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="37:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/TimerMilliC.nc" name="Timer" provided="1" ref="0x2b367858be08">
+      <component-ref nicename="tos.system.TimerMilliC" qname="Msp430RefVoltArbiterP.SwitchOnDelayTimer"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Timer" ref="0x2b367858be08" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.timer.Timer" qname="Timer"/>
+        <arguments>
+          <type-tag alignment="I:2" size="I:2"><struct-ref ref="0x2b36770a5970"/>
+            <typename><typedef-ref name="TMilli" ref="0x2b36770a5cc8"/></typename>
+          </type-tag>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="getNow" ref="0x2b36785860c0" scoped=""/>
+        <function-ref name="fired" ref="0x2b3678589798" scoped=""/>
+        <function-ref name="startPeriodicAt" ref="0x2b36785874d8" scoped=""/>
+        <function-ref name="isOneShot" ref="0x2b3678587088" scoped=""/>
+        <function-ref name="getdt" ref="0x2b3678586960" scoped=""/>
+        <function-ref name="gett0" ref="0x2b3678586510" scoped=""/>
+        <function-ref name="isRunning" ref="0x2b3678589be8" scoped=""/>
+        <function-ref name="startPeriodic" ref="0x2b367858a9e0" scoped=""/>
+        <function-ref name="startOneShotAt" ref="0x2b3678587aa8" scoped=""/>
+        <function-ref name="startOneShot" ref="0x2b367858ae80" scoped=""/>
+        <function-ref name="stop" ref="0x2b3678589348" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="40:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/adc12/Msp430RefVoltArbiterImplP.nc" name="AdcResource" provided="0" ref="0x2b367854b020">
+      <component-ref nicename="tos.chips.msp430.adc12.Msp430RefVoltArbiterImplP" qname="Msp430RefVoltArbiterImplP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="AdcResource" ref="0x2b367854b020" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Resource" qname="Resource"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x2b3676396318"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="release" ref="0x2b367854b370" scoped=""/>
+        <function-ref name="immediateRequest" ref="0x2b367854b4f8" scoped=""/>
+        <function-ref name="request" ref="0x2b367854b680" scoped=""/>
+        <function-ref name="granted" ref="0x2b367854b808" scoped=""/>
+        <function-ref name="isOwner" ref="0x2b367854b990" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="44:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/adc12/Msp430RefVoltGeneratorP.nc" name="SwitchOnTimer" provided="0" ref="0x2b36784babd0">
+      <component-ref nicename="tos.chips.msp430.adc12.Msp430RefVoltGeneratorP" qname="Msp430RefVoltGeneratorP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="SwitchOnTimer" ref="0x2b36784babd0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.timer.Timer" qname="Timer"/>
+        <arguments>
+          <type-tag alignment="I:2" size="I:2"><struct-ref ref="0x2b36770a5970"/>
+            <typename><typedef-ref name="TMilli" ref="0x2b36770a5cc8"/></typename>
+          </type-tag>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="getNow" ref="0x2b3678526dd8" scoped=""/>
+        <function-ref name="fired" ref="0x2b3678528510" scoped=""/>
+        <function-ref name="startPeriodicAt" ref="0x2b3678526238" scoped=""/>
+        <function-ref name="isOneShot" ref="0x2b3678528db0" scoped=""/>
+        <function-ref name="getdt" ref="0x2b36785256c8" scoped=""/>
+        <function-ref name="gett0" ref="0x2b3678525278" scoped=""/>
+        <function-ref name="isRunning" ref="0x2b3678528960" scoped=""/>
+        <function-ref name="startPeriodic" ref="0x2b36784b9740" scoped=""/>
+        <function-ref name="startOneShotAt" ref="0x2b3678526808" scoped=""/>
+        <function-ref name="startOneShot" ref="0x2b36784b9be0" scoped=""/>
+        <function-ref name="stop" ref="0x2b36785280c0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="43:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/adc12/Msp430RefVoltGeneratorP.nc" name="HplAdc12" provided="0" ref="0x2b36784bcc48">
+      <component-ref nicename="tos.chips.msp430.adc12.Msp430RefVoltGeneratorP" qname="Msp430RefVoltGeneratorP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="HplAdc12" ref="0x2b36784bcc48" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.adc12.HplAdc12" qname="HplAdc12"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getCtl0" ref="0x2b36784bb020" scoped=""/>
+        <function-ref name="getMCtl" ref="0x2b36784bb1a8" scoped=""/>
+        <function-ref name="resetIFGs" ref="0x2b36784bb330" scoped=""/>
+        <function-ref name="isBusy" ref="0x2b36784bb4b8" scoped=""/>
+        <function-ref name="conversionDone" ref="0x2b36784bb640" scoped=""/>
+        <function-ref name="getCtl1" ref="0x2b36784bb7c8" scoped=""/>
+        <function-ref name="setMCtl" ref="0x2b36784bb950" scoped=""/>
+        <function-ref name="startConversion" ref="0x2b36784bbad8" scoped=""/>
+        <function-ref name="setCtl0" ref="0x2b36784bbc60" scoped=""/>
+        <function-ref name="getMem" ref="0x2b36784bbde8" scoped=""/>
+        <function-ref name="setIEFlags" ref="0x2b36784ba020" scoped=""/>
+        <function-ref name="getIEFlags" ref="0x2b36784ba1a8" scoped=""/>
+        <function-ref name="stopConversion" ref="0x2b36784ba330" scoped=""/>
+        <function-ref name="enableConversion" ref="0x2b36784ba5b8" scoped=""/>
+        <function-ref name="setCtl1" ref="0x2b36784ba740" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="46:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/adc12/HplAdc12P.nc" name="HplAdc12" provided="1" ref="0x2b3678479278">
+      <component-ref nicename="tos.chips.msp430.adc12.HplAdc12P" qname="HplAdc12P"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="HplAdc12" ref="0x2b3678479278" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.adc12.HplAdc12" qname="HplAdc12"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getCtl0" ref="0x2b36784795c8" scoped=""/>
+        <function-ref name="getMCtl" ref="0x2b3678479750" scoped=""/>
+        <function-ref name="resetIFGs" ref="0x2b36784798d8" scoped=""/>
+        <function-ref name="isBusy" ref="0x2b3678479a60" scoped=""/>
+        <function-ref name="conversionDone" ref="0x2b3678479be8" scoped=""/>
+        <function-ref name="getCtl1" ref="0x2b3678479d70" scoped=""/>
+        <function-ref name="setMCtl" ref="0x2b3678478020" scoped=""/>
+        <function-ref name="startConversion" ref="0x2b36784781a8" scoped=""/>
+        <function-ref name="setCtl0" ref="0x2b3678478330" scoped=""/>
+        <function-ref name="getMem" ref="0x2b36784784b8" scoped=""/>
+        <function-ref name="setIEFlags" ref="0x2b3678478640" scoped=""/>
+        <function-ref name="getIEFlags" ref="0x2b36784787c8" scoped=""/>
+        <function-ref name="stopConversion" ref="0x2b3678478950" scoped=""/>
+        <function-ref name="enableConversion" ref="0x2b3678478bd8" scoped=""/>
+        <function-ref name="setCtl1" ref="0x2b3678478d60" scoped=""/>
+      </interface-functions>
+    </interface><component loc="36(Msp430RefVoltArbiterP.SwitchOffDelayTimer):/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/TimerMilliC.nc" nicename="tos.system.TimerMilliC" qname="Msp430RefVoltArbiterP.SwitchOffDelayTimer">
+      <documentation loc="25:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/TimerMilliC.nc">
+        <short>
+ The virtualized millisecond timer abstraction.</short>
+        <long>
+ The virtualized millisecond timer abstraction. Instantiating this 
+ component gives an independent millisecond granularity timer.
+
+ @author Philip Levis
+ @date   January 16 2006
+ @see    TEP 102: Timers
+</long>
+      </documentation>
+      <instance number="2">
+        <component-ref nicename="tos.system.TimerMilliC" qname="TimerMilliC"/>
+      </instance>
+      <configuration/>
+      <wiring>
+        <wire>
+          <from><interface-ref name="Timer" ref="0x2b3678584350" scoped=""/></from>
+          <to><interface-ref name="TimerMilli" ref="0x2b3677b7b510" scoped=""/>
+          <arguments>
+            <value cst="I:3">
+              <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned=""/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+      </wiring>
+    </component><component loc="36:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/adc12/Msp430RefVoltArbiterImplP.nc" nicename="tos.chips.msp430.adc12.Msp430RefVoltArbiterImplP" qname="Msp430RefVoltArbiterImplP">
+      <module/>
+    </component><component loc="45:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/adc12/HplAdc12P.nc" nicename="tos.chips.msp430.adc12.HplAdc12P" qname="HplAdc12P">
+      <documentation loc="36:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/adc12/HplAdc12P.nc">
+        <short>
+ The HplAdc12 interface exports low-level access to the ADC12 registers
+ of the MSP430 MCU.</short>
+        <long>
+ The HplAdc12 interface exports low-level access to the ADC12 registers
+ of the MSP430 MCU.
+
+ @author Jan Hauer
+ @see  Please refer to TEP 101 for more information about this component and its
+          intended use.
+</long>
+      </documentation>
+      <module/>
+    </component><component loc="36(Msp430RefVoltArbiterP.SwitchOnDelayTimer):/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/TimerMilliC.nc" nicename="tos.system.TimerMilliC" qname="Msp430RefVoltArbiterP.SwitchOnDelayTimer">
+      <documentation loc="25:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/TimerMilliC.nc">
+        <short>
+ The virtualized millisecond timer abstraction.</short>
+        <long>
+ The virtualized millisecond timer abstraction. Instantiating this 
+ component gives an independent millisecond granularity timer.
+
+ @author Philip Levis
+ @date   January 16 2006
+ @see    TEP 102: Timers
+</long>
+      </documentation>
+      <instance number="1">
+        <component-ref nicename="tos.system.TimerMilliC" qname="TimerMilliC"/>
+      </instance>
+      <configuration/>
+      <wiring>
+        <wire>
+          <from><interface-ref name="Timer" ref="0x2b367858be08" scoped=""/></from>
+          <to><interface-ref name="TimerMilli" ref="0x2b3677b7b510" scoped=""/>
+          <arguments>
+            <value cst="I:2">
+              <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned=""/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+      </wiring>
+    </component><component loc="36:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/adc12/Msp430RefVoltGeneratorP.nc" nicename="tos.chips.msp430.adc12.Msp430RefVoltGeneratorP" qname="Msp430RefVoltGeneratorP">
+      <module/>
+    </component></referenced></component>

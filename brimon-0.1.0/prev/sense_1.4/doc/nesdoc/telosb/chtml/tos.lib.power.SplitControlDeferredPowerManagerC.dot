@@ -1,0 +1,17 @@
+digraph "tos.lib.power.SplitControlDeferredPowerManagerC" {
+  "SplitControlDeferredPowerManagerC.PowerManager" [fontsize=12, shape=box, style=dashed, label="DeferredPowerManagerP\n(PowerManager)", URL="../chtml/tos.lib.power.DeferredPowerManagerP.html"];
+  n0x2b3677e5c0c0 [shape=ellipse, style=filled, label="SplitControl", fontsize=12];
+  "SplitControlDeferredPowerManagerC.PowerManager" [fontsize=12, shape=box, style=dashed, label="DeferredPowerManagerP\n(PowerManager)", URL="../chtml/tos.lib.power.DeferredPowerManagerP.html"];
+  n0x2b3677e5cb98 [shape=ellipse, style=filled, label="PowerDownCleanup", fontsize=12];
+  "SplitControlDeferredPowerManagerC.PowerManager" [fontsize=12, shape=box, style=dashed, label="DeferredPowerManagerP\n(PowerManager)", URL="../chtml/tos.lib.power.DeferredPowerManagerP.html"];
+  n0x2b3677e5b338 [shape=ellipse, style=filled, label="ResourceDefaultOwner", fontsize=12];
+  "SplitControlDeferredPowerManagerC.PowerManager" [fontsize=12, shape=box, style=dashed, label="DeferredPowerManagerP\n(PowerManager)", URL="../chtml/tos.lib.power.DeferredPowerManagerP.html"];
+  n0x2b3677e5a020 [shape=ellipse, style=filled, label="ArbiterInfo", fontsize=12];
+  "SplitControlDeferredPowerManagerC.PowerManager" [fontsize=12, shape=box, style=dashed, label="DeferredPowerManagerP\n(PowerManager)", URL="../chtml/tos.lib.power.DeferredPowerManagerP.html"];
+  "SplitControlDeferredPowerManagerC.TimerMilliC" [fontsize=12, shape=box,peripheries=2, style=dashed, label="TimerMilliC", URL="../chtml/tos.system.TimerMilliC.html"];
+  "SplitControlDeferredPowerManagerC.PowerManager" -> "n0x2b3677e5c0c0" [label="SplitControl", URL="../ihtml/tos.interfaces.SplitControl.html", fontsize=10];
+  "SplitControlDeferredPowerManagerC.PowerManager" -> "n0x2b3677e5cb98" [label="PowerDownCleanup", URL="../ihtml/tos.lib.power.PowerDownCleanup.html", fontsize=10];
+  "SplitControlDeferredPowerManagerC.PowerManager" -> "n0x2b3677e5b338" [label="ResourceDefaultOwner", URL="../ihtml/tos.interfaces.ResourceDefaultOwner.html", fontsize=10];
+  "SplitControlDeferredPowerManagerC.PowerManager" -> "n0x2b3677e5a020" [label="ArbiterInfo", URL="../ihtml/tos.interfaces.ArbiterInfo.html", fontsize=10];
+  "SplitControlDeferredPowerManagerC.PowerManager" -> "SplitControlDeferredPowerManagerC.TimerMilliC" [label="Timer<TMilli>", URL="../ihtml/tos.lib.timer.Timer.html", fontsize=10];
+}

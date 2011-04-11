@@ -1,0 +1,87 @@
+<?xml version="1.0" ?><component abstract="" loc="35:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/lib/timer/VirtualizeTimerC.nc" nicename="tos.lib.timer.VirtualizeTimerC" qname="VirtualizeTimerC" safe="">
+      <documentation loc="23:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/lib/timer/VirtualizeTimerC.nc">
+        <short>
+ VirtualizeTimerC uses a single Timer to create up to 255 virtual timers.</short>
+        <long>
+ VirtualizeTimerC uses a single Timer to create up to 255 virtual timers.
+
+ &lt;p&gt;See TEP102 for more details.
+
+ @param precision_tag A type indicating the precision of the Timer being 
+   virtualized.
+ @param max_timers Number of virtual timers to create.
+
+ @author Cory Sharp &lt;cssharp@eecs.berkeley.edu&gt;
+</long>
+      </documentation>
+      <parameters>
+        <typedef loc="35:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/lib/timer/VirtualizeTimerC.nc" name="precision_tag" ref="0x2ae8dedcc210">
+          <component-ref nicename="tos.lib.timer.VirtualizeTimerC" qname="VirtualizeTimerC"/>
+          <type-var alignment="U:" size="U:"><typedef-ref name="precision_tag" ref="0x2ae8dedcc210" scoped=""/></type-var>
+        </typedef>
+        <constant loc="35:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/lib/timer/VirtualizeTimerC.nc" name="max_timers" ref="0x2ae8dedcc520">
+          <component-ref nicename="tos.lib.timer.VirtualizeTimerC" qname="VirtualizeTimerC"/>
+          <type-int alignment="I:2" cname="int" size="I:2"/>
+        </constant>
+      </parameters>
+      <module/>
+    <specification><interface loc="60:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/lib/timer/VirtualizeTimerC.nc" name="updateFromTimer" provided="0" ref="0x2ae8dee2b6f0">
+      <component-ref nicename="tos.lib.timer.VirtualizeTimerC" qname="VirtualizeTimerC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="updateFromTimer" ref="0x2ae8dee2b6f0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.TaskBasic" qname="TaskBasic"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="postTask" ref="0x2ae8dee2ba40" scoped=""/>
+        <function-ref name="runTask" ref="0x2ae8dee2bbc8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="38:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/lib/timer/VirtualizeTimerC.nc" name="TimerFrom" provided="0" ref="0x2ae8dedc66a0">
+      <component-ref nicename="tos.lib.timer.VirtualizeTimerC" qname="VirtualizeTimerC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="TimerFrom" ref="0x2ae8dedc66a0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.timer.Timer" qname="Timer"/>
+        <arguments>
+          <type-var alignment="U:" size="U:"><typedef-ref name="precision_tag" ref="0x2ae8dedcc210" scoped=""/></type-var>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="getNow" ref="0x2ae8dedc2a18" scoped=""/>
+        <function-ref name="fired" ref="0x2ae8dedc3158" scoped=""/>
+        <function-ref name="startPeriodicAt" ref="0x2ae8dedc3e48" scoped=""/>
+        <function-ref name="isOneShot" ref="0x2ae8dedc39f8" scoped=""/>
+        <function-ref name="getdt" ref="0x2ae8dedc02e8" scoped=""/>
+        <function-ref name="gett0" ref="0x2ae8dedc2e68" scoped=""/>
+        <function-ref name="isRunning" ref="0x2ae8dedc35a8" scoped=""/>
+        <function-ref name="startPeriodic" ref="0x2ae8dedc4370" scoped=""/>
+        <function-ref name="startOneShotAt" ref="0x2ae8dedc2448" scoped=""/>
+        <function-ref name="startOneShot" ref="0x2ae8dedc4810" scoped=""/>
+        <function-ref name="stop" ref="0x2ae8dedc4cb0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="37:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/lib/timer/VirtualizeTimerC.nc" name="Timer" provided="1" ref="0x2ae8dedcb4a0">
+      <component-ref nicename="tos.lib.timer.VirtualizeTimerC" qname="VirtualizeTimerC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Timer" ref="0x2ae8dedcb4a0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.timer.Timer" qname="Timer"/>
+        <arguments>
+          <type-var alignment="U:" size="U:"><typedef-ref name="precision_tag" ref="0x2ae8dedcc210" scoped=""/></type-var>
+        </arguments>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x2ae8dcc94318"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="getNow" ref="0x2ae8dedc76c8" scoped=""/>
+        <function-ref name="fired" ref="0x2ae8dedcadb0" scoped=""/>
+        <function-ref name="startPeriodicAt" ref="0x2ae8dedc8ad8" scoped=""/>
+        <function-ref name="isOneShot" ref="0x2ae8dedc8688" scoped=""/>
+        <function-ref name="getdt" ref="0x2ae8dedc6020" scoped=""/>
+        <function-ref name="gett0" ref="0x2ae8dedc7b18" scoped=""/>
+        <function-ref name="isRunning" ref="0x2ae8dedc8238" scoped=""/>
+        <function-ref name="startPeriodic" ref="0x2ae8dedca020" scoped=""/>
+        <function-ref name="startOneShotAt" ref="0x2ae8dedc70f8" scoped=""/>
+        <function-ref name="startOneShot" ref="0x2ae8dedca4c0" scoped=""/>
+        <function-ref name="stop" ref="0x2ae8dedca960" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced/></component>

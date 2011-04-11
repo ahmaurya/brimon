@@ -1,0 +1,405 @@
+<?xml version="1.0" ?><component abstract="" loc="42:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/stm25p/BlockStorageC.nc" nicename="tos.chips.stm25p.BlockStorageC" qname="BlockStorageC">
+      <documentation loc="1:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/stm25p/Stm25p.h">
+        <short>
+ Copyright (c) 2005-2006 Arch Rock Corporation
+ All rights reserved.</short>
+        <long>
+ Copyright (c) 2005-2006 Arch Rock Corporation
+ All rights reserved.
+
+ Redistribution and use in source and binary forms, with or without
+ modification, are permitted provided that the following conditions
+ are met:
+ - Redistributions of source code must retain the above copyright
+   notice, this list of conditions and the following disclaimer.
+ - Redistributions in binary form must reproduce the above copyright
+   notice, this list of conditions and the following disclaimer in the
+   documentation and/or other materials provided with the
+   distribution.
+ - Neither the name of the Arch Rock Corporation nor the names of
+   its contributors may be used to endorse or promote products derived
+   from this software without specific prior written permission.
+
+ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+ ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+ LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
+ FOR A PARTICULAR PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE
+ ARCHED ROCK OR ITS CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
+ INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+ (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+ SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+ HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT,
+ STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED
+ OF THE POSSIBILITY OF SUCH DAMAGE
+
+ @author Jonathan Hui &lt;jhui@archrock.com&gt;
+ @version $Revision: 1.4 $ $Date: 2006/12/12 18:23:12 $
+</long>
+      </documentation>
+      <parameters>
+        <constant loc="42:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/stm25p/BlockStorageC.nc" name="volume_id" ref="0x2b3678177af8">
+          <component-ref nicename="tos.chips.stm25p.BlockStorageC" qname="BlockStorageC"/>
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="volume_id_t" ref="0x2b36770d7cf0"/></typename>
+          </type-int>
+        </constant>
+      </parameters>
+      <configuration/>
+      <wiring>
+        <wire loc="58:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/stm25p/BlockStorageC.nc">
+          <from><interface-ref name="BlockRead" ref="0x2b3678174020" scoped=""/></from>
+          <to><interface-ref name="Read" ref="0x2b3678171b18" scoped=""/>
+          <arguments>
+            <value cst="U:">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="59:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/stm25p/BlockStorageC.nc">
+          <from><interface-ref name="BlockWrite" ref="0x2b3678174c80" scoped=""/></from>
+          <to><interface-ref name="Write" ref="0x2b367816bd10" scoped=""/>
+          <arguments>
+            <value cst="U:">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="60:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/stm25p/BlockStorageC.nc">
+          <from><interface-ref name="StorageMap" ref="0x2b367816e360" scoped=""/></from>
+          <to><interface-ref name="StorageMap" ref="0x2b3678168050" scoped=""/>
+          <arguments>
+            <value cst="U:">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="63:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/stm25p/BlockStorageC.nc">
+          <from><interface-ref name="ClientResource" ref="0x2b36781666d8" scoped=""/>
+          <arguments>
+            <value cst="U:">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </from>
+          <to><interface-ref name="ClientResource" ref="0x2b3677df63c8" scoped=""/>
+          <arguments>
+            <value cst="U:">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="64:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/stm25p/BlockStorageC.nc">
+          <from><interface-ref name="Sector" ref="0x2b3678168c18" scoped=""/>
+          <arguments>
+            <value cst="U:">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </from>
+          <to><interface-ref name="Sector" ref="0x2b3677df45f0" scoped=""/>
+          <arguments>
+            <value cst="U:">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="67:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/stm25p/BlockStorageC.nc">
+          <from><interface-ref name="Volume" ref="0x2b36781c2548" scoped=""/></from>
+          <to><interface-ref name="Volume" ref="0x2b3677df2510" scoped=""/>
+          <arguments>
+            <value cst="U:">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+      </wiring>
+    <specification><interface loc="44:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/stm25p/BlockStorageC.nc" name="BlockRead" provided="1" ref="0x2b3678174020">
+      <component-ref nicename="tos.chips.stm25p.BlockStorageC" qname="BlockStorageC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="BlockRead" ref="0x2b3678174020" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.BlockRead" qname="BlockRead"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="read" ref="0x2b3678174370" scoped=""/>
+        <function-ref name="computeCrcDone" ref="0x2b36781744f8" scoped=""/>
+        <function-ref name="computeCrc" ref="0x2b3678174680" scoped=""/>
+        <function-ref name="getSize" ref="0x2b3678174808" scoped=""/>
+        <function-ref name="readDone" ref="0x2b3678174990" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="45:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/stm25p/BlockStorageC.nc" name="BlockWrite" provided="1" ref="0x2b3678174c80">
+      <component-ref nicename="tos.chips.stm25p.BlockStorageC" qname="BlockStorageC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="BlockWrite" ref="0x2b3678174c80" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.BlockWrite" qname="BlockWrite"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="syncDone" ref="0x2b3678173020" scoped=""/>
+        <function-ref name="writeDone" ref="0x2b36781731a8" scoped=""/>
+        <function-ref name="erase" ref="0x2b3678173330" scoped=""/>
+        <function-ref name="eraseDone" ref="0x2b36781734b8" scoped=""/>
+        <function-ref name="write" ref="0x2b3678173640" scoped=""/>
+        <function-ref name="sync" ref="0x2b36781737c8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="46:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/stm25p/BlockStorageC.nc" name="StorageMap" provided="1" ref="0x2b367816e360">
+      <component-ref nicename="tos.chips.stm25p.BlockStorageC" qname="BlockStorageC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="StorageMap" ref="0x2b367816e360" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.stm25p.StorageMap" qname="StorageMap"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getPhysicalAddress" ref="0x2b367816e6b0" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced><interface loc="43:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/stm25p/Stm25pBlockP.nc" name="Sector" provided="0" ref="0x2b3678168c18">
+      <component-ref nicename="tos.chips.stm25p.Stm25pBlockP" qname="Stm25pBlockP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Sector" ref="0x2b3678168c18" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.stm25p.Stm25pSector" qname="Stm25pSector"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x2b3676396318"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="getPhysicalAddress" ref="0x2b3678167020" scoped=""/>
+        <function-ref name="read" ref="0x2b36781671a8" scoped=""/>
+        <function-ref name="writeDone" ref="0x2b3678167330" scoped=""/>
+        <function-ref name="erase" ref="0x2b36781674b8" scoped=""/>
+        <function-ref name="eraseDone" ref="0x2b3678167640" scoped=""/>
+        <function-ref name="computeCrcDone" ref="0x2b36781677c8" scoped=""/>
+        <function-ref name="computeCrc" ref="0x2b3678167950" scoped=""/>
+        <function-ref name="write" ref="0x2b3678167ad8" scoped=""/>
+        <function-ref name="getNumSectors" ref="0x2b3678167c60" scoped=""/>
+        <function-ref name="readDone" ref="0x2b3678167de8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="44:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/stm25p/Stm25pBlockP.nc" name="ClientResource" provided="0" ref="0x2b36781666d8">
+      <component-ref nicename="tos.chips.stm25p.Stm25pBlockP" qname="Stm25pBlockP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ClientResource" ref="0x2b36781666d8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Resource" qname="Resource"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x2b3676396318"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="release" ref="0x2b3678166a28" scoped=""/>
+        <function-ref name="immediateRequest" ref="0x2b3678166bb0" scoped=""/>
+        <function-ref name="request" ref="0x2b3678166d38" scoped=""/>
+        <function-ref name="granted" ref="0x2b3678164020" scoped=""/>
+        <function-ref name="isOwner" ref="0x2b36781641a8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="39:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/stm25p/Stm25pBlockP.nc" name="Read" provided="1" ref="0x2b3678171b18">
+      <component-ref nicename="tos.chips.stm25p.Stm25pBlockP" qname="Stm25pBlockP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Read" ref="0x2b3678171b18" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.BlockRead" qname="BlockRead"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x2b3676396318"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="read" ref="0x2b3678171e68" scoped=""/>
+        <function-ref name="computeCrcDone" ref="0x2b367816b020" scoped=""/>
+        <function-ref name="computeCrc" ref="0x2b367816b1a8" scoped=""/>
+        <function-ref name="getSize" ref="0x2b367816b330" scoped=""/>
+        <function-ref name="readDone" ref="0x2b367816b4b8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="40:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/stm25p/Stm25pBlockP.nc" name="Write" provided="1" ref="0x2b367816bd10">
+      <component-ref nicename="tos.chips.stm25p.Stm25pBlockP" qname="Stm25pBlockP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Write" ref="0x2b367816bd10" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.BlockWrite" qname="BlockWrite"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x2b3676396318"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="syncDone" ref="0x2b36781690a0" scoped=""/>
+        <function-ref name="writeDone" ref="0x2b3678169228" scoped=""/>
+        <function-ref name="erase" ref="0x2b36781693b0" scoped=""/>
+        <function-ref name="eraseDone" ref="0x2b3678169538" scoped=""/>
+        <function-ref name="write" ref="0x2b36781696c0" scoped=""/>
+        <function-ref name="sync" ref="0x2b3678169848" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="39:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/stm25p/Stm25pBinderP.nc" name="Volume" provided="0" ref="0x2b36781c2548">
+      <component-ref nicename="tos.chips.stm25p.Stm25pBinderP" qname="BlockStorageC.BinderP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Volume" ref="0x2b36781c2548" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.stm25p.Stm25pVolume" qname="Stm25pVolume"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getVolumeId" ref="0x2b36781c2898" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="42:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/stm25p/Stm25pSectorC.nc" name="ClientResource" provided="1" ref="0x2b3677df63c8">
+      <component-ref nicename="tos.chips.stm25p.Stm25pSectorC" qname="Stm25pSectorC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ClientResource" ref="0x2b3677df63c8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Resource" qname="Resource"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x2b3676396318"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="release" ref="0x2b3677df6718" scoped=""/>
+        <function-ref name="immediateRequest" ref="0x2b3677df68a0" scoped=""/>
+        <function-ref name="request" ref="0x2b3677df6a28" scoped=""/>
+        <function-ref name="granted" ref="0x2b3677df6bb0" scoped=""/>
+        <function-ref name="isOwner" ref="0x2b3677df6d38" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="41:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/stm25p/Stm25pBlockP.nc" name="StorageMap" provided="1" ref="0x2b3678168050">
+      <component-ref nicename="tos.chips.stm25p.Stm25pBlockP" qname="Stm25pBlockP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="StorageMap" ref="0x2b3678168050" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.stm25p.StorageMap" qname="StorageMap"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x2b3676396318"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="getPhysicalAddress" ref="0x2b36781683a0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="43:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/stm25p/Stm25pSectorC.nc" name="Sector" provided="1" ref="0x2b3677df45f0">
+      <component-ref nicename="tos.chips.stm25p.Stm25pSectorC" qname="Stm25pSectorC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Sector" ref="0x2b3677df45f0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.stm25p.Stm25pSector" qname="Stm25pSector"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x2b3676396318"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="getPhysicalAddress" ref="0x2b3677df4940" scoped=""/>
+        <function-ref name="read" ref="0x2b3677df4ac8" scoped=""/>
+        <function-ref name="writeDone" ref="0x2b3677df4c50" scoped=""/>
+        <function-ref name="erase" ref="0x2b3677df4dd8" scoped=""/>
+        <function-ref name="eraseDone" ref="0x2b3677df3020" scoped=""/>
+        <function-ref name="computeCrcDone" ref="0x2b3677df31a8" scoped=""/>
+        <function-ref name="computeCrc" ref="0x2b3677df3330" scoped=""/>
+        <function-ref name="write" ref="0x2b3677df34b8" scoped=""/>
+        <function-ref name="getNumSectors" ref="0x2b3677df3640" scoped=""/>
+        <function-ref name="readDone" ref="0x2b3677df37c8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="44:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/stm25p/Stm25pSectorC.nc" name="Volume" provided="1" ref="0x2b3677df2510">
+      <component-ref nicename="tos.chips.stm25p.Stm25pSectorC" qname="Stm25pSectorC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Volume" ref="0x2b3677df2510" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.stm25p.Stm25pVolume" qname="Stm25pVolume"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x2b3676396318"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="getVolumeId" ref="0x2b3677df2860" scoped=""/>
+      </interface-functions>
+    </interface><component loc="37:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/stm25p/Stm25pBlockP.nc" nicename="tos.chips.stm25p.Stm25pBlockP" qname="Stm25pBlockP">
+      <documentation loc="32:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/stm25p/Stm25pBlockP.nc">
+        <short>
+ </short>
+        <long>
+ @author Jonathan Hui &lt;jhui@archrock.com&gt;
+ @version $Revision: 1.4 $ $Date: 2006/12/12 18:23:12 $
+</long>
+      </documentation>
+      <module/>
+    </component><component abstract="" loc="37(BlockStorageC.BinderP):/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/stm25p/Stm25pBinderP.nc" nicename="tos.chips.stm25p.Stm25pBinderP" qname="BlockStorageC.BinderP">
+      <documentation loc="32:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/stm25p/Stm25pBinderP.nc">
+        <short>
+ </short>
+        <long>
+ @author Jonathan Hui &lt;jhui@archrock.com&gt;
+ @version $Revision: 1.4 $ $Date: 2006/12/12 18:23:12 $
+</long>
+      </documentation>
+      <instance>
+        <component-ref nicename="tos.chips.stm25p.Stm25pBinderP" qname="Stm25pBinderP"/>
+        <arguments>
+          <value cst="U:">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="volume_id_t" ref="0x2b36770d7cf0"/></typename>
+            </type-int>
+          </value>
+        </arguments>
+      </instance>
+      <module/>
+    </component><component loc="40:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/stm25p/Stm25pSectorC.nc" nicename="tos.chips.stm25p.Stm25pSectorC" qname="Stm25pSectorC">
+      <documentation loc="32:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/stm25p/Stm25pSectorC.nc">
+        <short>
+ Implementation of the sector storage absraction for the ST M25P
+ serial code flash.</short>
+        <long>
+ Implementation of the sector storage absraction for the ST M25P
+ serial code flash.
+
+ @author Jonathan Hui &lt;jhui@archrock.com&gt;
+ @version $Revision: 1.5 $ $Date: 2007/02/04 19:55:17 $
+</long>
+      </documentation>
+      <configuration/>
+      <wiring>
+        <wire loc="54:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/stm25p/Stm25pSectorC.nc">
+          <from><interface-ref name="Sector" ref="0x2b3677df45f0" scoped=""/></from>
+          <to><interface-ref name="Sector" ref="0x2b3677de7498" scoped=""/></to>
+        </wire>
+        <wire loc="55:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/stm25p/Stm25pSectorC.nc">
+          <from><interface-ref name="Volume" ref="0x2b3677df2510" scoped=""/></from>
+          <to><interface-ref name="Volume" ref="0x2b3677de4020" scoped=""/></to>
+        </wire>
+        <wire loc="53:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/stm25p/Stm25pSectorC.nc">
+          <from><interface-ref name="ClientResource" ref="0x2b3677df63c8" scoped=""/></from>
+          <to><interface-ref name="ClientResource" ref="0x2b3677de8270" scoped=""/></to>
+        </wire>
+        <wire loc="58:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/stm25p/Stm25pSectorC.nc">
+          <from><interface-ref name="Stm25pResource" ref="0x2b3677de4c10" scoped=""/></from>
+          <to><interface-ref name="Resource" ref="0x2b3677e65940" scoped=""/></to>
+        </wire>
+        <wire loc="61:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/stm25p/Stm25pSectorC.nc">
+          <from><interface-ref name="SplitControl" ref="0x2b3677ec7020" scoped=""/></from>
+          <to><interface-ref name="SplitControl" ref="0x2b3677de91a0" scoped=""/></to>
+        </wire>
+        <wire loc="62:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/stm25p/Stm25pSectorC.nc">
+          <from><interface-ref name="ResourceDefaultOwner" ref="0x2b3677ec6020" scoped=""/></from>
+          <to><interface-ref name="ResourceDefaultOwner" ref="0x2b3677e64dd8" scoped=""/></to>
+        </wire>
+        <wire loc="63:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/stm25p/Stm25pSectorC.nc">
+          <from><interface-ref name="ArbiterInfo" ref="0x2b3677ec6bd8" scoped=""/></from>
+          <to><interface-ref name="ArbiterInfo" ref="0x2b3677e629d8" scoped=""/></to>
+        </wire>
+        <wire loc="66:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/stm25p/Stm25pSectorC.nc">
+          <from><interface-ref name="SpiResource" ref="0x2b3677de39d0" scoped=""/></from>
+          <to><interface-ref name="Resource" ref="0x2b3677ec07f8" scoped=""/></to>
+        </wire>
+        <wire loc="67:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/stm25p/Stm25pSectorC.nc">
+          <from><interface-ref name="Spi" ref="0x2b3677de1020" scoped=""/></from>
+          <to><interface-ref name="Stm25pSpi" ref="0x2b3677ebf490" scoped=""/></to>
+        </wire>
+        <wire loc="68:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/stm25p/Stm25pSectorC.nc">
+          <from><interface-ref name="SoftwareInit" ref="0x2b36771fcca0" scoped=""/></from>
+          <to><interface-ref name="Init" ref="0x2b3677ec01c8" scoped=""/></to>
+        </wire>
+        <wire loc="71:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/stm25p/Stm25pSectorC.nc">
+          <from><interface-ref name="Leds" ref="0x2b3677de0770" scoped=""/></from>
+          <to><interface-ref name="Leds" ref="0x2b367792e760" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component></referenced></component>

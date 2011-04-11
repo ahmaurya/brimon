@@ -1,0 +1,365 @@
+<?xml version="1.0" ?><component loc="45:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/lib/printf/PrintfC.nc" nicename="tos.lib.printf.PrintfC" qname="PrintfC">
+      <documentation loc="23:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/lib/printf/printf.h">
+        <short>
+
+ </short>
+        <long>
+
+ @author Kevin Klues (klueska@cs.wustl.edu)
+ @version $Revision: 1.16 $
+ @date $Date: 2010/02/22 05:29:57 $
+</long>
+      </documentation>
+      <configuration/>
+      <wiring>
+        <wire loc="60:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/lib/printf/PrintfC.nc">
+          <from><interface-ref name="Boot" ref="0x2ae8ddbae3d8" scoped=""/></from>
+          <to><interface-ref name="Boot" ref="0x2ae8de341630" scoped=""/></to>
+        </wire>
+        <wire loc="59:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/lib/printf/PrintfC.nc">
+          <from><interface-ref name="MainBoot" ref="0x2ae8de341d10" scoped=""/></from>
+          <to><interface-ref name="MainBoot" ref="0x2ae8ddbbd020" scoped=""/></to>
+        </wire>
+        <wire loc="62:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/lib/printf/PrintfC.nc">
+          <from><interface-ref name="SerialControl" ref="0x2ae8de340430" scoped=""/></from>
+          <to><interface-ref name="SplitControl" ref="0x2ae8ddbb41e0" scoped=""/></to>
+        </wire>
+        <wire loc="63:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/lib/printf/PrintfC.nc">
+          <from><interface-ref name="Queue" ref="0x2ae8de33f098" scoped=""/></from>
+          <to><interface-ref name="Queue" ref="0x2ae8de3231c8" scoped=""/></to>
+        </wire>
+        <wire loc="64:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/lib/printf/PrintfC.nc">
+          <from><interface-ref name="AMSend" ref="0x2ae8de33b370" scoped=""/></from>
+          <to><interface-ref name="AMSend" ref="0x2ae8de32a550" scoped=""/></to>
+        </wire>
+        <wire loc="65:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/lib/printf/PrintfC.nc">
+          <from><interface-ref name="Packet" ref="0x2ae8de33a020" scoped=""/></from>
+          <to><interface-ref name="Packet" ref="0x2ae8de329268" scoped=""/></to>
+        </wire>
+      </wiring>
+    <specification><interface loc="47:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/lib/printf/PrintfC.nc" name="Boot" provided="1" ref="0x2ae8ddbae3d8">
+      <component-ref nicename="tos.lib.printf.PrintfC" qname="PrintfC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Boot" ref="0x2ae8ddbae3d8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Boot" qname="Boot"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="booted" ref="0x2ae8ddbae728" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="49:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/lib/printf/PrintfC.nc" name="MainBoot" provided="0" ref="0x2ae8ddbbd020">
+      <component-ref nicename="tos.lib.printf.PrintfC" qname="PrintfC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="MainBoot" ref="0x2ae8ddbbd020" scoped=""/></type-interface>
+      <attribute-value>
+        <attribute-ref name="exactlyonce" ref="0x2ae8dd4f4b98"/>
+        <value-structured>
+          <type-tag alignment="I:1" size="I:0"><attribute-ref name="exactlyonce" ref="0x2ae8dd4f4b98"/></type-tag>
+        </value-structured>
+      </attribute-value>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Boot" qname="Boot"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="booted" ref="0x2ae8ddbbd370" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced><interface loc="91:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/lib/printf/PrintfP.nc" name="Queue" provided="0" ref="0x2ae8de33f098">
+      <component-ref nicename="tos.lib.printf.PrintfP" qname="PrintfP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Queue" ref="0x2ae8de33f098" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Queue" qname="Queue"/>
+        <arguments>
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="uint8_t" ref="0x2ae8dcc94318"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="head" ref="0x2ae8de33e928" scoped=""/>
+        <function-ref name="enqueue" ref="0x2ae8de33d680" scoped=""/>
+        <function-ref name="element" ref="0x2ae8de33dcb0" scoped=""/>
+        <function-ref name="maxSize" ref="0x2ae8de33e4d8" scoped=""/>
+        <function-ref name="dequeue" ref="0x2ae8de33d020" scoped=""/>
+        <function-ref name="empty" ref="0x2ae8de33fbe0" scoped=""/>
+        <function-ref name="size" ref="0x2ae8de33e088" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="93:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/lib/printf/PrintfP.nc" name="AMSend" provided="0" ref="0x2ae8de33b370">
+      <component-ref nicename="tos.lib.printf.PrintfP" qname="PrintfP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="AMSend" ref="0x2ae8de33b370" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.AMSend" qname="AMSend"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="send" ref="0x2ae8de33b6c0" scoped=""/>
+        <function-ref name="getPayload" ref="0x2ae8de33b848" scoped=""/>
+        <function-ref name="maxPayloadLength" ref="0x2ae8de33b9d0" scoped=""/>
+        <function-ref name="cancel" ref="0x2ae8de33bb58" scoped=""/>
+        <function-ref name="sendDone" ref="0x2ae8de33bce0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="94:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/lib/printf/PrintfP.nc" name="Packet" provided="0" ref="0x2ae8de33a020">
+      <component-ref nicename="tos.lib.printf.PrintfP" qname="PrintfP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Packet" ref="0x2ae8de33a020" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Packet" qname="Packet"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="clear" ref="0x2ae8de33a370" scoped=""/>
+        <function-ref name="payloadLength" ref="0x2ae8de33a4f8" scoped=""/>
+        <function-ref name="getPayload" ref="0x2ae8de33a680" scoped=""/>
+        <function-ref name="maxPayloadLength" ref="0x2ae8de33a808" scoped=""/>
+        <function-ref name="setPayloadLength" ref="0x2ae8de33a990" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="41:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/lib/serial/SerialAMSenderC.nc" name="AMSend" provided="1" ref="0x2ae8de32a550">
+      <component-ref nicename="tos.lib.serial.SerialAMSenderC" qname="PrintfC.SerialAMSenderC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="AMSend" ref="0x2ae8de32a550" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.AMSend" qname="AMSend"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="send" ref="0x2ae8de32a8a0" scoped=""/>
+        <function-ref name="getPayload" ref="0x2ae8de32aa28" scoped=""/>
+        <function-ref name="maxPayloadLength" ref="0x2ae8de32abb0" scoped=""/>
+        <function-ref name="cancel" ref="0x2ae8de32ad38" scoped=""/>
+        <function-ref name="sendDone" ref="0x2ae8de329020" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="89:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/lib/printf/PrintfP.nc" name="MainBoot" provided="0" ref="0x2ae8de341d10">
+      <component-ref nicename="tos.lib.printf.PrintfP" qname="PrintfP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="MainBoot" ref="0x2ae8de341d10" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Boot" qname="Boot"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="booted" ref="0x2ae8de3400a0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="90:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/lib/printf/PrintfP.nc" name="SerialControl" provided="0" ref="0x2ae8de340430">
+      <component-ref nicename="tos.lib.printf.PrintfP" qname="PrintfP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="SerialControl" ref="0x2ae8de340430" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.SplitControl" qname="SplitControl"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="startDone" ref="0x2ae8de340780" scoped=""/>
+        <function-ref name="stopDone" ref="0x2ae8de340908" scoped=""/>
+        <function-ref name="start" ref="0x2ae8de340a90" scoped=""/>
+        <function-ref name="stop" ref="0x2ae8de340c18" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="86:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/lib/printf/PrintfP.nc" name="Boot" provided="1" ref="0x2ae8de341630">
+      <component-ref nicename="tos.lib.printf.PrintfP" qname="PrintfP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Boot" ref="0x2ae8de341630" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Boot" qname="Boot"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="booted" ref="0x2ae8de341980" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="42:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/lib/serial/SerialAMSenderC.nc" name="Packet" provided="1" ref="0x2ae8de329268">
+      <component-ref nicename="tos.lib.serial.SerialAMSenderC" qname="PrintfC.SerialAMSenderC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Packet" ref="0x2ae8de329268" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Packet" qname="Packet"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="clear" ref="0x2ae8de3295b8" scoped=""/>
+        <function-ref name="payloadLength" ref="0x2ae8de329740" scoped=""/>
+        <function-ref name="getPayload" ref="0x2ae8de3298c8" scoped=""/>
+        <function-ref name="maxPayloadLength" ref="0x2ae8de329a50" scoped=""/>
+        <function-ref name="setPayloadLength" ref="0x2ae8de329bd8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="35:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/lib/serial/SerialActiveMessageC.nc" name="SplitControl" provided="1" ref="0x2ae8ddbb41e0">
+      <component-ref nicename="tos.lib.serial.SerialActiveMessageC" qname="SerialActiveMessageC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="SplitControl" ref="0x2ae8ddbb41e0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.SplitControl" qname="SplitControl"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="startDone" ref="0x2ae8ddbb4530" scoped=""/>
+        <function-ref name="stopDone" ref="0x2ae8ddbb46b8" scoped=""/>
+        <function-ref name="start" ref="0x2ae8ddbb4840" scoped=""/>
+        <function-ref name="stop" ref="0x2ae8ddbb49c8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="43:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/QueueC.nc" name="Queue" provided="1" ref="0x2ae8de3231c8">
+      <component-ref nicename="tos.system.QueueC" qname="PrintfC.QueueC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Queue" ref="0x2ae8de3231c8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Queue" qname="Queue"/>
+        <arguments>
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="uint8_t" ref="0x2ae8dcc94318"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="head" ref="0x2ae8de347a60" scoped=""/>
+        <function-ref name="enqueue" ref="0x2ae8de346758" scoped=""/>
+        <function-ref name="element" ref="0x2ae8de346d88" scoped=""/>
+        <function-ref name="maxSize" ref="0x2ae8de347610" scoped=""/>
+        <function-ref name="dequeue" ref="0x2ae8de3460f8" scoped=""/>
+        <function-ref name="empty" ref="0x2ae8de323d10" scoped=""/>
+        <function-ref name="size" ref="0x2ae8de3471c0" scoped=""/>
+      </interface-functions>
+    </interface><component loc="42(PrintfC.QueueC):/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/QueueC.nc" nicename="tos.system.QueueC" qname="PrintfC.QueueC">
+      <documentation loc="33:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/QueueC.nc">
+        <short>
+  A general FIFO queue component, whose queue has a bounded size.</short>
+        <long>
+  A general FIFO queue component, whose queue has a bounded size.
+
+  @author Philip Levis
+  @author Geoffrey Mainland
+  @date   $Date: 2009/06/25 18:37:24 $
+</long>
+      </documentation>
+      <instance number="0">
+        <component-ref nicename="tos.system.QueueC" qname="QueueC"/>
+        <arguments>
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="uint8_t" ref="0x2ae8dcc94318"/></typename>
+          </type-int>
+          <value cst="I:250">
+            <type-int alignment="I:2" cname="int" size="I:2"/>
+          </value>
+        </arguments>
+      </instance>
+      <module/>
+    </component><component loc="33:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/lib/serial/SerialActiveMessageC.nc" nicename="tos.lib.serial.SerialActiveMessageC" qname="SerialActiveMessageC">
+      <documentation loc="60:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/lib/serial/Serial.h">
+        <short>
+ </short>
+        <long>
+ @author Phil Buonadonna
+ @author Lewis Girod
+ @author Ben Greenstein
+ @author Philip Levis
+ @date   August 7 2005
+</long>
+      </documentation>
+      <configuration/>
+      <wiring>
+        <wire loc="50:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/lib/serial/SerialActiveMessageC.nc">
+          <from><interface-ref name="SplitControl" ref="0x2ae8ddbb41e0" scoped=""/></from>
+          <to><interface-ref name="SplitControl" ref="0x2ae8ddc752e8" scoped=""/></to>
+        </wire>
+        <wire loc="52:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/lib/serial/SerialActiveMessageC.nc">
+          <from><interface-ref name="AMSend" ref="0x2ae8ddbd0788" scoped=""/></from>
+          <to><interface-ref name="AMSend" ref="0x2ae8ddc12b60" scoped=""/></to>
+        </wire>
+        <wire loc="54:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/lib/serial/SerialActiveMessageC.nc">
+          <from><interface-ref name="Packet" ref="0x2ae8ddbe9740" scoped=""/></from>
+          <to><interface-ref name="Packet" ref="0x2ae8ddc55578" scoped=""/></to>
+        </wire>
+        <wire loc="53:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/lib/serial/SerialActiveMessageC.nc">
+          <from><interface-ref name="Receive" ref="0x2ae8ddbb8300" scoped=""/></from>
+          <to><interface-ref name="Receive" ref="0x2ae8ddc579a8" scoped=""/></to>
+        </wire>
+        <wire loc="56:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/lib/serial/SerialActiveMessageC.nc">
+          <from><interface-ref name="PacketAcknowledgements" ref="0x2ae8ddbf9de0" scoped=""/></from>
+          <to><interface-ref name="PacketAcknowledgements" ref="0x2ae8ddc54268" scoped=""/></to>
+        </wire>
+        <wire loc="55:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/lib/serial/SerialActiveMessageC.nc">
+          <from><interface-ref name="AMPacket" ref="0x2ae8ddbffe08" scoped=""/></from>
+          <to><interface-ref name="AMPacket" ref="0x2ae8ddc56020" scoped=""/></to>
+        </wire>
+        <wire loc="48:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/lib/serial/SerialActiveMessageC.nc">
+          <from><interface-ref name="SoftwareInit" ref="0x2ae8dd9fd808" scoped=""/></from>
+          <to><interface-ref name="Init" ref="0x2ae8ddc50bc0" scoped=""/></to>
+        </wire>
+        <wire loc="49:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/lib/serial/SerialActiveMessageC.nc">
+          <from><interface-ref name="Leds" ref="0x2ae8ddc725a8" scoped=""/></from>
+          <to><interface-ref name="Leds" ref="0x2ae8ddbfd020" scoped=""/></to>
+        </wire>
+        <wire loc="58:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/lib/serial/SerialActiveMessageC.nc">
+          <from><interface-ref name="SubSend" ref="0x2ae8ddc54bb0" scoped=""/></from>
+          <to><interface-ref name="Send" ref="0x2ae8ddc74ce8" scoped=""/>
+          <arguments>
+            <value cst="I:0">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="59:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/lib/serial/SerialActiveMessageC.nc">
+          <from><interface-ref name="SubReceive" ref="0x2ae8ddc528c8" scoped=""/></from>
+          <to><interface-ref name="Receive" ref="0x2ae8ddc74270" scoped=""/>
+          <arguments>
+            <value cst="I:0">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="61:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/lib/serial/SerialActiveMessageC.nc">
+          <from><interface-ref name="SerialPacketInfo" ref="0x2ae8ddc6dba8" scoped=""/>
+          <arguments>
+            <value cst="I:0">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </from>
+          <to><interface-ref name="Info" ref="0x2ae8de2a2060" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component><component loc="84:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/lib/printf/PrintfP.nc" nicename="tos.lib.printf.PrintfP" qname="PrintfP" safe="">
+      <documentation loc="23:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/lib/printf/printf.h">
+        <short>
+
+ </short>
+        <long>
+
+ @author Kevin Klues (klueska@cs.wustl.edu)
+ @version $Revision: 1.16 $
+ @date $Date: 2010/02/22 05:29:57 $
+</long>
+      </documentation>
+      <module/>
+    </component><component loc="39(PrintfC.SerialAMSenderC):/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/lib/serial/SerialAMSenderC.nc" nicename="tos.lib.serial.SerialAMSenderC" qname="PrintfC.SerialAMSenderC">
+      <documentation loc="60:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/lib/serial/Serial.h">
+        <short>
+ </short>
+        <long>
+ @author Phil Buonadonna
+ @author Lewis Girod
+ @author Ben Greenstein
+ @author Philip Levis
+ @date   August 7 2005
+</long>
+      </documentation>
+      <instance number="0">
+        <component-ref nicename="tos.lib.serial.SerialAMSenderC" qname="SerialAMSenderC"/>
+        <arguments>
+          <value cst="I:100">
+            <type-int alignment="I:2" cname="int" size="I:2"/>
+          </value>
+        </arguments>
+      </instance>
+      <configuration/>
+      <wiring>
+        <wire>
+          <from><interface-ref name="AMSend" ref="0x2ae8de32a550" scoped=""/></from>
+          <to><interface-ref name="AMSend" ref="0x2ae8df603be0" scoped=""/></to>
+        </wire>
+        <wire>
+          <from><interface-ref name="Packet" ref="0x2ae8de329268" scoped=""/></from>
+          <to><interface-ref name="Packet" ref="0x2ae8ddbe9740" scoped=""/></to>
+        </wire>
+        <wire>
+          <from><interface-ref name="AMPacket" ref="0x2ae8de329e20" scoped=""/></from>
+          <to><interface-ref name="AMPacket" ref="0x2ae8ddbffe08" scoped=""/></to>
+        </wire>
+        <wire>
+          <from><interface-ref name="Acks" ref="0x2ae8de327430" scoped=""/></from>
+          <to><interface-ref name="PacketAcknowledgements" ref="0x2ae8ddbf9de0" scoped=""/></to>
+        </wire>
+        <wire>
+          <from><interface-ref name="Send" ref="0x2ae8df6028e8" scoped=""/></from>
+          <to><interface-ref name="Send" ref="0x2ae8de2b8818" scoped=""/>
+          <arguments>
+            <value cst="I:0">
+              <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned=""/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire>
+          <from><interface-ref name="AMPacket" ref="0x2ae8df68f578" scoped=""/></from>
+          <to><interface-ref name="AMPacket" ref="0x2ae8ddbffe08" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component></referenced></component>

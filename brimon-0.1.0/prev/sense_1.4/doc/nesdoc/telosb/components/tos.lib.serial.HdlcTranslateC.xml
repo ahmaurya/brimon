@@ -1,0 +1,63 @@
+<?xml version="1.0" ?><component loc="35:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/lib/serial/HdlcTranslateC.nc" nicename="tos.lib.serial.HdlcTranslateC" qname="HdlcTranslateC">
+      <documentation loc="60:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/lib/serial/Serial.h">
+        <short>
+ </short>
+        <long>
+ @author Phil Buonadonna
+ @author Lewis Girod
+ @author Ben Greenstein
+ @author Philip Levis
+ @date   August 7 2005
+</long>
+      </documentation>
+      <module/>
+    <specification><interface loc="38:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/lib/serial/HdlcTranslateC.nc" name="UartStream" provided="0" ref="0x2b36775b3448">
+      <component-ref nicename="tos.lib.serial.HdlcTranslateC" qname="HdlcTranslateC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="UartStream" ref="0x2b36775b3448" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.UartStream" qname="UartStream"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="send" ref="0x2b36775b3798" scoped=""/>
+        <function-ref name="receivedByte" ref="0x2b36775b3920" scoped=""/>
+        <function-ref name="receive" ref="0x2b36775b3aa8" scoped=""/>
+        <function-ref name="enableReceiveInterrupt" ref="0x2b36775b3c30" scoped=""/>
+        <function-ref name="receiveDone" ref="0x2b36775b3db8" scoped=""/>
+        <function-ref name="disableReceiveInterrupt" ref="0x2b36775bf020" scoped=""/>
+        <function-ref name="sendDone" ref="0x2b36775bf1a8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="36:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/lib/serial/HdlcTranslateC.nc" name="SerialFrameComm" provided="1" ref="0x2b3677592b58">
+      <component-ref nicename="tos.lib.serial.HdlcTranslateC" qname="HdlcTranslateC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="SerialFrameComm" ref="0x2b3677592b58" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.serial.SerialFrameComm" qname="SerialFrameComm"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="putDelimiter" ref="0x2b36775c0020" scoped=""/>
+        <function-ref name="resetSend" ref="0x2b36775c01a8" scoped=""/>
+        <function-ref name="dataReceived" ref="0x2b36775c0330" scoped=""/>
+        <function-ref name="resetReceive" ref="0x2b36775c04b8" scoped=""/>
+        <function-ref name="putData" ref="0x2b36775c0640" scoped=""/>
+        <function-ref name="putDone" ref="0x2b36775c07c8" scoped=""/>
+        <function-ref name="delimiterReceived" ref="0x2b36775c0950" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="39:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/lib/serial/HdlcTranslateC.nc" name="Leds" provided="0" ref="0x2b36775bf420">
+      <component-ref nicename="tos.lib.serial.HdlcTranslateC" qname="HdlcTranslateC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Leds" ref="0x2b36775bf420" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Leds" qname="Leds"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="led0Off" ref="0x2b36775bf770" scoped=""/>
+        <function-ref name="led0Toggle" ref="0x2b36775bf8f8" scoped=""/>
+        <function-ref name="led1On" ref="0x2b36775bfa80" scoped=""/>
+        <function-ref name="led1Toggle" ref="0x2b36775bfc08" scoped=""/>
+        <function-ref name="led2Toggle" ref="0x2b36775bfd90" scoped=""/>
+        <function-ref name="get" ref="0x2b36775be020" scoped=""/>
+        <function-ref name="led1Off" ref="0x2b36775be1a8" scoped=""/>
+        <function-ref name="led2Off" ref="0x2b36775be7c8" scoped=""/>
+        <function-ref name="set" ref="0x2b36775be330" scoped=""/>
+        <function-ref name="led0On" ref="0x2b36775be4b8" scoped=""/>
+        <function-ref name="led2On" ref="0x2b36775be640" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced/></component>

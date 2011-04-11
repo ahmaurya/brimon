@@ -1,0 +1,234 @@
+<?xml version="1.0" ?><interfacedef loc="42:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/interfaces/BlockWrite.nc" nicename="tos.interfaces.BlockWrite" qname="BlockWrite">
+      <documentation loc="32:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/interfaces/BlockWrite.nc">
+        <short>
+ Write interface for the block storage abstraction described in
+ TEP103.</short>
+        <long>
+ Write interface for the block storage abstraction described in
+ TEP103.
+
+ @author Jonathan Hui &lt;jhui@archrock.com&gt;
+ @version $Revision: 1.6 $ $Date: 2008/06/04 03:00:25 $
+</long>
+      </documentation>
+      <function event="" loc="112:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/interfaces/BlockWrite.nc" name="syncDone" provided="0" ref="0x2b36771654e8">
+        <documentation loc="105:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/interfaces/BlockWrite.nc">
+          <short>
+ Signals the completion of a sync operation.</short>
+          <long>
+ Signals the completion of a sync operation. All written data is
+ flushed to non-volatile storage after this event.
+
+ @param error SUCCESS if the operation was successful, FAIL if
+   it failed
+</long>
+        </documentation>
+        <interfacedef-ref nicename="tos.interfaces.BlockWrite" qname="BlockWrite"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="error_t" ref="0x2b3676c015d8"/></typename>
+            </type-int>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="112:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/interfaces/BlockWrite.nc" name="error" ref="0x2b3677165278">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="error_t" ref="0x2b3676c015d8"/></typename>
+            </type-int>
+          </variable>
+        </parameters>
+      </function>
+      <function event="" loc="71:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/interfaces/BlockWrite.nc" name="writeDone" provided="0" ref="0x2b3677168a00">
+        <documentation loc="60:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/interfaces/BlockWrite.nc">
+          <short>
+ Signals the completion of a write operation.</short>
+          <long>
+ Signals the completion of a write operation. However, data is not
+ guaranteed to survive a power-cycle unless a sync operation has
+ been completed.
+
+ @param addr starting address of write.
+ @param 'void* COUNT(len) buf' buffer that written data was read from.
+ @param len number of bytes written.
+ @param error SUCCESS if the operation was successful, FAIL if
+   it failed
+</long>
+        </documentation>
+        <interfacedef-ref nicename="tos.interfaces.BlockWrite" qname="BlockWrite"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+            <type-int alignment="I:2" cname="unsigned long" size="I:4" unsigned="">
+              <typename><typedef-ref name="storage_addr_t" ref="0x2b36770d3220"/></typename>
+            </type-int>
+            <type-pointer alignment="I:2" size="I:2">
+              <type-void alignment="I:1" size="I:1"/>
+            </type-pointer>
+            <type-int alignment="I:2" cname="unsigned long" size="I:4" unsigned="">
+              <typename><typedef-ref name="storage_len_t" ref="0x2b36770d3600"/></typename>
+            </type-int>
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="error_t" ref="0x2b3676c015d8"/></typename>
+            </type-int>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="71:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/interfaces/BlockWrite.nc" name="addr" ref="0x2b367716ad50">
+            <type-int alignment="I:2" cname="unsigned long" size="I:4" unsigned="">
+              <typename><typedef-ref name="storage_addr_t" ref="0x2b36770d3220"/></typename>
+            </type-int>
+          </variable>
+          <variable loc="71:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/interfaces/BlockWrite.nc" name="buf" ref="0x2b36771680c8">
+            <type-pointer alignment="I:2" size="I:2">
+              <type-void alignment="I:1" size="I:1"/>
+            </type-pointer>
+          </variable>
+          <variable loc="71:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/interfaces/BlockWrite.nc" name="len" ref="0x2b3677168418">
+            <type-int alignment="I:2" cname="unsigned long" size="I:4" unsigned="">
+              <typename><typedef-ref name="storage_len_t" ref="0x2b36770d3600"/></typename>
+            </type-int>
+          </variable>
+          <variable loc="72:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/interfaces/BlockWrite.nc" name="error" ref="0x2b3677168760">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="error_t" ref="0x2b3676c015d8"/></typename>
+            </type-int>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="83:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/interfaces/BlockWrite.nc" name="erase" provided="0" ref="0x2b3677166888">
+        <documentation loc="74:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/interfaces/BlockWrite.nc">
+          <short>
+ Initiate an erase operation.</short>
+          <long>
+ Initiate an erase operation. On SUCCESS, the
+ &lt;code&gt;eraseDone&lt;/code&gt; event will signal completion of the
+ operation.
+
+ @return 
+   &lt;li&gt;SUCCESS if the request was accepted, 
+   &lt;li&gt;EBUSY if a request is already being processed.
+</long>
+        </documentation>
+        <interfacedef-ref nicename="tos.interfaces.BlockWrite" qname="BlockWrite"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="error_t" ref="0x2b3676c015d8"/></typename>
+          </type-int>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+        <parameters>
+        </parameters>
+      </function>
+      <function event="" loc="91:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/interfaces/BlockWrite.nc" name="eraseDone" provided="0" ref="0x2b36771672d0">
+        <documentation loc="85:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/interfaces/BlockWrite.nc">
+          <short>
+ Signals the completion of an erase operation.</short>
+          <long>
+ Signals the completion of an erase operation.
+
+ @param error SUCCESS if the operation was successful, FAIL if
+   it failed
+</long>
+        </documentation>
+        <interfacedef-ref nicename="tos.interfaces.BlockWrite" qname="BlockWrite"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="error_t" ref="0x2b3676c015d8"/></typename>
+            </type-int>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="91:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/interfaces/BlockWrite.nc" name="error" ref="0x2b3677167060">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="error_t" ref="0x2b3676c015d8"/></typename>
+            </type-int>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="58:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/interfaces/BlockWrite.nc" name="write" provided="0" ref="0x2b367716bda0">
+        <documentation loc="43:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/interfaces/BlockWrite.nc">
+          <short>
+ Initiate a write operation within a given volume.</short>
+          <long>
+ Initiate a write operation within a given volume. On SUCCESS, the
+ &lt;code&gt;writeDone&lt;/code&gt; event will signal completion of the
+ operation.
+ &lt;p&gt;
+ Between two erases, no byte may be written more than once.
+ 
+ @param addr starting address to begin write.
+ @param 'void* COUNT(len) buf' buffer to write data from.
+ @param len number of bytes to write.
+ @return 
+   &lt;li&gt;SUCCESS if the request was accepted, 
+   &lt;li&gt;EINVAL if the parameters are invalid
+   &lt;li&gt;EBUSY if a request is already being processed.
+</long>
+        </documentation>
+        <interfacedef-ref nicename="tos.interfaces.BlockWrite" qname="BlockWrite"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="error_t" ref="0x2b3676c015d8"/></typename>
+          </type-int>
+          <function-parameters>
+            <type-int alignment="I:2" cname="unsigned long" size="I:4" unsigned="">
+              <typename><typedef-ref name="storage_addr_t" ref="0x2b36770d3220"/></typename>
+            </type-int>
+            <type-pointer alignment="I:2" size="I:2">
+              <type-void alignment="I:1" size="I:1"/>
+            </type-pointer>
+            <type-int alignment="I:2" cname="unsigned long" size="I:4" unsigned="">
+              <typename><typedef-ref name="storage_len_t" ref="0x2b36770d3600"/></typename>
+            </type-int>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="58:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/interfaces/BlockWrite.nc" name="addr" ref="0x2b367716b4c0">
+            <type-int alignment="I:2" cname="unsigned long" size="I:4" unsigned="">
+              <typename><typedef-ref name="storage_addr_t" ref="0x2b36770d3220"/></typename>
+            </type-int>
+          </variable>
+          <variable loc="58:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/interfaces/BlockWrite.nc" name="buf" ref="0x2b367716b7c0">
+            <type-pointer alignment="I:2" size="I:2">
+              <type-void alignment="I:1" size="I:1"/>
+            </type-pointer>
+          </variable>
+          <variable loc="58:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/interfaces/BlockWrite.nc" name="len" ref="0x2b367716bb10">
+            <type-int alignment="I:2" cname="unsigned long" size="I:4" unsigned="">
+              <typename><typedef-ref name="storage_len_t" ref="0x2b36770d3600"/></typename>
+            </type-int>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="103:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/interfaces/BlockWrite.nc" name="sync" provided="0" ref="0x2b3677167a30">
+        <documentation loc="93:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/interfaces/BlockWrite.nc">
+          <short>
+ Initiate a sync operation to finalize writes to the volume.</short>
+          <long>
+ Initiate a sync operation to finalize writes to the volume. A
+ sync operation must be issued to ensure that data is stored in
+ non-volatile storage. On SUCCES, the &lt;code&gt;syncDone&lt;/code&gt; event
+ will signal completion of the operation.
+
+ @return 
+   &lt;li&gt;SUCCESS if the request was accepted, 
+   &lt;li&gt;EBUSY if a request is already being processed.
+</long>
+        </documentation>
+        <interfacedef-ref nicename="tos.interfaces.BlockWrite" qname="BlockWrite"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="error_t" ref="0x2b3676c015d8"/></typename>
+          </type-int>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+        <parameters>
+        </parameters>
+      </function>
+    </interfacedef>

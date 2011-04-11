@@ -1,0 +1,78 @@
+<html>
+  <head>
+    <LINK rel="stylesheet" href="nesdoc.css" type="text/css" media="screen"><title>Component: tos.chips.msp430.adc12.AdcReadStreamClientC</title>
+  </head>
+  <body>
+    <h2>Component: tos.chips.msp430.adc12.AdcReadStreamClientC
+    </h2>
+    <b>generic configuration AdcReadStreamClientC()</b>
+    <p> 
+ This component virtualizes the HIL of ADC12 on MSP430. A client must wire
+ <code>AdcConfigure</code> to a component that returns the client's adc
+ configuration data.
+
+ 
+    <p>
+    <dl>
+      <dt><b>Author:</b>
+      <dd>
+        Jan Hauer 
+ 
+      </dd>
+      <dt><b>See:</b>
+      <dd>
+         Please refer to the README.txt and TEP 101 for more information about 
+ this component and its intended use.
+
+      </dd>
+    </dl>
+    <p><p><div id=heading>Provides</div><div id=funcsig>interface <a href="../ihtml/tos.interfaces.ReadStream.html">ReadStream</a>&lt;uint16_t&gt;</div><p><div id=heading>Uses</div><div id=funcsig>interface <a href="../ihtml/tos.interfaces.AdcConfigure.html">AdcConfigure</a>&lt;msp430adc12_channel_config_t *&gt;</div><p><div id=heading>Wiring</div><p>
+    <map name="comp">
+      <area shape="rect" href="../chtml/tos.chips.msp430.adc12.WireAdcStreamP.html" title="WireAdcStreamP" alt="" coords="145,120,308,179">
+
+      <area shape="poly" href="../ihtml/tos.interfaces.ReadStream.html" title="ReadStream&lt;uint16_t&gt;" alt="" coords="229,53 229,107 224,107 224,53">
+
+      <area shape="rect" href="../ihtml/tos.interfaces.ReadStream.html" title="ReadStream&lt;uint16_t&gt;" alt="" coords="223,49,231,57">
+
+      <area shape="rect" href="../ihtml/tos.interfaces.ReadStream.html" title="ReadStream&lt;uint16_t&gt;" alt="" coords="223,116,231,124">
+
+      <area shape="rect" href="../ihtml/tos.interfaces.ReadStream.html" title="ReadStream&lt;uint16_t&gt;" alt="" coords="226,78,379,95">
+
+      <area shape="rect" href="../chtml/tos.chips.msp430.adc12.Msp430Adc12ClientAutoRVGC.html" title="Msp430Adc12ClientAutoRVGC\n(Msp430AdcClient)" alt="" coords="5,245,272,304">
+
+      <area shape="poly" href="../ihtml/tos.interfaces.Resource.html" title="Resource[uint8_t]" alt="" coords="146,174 110,189 88,204 84,218 90,234 86,236 79,219 83,201 107,184 144,170">
+
+      <area shape="rect" href="../ihtml/tos.interfaces.Resource.html" title="Resource[uint8_t]" alt="" coords="141,168,149,176">
+
+      <area shape="rect" href="../ihtml/tos.interfaces.Resource.html" title="Resource[uint8_t]" alt="" coords="93,241,101,249">
+
+      <area shape="rect" href="../ihtml/tos.interfaces.Resource.html" title="Resource[uint8_t]" alt="" coords="89,203,201,221">
+
+      <area shape="poly" href="../ihtml/tos.chips.msp430.adc12.Msp430Adc12SingleChannel.html" title="Msp430Adc12SingleChannel[uint8_t]" alt="" coords="220,180 200,223 187,238 183,234 195,220 215,178">
+
+      <area shape="rect" href="../ihtml/tos.chips.msp430.adc12.Msp430Adc12SingleChannel.html" title="Msp430Adc12SingleChannel[uint8_t]" alt="" coords="213,175,221,183">
+
+      <area shape="rect" href="../ihtml/tos.chips.msp430.adc12.Msp430Adc12SingleChannel.html" title="Msp430Adc12SingleChannel[uint8_t]" alt="" coords="172,241,180,249">
+
+      <area shape="rect" href="../ihtml/tos.chips.msp430.adc12.Msp430Adc12SingleChannel.html" title="Msp430Adc12SingleChannel[uint8_t]" alt="" coords="207,203,441,221">
+
+      <area shape="poly" href="../ihtml/tos.interfaces.AdcConfigure.html" title="AdcConfigure&lt;msp430adc12_channel_config_t *&gt;[uint8_t]" alt="" coords="309,157 392,174 426,186 448,201 475,237 487,273 484,310 465,348 453,358 436,367 391,381 390,376 434,362 450,354 461,345 479,309 482,274 470,240 445,205 424,191 390,179 307,163">
+
+      <area shape="rect" href="../ihtml/tos.interfaces.AdcConfigure.html" title="AdcConfigure&lt;msp430adc12_channel_config_t *&gt;[uint8_t]" alt="" coords="304,156,312,164">
+
+      <area shape="rect" href="../ihtml/tos.interfaces.AdcConfigure.html" title="AdcConfigure&lt;msp430adc12_channel_config_t *&gt;[uint8_t]" alt="" coords="373,377,381,385">
+
+      <area shape="rect" href="../ihtml/tos.interfaces.AdcConfigure.html" title="AdcConfigure&lt;msp430adc12_channel_config_t *&gt;[uint8_t]" alt="" coords="483,266,861,283">
+
+      <area shape="poly" href="../ihtml/tos.interfaces.AdcConfigure.html" title="AdcConfigure&lt;msp430adc12_channel_config_t *&gt;" alt="" coords="135,304 135,326 142,345 154,355 173,364 225,379 223,384 172,369 151,359 138,348 129,327 129,304">
+
+      <area shape="rect" href="../ihtml/tos.interfaces.AdcConfigure.html" title="AdcConfigure&lt;msp430adc12_channel_config_t *&gt;" alt="" coords="128,300,136,308">
+
+      <area shape="rect" href="../ihtml/tos.interfaces.AdcConfigure.html" title="AdcConfigure&lt;msp430adc12_channel_config_t *&gt;" alt="" coords="233,380,241,388">
+
+      <area shape="rect" href="../ihtml/tos.interfaces.AdcConfigure.html" title="AdcConfigure&lt;msp430adc12_channel_config_t *&gt;" alt="" coords="140,329,463,346">
+
+    </map>
+    <img src="tos.chips.msp430.adc12.AdcReadStreamClientC.png" usemap="#comp" id=imgwiring>
+  </body>
+</html>

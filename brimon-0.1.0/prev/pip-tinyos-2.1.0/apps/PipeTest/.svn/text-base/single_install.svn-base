@@ -1,0 +1,12 @@
+if [ $# -ne 2 ]
+then
+	echo "Usage: $0 <nodeid > <ttynum>";
+	exit 1;
+fi
+
+nodeid=$1;
+ttynum=$2;
+echo "nodeid = ${nodeid}, tty = /dev/ttyUSB${ttynum}:telosb"
+make tmote reinstall,$nodeid bsl,/dev/ttyUSB${ttynum} &
+
+

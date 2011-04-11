@@ -1,0 +1,243 @@
+<?xml version="1.0" ?><component loc="45:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/lib/printf/MainC.nc" nicename="tos.lib.printf.MainC" qname="MainC">
+      <documentation loc="34:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/lib/printf/MainC.nc">
+        <short>
+ MainC is the system interface the TinyOS boot sequence.</short>
+        <long>
+ MainC is the system interface the TinyOS boot sequence. It wires the
+ boot sequence implementation to the scheduler and hardware resources.
+
+ @author Philip Levis
+ @author Kevin Klues
+ @date   August 6 2005
+</long>
+      </documentation>
+      <configuration/>
+      <wiring>
+        <wire loc="59:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/lib/printf/MainC.nc">
+          <from><interface-ref name="Boot" ref="0x2b3677185878" scoped=""/></from>
+          <to><interface-ref name="Boot" ref="0x2b36773dd3d8" scoped=""/></to>
+        </wire>
+        <wire loc="53:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/lib/printf/MainC.nc">
+          <from><interface-ref name="Scheduler" ref="0x2b36773bc020" scoped=""/></from>
+          <to><interface-ref name="Scheduler" ref="0x2b3676bfc0f0" scoped=""/></to>
+        </wire>
+        <wire loc="54:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/lib/printf/MainC.nc">
+          <from><interface-ref name="PlatformInit" ref="0x2b36773bc9f8" scoped=""/></from>
+          <to><interface-ref name="Init" ref="0x2b367721eaf0" scoped=""/></to>
+        </wire>
+        <wire loc="55:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/lib/printf/MainC.nc">
+          <from><interface-ref name="MainBoot" ref="0x2b36773da020" scoped=""/></from>
+          <to><interface-ref name="Boot" ref="0x2b367721d9c0" scoped=""/></to>
+        </wire>
+        <wire loc="58:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/lib/printf/MainC.nc">
+          <from><interface-ref name="SoftwareInit" ref="0x2b36773bb140" scoped=""/></from>
+          <to><interface-ref name="SoftwareInit" ref="0x2b36771fcca0" scoped=""/></to>
+        </wire>
+      </wiring>
+    <specification><interface loc="47:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/lib/printf/MainC.nc" name="SoftwareInit" provided="0" ref="0x2b36771fcca0">
+      <component-ref nicename="tos.lib.printf.MainC" qname="MainC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="SoftwareInit" ref="0x2b36771fcca0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x2b367721e020" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="46:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/lib/printf/MainC.nc" name="Boot" provided="1" ref="0x2b3677185878">
+      <component-ref nicename="tos.lib.printf.MainC" qname="MainC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Boot" ref="0x2b3677185878" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Boot" qname="Boot"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="booted" ref="0x2b3677185bc8" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced><interface loc="49:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/RealMainP.nc" name="SoftwareInit" provided="0" ref="0x2b36773bb140">
+      <component-ref nicename="tos.system.RealMainP" qname="RealMainP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="SoftwareInit" ref="0x2b36773bb140" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x2b36773bb490" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="48:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/RealMainP.nc" name="PlatformInit" provided="0" ref="0x2b36773bc9f8">
+      <component-ref nicename="tos.system.RealMainP" qname="RealMainP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="PlatformInit" ref="0x2b36773bc9f8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x2b36773bcd48" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="49:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/lib/printf/PrintfC.nc" name="MainBoot" provided="0" ref="0x2b36773da020">
+      <component-ref nicename="tos.lib.printf.PrintfC" qname="PrintfC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="MainBoot" ref="0x2b36773da020" scoped=""/></type-interface>
+      <attribute-value>
+        <attribute-ref name="exactlyonce" ref="0x2b3676bf6b98"/>
+        <value-structured>
+          <type-tag alignment="I:1" size="I:0"><attribute-ref name="exactlyonce" ref="0x2b3676bf6b98"/></type-tag>
+        </value-structured>
+      </attribute-value>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Boot" qname="Boot"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="booted" ref="0x2b36773da370" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="46:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/RealMainP.nc" name="Boot" provided="1" ref="0x2b367721d9c0">
+      <component-ref nicename="tos.system.RealMainP" qname="RealMainP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Boot" ref="0x2b367721d9c0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Boot" qname="Boot"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="booted" ref="0x2b367721dd10" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="47:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/lib/printf/PrintfC.nc" name="Boot" provided="1" ref="0x2b36773dd3d8">
+      <component-ref nicename="tos.lib.printf.PrintfC" qname="PrintfC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Boot" ref="0x2b36773dd3d8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Boot" qname="Boot"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="booted" ref="0x2b36773dd728" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="47:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/RealMainP.nc" name="Scheduler" provided="0" ref="0x2b36773bc020">
+      <component-ref nicename="tos.system.RealMainP" qname="RealMainP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Scheduler" ref="0x2b36773bc020" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Scheduler" qname="Scheduler"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x2b36773bc370" scoped=""/>
+        <function-ref name="taskLoop" ref="0x2b36773bc4f8" scoped=""/>
+        <function-ref name="runNextTask" ref="0x2b36773bc680" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="31:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/platforms/telosa/PlatformC.nc" name="Init" provided="1" ref="0x2b367721eaf0">
+      <component-ref nicename="tos.platforms.telosa.PlatformC" qname="PlatformC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Init" ref="0x2b367721eaf0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x2b367721ee40" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="36:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/TinySchedulerC.nc" name="Scheduler" provided="1" ref="0x2b3676bfc0f0">
+      <component-ref nicename="tos.system.TinySchedulerC" qname="TinySchedulerC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Scheduler" ref="0x2b3676bfc0f0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Scheduler" qname="Scheduler"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x2b3676bfc440" scoped=""/>
+        <function-ref name="taskLoop" ref="0x2b3676bfc5c8" scoped=""/>
+        <function-ref name="runNextTask" ref="0x2b3676bfc750" scoped=""/>
+      </interface-functions>
+    </interface><component loc="45:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/RealMainP.nc" nicename="tos.system.RealMainP" qname="RealMainP" safe="">
+      <documentation loc="38:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/RealMainP.nc">
+        <short>
+ RealMain implements the TinyOS boot sequence, as documented in TEP 107.</short>
+        <long>
+ RealMain implements the TinyOS boot sequence, as documented in TEP 107.
+
+ @author Philip Levis
+ @date   January 17 2005
+</long>
+      </documentation>
+      <module/>
+    </component><component loc="29:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/platforms/telosa/PlatformC.nc" nicename="tos.platforms.telosa.PlatformC" qname="PlatformC">
+      <documentation loc="23:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/platforms/telosa/PlatformC.nc">
+        <short>
+ </short>
+        <long>
+ @author Joe Polastre and Cory Sharp
+ @version $Revision: 1.5 $ $Date: 2007/07/10 00:24:31 $
+</long>
+      </documentation>
+      <configuration/>
+      <wiring>
+        <wire loc="37:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/platforms/telosa/PlatformC.nc">
+          <from><interface-ref name="Init" ref="0x2b367721eaf0" scoped=""/></from>
+          <to><interface-ref name="Init" ref="0x2b367721ae60" scoped=""/></to>
+        </wire>
+        <wire loc="38:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/platforms/telosa/PlatformC.nc">
+          <from><interface-ref name="MoteClockInit" ref="0x2b3677217568" scoped=""/></from>
+          <to><interface-ref name="MoteClockInit" ref="0x2b36772186c0" scoped=""/></to>
+        </wire>
+        <wire loc="39:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/platforms/telosa/PlatformC.nc">
+          <from><interface-ref name="MoteInit" ref="0x2b3677217c08" scoped=""/></from>
+          <to><interface-ref name="Init" ref="0x2b36772198a0" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component><component loc="35:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/TinySchedulerC.nc" nicename="tos.system.TinySchedulerC" qname="TinySchedulerC">
+      <documentation loc="23:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/TinySchedulerC.nc">
+        <short>
+ The TinyOS scheduler.</short>
+        <long>
+ The TinyOS scheduler. It provides two interfaces: Scheduler,
+ for TinyOS to initialize and run tasks, and TaskBasic, the simplext
+ class of TinyOS tasks (reserved always at-most-once posting,
+ FIFO, parameter-free). For details and information on how to
+ replace the scheduler, refer to TEP 106.
+
+ @author  Phil Levis
+ @date    August 7 2005
+ @see     TEP 106: Tasks and Schedulers
+</long>
+      </documentation>
+      <configuration/>
+      <wiring>
+        <wire loc="43:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/TinySchedulerC.nc">
+          <from><interface-ref name="TaskBasic" ref="0x2b3676c08b18" scoped=""/></from>
+          <to><interface-ref name="TaskBasic" ref="0x2b367706a020" scoped=""/></to>
+        </wire>
+        <wire loc="42:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/TinySchedulerC.nc">
+          <from><interface-ref name="Scheduler" ref="0x2b3676bfc0f0" scoped=""/></from>
+          <to><interface-ref name="Scheduler" ref="0x2b367706b0c0" scoped=""/></to>
+        </wire>
+        <wire loc="44:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/TinySchedulerC.nc">
+          <from><interface-ref name="McuSleep" ref="0x2b36770664e0" scoped=""/></from>
+          <to><interface-ref name="McuSleep" ref="0x2b3676c6d408" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component><component loc="45:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/lib/printf/PrintfC.nc" nicename="tos.lib.printf.PrintfC" qname="PrintfC">
+      <documentation loc="23:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/lib/printf/printf.h">
+        <short>
+
+ </short>
+        <long>
+
+ @author Kevin Klues (klueska@cs.wustl.edu)
+ @version $Revision: 1.16 $
+ @date $Date: 2010/02/22 05:29:57 $
+</long>
+      </documentation>
+      <configuration/>
+      <wiring>
+        <wire loc="60:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/lib/printf/PrintfC.nc">
+          <from><interface-ref name="Boot" ref="0x2b36773dd3d8" scoped=""/></from>
+          <to><interface-ref name="Boot" ref="0x2b3677b66298" scoped=""/></to>
+        </wire>
+        <wire loc="59:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/lib/printf/PrintfC.nc">
+          <from><interface-ref name="MainBoot" ref="0x2b3677b66978" scoped=""/></from>
+          <to><interface-ref name="MainBoot" ref="0x2b36773da020" scoped=""/></to>
+        </wire>
+        <wire loc="62:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/lib/printf/PrintfC.nc">
+          <from><interface-ref name="SerialControl" ref="0x2b3677b650e8" scoped=""/></from>
+          <to><interface-ref name="SplitControl" ref="0x2b36773d11e0" scoped=""/></to>
+        </wire>
+        <wire loc="63:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/lib/printf/PrintfC.nc">
+          <from><interface-ref name="Queue" ref="0x2b3677b65d18" scoped=""/></from>
+          <to><interface-ref name="Queue" ref="0x2b3677b45d50" scoped=""/></to>
+        </wire>
+        <wire loc="64:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/lib/printf/PrintfC.nc">
+          <from><interface-ref name="AMSend" ref="0x2b3677b60020" scoped=""/></from>
+          <to><interface-ref name="AMSend" ref="0x2b3677b041d0" scoped=""/></to>
+        </wire>
+        <wire loc="65:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/lib/printf/PrintfC.nc">
+          <from><interface-ref name="Packet" ref="0x2b3677b60c18" scoped=""/></from>
+          <to><interface-ref name="Packet" ref="0x2b3677b04d88" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component></referenced></component>

@@ -1,0 +1,40 @@
+<area shape="rect" href="../chtml/tos.system.ArbitratedReadStreamC.html" title="ArbitratedReadStreamC\n(MultiplexY)" alt="" coords="72,120,275,168">
+<area shape="poly" href="../ihtml/tos.interfaces.ReadStream.html" title="ReadStream&lt;uint16_t&gt;[uint8_t]" alt="" coords="176,53 176,107 171,107 171,53">
+<area shape="rect" href="../ihtml/tos.interfaces.ReadStream.html" title="ReadStream&lt;uint16_t&gt;[uint8_t]" alt="" coords="169,49,177,57">
+<area shape="rect" href="../ihtml/tos.interfaces.ReadStream.html" title="ReadStream&lt;uint16_t&gt;[uint8_t]" alt="" coords="169,116,177,124">
+<area shape="rect" href="../ihtml/tos.interfaces.ReadStream.html" title="ReadStream&lt;uint16_t&gt;[uint8_t]" alt="" coords="173,78,379,95">
+<area shape="rect" href="../chtml/AccelConfigP.html" title="AccelConfigP" alt="" coords="605,235,739,293">
+<area shape="poly" href="../ihtml/tos.interfaces.Resource.html" title="Resource[uint8_t]" alt="" coords="220,166 271,191 311,208 362,220 403,225 444,227 498,232 592,247 592,252 497,237 444,232 402,230 361,225 310,213 269,196 217,170">
+<area shape="rect" href="../ihtml/tos.interfaces.Resource.html" title="Resource[uint8_t]" alt="" coords="215,164,223,172">
+<area shape="rect" href="../ihtml/tos.interfaces.Resource.html" title="Resource[uint8_t]" alt="" coords="601,248,609,256">
+<area shape="rect" href="../ihtml/tos.interfaces.Resource.html" title="Resource[uint8_t]" alt="" coords="311,193,423,210">
+<area shape="poly" href="../ihtml/tos.interfaces.ReadStream.html" title="ReadStream&lt;uint16_t&gt;[uint8_t]" alt="" coords="84,170 58,194 52,209 51,227 45,226 47,208 54,190 81,166">
+<area shape="rect" href="../ihtml/tos.interfaces.ReadStream.html" title="ReadStream&lt;uint16_t&gt;[uint8_t]" alt="" coords="79,164,87,172">
+<area shape="rect" href="../ihtml/tos.interfaces.ReadStream.html" title="ReadStream&lt;uint16_t&gt;[uint8_t]" alt="" coords="45,236,53,244">
+<area shape="rect" href="../ihtml/tos.interfaces.ReadStream.html" title="ReadStream&lt;uint16_t&gt;[uint8_t]" alt="" coords="55,193,262,210">
+<area shape="rect" href="../chtml/tos.system.ArbitratedReadStreamC.html" title="ArbitratedReadStreamC\n(MultiplexZ)" alt="" coords="428,120,631,168">
+<area shape="poly" href="../ihtml/tos.interfaces.ReadStream.html" title="ReadStream&lt;uint16_t&gt;[uint8_t]" alt="" coords="532,53 532,107 527,107 527,53">
+<area shape="rect" href="../ihtml/tos.interfaces.ReadStream.html" title="ReadStream&lt;uint16_t&gt;[uint8_t]" alt="" coords="525,49,533,57">
+<area shape="rect" href="../ihtml/tos.interfaces.ReadStream.html" title="ReadStream&lt;uint16_t&gt;[uint8_t]" alt="" coords="525,116,533,124">
+<area shape="rect" href="../ihtml/tos.interfaces.ReadStream.html" title="ReadStream&lt;uint16_t&gt;[uint8_t]" alt="" coords="529,78,735,95">
+<area shape="poly" href="../ihtml/tos.interfaces.Resource.html" title="Resource[uint8_t]" alt="" coords="610,166 645,190 664,220 659,223 641,194 606,170">
+<area shape="rect" href="../ihtml/tos.interfaces.Resource.html" title="Resource[uint8_t]" alt="" coords="604,164,612,172">
+<area shape="rect" href="../ihtml/tos.interfaces.Resource.html" title="Resource[uint8_t]" alt="" coords="661,231,669,239">
+<area shape="rect" href="../ihtml/tos.interfaces.Resource.html" title="Resource[uint8_t]" alt="" coords="653,193,765,210">
+<area shape="poly" href="../ihtml/tos.interfaces.ReadStream.html" title="ReadStream&lt;uint16_t&gt;[uint8_t]" alt="" coords="463,170 438,193 432,209 431,227 425,226 427,208 434,191 459,166">
+<area shape="rect" href="../ihtml/tos.interfaces.ReadStream.html" title="ReadStream&lt;uint16_t&gt;[uint8_t]" alt="" coords="457,164,465,172">
+<area shape="rect" href="../ihtml/tos.interfaces.ReadStream.html" title="ReadStream&lt;uint16_t&gt;[uint8_t]" alt="" coords="425,236,433,244">
+<area shape="rect" href="../ihtml/tos.interfaces.ReadStream.html" title="ReadStream&lt;uint16_t&gt;[uint8_t]" alt="" coords="435,193,642,210">
+<area shape="rect" href="../chtml/tos.system.ArbitratedReadStreamC.html" title="ArbitratedReadStreamC\n(MultiplexX)" alt="" coords="760,120,963,168">
+<area shape="poly" href="../ihtml/tos.interfaces.ReadStream.html" title="ReadStream&lt;uint16_t&gt;[uint8_t]" alt="" coords="864,53 864,107 859,107 859,53">
+<area shape="rect" href="../ihtml/tos.interfaces.ReadStream.html" title="ReadStream&lt;uint16_t&gt;[uint8_t]" alt="" coords="857,49,865,57">
+<area shape="rect" href="../ihtml/tos.interfaces.ReadStream.html" title="ReadStream&lt;uint16_t&gt;[uint8_t]" alt="" coords="857,116,865,124">
+<area shape="rect" href="../ihtml/tos.interfaces.ReadStream.html" title="ReadStream&lt;uint16_t&gt;[uint8_t]" alt="" coords="861,78,1067,95">
+<area shape="poly" href="../ihtml/tos.interfaces.Resource.html" title="Resource[uint8_t]" alt="" coords="832,170 772,213 744,230 741,226 769,208 829,166">
+<area shape="rect" href="../ihtml/tos.interfaces.Resource.html" title="Resource[uint8_t]" alt="" coords="827,164,835,172">
+<area shape="rect" href="../ihtml/tos.interfaces.Resource.html" title="Resource[uint8_t]" alt="" coords="727,231,735,239">
+<area shape="rect" href="../ihtml/tos.interfaces.Resource.html" title="Resource[uint8_t]" alt="" coords="799,193,911,210">
+<area shape="poly" href="../ihtml/tos.interfaces.ReadStream.html" title="ReadStream&lt;uint16_t&gt;[uint8_t]" alt="" coords="905,166 930,190 949,225 944,228 926,194 901,170">
+<area shape="rect" href="../ihtml/tos.interfaces.ReadStream.html" title="ReadStream&lt;uint16_t&gt;[uint8_t]" alt="" coords="899,164,907,172">
+<area shape="rect" href="../ihtml/tos.interfaces.ReadStream.html" title="ReadStream&lt;uint16_t&gt;[uint8_t]" alt="" coords="947,236,955,244">
+<area shape="rect" href="../ihtml/tos.interfaces.ReadStream.html" title="ReadStream&lt;uint16_t&gt;[uint8_t]" alt="" coords="935,193,1142,210">

@@ -1,0 +1,230 @@
+<?xml version="1.0" ?><component abstract="" loc="18:AccelXStreamC.nc" nicename="AccelXStreamC" qname="AccelXStreamC">
+      <documentation loc="10:AccelXStreamC.nc">
+        <short>
+ AccelXdiode of the basicsb sensor board.</short>
+        <long>
+ AccelXdiode of the basicsb sensor board.
+
+ @author David Gay
+</long>
+      </documentation>
+      <parameters>
+      </parameters>
+      <configuration/>
+      <wiring>
+        <wire loc="27:AccelXStreamC.nc">
+          <from><interface-ref name="ReadStream" ref="0x2b36782146f0" scoped=""/></from>
+          <to><interface-ref name="ReadStreamX" ref="0x2b367820db70" scoped=""/>
+          <arguments>
+            <value cst="U:">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="28:AccelXStreamC.nc">
+          <from><interface-ref name="ActualX" ref="0x2b36781fe020" scoped=""/>
+          <arguments>
+            <value cst="U:">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </from>
+          <to><interface-ref name="ReadStream" ref="0x2b36785d16c0" scoped=""/></to>
+        </wire>
+        <wire loc="29:AccelXStreamC.nc">
+          <from><interface-ref name="AdcConfigure" ref="0x2b36785cd2d8" scoped=""/></from>
+          <to><interface-ref name="ConfigX" ref="0x2b367823b630" scoped=""/></to>
+        </wire>
+      </wiring>
+    <specification><interface loc="19:AccelXStreamC.nc" name="ReadStream" provided="1" ref="0x2b36782146f0">
+      <component-ref nicename="AccelXStreamC" qname="AccelXStreamC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ReadStream" ref="0x2b36782146f0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.ReadStream" qname="ReadStream"/>
+        <arguments>
+          <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned="">
+            <typename><typedef-ref name="uint16_t" ref="0x2b36763969f0"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="bufferDone" ref="0x2b367820f158" scoped=""/>
+        <function-ref name="postBuffer" ref="0x2b3678211370" scoped=""/>
+        <function-ref name="read" ref="0x2b3678211c78" scoped=""/>
+        <function-ref name="readDone" ref="0x2b367820fb90" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced><interface loc="24:AccelConfigP.nc" name="ConfigX" provided="1" ref="0x2b367823b630">
+      <component-ref nicename="AccelConfigP" qname="AccelConfigP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ConfigX" ref="0x2b367823b630" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.AdcConfigure" qname="AdcConfigure"/>
+        <arguments>
+          <type-pointer alignment="I:2" size="I:2">
+            <type-qualified const="">
+                <typename><typedef-ref name="msp430adc12_channel_config_t" ref="0x2b36781ed0c8"/></typename>
+              <type-tag alignment="I:2" size="I:4"><struct-ref ref="0x2b36781ee7c8"/></type-tag>
+            </type-qualified>
+          </type-pointer>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="getConfiguration" ref="0x2b367823d220" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="48:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/adc12/AdcReadStreamClientC.nc" name="ReadStream" provided="1" ref="0x2b36785d16c0">
+      <component-ref nicename="tos.chips.msp430.adc12.AdcReadStreamClientC" qname="AccelXStreamC.AdcReadStreamClientC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ReadStream" ref="0x2b36785d16c0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.ReadStream" qname="ReadStream"/>
+        <arguments>
+          <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned="">
+            <typename><typedef-ref name="uint16_t" ref="0x2b36763969f0"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="bufferDone" ref="0x2b36785cf158" scoped=""/>
+        <function-ref name="postBuffer" ref="0x2b36785d0370" scoped=""/>
+        <function-ref name="read" ref="0x2b36785d0c78" scoped=""/>
+        <function-ref name="readDone" ref="0x2b36785cfb90" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="11:AccelReadStreamP.nc" name="ActualX" provided="0" ref="0x2b36781fe020">
+      <component-ref nicename="AccelReadStreamP" qname="AccelReadStreamP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ActualX" ref="0x2b36781fe020" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.ReadStream" qname="ReadStream"/>
+        <arguments>
+          <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned="">
+            <typename><typedef-ref name="uint16_t" ref="0x2b36763969f0"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x2b3676396318"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="bufferDone" ref="0x2b36781fd970" scoped=""/>
+        <function-ref name="postBuffer" ref="0x2b36781feb68" scoped=""/>
+        <function-ref name="read" ref="0x2b36781fd4d0" scoped=""/>
+        <function-ref name="readDone" ref="0x2b36781fb408" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="6:AccelReadStreamP.nc" name="ReadStreamX" provided="1" ref="0x2b367820db70">
+      <component-ref nicename="AccelReadStreamP" qname="AccelReadStreamP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ReadStreamX" ref="0x2b367820db70" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.ReadStream" qname="ReadStream"/>
+        <arguments>
+          <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned="">
+            <typename><typedef-ref name="uint16_t" ref="0x2b36763969f0"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x2b3676396318"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="bufferDone" ref="0x2b36782094c0" scoped=""/>
+        <function-ref name="postBuffer" ref="0x2b367820a6f0" scoped=""/>
+        <function-ref name="read" ref="0x2b3678209020" scoped=""/>
+        <function-ref name="readDone" ref="0x2b3678207020" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="49:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/adc12/AdcReadStreamClientC.nc" name="AdcConfigure" provided="0" ref="0x2b36785cd2d8">
+      <component-ref nicename="tos.chips.msp430.adc12.AdcReadStreamClientC" qname="AccelXStreamC.AdcReadStreamClientC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="AdcConfigure" ref="0x2b36785cd2d8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.AdcConfigure" qname="AdcConfigure"/>
+        <arguments>
+          <type-pointer alignment="I:2" size="I:2">
+            <type-qualified const="">
+                <typename><typedef-ref name="msp430adc12_channel_config_t" ref="0x2b36781ed0c8"/></typename>
+              <type-tag alignment="I:2" size="I:4"><struct-ref ref="0x2b36781ee7c8"/></type-tag>
+            </type-qualified>
+          </type-pointer>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="getConfiguration" ref="0x2b36785cde58" scoped=""/>
+      </interface-functions>
+    </interface><component loc="21:AccelConfigP.nc" nicename="AccelConfigP" qname="AccelConfigP">
+      <configuration/>
+      <wiring>
+        <wire loc="34:AccelConfigP.nc">
+          <from><interface-ref name="ConfigY" ref="0x2b367823d998" scoped=""/></from>
+          <to><interface-ref name="ConfigY" ref="0x2b3678235cd8" scoped=""/></to>
+        </wire>
+        <wire loc="35:AccelConfigP.nc">
+          <from><interface-ref name="ConfigZ" ref="0x2b367823acd8" scoped=""/></from>
+          <to><interface-ref name="ConfigZ" ref="0x2b36782320a8" scoped=""/></to>
+        </wire>
+        <wire loc="33:AccelConfigP.nc">
+          <from><interface-ref name="ConfigX" ref="0x2b367823b630" scoped=""/></from>
+          <to><interface-ref name="ConfigX" ref="0x2b3678238950" scoped=""/></to>
+        </wire>
+        <wire loc="32:AccelConfigP.nc">
+          <from><interface-ref name="Resource" ref="0x2b367823f1c8" scoped=""/></from>
+          <to><interface-ref name="Resource" ref="0x2b3678254020" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component><component abstract="" loc="47(AccelXStreamC.AdcReadStreamClientC):/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/adc12/AdcReadStreamClientC.nc" nicename="tos.chips.msp430.adc12.AdcReadStreamClientC" qname="AccelXStreamC.AdcReadStreamClientC">
+      <documentation loc="36:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/adc12/AdcReadStreamClientC.nc">
+        <short> 
+ This component virtualizes the HIL of ADC12 on MSP430.</short>
+        <long> 
+ This component virtualizes the HIL of ADC12 on MSP430. A client must wire
+ &lt;code&gt;AdcConfigure&lt;/code&gt; to a component that returns the client's adc
+ configuration data.
+
+ @author Jan Hauer 
+ @see  Please refer to the README.txt and TEP 101 for more information about 
+ this component and its intended use.
+</long>
+      </documentation>
+      <instance>
+        <component-ref nicename="tos.chips.msp430.adc12.AdcReadStreamClientC" qname="AdcReadStreamClientC"/>
+      </instance>
+      <configuration/>
+    </component><component loc="3:AccelReadStreamP.nc" nicename="AccelReadStreamP" qname="AccelReadStreamP">
+      <configuration/>
+      <wiring>
+        <wire loc="30:AccelReadStreamP.nc">
+          <from><interface-ref name="ReadStreamY" ref="0x2b3678207d08" scoped=""/></from>
+          <to><interface-ref name="ReadStream" ref="0x2b367827f060" scoped=""/></to>
+        </wire>
+        <wire loc="34:AccelReadStreamP.nc">
+          <from><interface-ref name="ReadStreamZ" ref="0x2b3678203e00" scoped=""/></from>
+          <to><interface-ref name="ReadStream" ref="0x2b36782d9568" scoped=""/></to>
+        </wire>
+        <wire loc="26:AccelReadStreamP.nc">
+          <from><interface-ref name="ReadStreamX" ref="0x2b367820db70" scoped=""/></from>
+          <to><interface-ref name="ReadStream" ref="0x2b367824eb90" scoped=""/></to>
+        </wire>
+        <wire loc="27:AccelReadStreamP.nc">
+          <from><interface-ref name="Resource" ref="0x2b36782823c8" scoped=""/></from>
+          <to><interface-ref name="Resource" ref="0x2b367823f1c8" scoped=""/></to>
+        </wire>
+        <wire loc="28:AccelReadStreamP.nc">
+          <from><interface-ref name="Service" ref="0x2b3678287860" scoped=""/></from>
+          <to><interface-ref name="ActualX" ref="0x2b36781fe020" scoped=""/></to>
+        </wire>
+        <wire loc="31:AccelReadStreamP.nc">
+          <from><interface-ref name="Resource" ref="0x2b36782dd830" scoped=""/></from>
+          <to><interface-ref name="Resource" ref="0x2b367823f1c8" scoped=""/></to>
+        </wire>
+        <wire loc="32:AccelReadStreamP.nc">
+          <from><interface-ref name="Service" ref="0x2b367827ccd0" scoped=""/></from>
+          <to><interface-ref name="ActualY" ref="0x2b36781fa1c8" scoped=""/></to>
+        </wire>
+        <wire loc="35:AccelReadStreamP.nc">
+          <from><interface-ref name="Resource" ref="0x2b36782d2da8" scoped=""/></from>
+          <to><interface-ref name="Resource" ref="0x2b367823f1c8" scoped=""/></to>
+        </wire>
+        <wire loc="36:AccelReadStreamP.nc">
+          <from><interface-ref name="Service" ref="0x2b36782d52e8" scoped=""/></from>
+          <to><interface-ref name="ActualZ" ref="0x2b36781f62b0" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component></referenced></component>

@@ -1,0 +1,27 @@
+<area shape="rect" href="../chtml/tos.system.SimpleArbiterP.html" title="SimpleArbiterP\n(Arbiter)" alt="" coords="259,125,392,173">
+<area shape="poly" href="../ihtml/tos.interfaces.ResourceRequested.html" title="ResourceRequested[uint8_t]" alt="" coords="123,53 130,75 143,94 160,104 184,114 246,132 245,137 182,119 157,109 140,98 125,77 117,54">
+<area shape="rect" href="../ihtml/tos.interfaces.ResourceRequested.html" title="ResourceRequested[uint8_t]" alt="" coords="116,49,124,57">
+<area shape="rect" href="../ihtml/tos.interfaces.ResourceRequested.html" title="ResourceRequested[uint8_t]" alt="" coords="255,133,263,141">
+<area shape="rect" href="../ihtml/tos.interfaces.ResourceRequested.html" title="ResourceRequested[uint8_t]" alt="" coords="141,78,320,95">
+<area shape="rect" href="../chtml/tos.system.RoundRobinResourceQueueC.html" title="RoundRobinResourceQueueC\n(Queue)" alt="" coords="395,245,643,293">
+<area shape="poly" href="../ihtml/tos.interfaces.ResourceQueue.html" title="ResourceQueue" alt="" coords="359,171 429,219 459,236 456,241 427,224 356,176">
+<area shape="rect" href="../ihtml/tos.interfaces.ResourceQueue.html" title="ResourceQueue" alt="" coords="353,169,361,177">
+<area shape="rect" href="../ihtml/tos.interfaces.ResourceQueue.html" title="ResourceQueue" alt="" coords="465,241,473,249">
+<area shape="rect" href="../ihtml/tos.interfaces.ResourceQueue.html" title="ResourceQueue" alt="" coords="427,203,527,221">
+<area shape="poly" href="../ihtml/tos.interfaces.ResourceConfigure.html" title="ResourceConfigure[uint8_t]" alt="" coords="260,174 242,187 228,204 223,217 221,232 216,232 217,216 223,201 238,183 257,170">
+<area shape="rect" href="../ihtml/tos.interfaces.ResourceConfigure.html" title="ResourceConfigure[uint8_t]" alt="" coords="255,168,263,176">
+<area shape="rect" href="../ihtml/tos.interfaces.ResourceConfigure.html" title="ResourceConfigure[uint8_t]" alt="" coords="215,241,223,249">
+<area shape="rect" href="../ihtml/tos.interfaces.ResourceConfigure.html" title="ResourceConfigure[uint8_t]" alt="" coords="225,203,399,221">
+<area shape="poly" href="../ihtml/tos.interfaces.Resource.html" title="Resource[uint8_t]" alt="" coords="328,53 328,112 323,112 323,53">
+<area shape="rect" href="../ihtml/tos.interfaces.Resource.html" title="Resource[uint8_t]" alt="" coords="321,49,329,57">
+<area shape="rect" href="../ihtml/tos.interfaces.Resource.html" title="Resource[uint8_t]" alt="" coords="321,121,329,129">
+<area shape="rect" href="../ihtml/tos.interfaces.Resource.html" title="Resource[uint8_t]" alt="" coords="325,78,437,95">
+<area shape="poly" href="../ihtml/tos.interfaces.ArbiterInfo.html" title="ArbiterInfo" alt="" coords="470,54 460,77 445,98 406,125 402,120 441,94 456,74 466,52">
+<area shape="rect" href="../ihtml/tos.interfaces.ArbiterInfo.html" title="ArbiterInfo" alt="" coords="464,49,472,57">
+<area shape="rect" href="../ihtml/tos.interfaces.ArbiterInfo.html" title="ArbiterInfo" alt="" coords="388,124,396,132">
+<area shape="rect" href="../ihtml/tos.interfaces.ArbiterInfo.html" title="ArbiterInfo" alt="" coords="456,78,523,95">
+<area shape="rect" href="../chtml/tos.lib.printf.MainC.html" title="MainC" alt="" coords="517,120,600,179">
+<area shape="poly" href="../ihtml/tos.interfaces.Init.html" title="Init" alt="" coords="552,180 533,233 528,231 547,178">
+<area shape="rect" href="../ihtml/tos.interfaces.Init.html" title="Init" alt="" coords="545,175,553,183">
+<area shape="rect" href="../ihtml/tos.interfaces.Init.html" title="Init" alt="" coords="523,241,531,249">
+<area shape="rect" href="../ihtml/tos.interfaces.Init.html" title="Init" alt="" coords="540,203,559,221">

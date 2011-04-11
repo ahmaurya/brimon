@@ -1,0 +1,232 @@
+<html>
+  <head>
+    <LINK rel="stylesheet" href="nesdoc.css" type="text/css" media="screen"><title>Interface: tos.interfaces.LogRead</title>
+  </head>
+  <body>
+    <h2>Interface: tos.interfaces.LogRead</h2>
+    <b>interface LogRead</b><p>
+ Read interface for the log storage abstraction described in
+ TEP103.
+
+ 
+    <p>
+    <dl>
+      <dt><b>Author:</b>
+      <dd>
+        Jonathan Hui &lt;jhui@archrock.com&gt;
+ 
+      </dd>
+      <dd>
+        David Gay
+ 
+      </dd>
+      <dt><b>Version:</b>
+      <dd>
+        $Revision: 1.5 $ $Date: 2008/06/04 03:00:29 $
+
+      </dd>
+    </dl>
+    <p><p><div id=heading>Commands</div><div id=funcsig><span id=funcnameshort>command storage_cookie_t <a href="#currentOffset">currentOffset</a>()
+      </span><menu>
+ Return a "cookie" representing the current read offset within the
+ log.
+      </menu>
+    </div><div id=funcsig><span id=funcnameshort>command storage_len_t <a href="#getSize">getSize</a>()
+      </span><menu>
+ Report approximate log capacity in bytes.
+      </menu>
+    </div><div id=funcsig><span id=funcnameshort>command error_t <a href="#read">read</a>(void *buf, storage_len_t len)
+      </span><menu>
+ Initiate a read operation from the current position within a given log
+ volume.
+      </menu>
+    </div><div id=funcsig><span id=funcnameshort>command error_t <a href="#seek">seek</a>(storage_cookie_t offset)
+      </span><menu>
+ Set the read position in the log, using a cookie returned by the
+ <code>currentOffset</code> commands of <code>LogRead</code> or
+ <code>LogWrite</code>, or the special value <code>SEEK_BEGINNING</code>.
+      </menu>
+    </div><p><div id=heading>Events</div><div id=funcsig><span id=funcnameshort>event void <a href="#readDone">readDone</a>(void *buf, storage_len_t len, error_t error)
+      </span><menu>
+ Signals the completion of a read operation.
+      </menu>
+    </div><div id=funcsig><span id=funcnameshort>event void <a href="#seekDone">seekDone</a>(error_t error)
+      </span><menu>
+ Report success of seek operation.
+      </menu>
+    </div><p><div id=heading>Commands - Details</div>
+    <a name="currentOffset"></a>
+    <h4>currentOffset
+    </h4>
+    <span id=funcnameshort>command storage_cookie_t <b>currentOffset</b>()
+    </span>
+    <p>
+    <menu>
+      
+ Return a "cookie" representing the current read offset within the
+ log. This cookie can be used in a subsequent seek operation to
+ return to the same place in the log (if it hasn't been overwritten).
+
+ 
+      <p>
+      <dl>
+        <dt><b>Returns:</b>
+        <dd>
+          Cookie representing current offset. 
+   <code>SEEK_BEGINNING</code> will be returned if:<ul>
+   <li> a write in a circular log overwrote the previous read position
+   <li> seek was passed a cookie representing a position before the
+        current beginning of a circular log
+   </ul>
+   Note that <code>SEEK_BEGINNING</code> can also be returned at
+   other times (just after erasing a log, etc).
+
+        </dd>
+      </dl>
+    </menu>
+    <hr>
+    <a name="getSize"></a>
+    <h4>getSize
+    </h4>
+    <span id=funcnameshort>command storage_len_t <b>getSize</b>()
+    </span>
+    <p>
+    <menu>
+      
+ Report approximate log capacity in bytes. Note that use of
+ <code>sync</code>, failures and general overhead may reduce the number
+ of bytes available to the log. 
+
+ 
+      <p>
+      <dl>
+        <dt><b>Returns:</b>
+        <dd>
+          Volume size.
+
+        </dd>
+      </dl>
+    </menu>
+    <hr>
+    <a name="read"></a>
+    <h4>read
+    </h4>
+    <span id=funcnameshort>command error_t <b>read</b>(void *buf, storage_len_t len)
+    </span>
+    <p>
+    <menu>
+      
+ Initiate a read operation from the current position within a given log
+ volume. On SUCCESS, the <code>readDone</code> event will signal
+ completion of the operation.
+ 
+ 
+      <p>
+      <dl>
+        <dt><b>Parameters:</b>
+        <dd>
+          'void* COUNT(len) buf' buffer to place read data.
+ 
+        </dd>
+        <dd>
+          <code>len</code> -  number of bytes to read.
+ 
+        </dd>
+        <dt><b>Returns:</b>
+        <dd>
+          
+   <li>SUCCESS if the request was accepted, 
+   <li>EBUSY if a request is already being processed.
+
+        </dd>
+      </dl>
+    </menu>
+    <hr>
+    <a name="seek"></a>
+    <h4>seek
+    </h4>
+    <span id=funcnameshort>command error_t <b>seek</b>(storage_cookie_t offset)
+    </span>
+    <p>
+    <menu>
+      
+ Set the read position in the log, using a cookie returned by the
+ <code>currentOffset</code> commands of <code>LogRead</code> or
+ <code>LogWrite</code>, or the special value <code>SEEK_BEGINNING</code>.
+
+ If the specified position has been overwritten, the read position
+ will be set to the beginning of the log.
+
+ 
+      <p>
+      <dl>
+        <dt><b>Returns:</b>
+        <dd>
+          
+   <li>SUCCESS if the request was accepted, 
+   <li>EBUSY if a request is already being processed.
+
+        </dd>
+      </dl>
+    </menu>
+    <p><div id=heading>Events - Details</div>
+    <a name="readDone"></a>
+    <h4>readDone
+    </h4>
+    <span id=funcnameshort>event void <b>readDone</b>(void *buf, storage_len_t len, error_t error)
+    </span>
+    <p>
+    <menu>
+      
+ Signals the completion of a read operation. The current read position is
+ advanced by <code>len</code> bytes.
+
+ 
+      <p>
+      <dl>
+        <dt><b>Parameters:</b>
+        <dd>
+          <code>addr</code> -  starting address of read.
+ 
+        </dd>
+        <dd>
+          'void* COUNT(len) buf' buffer where read data was placed.
+ 
+        </dd>
+        <dd>
+          <code>len</code> -  number of bytes read - this may be less than requested
+    (even equal to 0) if the end of the log was reached
+ 
+        </dd>
+        <dd>
+          <code>error</code> -  SUCCESS if read was possible, FAIL otherwise
+
+        </dd>
+      </dl>
+    </menu>
+    <hr>
+    <a name="seekDone"></a>
+    <h4>seekDone
+    </h4>
+    <span id=funcnameshort>event void <b>seekDone</b>(error_t error)
+    </span>
+    <p>
+    <menu>
+      
+ Report success of seek operation. If <code>SUCCESS</code> is returned,
+ the read position has been changed as requested. If other values are
+ returned, the read position is undefined.
+
+ 
+      <p>
+      <dl>
+        <dt><b>Parameters:</b>
+        <dd>
+          <code>error</code> -  SUCCESS if the seek was succesful, EINVAL if the cookie
+   was invalid and FAIL for other errors.
+
+        </dd>
+      </dl>
+    </menu>
+  </body>
+</html>

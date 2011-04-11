@@ -1,0 +1,57 @@
+<?xml version="1.0" ?><component loc="37:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/platforms/telosb/MoteClockC.nc" nicename="tos.platforms.telosb.MoteClockC" qname="MoteClockC">
+      <documentation loc="33:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/platforms/telosb/MoteClockC.nc">
+        <short>
+ </short>
+        <long>
+ @author Vlado Handziski &lt;handzisk@tkn.tu-berlind.de&gt;
+</long>
+      </documentation>
+      <configuration/>
+      <wiring>
+        <wire loc="46:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/platforms/telosb/MoteClockC.nc">
+          <from><interface-ref name="MoteClockInit" ref="0x2ae8dda1a2e0" scoped=""/></from>
+          <to><interface-ref name="Init" ref="0x2ae8dda16168" scoped=""/></to>
+        </wire>
+      </wiring>
+    <specification><interface loc="39:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/platforms/telosb/MoteClockC.nc" name="MoteClockInit" provided="1" ref="0x2ae8dda1a2e0">
+      <component-ref nicename="tos.platforms.telosb.MoteClockC" qname="MoteClockC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="MoteClockInit" ref="0x2ae8dda1a2e0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x2ae8dda1a630" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced><interface loc="28:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/timer/Msp430ClockC.nc" name="Init" provided="1" ref="0x2ae8dda16168">
+      <component-ref nicename="tos.chips.msp430.timer.Msp430ClockC" qname="Msp430ClockC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Init" ref="0x2ae8dda16168" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x2ae8dda164b8" scoped=""/>
+      </interface-functions>
+    </interface><component loc="26:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/timer/Msp430ClockC.nc" nicename="tos.chips.msp430.timer.Msp430ClockC" qname="Msp430ClockC">
+      <documentation loc="22:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/timer/Msp430ClockC.nc">
+        <short>
+ </short>
+        <long>
+ @author Cory Sharp &lt;cssharp@eecs.berkeley.edu&gt;
+</long>
+      </documentation>
+      <configuration/>
+      <wiring>
+        <wire loc="36:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/timer/Msp430ClockC.nc">
+          <from><interface-ref name="Msp430ClockInit" ref="0x2ae8dda2f3a8" scoped=""/></from>
+          <to><interface-ref name="Msp430ClockInit" ref="0x2ae8dda40b60" scoped=""/></to>
+        </wire>
+        <wire loc="35:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/timer/Msp430ClockC.nc">
+          <from><interface-ref name="Init" ref="0x2ae8dda16168" scoped=""/></from>
+          <to><interface-ref name="Init" ref="0x2ae8dda404f0" scoped=""/></to>
+        </wire>
+        <wire loc="37:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/timer/Msp430ClockC.nc">
+          <from><interface-ref name="McuPowerOverride" ref="0x2ae8dd6e3020" scoped=""/></from>
+          <to><interface-ref name="McuPowerOverride" ref="0x2ae8dda3fe08" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component></referenced></component>

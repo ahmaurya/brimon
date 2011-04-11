@@ -1,0 +1,246 @@
+<html>
+  <head>
+    <LINK rel="stylesheet" href="nesdoc.css" type="text/css" media="screen"><title>Interface: tos.interfaces.LogWrite</title>
+  </head>
+  <body>
+    <h2>Interface: tos.interfaces.LogWrite</h2>
+    <b>interface LogWrite</b><p>
+ Write interface for the log storage abstraction described in
+ TEP103.
+
+ 
+    <p>
+    <dl>
+      <dt><b>Author:</b>
+      <dd>
+        Jonathan Hui &lt;jhui@archrock.com&gt;
+ 
+      </dd>
+      <dt><b>Version:</b>
+      <dd>
+        $Revision: 1.5 $ $Date: 2008/06/04 03:00:29 $
+
+      </dd>
+    </dl>
+    <p><p><div id=heading>Commands</div><div id=funcsig><span id=funcnameshort>command error_t <a href="#append">append</a>(void *buf, storage_len_t len)
+      </span><menu>
+ Append data to a given volume.
+      </menu>
+    </div><div id=funcsig><span id=funcnameshort>command storage_cookie_t <a href="#currentOffset">currentOffset</a>()
+      </span><menu>
+ Return a "cookie" representing the current append offset within the
+ log.
+      </menu>
+    </div><div id=funcsig><span id=funcnameshort>command error_t <a href="#erase">erase</a>()
+      </span><menu>
+ Initiate an erase operation.
+      </menu>
+    </div><div id=funcsig><span id=funcnameshort>command error_t <a href="#sync">sync</a>()
+      </span><menu>
+ Ensure all writes are present on flash, and that failure in subsequent
+ writes cannot cause loss of earlier writes.
+      </menu>
+    </div><p><div id=heading>Events</div><div id=funcsig><span id=funcnameshort>event void <a href="#appendDone">appendDone</a>(void *buf, storage_len_t len, bool recordsLost, error_t error)
+      </span><menu>
+ Signals the completion of an append operation.
+      </menu>
+    </div><div id=funcsig><span id=funcnameshort>event void <a href="#eraseDone">eraseDone</a>(error_t error)
+      </span><menu>
+ Signals the completion of an erase operation.
+      </menu>
+    </div><div id=funcsig><span id=funcnameshort>event void <a href="#syncDone">syncDone</a>(error_t error)
+      </span><menu>
+ Signals the successful or unsuccessful completion of a sync operation.
+      </menu>
+    </div><p><div id=heading>Commands - Details</div>
+    <a name="append"></a>
+    <h4>append
+    </h4>
+    <span id=funcnameshort>command error_t <b>append</b>(void *buf, storage_len_t len)
+    </span>
+    <p>
+    <menu>
+      
+ Append data to a given volume. On SUCCESS, the <code>appendDone</code> 
+ event will signal completion of the operation.
+ 
+ 
+      <p>
+      <dl>
+        <dt><b>Parameters:</b>
+        <dd>
+          'void* COUNT(len) buf' buffer to write data from.
+ 
+        </dd>
+        <dd>
+          <code>len</code> -  number of bytes to write.
+ 
+        </dd>
+        <dt><b>Returns:</b>
+        <dd>
+          
+   <li>SUCCESS if the request was accepted, 
+   <li>EINVAL if the request is invalid (len too large).
+   <li>EBUSY if a request is already being processed.
+
+        </dd>
+      </dl>
+    </menu>
+    <hr>
+    <a name="currentOffset"></a>
+    <h4>currentOffset
+    </h4>
+    <span id=funcnameshort>command storage_cookie_t <b>currentOffset</b>()
+    </span>
+    <p>
+    <menu>
+      
+ Return a "cookie" representing the current append offset within the
+ log. This cookie can be used in a subsequent seek operation (see
+ <code>LogRead</code> to start reading from this place in the log (if
+ it hasn't been overwritten).
+
+ The current write position is not known before the first read, append,
+ seek, erase or sync.
+
+ 
+      <p>
+      <dl>
+        <dt><b>Returns:</b>
+        <dd>
+          Cookie representing current offset. 
+
+        </dd>
+      </dl>
+    </menu>
+    <hr>
+    <a name="erase"></a>
+    <h4>erase
+    </h4>
+    <span id=funcnameshort>command error_t <b>erase</b>()
+    </span>
+    <p>
+    <menu>
+      
+ Initiate an erase operation. On SUCCESS, the
+ <code>eraseDone</code> event will signal completion of the
+ operation.
+
+ 
+      <p>
+      <dl>
+        <dt><b>Returns:</b>
+        <dd>
+          
+   <li>SUCCESS if the request was accepted, 
+   <li>EBUSY if a request is already being processed.
+
+        </dd>
+      </dl>
+    </menu>
+    <hr>
+    <a name="sync"></a>
+    <h4>sync
+    </h4>
+    <span id=funcnameshort>command error_t <b>sync</b>()
+    </span>
+    <p>
+    <menu>
+      
+ Ensure all writes are present on flash, and that failure in subsequent
+ writes cannot cause loss of earlier writes. On SUCCES, the 
+ <code>commitDone</code> event will signal completion of the operation.
+
+ 
+      <p>
+      <dl>
+        <dt><b>Returns:</b>
+        <dd>
+          
+   <li>SUCCESS if the request was accepted, 
+   <li>EBUSY if a request is already being processed.
+
+        </dd>
+      </dl>
+    </menu>
+    <p><div id=heading>Events - Details</div>
+    <a name="appendDone"></a>
+    <h4>appendDone
+    </h4>
+    <span id=funcnameshort>event void <b>appendDone</b>(void *buf, storage_len_t len, bool recordsLost, error_t error)
+    </span>
+    <p>
+    <menu>
+      
+ Signals the completion of an append operation. However, data is not
+ guaranteed to survive a power-cycle unless a commit operation has
+ been completed.
+
+ 
+      <p>
+      <dl>
+        <dt><b>Parameters:</b>
+        <dd>
+          'void* COUNT(len) buf' buffer that written data was read from.
+ 
+        </dd>
+        <dd>
+          <code>len</code> -  number of bytes actually written (valid even in case of error)
+ 
+        </dd>
+        <dd>
+          <code>records_lost</code> -  TRUE if this append destroyed some old records from
+   the beginning of the log (only possible for circular logs).
+ 
+        </dd>
+        <dd>
+          <code>error</code> -  SUCCESS if append was possible, ESIZE if the (linear) log
+    is full and FAIL for other errors.
+
+        </dd>
+      </dl>
+    </menu>
+    <hr>
+    <a name="eraseDone"></a>
+    <h4>eraseDone
+    </h4>
+    <span id=funcnameshort>event void <b>eraseDone</b>(error_t error)
+    </span>
+    <p>
+    <menu>
+      
+ Signals the completion of an erase operation.
+
+ 
+      <p>
+      <dl>
+        <dt><b>Parameters:</b>
+        <dd>
+          <code>error</code> -  SUCCESS if the log was erased, FAIL otherwise.
+
+        </dd>
+      </dl>
+    </menu>
+    <hr>
+    <a name="syncDone"></a>
+    <h4>syncDone
+    </h4>
+    <span id=funcnameshort>event void <b>syncDone</b>(error_t error)
+    </span>
+    <p>
+    <menu>
+      
+ Signals the successful or unsuccessful completion of a sync operation. 
+
+ 
+      <p>
+      <dl>
+        <dt><b>Parameters:</b>
+        <dd>
+          <code>error</code> -  SUCCESS if the log was synchronised, FAIL otherwise.
+
+        </dd>
+      </dl>
+    </menu>
+  </body>
+</html>

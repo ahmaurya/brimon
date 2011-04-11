@@ -1,0 +1,38 @@
+<?xml version="1.0" ?><component loc="43:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/SchedulerBasicP.nc" nicename="tos.system.SchedulerBasicP" qname="SchedulerBasicP" safe="">
+      <module/>
+    <specification><interface loc="45:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/SchedulerBasicP.nc" name="TaskBasic" provided="1" ref="0x2b367706a020">
+      <component-ref nicename="tos.system.SchedulerBasicP" qname="SchedulerBasicP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="TaskBasic" ref="0x2b367706a020" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.TaskBasic" qname="TaskBasic"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x2b3676396318"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="postTask" ref="0x2b367706a370" scoped=""/>
+        <function-ref name="runTask" ref="0x2b367706a4f8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="46:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/SchedulerBasicP.nc" name="McuSleep" provided="0" ref="0x2b36770664e0">
+      <component-ref nicename="tos.system.SchedulerBasicP" qname="SchedulerBasicP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="McuSleep" ref="0x2b36770664e0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.McuSleep" qname="McuSleep"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="sleep" ref="0x2b3677066830" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="44:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/SchedulerBasicP.nc" name="Scheduler" provided="1" ref="0x2b367706b0c0">
+      <component-ref nicename="tos.system.SchedulerBasicP" qname="SchedulerBasicP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Scheduler" ref="0x2b367706b0c0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Scheduler" qname="Scheduler"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x2b367706b410" scoped=""/>
+        <function-ref name="taskLoop" ref="0x2b367706b598" scoped=""/>
+        <function-ref name="runNextTask" ref="0x2b367706b720" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced/></component>

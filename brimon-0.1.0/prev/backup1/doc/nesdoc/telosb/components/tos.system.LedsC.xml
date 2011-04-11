@@ -1,0 +1,245 @@
+<?xml version="1.0" ?><component loc="34:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/LedsC.nc" nicename="tos.system.LedsC" qname="LedsC">
+      <documentation loc="23:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/LedsC.nc">
+        <short>
+
+ The basic TinyOS LEDs abstraction.</short>
+        <long>
+
+ The basic TinyOS LEDs abstraction.
+
+ @author Phil Buonadonna
+ @author David Gay
+ @author Philip Levis
+ @author Joe Polastre
+</long>
+      </documentation>
+      <configuration/>
+      <wiring>
+        <wire loc="40:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/LedsC.nc">
+          <from><interface-ref name="Leds" ref="0x2ae8de10d760" scoped=""/></from>
+          <to><interface-ref name="Leds" ref="0x2ae8de16c020" scoped=""/></to>
+        </wire>
+        <wire loc="42:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/LedsC.nc">
+          <from><interface-ref name="Init" ref="0x2ae8de181020" scoped=""/></from>
+          <to><interface-ref name="Init" ref="0x2ae8de1709e0" scoped=""/></to>
+        </wire>
+        <wire loc="43:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/LedsC.nc">
+          <from><interface-ref name="Led0" ref="0x2ae8de164348" scoped=""/></from>
+          <to><interface-ref name="Led0" ref="0x2ae8de16dab8" scoped=""/></to>
+        </wire>
+        <wire loc="44:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/LedsC.nc">
+          <from><interface-ref name="Led1" ref="0x2ae8de16a4c0" scoped=""/></from>
+          <to><interface-ref name="Led1" ref="0x2ae8de184ca8" scoped=""/></to>
+        </wire>
+        <wire loc="45:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/LedsC.nc">
+          <from><interface-ref name="Led2" ref="0x2ae8de169648" scoped=""/></from>
+          <to><interface-ref name="Led2" ref="0x2ae8de183e30" scoped=""/></to>
+        </wire>
+      </wiring>
+    <specification><interface loc="35:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/LedsC.nc" name="Leds" provided="1" ref="0x2ae8de10d760">
+      <component-ref nicename="tos.system.LedsC" qname="LedsC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Leds" ref="0x2ae8de10d760" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Leds" qname="Leds"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="led0Off" ref="0x2ae8de10dab0" scoped=""/>
+        <function-ref name="led0Toggle" ref="0x2ae8de10dc38" scoped=""/>
+        <function-ref name="led1On" ref="0x2ae8de10ddc0" scoped=""/>
+        <function-ref name="led1Toggle" ref="0x2ae8de171020" scoped=""/>
+        <function-ref name="led2Toggle" ref="0x2ae8de1711a8" scoped=""/>
+        <function-ref name="get" ref="0x2ae8de171330" scoped=""/>
+        <function-ref name="led1Off" ref="0x2ae8de1714b8" scoped=""/>
+        <function-ref name="led2Off" ref="0x2ae8de171ad8" scoped=""/>
+        <function-ref name="set" ref="0x2ae8de171640" scoped=""/>
+        <function-ref name="led0On" ref="0x2ae8de1717c8" scoped=""/>
+        <function-ref name="led2On" ref="0x2ae8de171950" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced><interface loc="33:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/platforms/telosa/PlatformLedsC.nc" name="Init" provided="0" ref="0x2ae8de181020">
+      <component-ref nicename="tos.platforms.telosa.PlatformLedsC" qname="PlatformLedsC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Init" ref="0x2ae8de181020" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x2ae8de181370" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="41:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/LedsP.nc" name="Led2" provided="0" ref="0x2ae8de169648">
+      <component-ref nicename="tos.system.LedsP" qname="LedsP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Led2" ref="0x2ae8de169648" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.GeneralIO" qname="GeneralIO"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="makeInput" ref="0x2ae8de169998" scoped=""/>
+        <function-ref name="isInput" ref="0x2ae8de169b20" scoped=""/>
+        <function-ref name="toggle" ref="0x2ae8de169ca8" scoped=""/>
+        <function-ref name="isOutput" ref="0x2ae8de169e30" scoped=""/>
+        <function-ref name="get" ref="0x2ae8de163020" scoped=""/>
+        <function-ref name="makeOutput" ref="0x2ae8de1631a8" scoped=""/>
+        <function-ref name="set" ref="0x2ae8de163330" scoped=""/>
+        <function-ref name="clr" ref="0x2ae8de1634b8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="35:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/LedsP.nc" name="Init" provided="1" ref="0x2ae8de1709e0">
+      <component-ref nicename="tos.system.LedsP" qname="LedsP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Init" ref="0x2ae8de1709e0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x2ae8de170d30" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="32:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/platforms/telosa/PlatformLedsC.nc" name="Led2" provided="1" ref="0x2ae8de183e30">
+      <component-ref nicename="tos.platforms.telosa.PlatformLedsC" qname="PlatformLedsC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Led2" ref="0x2ae8de183e30" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.GeneralIO" qname="GeneralIO"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="makeInput" ref="0x2ae8de1821a8" scoped=""/>
+        <function-ref name="isInput" ref="0x2ae8de182330" scoped=""/>
+        <function-ref name="toggle" ref="0x2ae8de1824b8" scoped=""/>
+        <function-ref name="isOutput" ref="0x2ae8de182640" scoped=""/>
+        <function-ref name="get" ref="0x2ae8de1827c8" scoped=""/>
+        <function-ref name="makeOutput" ref="0x2ae8de182950" scoped=""/>
+        <function-ref name="set" ref="0x2ae8de182ad8" scoped=""/>
+        <function-ref name="clr" ref="0x2ae8de182c60" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="31:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/platforms/telosa/PlatformLedsC.nc" name="Led1" provided="1" ref="0x2ae8de184ca8">
+      <component-ref nicename="tos.platforms.telosa.PlatformLedsC" qname="PlatformLedsC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Led1" ref="0x2ae8de184ca8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.GeneralIO" qname="GeneralIO"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="makeInput" ref="0x2ae8de183020" scoped=""/>
+        <function-ref name="isInput" ref="0x2ae8de1831a8" scoped=""/>
+        <function-ref name="toggle" ref="0x2ae8de183330" scoped=""/>
+        <function-ref name="isOutput" ref="0x2ae8de1834b8" scoped=""/>
+        <function-ref name="get" ref="0x2ae8de183640" scoped=""/>
+        <function-ref name="makeOutput" ref="0x2ae8de1837c8" scoped=""/>
+        <function-ref name="set" ref="0x2ae8de183950" scoped=""/>
+        <function-ref name="clr" ref="0x2ae8de183ad8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="30:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/platforms/telosa/PlatformLedsC.nc" name="Led0" provided="1" ref="0x2ae8de16dab8">
+      <component-ref nicename="tos.platforms.telosa.PlatformLedsC" qname="PlatformLedsC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Led0" ref="0x2ae8de16dab8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.GeneralIO" qname="GeneralIO"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="makeInput" ref="0x2ae8de16de08" scoped=""/>
+        <function-ref name="isInput" ref="0x2ae8de184020" scoped=""/>
+        <function-ref name="toggle" ref="0x2ae8de1841a8" scoped=""/>
+        <function-ref name="isOutput" ref="0x2ae8de184330" scoped=""/>
+        <function-ref name="get" ref="0x2ae8de1844b8" scoped=""/>
+        <function-ref name="makeOutput" ref="0x2ae8de184640" scoped=""/>
+        <function-ref name="set" ref="0x2ae8de1847c8" scoped=""/>
+        <function-ref name="clr" ref="0x2ae8de184950" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="40:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/LedsP.nc" name="Led1" provided="0" ref="0x2ae8de16a4c0">
+      <component-ref nicename="tos.system.LedsP" qname="LedsP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Led1" ref="0x2ae8de16a4c0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.GeneralIO" qname="GeneralIO"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="makeInput" ref="0x2ae8de16a810" scoped=""/>
+        <function-ref name="isInput" ref="0x2ae8de16a998" scoped=""/>
+        <function-ref name="toggle" ref="0x2ae8de16ab20" scoped=""/>
+        <function-ref name="isOutput" ref="0x2ae8de16aca8" scoped=""/>
+        <function-ref name="get" ref="0x2ae8de16ae30" scoped=""/>
+        <function-ref name="makeOutput" ref="0x2ae8de169020" scoped=""/>
+        <function-ref name="set" ref="0x2ae8de1691a8" scoped=""/>
+        <function-ref name="clr" ref="0x2ae8de169330" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="39:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/LedsP.nc" name="Led0" provided="0" ref="0x2ae8de164348">
+      <component-ref nicename="tos.system.LedsP" qname="LedsP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Led0" ref="0x2ae8de164348" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.GeneralIO" qname="GeneralIO"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="makeInput" ref="0x2ae8de164698" scoped=""/>
+        <function-ref name="isInput" ref="0x2ae8de164820" scoped=""/>
+        <function-ref name="toggle" ref="0x2ae8de1649a8" scoped=""/>
+        <function-ref name="isOutput" ref="0x2ae8de164b30" scoped=""/>
+        <function-ref name="get" ref="0x2ae8de164cb8" scoped=""/>
+        <function-ref name="makeOutput" ref="0x2ae8de164e40" scoped=""/>
+        <function-ref name="set" ref="0x2ae8de16a020" scoped=""/>
+        <function-ref name="clr" ref="0x2ae8de16a1a8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="36:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/LedsP.nc" name="Leds" provided="1" ref="0x2ae8de16c020">
+      <component-ref nicename="tos.system.LedsP" qname="LedsP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Leds" ref="0x2ae8de16c020" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Leds" qname="Leds"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="led0Off" ref="0x2ae8de16c370" scoped=""/>
+        <function-ref name="led0Toggle" ref="0x2ae8de16c4f8" scoped=""/>
+        <function-ref name="led1On" ref="0x2ae8de16c680" scoped=""/>
+        <function-ref name="led1Toggle" ref="0x2ae8de16c808" scoped=""/>
+        <function-ref name="led2Toggle" ref="0x2ae8de16c990" scoped=""/>
+        <function-ref name="get" ref="0x2ae8de16cb18" scoped=""/>
+        <function-ref name="led1Off" ref="0x2ae8de16cca0" scoped=""/>
+        <function-ref name="led2Off" ref="0x2ae8de16b330" scoped=""/>
+        <function-ref name="set" ref="0x2ae8de16ce28" scoped=""/>
+        <function-ref name="led0On" ref="0x2ae8de16b020" scoped=""/>
+        <function-ref name="led2On" ref="0x2ae8de16b1a8" scoped=""/>
+      </interface-functions>
+    </interface><component loc="29:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/platforms/telosa/PlatformLedsC.nc" nicename="tos.platforms.telosa.PlatformLedsC" qname="PlatformLedsC">
+      <documentation loc="23:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/platforms/telosa/PlatformLedsC.nc">
+        <short>
+ </short>
+        <long>
+ @author Joe Polastre
+ @version $Revision: 1.4 $ $Date: 2006/12/12 18:23:44 $
+</long>
+      </documentation>
+      <configuration/>
+      <wiring>
+        <wire loc="47:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/platforms/telosa/PlatformLedsC.nc">
+          <from><interface-ref name="Led0" ref="0x2ae8de16dab8" scoped=""/></from>
+          <to><interface-ref name="GeneralIO" ref="0x2ae8de17fc30" scoped=""/></to>
+        </wire>
+        <wire loc="50:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/platforms/telosa/PlatformLedsC.nc">
+          <from><interface-ref name="Led1" ref="0x2ae8de184ca8" scoped=""/></from>
+          <to><interface-ref name="GeneralIO" ref="0x2ae8de1a8020" scoped=""/></to>
+        </wire>
+        <wire loc="53:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/platforms/telosa/PlatformLedsC.nc">
+          <from><interface-ref name="Led2" ref="0x2ae8de183e30" scoped=""/></from>
+          <to><interface-ref name="GeneralIO" ref="0x2ae8de1a4368" scoped=""/></to>
+        </wire>
+        <wire loc="45:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/platforms/telosa/PlatformLedsC.nc">
+          <from><interface-ref name="LedsInit" ref="0x2ae8dd9f8d60" scoped=""/></from>
+          <to><interface-ref name="Init" ref="0x2ae8de181020" scoped=""/></to>
+        </wire>
+        <wire loc="48:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/platforms/telosa/PlatformLedsC.nc">
+          <from><interface-ref name="HplGeneralIO" ref="0x2ae8de17eda0" scoped=""/></from>
+          <to><interface-ref name="Port54" ref="0x2ae8ddfa3020" scoped=""/></to>
+        </wire>
+        <wire loc="51:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/platforms/telosa/PlatformLedsC.nc">
+          <from><interface-ref name="HplGeneralIO" ref="0x2ae8de1a7120" scoped=""/></from>
+          <to><interface-ref name="Port55" ref="0x2ae8ddfa2b00" scoped=""/></to>
+        </wire>
+        <wire loc="54:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/platforms/telosa/PlatformLedsC.nc">
+          <from><interface-ref name="HplGeneralIO" ref="0x2ae8de1a3470" scoped=""/></from>
+          <to><interface-ref name="Port56" ref="0x2ae8ddfa0668" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component><component loc="33:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/LedsP.nc" nicename="tos.system.LedsP" qname="LedsP" safe="">
+      <documentation loc="24:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/LedsP.nc">
+        <short>
+ The implementation of the standard 3 LED mote abstraction.</short>
+        <long>
+ The implementation of the standard 3 LED mote abstraction.
+
+ @author Joe Polastre
+ @author Philip Levis
+
+ @date   March 21, 2005
+</long>
+      </documentation>
+      <module/>
+    </component></referenced></component>

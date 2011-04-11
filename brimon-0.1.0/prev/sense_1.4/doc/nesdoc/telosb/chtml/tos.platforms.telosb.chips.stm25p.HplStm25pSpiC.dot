@@ -1,0 +1,11 @@
+digraph "tos.platforms.telosb.chips.stm25p.HplStm25pSpiC" {
+  n0x2b3677f0f308 [shape=ellipse, style=filled, label="SpiPacket", fontsize=12];
+  "HplStm25pSpiC.SpiC" [fontsize=12, shape=box,peripheries=2, style=dashed, label="Msp430Spi0C\n(SpiC)", URL="../chtml/tos.chips.msp430.usart.Msp430Spi0C.html"];
+  n0x2b3677f10c60 [shape=ellipse, style=filled, label="SpiByte", fontsize=12];
+  "HplStm25pSpiC.SpiC" [fontsize=12, shape=box,peripheries=2, style=dashed, label="Msp430Spi0C\n(SpiC)", URL="../chtml/tos.chips.msp430.usart.Msp430Spi0C.html"];
+  n0x2b3677f10020 [shape=ellipse, style=filled, label="Resource", fontsize=12];
+  "HplStm25pSpiC.SpiC" [fontsize=12, shape=box,peripheries=2, style=dashed, label="Msp430Spi0C\n(SpiC)", URL="../chtml/tos.chips.msp430.usart.Msp430Spi0C.html"];
+  "n0x2b3677f0f308" -> "HplStm25pSpiC.SpiC" [label="SpiPacket", URL="../ihtml/tos.interfaces.SpiPacket.html", fontsize=10];
+  "n0x2b3677f10c60" -> "HplStm25pSpiC.SpiC" [label="SpiByte", URL="../ihtml/tos.interfaces.SpiByte.html", fontsize=10];
+  "n0x2b3677f10020" -> "HplStm25pSpiC.SpiC" [label="Resource", URL="../ihtml/tos.interfaces.Resource.html", fontsize=10];
+}

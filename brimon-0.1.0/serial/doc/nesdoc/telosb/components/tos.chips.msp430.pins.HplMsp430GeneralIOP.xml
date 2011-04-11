@@ -1,0 +1,63 @@
+<?xml version="1.0" ?><component abstract="" loc="28:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/pins/HplMsp430GeneralIOP.nc" nicename="tos.chips.msp430.pins.HplMsp430GeneralIOP" qname="HplMsp430GeneralIOP" safe="">
+      <documentation loc="22:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/pins/HplMsp430GeneralIOP.nc">
+        <short>
+ </short>
+        <long>
+ @author Joe Polastre
+</long>
+      </documentation>
+      <parameters>
+        <constant loc="29:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/pins/HplMsp430GeneralIOP.nc" name="port_in_addr" ref="0x2af767c56650">
+          <component-ref nicename="tos.chips.msp430.pins.HplMsp430GeneralIOP" qname="HplMsp430GeneralIOP"/>
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="uint8_t" ref="0x2af766df9318"/></typename>
+          </type-int>
+        </constant>
+        <constant loc="30:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/pins/HplMsp430GeneralIOP.nc" name="port_out_addr" ref="0x2af767c569e8">
+          <component-ref nicename="tos.chips.msp430.pins.HplMsp430GeneralIOP" qname="HplMsp430GeneralIOP"/>
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="uint8_t" ref="0x2af766df9318"/></typename>
+          </type-int>
+        </constant>
+        <constant loc="31:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/pins/HplMsp430GeneralIOP.nc" name="port_dir_addr" ref="0x2af767c56d80">
+          <component-ref nicename="tos.chips.msp430.pins.HplMsp430GeneralIOP" qname="HplMsp430GeneralIOP"/>
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="uint8_t" ref="0x2af766df9318"/></typename>
+          </type-int>
+        </constant>
+        <constant loc="32:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/pins/HplMsp430GeneralIOP.nc" name="port_sel_addr" ref="0x2af767c53190">
+          <component-ref nicename="tos.chips.msp430.pins.HplMsp430GeneralIOP" qname="HplMsp430GeneralIOP"/>
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="uint8_t" ref="0x2af766df9318"/></typename>
+          </type-int>
+        </constant>
+        <constant loc="33:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/pins/HplMsp430GeneralIOP.nc" name="pin" ref="0x2af767c534e0">
+          <component-ref nicename="tos.chips.msp430.pins.HplMsp430GeneralIOP" qname="HplMsp430GeneralIOP"/>
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="uint8_t" ref="0x2af766df9318"/></typename>
+          </type-int>
+        </constant>
+      </parameters>
+      <module/>
+    <specification><interface loc="36:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/pins/HplMsp430GeneralIOP.nc" name="IO" provided="1" ref="0x2af767c53de0">
+      <component-ref nicename="tos.chips.msp430.pins.HplMsp430GeneralIOP" qname="HplMsp430GeneralIOP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="IO" ref="0x2af767c53de0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.pins.HplMsp430GeneralIO" qname="HplMsp430GeneralIO"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="makeInput" ref="0x2af767c52170" scoped=""/>
+        <function-ref name="isInput" ref="0x2af767c522f8" scoped=""/>
+        <function-ref name="toggle" ref="0x2af767c52480" scoped=""/>
+        <function-ref name="isOutput" ref="0x2af767c52608" scoped=""/>
+        <function-ref name="makeOutput" ref="0x2af767c52790" scoped=""/>
+        <function-ref name="get" ref="0x2af767c52918" scoped=""/>
+        <function-ref name="selectIOFunc" ref="0x2af767c52aa0" scoped=""/>
+        <function-ref name="getRaw" ref="0x2af767c52c28" scoped=""/>
+        <function-ref name="set" ref="0x2af767c52db0" scoped=""/>
+        <function-ref name="selectModuleFunc" ref="0x2af767c51020" scoped=""/>
+        <function-ref name="isIOFunc" ref="0x2af767c511a8" scoped=""/>
+        <function-ref name="isModuleFunc" ref="0x2af767c51330" scoped=""/>
+        <function-ref name="clr" ref="0x2af767c514b8" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced/></component>

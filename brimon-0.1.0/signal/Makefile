@@ -1,0 +1,2 @@
+COMPONENT=EventSignalAppC
+include $(MAKERULES)

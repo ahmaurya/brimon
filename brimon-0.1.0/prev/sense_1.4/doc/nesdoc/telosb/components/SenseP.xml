@@ -1,0 +1,75 @@
+<?xml version="1.0" ?><component loc="13:SenseP.nc" nicename="SenseP" qname="SenseP">
+      <module/>
+    <specification><interface loc="16:SenseP.nc" name="Boot" provided="0" ref="0x2b36770a6d88">
+      <component-ref nicename="SenseP" qname="SenseP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Boot" ref="0x2b36770a6d88" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Boot" qname="Boot"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="booted" ref="0x2b36770a5170" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="19:SenseP.nc" name="Summary" provided="0" ref="0x2b36770ad528">
+      <component-ref nicename="SenseP" qname="SenseP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Summary" ref="0x2b36770ad528" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="Summary" qname="Summary"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="summarize" ref="0x2b36770ad878" scoped=""/>
+        <function-ref name="summarized" ref="0x2b36770ada00" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="18:SenseP.nc" name="Sample" provided="0" ref="0x2b36770af8d0">
+      <component-ref nicename="SenseP" qname="SenseP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Sample" ref="0x2b36770af8d0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="Sample" qname="Sample"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="sampled" ref="0x2b36770afc20" scoped=""/>
+        <function-ref name="sample" ref="0x2b36770afda8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="20:SenseP.nc" name="Leds" provided="0" ref="0x2b36770c1760">
+      <component-ref nicename="SenseP" qname="SenseP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Leds" ref="0x2b36770c1760" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Leds" qname="Leds"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="led0Off" ref="0x2b36770c1ab0" scoped=""/>
+        <function-ref name="led0Toggle" ref="0x2b36770c1c38" scoped=""/>
+        <function-ref name="led1On" ref="0x2b36770c1dc0" scoped=""/>
+        <function-ref name="led1Toggle" ref="0x2b36770b1020" scoped=""/>
+        <function-ref name="led2Toggle" ref="0x2b36770b11a8" scoped=""/>
+        <function-ref name="get" ref="0x2b36770b1330" scoped=""/>
+        <function-ref name="led1Off" ref="0x2b36770b14b8" scoped=""/>
+        <function-ref name="led2Off" ref="0x2b36770b1ad8" scoped=""/>
+        <function-ref name="set" ref="0x2b36770b1640" scoped=""/>
+        <function-ref name="led0On" ref="0x2b36770b17c8" scoped=""/>
+        <function-ref name="led2On" ref="0x2b36770b1950" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="17:SenseP.nc" name="Timer" provided="0" ref="0x2b36770b64f8">
+      <component-ref nicename="SenseP" qname="SenseP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Timer" ref="0x2b36770b64f8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.timer.Timer" qname="Timer"/>
+        <arguments>
+          <type-tag alignment="I:2" size="I:2"><struct-ref ref="0x2b36770a5970"/>
+            <typename><typedef-ref name="TMilli" ref="0x2b36770a5cc8"/></typename>
+          </type-tag>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="getNow" ref="0x2b36770b4768" scoped=""/>
+        <function-ref name="fired" ref="0x2b36770a4e18" scoped=""/>
+        <function-ref name="startPeriodicAt" ref="0x2b36770b5b78" scoped=""/>
+        <function-ref name="isOneShot" ref="0x2b36770b5728" scoped=""/>
+        <function-ref name="getdt" ref="0x2b36770b3088" scoped=""/>
+        <function-ref name="gett0" ref="0x2b36770b4bb8" scoped=""/>
+        <function-ref name="isRunning" ref="0x2b36770b52d8" scoped=""/>
+        <function-ref name="startPeriodic" ref="0x2b36770a4088" scoped=""/>
+        <function-ref name="startOneShotAt" ref="0x2b36770b4198" scoped=""/>
+        <function-ref name="startOneShot" ref="0x2b36770a4528" scoped=""/>
+        <function-ref name="stop" ref="0x2b36770a49c8" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced/></component>

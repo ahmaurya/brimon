@@ -1,0 +1,361 @@
+<?xml version="1.0" ?><component abstract="" loc="26:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/timer/Msp430Timer32khzC.nc" nicename="tos.chips.msp430.timer.Msp430Timer32khzC" qname="Msp430Timer32khzC">
+      <documentation loc="22:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/timer/Msp430Timer32khzC.nc">
+        <short>
+ </short>
+        <long>
+ @author Cory Sharp &lt;cssharp@eecs.berkeley.edu&gt;
+</long>
+      </documentation>
+      <parameters>
+      </parameters>
+      <configuration/>
+      <wiring>
+        <wire loc="40:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/timer/Msp430Timer32khzC.nc">
+          <from><interface-ref name="Msp430Compare" ref="0x2af768434020" scoped=""/></from>
+          <to><interface-ref name="Msp430Compare" ref="0x2af76846e300" scoped=""/>
+          <arguments>
+            <value cst="U:">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="38:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/timer/Msp430Timer32khzC.nc">
+          <from><interface-ref name="Msp430Timer" ref="0x2af76843a5c0" scoped=""/></from>
+          <to><interface-ref name="Msp430Timer" ref="0x2af768433db8" scoped=""/>
+          <arguments>
+            <value cst="U:">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="39:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/timer/Msp430Timer32khzC.nc">
+          <from><interface-ref name="Msp430TimerControl" ref="0x2af768437c90" scoped=""/></from>
+          <to><interface-ref name="Msp430TimerControl" ref="0x2af7684719d8" scoped=""/>
+          <arguments>
+            <value cst="U:">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+      </wiring>
+    <specification><interface loc="30:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/timer/Msp430Timer32khzC.nc" name="Msp430Compare" provided="1" ref="0x2af768434020">
+      <component-ref nicename="tos.chips.msp430.timer.Msp430Timer32khzC" qname="Msp430Timer32khzC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Msp430Compare" ref="0x2af768434020" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.timer.Msp430Compare" qname="Msp430Compare"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getEvent" ref="0x2af768434370" scoped=""/>
+        <function-ref name="setEvent" ref="0x2af7684344f8" scoped=""/>
+        <function-ref name="setEventFromPrev" ref="0x2af768434680" scoped=""/>
+        <function-ref name="setEventFromNow" ref="0x2af768434808" scoped=""/>
+        <function-ref name="fired" ref="0x2af768434990" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="28:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/timer/Msp430Timer32khzC.nc" name="Msp430Timer" provided="1" ref="0x2af76843a5c0">
+      <component-ref nicename="tos.chips.msp430.timer.Msp430Timer32khzC" qname="Msp430Timer32khzC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Msp430Timer" ref="0x2af76843a5c0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.timer.Msp430Timer" qname="Msp430Timer"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="clear" ref="0x2af76843a910" scoped=""/>
+        <function-ref name="setClockSource" ref="0x2af76843aa98" scoped=""/>
+        <function-ref name="enableEvents" ref="0x2af76843ac20" scoped=""/>
+        <function-ref name="get" ref="0x2af76843ada8" scoped=""/>
+        <function-ref name="disableEvents" ref="0x2af768437020" scoped=""/>
+        <function-ref name="clearOverflow" ref="0x2af7684371a8" scoped=""/>
+        <function-ref name="getMode" ref="0x2af768437330" scoped=""/>
+        <function-ref name="isOverflowPending" ref="0x2af7684374b8" scoped=""/>
+        <function-ref name="overflow" ref="0x2af768437640" scoped=""/>
+        <function-ref name="setMode" ref="0x2af7684377c8" scoped=""/>
+        <function-ref name="setInputDivider" ref="0x2af768437950" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="29:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/timer/Msp430Timer32khzC.nc" name="Msp430TimerControl" provided="1" ref="0x2af768437c90">
+      <component-ref nicename="tos.chips.msp430.timer.Msp430Timer32khzC" qname="Msp430Timer32khzC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Msp430TimerControl" ref="0x2af768437c90" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.timer.Msp430TimerControl" qname="Msp430TimerControl"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="setControlAsCapture" ref="0x2af768436020" scoped=""/>
+        <function-ref name="getControl" ref="0x2af7684361a8" scoped=""/>
+        <function-ref name="enableEvents" ref="0x2af768436330" scoped=""/>
+        <function-ref name="areEventsEnabled" ref="0x2af7684364b8" scoped=""/>
+        <function-ref name="setControlAsCompare" ref="0x2af768436640" scoped=""/>
+        <function-ref name="disableEvents" ref="0x2af7684367c8" scoped=""/>
+        <function-ref name="isInterruptPending" ref="0x2af768436950" scoped=""/>
+        <function-ref name="clearPendingInterrupt" ref="0x2af768436ad8" scoped=""/>
+        <function-ref name="setControl" ref="0x2af768436c60" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced><interface loc="41:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/platforms/telosa/Msp430Timer32khzMapC.nc" name="Msp430Compare" provided="1" ref="0x2af76846e300">
+      <component-ref nicename="tos.platforms.telosa.Msp430Timer32khzMapC" qname="Msp430Timer32khzMapC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Msp430Compare" ref="0x2af76846e300" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.timer.Msp430Compare" qname="Msp430Compare"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x2af766df9318"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="getEvent" ref="0x2af76846e650" scoped=""/>
+        <function-ref name="setEvent" ref="0x2af76846e7d8" scoped=""/>
+        <function-ref name="setEventFromPrev" ref="0x2af76846e960" scoped=""/>
+        <function-ref name="setEventFromNow" ref="0x2af76846eae8" scoped=""/>
+        <function-ref name="fired" ref="0x2af76846ec70" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="39:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/platforms/telosa/Msp430Timer32khzMapC.nc" name="Msp430Timer" provided="1" ref="0x2af768433db8">
+      <component-ref nicename="tos.platforms.telosa.Msp430Timer32khzMapC" qname="Msp430Timer32khzMapC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Msp430Timer" ref="0x2af768433db8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.timer.Msp430Timer" qname="Msp430Timer"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x2af766df9318"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="clear" ref="0x2af768472170" scoped=""/>
+        <function-ref name="setClockSource" ref="0x2af7684722f8" scoped=""/>
+        <function-ref name="enableEvents" ref="0x2af768472480" scoped=""/>
+        <function-ref name="get" ref="0x2af768472608" scoped=""/>
+        <function-ref name="disableEvents" ref="0x2af768472790" scoped=""/>
+        <function-ref name="clearOverflow" ref="0x2af768472918" scoped=""/>
+        <function-ref name="getMode" ref="0x2af768472aa0" scoped=""/>
+        <function-ref name="isOverflowPending" ref="0x2af768472c28" scoped=""/>
+        <function-ref name="overflow" ref="0x2af768472db0" scoped=""/>
+        <function-ref name="setMode" ref="0x2af768471020" scoped=""/>
+        <function-ref name="setInputDivider" ref="0x2af7684711a8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="40:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/platforms/telosa/Msp430Timer32khzMapC.nc" name="Msp430TimerControl" provided="1" ref="0x2af7684719d8">
+      <component-ref nicename="tos.platforms.telosa.Msp430Timer32khzMapC" qname="Msp430Timer32khzMapC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Msp430TimerControl" ref="0x2af7684719d8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.timer.Msp430TimerControl" qname="Msp430TimerControl"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x2af766df9318"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="setControlAsCapture" ref="0x2af768471d28" scoped=""/>
+        <function-ref name="getControl" ref="0x2af768470020" scoped=""/>
+        <function-ref name="enableEvents" ref="0x2af7684701a8" scoped=""/>
+        <function-ref name="areEventsEnabled" ref="0x2af768470330" scoped=""/>
+        <function-ref name="setControlAsCompare" ref="0x2af7684704b8" scoped=""/>
+        <function-ref name="disableEvents" ref="0x2af768470640" scoped=""/>
+        <function-ref name="isInterruptPending" ref="0x2af7684707c8" scoped=""/>
+        <function-ref name="clearPendingInterrupt" ref="0x2af768470950" scoped=""/>
+        <function-ref name="setControl" ref="0x2af768470ad8" scoped=""/>
+      </interface-functions>
+    </interface><component loc="37:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/platforms/telosa/Msp430Timer32khzMapC.nc" nicename="tos.platforms.telosa.Msp430Timer32khzMapC" qname="Msp430Timer32khzMapC">
+      <documentation loc="23:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/platforms/telosa/Msp430Timer32khzMapC.nc">
+        <short>
+ MSP430Timer32khzMapC presents as paramaterized interfaces all of
+ the 32khz hardware timers on the MSP430 that are available for
+ compile time allocation by &quot;new Alarm32khz16C()&quot;, &quot;new
+ AlarmMilli32C()&quot;, and so on.</short>
+        <long>
+ MSP430Timer32khzMapC presents as paramaterized interfaces all of
+ the 32khz hardware timers on the MSP430 that are available for
+ compile time allocation by &quot;new Alarm32khz16C()&quot;, &quot;new
+ AlarmMilli32C()&quot;, and so on.  
+
+ Platforms based on the MSP430 are * encouraged to copy in and
+ override this file, presenting only the * hardware timers that are
+ available for allocation on that platform.
+
+ @author Cory Sharp &lt;cssharp@eecs.berkeley.edu&gt;
+ @version $Revision: 1.4 $ $Date: 2006/12/12 18:23:44 $
+</long>
+      </documentation>
+      <configuration/>
+      <wiring>
+        <wire loc="47:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/platforms/telosa/Msp430Timer32khzMapC.nc">
+          <from><interface-ref name="Msp430Timer" ref="0x2af768433db8" scoped=""/>
+          <arguments>
+            <value cst="I:0">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </from>
+          <to><interface-ref name="TimerB" ref="0x2af767e40398" scoped=""/></to>
+        </wire>
+        <wire loc="48:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/platforms/telosa/Msp430Timer32khzMapC.nc">
+          <from><interface-ref name="Msp430TimerControl" ref="0x2af7684719d8" scoped=""/>
+          <arguments>
+            <value cst="I:0">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </from>
+          <to><interface-ref name="ControlB0" ref="0x2af767e3fba8" scoped=""/></to>
+        </wire>
+        <wire loc="49:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/platforms/telosa/Msp430Timer32khzMapC.nc">
+          <from><interface-ref name="Msp430Compare" ref="0x2af76846e300" scoped=""/>
+          <arguments>
+            <value cst="I:0">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </from>
+          <to><interface-ref name="CompareB0" ref="0x2af767e5fd00" scoped=""/></to>
+        </wire>
+        <wire loc="55:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/platforms/telosa/Msp430Timer32khzMapC.nc">
+          <from><interface-ref name="Msp430Timer" ref="0x2af768433db8" scoped=""/>
+          <arguments>
+            <value cst="I:1">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </from>
+          <to><interface-ref name="TimerB" ref="0x2af767e40398" scoped=""/></to>
+        </wire>
+        <wire loc="56:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/platforms/telosa/Msp430Timer32khzMapC.nc">
+          <from><interface-ref name="Msp430TimerControl" ref="0x2af7684719d8" scoped=""/>
+          <arguments>
+            <value cst="I:1">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </from>
+          <to><interface-ref name="ControlB2" ref="0x2af767e65588" scoped=""/></to>
+        </wire>
+        <wire loc="57:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/platforms/telosa/Msp430Timer32khzMapC.nc">
+          <from><interface-ref name="Msp430Compare" ref="0x2af76846e300" scoped=""/>
+          <arguments>
+            <value cst="I:1">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </from>
+          <to><interface-ref name="CompareB2" ref="0x2af767e5d868" scoped=""/></to>
+        </wire>
+        <wire loc="59:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/platforms/telosa/Msp430Timer32khzMapC.nc">
+          <from><interface-ref name="Msp430Timer" ref="0x2af768433db8" scoped=""/>
+          <arguments>
+            <value cst="I:2">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </from>
+          <to><interface-ref name="TimerB" ref="0x2af767e40398" scoped=""/></to>
+        </wire>
+        <wire loc="60:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/platforms/telosa/Msp430Timer32khzMapC.nc">
+          <from><interface-ref name="Msp430TimerControl" ref="0x2af7684719d8" scoped=""/>
+          <arguments>
+            <value cst="I:2">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </from>
+          <to><interface-ref name="ControlB3" ref="0x2af767e64a20" scoped=""/></to>
+        </wire>
+        <wire loc="61:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/platforms/telosa/Msp430Timer32khzMapC.nc">
+          <from><interface-ref name="Msp430Compare" ref="0x2af76846e300" scoped=""/>
+          <arguments>
+            <value cst="I:2">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </from>
+          <to><interface-ref name="CompareB3" ref="0x2af767e5c6e0" scoped=""/></to>
+        </wire>
+        <wire loc="63:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/platforms/telosa/Msp430Timer32khzMapC.nc">
+          <from><interface-ref name="Msp430Timer" ref="0x2af768433db8" scoped=""/>
+          <arguments>
+            <value cst="I:3">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </from>
+          <to><interface-ref name="TimerB" ref="0x2af767e40398" scoped=""/></to>
+        </wire>
+        <wire loc="64:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/platforms/telosa/Msp430Timer32khzMapC.nc">
+          <from><interface-ref name="Msp430TimerControl" ref="0x2af7684719d8" scoped=""/>
+          <arguments>
+            <value cst="I:3">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </from>
+          <to><interface-ref name="ControlB4" ref="0x2af767e62020" scoped=""/></to>
+        </wire>
+        <wire loc="65:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/platforms/telosa/Msp430Timer32khzMapC.nc">
+          <from><interface-ref name="Msp430Compare" ref="0x2af76846e300" scoped=""/>
+          <arguments>
+            <value cst="I:3">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </from>
+          <to><interface-ref name="CompareB4" ref="0x2af767e5b558" scoped=""/></to>
+        </wire>
+        <wire loc="67:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/platforms/telosa/Msp430Timer32khzMapC.nc">
+          <from><interface-ref name="Msp430Timer" ref="0x2af768433db8" scoped=""/>
+          <arguments>
+            <value cst="I:4">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </from>
+          <to><interface-ref name="TimerB" ref="0x2af767e40398" scoped=""/></to>
+        </wire>
+        <wire loc="68:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/platforms/telosa/Msp430Timer32khzMapC.nc">
+          <from><interface-ref name="Msp430TimerControl" ref="0x2af7684719d8" scoped=""/>
+          <arguments>
+            <value cst="I:4">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </from>
+          <to><interface-ref name="ControlB5" ref="0x2af767e61400" scoped=""/></to>
+        </wire>
+        <wire loc="69:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/platforms/telosa/Msp430Timer32khzMapC.nc">
+          <from><interface-ref name="Msp430Compare" ref="0x2af76846e300" scoped=""/>
+          <arguments>
+            <value cst="I:4">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </from>
+          <to><interface-ref name="CompareB5" ref="0x2af767e5a3d0" scoped=""/></to>
+        </wire>
+        <wire loc="71:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/platforms/telosa/Msp430Timer32khzMapC.nc">
+          <from><interface-ref name="Msp430Timer" ref="0x2af768433db8" scoped=""/>
+          <arguments>
+            <value cst="I:5">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </from>
+          <to><interface-ref name="TimerB" ref="0x2af767e40398" scoped=""/></to>
+        </wire>
+        <wire loc="72:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/platforms/telosa/Msp430Timer32khzMapC.nc">
+          <from><interface-ref name="Msp430TimerControl" ref="0x2af7684719d8" scoped=""/>
+          <arguments>
+            <value cst="I:5">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </from>
+          <to><interface-ref name="ControlB6" ref="0x2af767e60898" scoped=""/></to>
+        </wire>
+        <wire loc="73:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/platforms/telosa/Msp430Timer32khzMapC.nc">
+          <from><interface-ref name="Msp430Compare" ref="0x2af76846e300" scoped=""/>
+          <arguments>
+            <value cst="I:5">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </from>
+          <to><interface-ref name="CompareB6" ref="0x2af767e59120" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component></referenced></component>

@@ -1,0 +1,178 @@
+<?xml version="1.0" ?><component loc="37:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/TimerMilliP.nc" nicename="tos.system.TimerMilliP" qname="TimerMilliP">
+      <documentation loc="23:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/TimerMilliP.nc">
+        <short>
+ Components should never wire to this component.</short>
+        <long>
+ Components should never wire to this component. This is the
+ underlying configuration of virtualized millisecond timers. 
+ It auto-wires wires the timer
+ implementation (TimerC) to the boot sequence and exports the
+ various Timer interfaces.
+
+ @author Philip Levis
+ @author Cory Sharp
+ @date   May 16 2005
+</long>
+      </documentation>
+      <configuration/>
+      <wiring>
+        <wire loc="43:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/TimerMilliP.nc">
+          <from><interface-ref name="TimerMilli" ref="0x2af768420510" scoped=""/></from>
+          <to><interface-ref name="TimerMilli" ref="0x2af7684169c8" scoped=""/></to>
+        </wire>
+        <wire loc="42:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/TimerMilliP.nc">
+          <from><interface-ref name="SoftwareInit" ref="0x2af767dd0020" scoped=""/></from>
+          <to><interface-ref name="Init" ref="0x2af76841ac68" scoped=""/></to>
+        </wire>
+      </wiring>
+    <specification><interface loc="38:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/TimerMilliP.nc" name="TimerMilli" provided="1" ref="0x2af768420510">
+      <component-ref nicename="tos.system.TimerMilliP" qname="TimerMilliP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="TimerMilli" ref="0x2af768420510" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.timer.Timer" qname="Timer"/>
+        <arguments>
+          <type-tag alignment="I:2" size="I:2"><struct-ref ref="0x2af767af2eb0"/>
+            <typename><typedef-ref name="TMilli" ref="0x2af767b0d230"/></typename>
+          </type-tag>
+        </arguments>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x2af766df9318"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="getNow" ref="0x2af76841d768" scoped=""/>
+        <function-ref name="fired" ref="0x2af76841fe18" scoped=""/>
+        <function-ref name="startPeriodicAt" ref="0x2af76841eb78" scoped=""/>
+        <function-ref name="isOneShot" ref="0x2af76841e728" scoped=""/>
+        <function-ref name="getdt" ref="0x2af76841c088" scoped=""/>
+        <function-ref name="gett0" ref="0x2af76841dbb8" scoped=""/>
+        <function-ref name="isRunning" ref="0x2af76841e2d8" scoped=""/>
+        <function-ref name="startPeriodic" ref="0x2af76841f088" scoped=""/>
+        <function-ref name="startOneShotAt" ref="0x2af76841d198" scoped=""/>
+        <function-ref name="startOneShot" ref="0x2af76841f528" scoped=""/>
+        <function-ref name="stop" ref="0x2af76841f9c8" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced><interface loc="34:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/timer/HilTimerMilliC.nc" name="Init" provided="1" ref="0x2af76841ac68">
+      <component-ref nicename="tos.chips.msp430.timer.HilTimerMilliC" qname="HilTimerMilliC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Init" ref="0x2af76841ac68" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x2af768416020" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="35:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/timer/HilTimerMilliC.nc" name="TimerMilli" provided="1" ref="0x2af7684169c8">
+      <component-ref nicename="tos.chips.msp430.timer.HilTimerMilliC" qname="HilTimerMilliC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="TimerMilli" ref="0x2af7684169c8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.timer.Timer" qname="Timer"/>
+        <arguments>
+          <type-tag alignment="I:2" size="I:2"><struct-ref ref="0x2af767af2eb0"/>
+            <typename><typedef-ref name="TMilli" ref="0x2af767b0d230"/></typename>
+          </type-tag>
+        </arguments>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x2af766df9318"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="getNow" ref="0x2af768412d60" scoped=""/>
+        <function-ref name="fired" ref="0x2af768414470" scoped=""/>
+        <function-ref name="startPeriodicAt" ref="0x2af7684121c0" scoped=""/>
+        <function-ref name="isOneShot" ref="0x2af768414d10" scoped=""/>
+        <function-ref name="getdt" ref="0x2af768411648" scoped=""/>
+        <function-ref name="gett0" ref="0x2af7684111f8" scoped=""/>
+        <function-ref name="isRunning" ref="0x2af7684148c0" scoped=""/>
+        <function-ref name="startPeriodic" ref="0x2af768415560" scoped=""/>
+        <function-ref name="startOneShotAt" ref="0x2af768412790" scoped=""/>
+        <function-ref name="startOneShot" ref="0x2af768415a00" scoped=""/>
+        <function-ref name="stop" ref="0x2af768414020" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="47:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/MainC.nc" name="SoftwareInit" provided="0" ref="0x2af767dd0020">
+      <component-ref nicename="tos.system.MainC" qname="MainC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="SoftwareInit" ref="0x2af767dd0020" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x2af767dd0370" scoped=""/>
+      </interface-functions>
+    </interface><component loc="32:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/timer/HilTimerMilliC.nc" nicename="tos.chips.msp430.timer.HilTimerMilliC" qname="HilTimerMilliC">
+      <documentation loc="22:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/timer/HilTimerMilliC.nc">
+        <short>
+ HilTimerMilliC provides a parameterized interface to a virtualized
+ millisecond timer.</short>
+        <long>
+ HilTimerMilliC provides a parameterized interface to a virtualized
+ millisecond timer.  TimerMilliC in tos/system/ uses this component to
+ allocate new timers.
+
+ @author Cory Sharp &lt;cssharp@eecs.berkeley.edu&gt;
+ @see  Please refer to TEP 102 for more information about this component and its
+          intended use.
+</long>
+      </documentation>
+      <configuration/>
+      <wiring>
+        <wire loc="47:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/timer/HilTimerMilliC.nc">
+          <from><interface-ref name="TimerMilli" ref="0x2af7684169c8" scoped=""/></from>
+          <to><interface-ref name="Timer" ref="0x2af768577020" scoped=""/></to>
+        </wire>
+        <wire loc="48:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/timer/HilTimerMilliC.nc">
+          <from><interface-ref name="LocalTime" ref="0x2af768451108" scoped=""/></from>
+          <to><interface-ref name="LocalTime" ref="0x2af76856ac38" scoped=""/></to>
+        </wire>
+        <wire loc="46:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/timer/HilTimerMilliC.nc">
+          <from><interface-ref name="Init" ref="0x2af76841ac68" scoped=""/></from>
+          <to><interface-ref name="Init" ref="0x2af76851c418" scoped=""/></to>
+        </wire>
+        <wire loc="50:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/timer/HilTimerMilliC.nc">
+          <from><interface-ref name="TimerFrom" ref="0x2af768571208" scoped=""/></from>
+          <to><interface-ref name="Timer" ref="0x2af768516d88" scoped=""/></to>
+        </wire>
+        <wire loc="51:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/timer/HilTimerMilliC.nc">
+          <from><interface-ref name="Alarm" ref="0x2af768532020" scoped=""/></from>
+          <to><interface-ref name="Alarm" ref="0x2af76851cc00" scoped=""/></to>
+        </wire>
+        <wire loc="52:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/timer/HilTimerMilliC.nc">
+          <from><interface-ref name="Counter" ref="0x2af768569e48" scoped=""/></from>
+          <to><interface-ref name="Counter" ref="0x2af7684af750" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component><component loc="45:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/MainC.nc" nicename="tos.system.MainC" qname="MainC">
+      <documentation loc="34:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/MainC.nc">
+        <short>
+ MainC is the system interface the TinyOS boot sequence.</short>
+        <long>
+ MainC is the system interface the TinyOS boot sequence. It wires the
+ boot sequence implementation to the scheduler and hardware resources.
+
+ @author Philip Levis
+ @date   August 6 2005
+ @see    TEP 107: Boot Sequence
+</long>
+      </documentation>
+      <configuration/>
+      <wiring>
+        <wire loc="61:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/MainC.nc">
+          <from><interface-ref name="Boot" ref="0x2af767dd38a8" scoped=""/></from>
+          <to><interface-ref name="Boot" ref="0x2af767dce9c0" scoped=""/></to>
+        </wire>
+        <wire loc="56:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/MainC.nc">
+          <from><interface-ref name="Scheduler" ref="0x2af767f64020" scoped=""/></from>
+          <to><interface-ref name="Scheduler" ref="0x2af76765f0f0" scoped=""/></to>
+        </wire>
+        <wire loc="57:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/MainC.nc">
+          <from><interface-ref name="PlatformInit" ref="0x2af767f649f8" scoped=""/></from>
+          <to><interface-ref name="Init" ref="0x2af767dd0e40" scoped=""/></to>
+        </wire>
+        <wire loc="60:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/MainC.nc">
+          <from><interface-ref name="SoftwareInit" ref="0x2af767f92140" scoped=""/></from>
+          <to><interface-ref name="SoftwareInit" ref="0x2af767dd0020" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component></referenced></component>

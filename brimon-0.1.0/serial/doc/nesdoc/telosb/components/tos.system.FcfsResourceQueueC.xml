@@ -1,0 +1,32 @@
+<?xml version="1.0" ?><component abstract="" loc="32:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/FcfsResourceQueueC.nc" nicename="tos.system.FcfsResourceQueueC" qname="FcfsResourceQueueC" safe="">
+      <parameters>
+        <constant loc="32:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/FcfsResourceQueueC.nc" name="size" ref="0x2af7683661b8">
+          <component-ref nicename="tos.system.FcfsResourceQueueC" qname="FcfsResourceQueueC"/>
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="uint8_t" ref="0x2af766df9318"/></typename>
+          </type-int>
+        </constant>
+      </parameters>
+      <module/>
+    <specification><interface loc="34:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/FcfsResourceQueueC.nc" name="Init" provided="1" ref="0x2af7683669d8">
+      <component-ref nicename="tos.system.FcfsResourceQueueC" qname="FcfsResourceQueueC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Init" ref="0x2af7683669d8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x2af768366d28" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="35:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/FcfsResourceQueueC.nc" name="FcfsQueue" provided="1" ref="0x2af768364020">
+      <component-ref nicename="tos.system.FcfsResourceQueueC" qname="FcfsResourceQueueC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="FcfsQueue" ref="0x2af768364020" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.ResourceQueue" qname="ResourceQueue"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="enqueue" ref="0x2af768364370" scoped=""/>
+        <function-ref name="isEmpty" ref="0x2af7683644f8" scoped=""/>
+        <function-ref name="isEnqueued" ref="0x2af768364680" scoped=""/>
+        <function-ref name="dequeue" ref="0x2af768364808" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced/></component>

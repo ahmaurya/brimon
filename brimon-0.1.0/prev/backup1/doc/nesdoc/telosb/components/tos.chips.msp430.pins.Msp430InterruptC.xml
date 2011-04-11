@@ -1,0 +1,45 @@
+<?xml version="1.0" ?><component abstract="" loc="32:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/pins/Msp430InterruptC.nc" nicename="tos.chips.msp430.pins.Msp430InterruptC" qname="Msp430InterruptC" safe="">
+      <documentation loc="22:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/pins/Msp430InterruptC.nc">
+        <short>
+ Implementation of the GPIO interrupt abstraction for
+ the TI MSP430 microcontroller.</short>
+        <long>
+ Implementation of the GPIO interrupt abstraction for
+ the TI MSP430 microcontroller.
+
+ @author Jonathan Hui
+ @author Joe Polastre
+ @see  Please refer to TEP 117 for more information about this component and its
+          intended use.
+</long>
+      </documentation>
+      <parameters>
+      </parameters>
+      <module/>
+    <specification><interface loc="35:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/pins/Msp430InterruptC.nc" name="HplInterrupt" provided="0" ref="0x2ae8de809730">
+      <component-ref nicename="tos.chips.msp430.pins.Msp430InterruptC" qname="Msp430InterruptC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="HplInterrupt" ref="0x2ae8de809730" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.pins.HplMsp430Interrupt" qname="HplMsp430Interrupt"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="clear" ref="0x2ae8de809a80" scoped=""/>
+        <function-ref name="fired" ref="0x2ae8de809c08" scoped=""/>
+        <function-ref name="disable" ref="0x2ae8de809d90" scoped=""/>
+        <function-ref name="edge" ref="0x2ae8de808020" scoped=""/>
+        <function-ref name="enable" ref="0x2ae8de8081a8" scoped=""/>
+        <function-ref name="getValue" ref="0x2ae8de808330" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="34:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/pins/Msp430InterruptC.nc" name="Interrupt" provided="1" ref="0x2ae8de80a9c0">
+      <component-ref nicename="tos.chips.msp430.pins.Msp430InterruptC" qname="Msp430InterruptC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Interrupt" ref="0x2ae8de80a9c0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.GpioInterrupt" qname="GpioInterrupt"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="fired" ref="0x2ae8de80ad10" scoped=""/>
+        <function-ref name="disable" ref="0x2ae8de809020" scoped=""/>
+        <function-ref name="enableFallingEdge" ref="0x2ae8de8091a8" scoped=""/>
+        <function-ref name="enableRisingEdge" ref="0x2ae8de809330" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced/></component>

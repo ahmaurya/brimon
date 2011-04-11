@@ -1,0 +1,339 @@
+<?xml version="1.0" ?><component abstract="" loc="79:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/FcfsArbiterC.nc" nicename="tos.system.FcfsArbiterC" qname="FcfsArbiterC">
+      <documentation loc="59:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/FcfsArbiterC.nc">
+        <short>
+ Please refer to TEP 108 for more information about this component and its
+ intended use.&lt;br&gt;&lt;br&gt;
+
+ This component provides the Resource, ArbiterInfo, and ResourceDefaultOwner
+ interfaces and uses the ResourceConfigure interface as
+ described in TEP 108.</short>
+        <long>
+ Please refer to TEP 108 for more information about this component and its
+ intended use.&lt;br&gt;&lt;br&gt;
+
+ This component provides the Resource, ArbiterInfo, and ResourceDefaultOwner
+ interfaces and uses the ResourceConfigure interface as
+ described in TEP 108.  It provides arbitration to a shared resource in
+ an FCFS fashion.  An array is used to keep track of which users have put
+ in requests for the resource.  Upon the release of the resource by one
+ of these users, the array is checked and the next user (in FCFS order)
+ that has a pending request will ge granted control of the resource.  If
+ there are no pending requests, then the resource is granted to the default 
+ user.  If a new request is made, the default user will release the resource, 
+ and it will be granted to the requesting cleint.
+
+ @param &lt;b&gt;resourceName&lt;/b&gt; -- The name of the Resource being shared
+ 
+ @author Kevin Klues (klues@tkn.tu-berlin.de)
+</long>
+      </documentation>
+      <parameters>
+        <constant loc="79:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/FcfsArbiterC.nc" name="resourceName" ref="0x2ae8de1e06a0">
+          <component-ref nicename="tos.system.FcfsArbiterC" qname="FcfsArbiterC"/>
+          <type-pointer alignment="I:2" size="I:2">
+            <type-int alignment="I:1" cname="char" size="I:1"/>
+          </type-pointer>
+        </constant>
+      </parameters>
+      <configuration/>
+      <wiring>
+        <wire loc="96:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/FcfsArbiterC.nc">
+          <from><interface-ref name="ResourceRequested" ref="0x2ae8de1de1c8" scoped=""/></from>
+          <to><interface-ref name="ResourceRequested" ref="0x2ae8de239d18" scoped=""/></to>
+        </wire>
+        <wire loc="97:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/FcfsArbiterC.nc">
+          <from><interface-ref name="ResourceDefaultOwner" ref="0x2ae8de1d89b0" scoped=""/></from>
+          <to><interface-ref name="ResourceDefaultOwner" ref="0x2ae8de2384a8" scoped=""/></to>
+        </wire>
+        <wire loc="95:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/FcfsArbiterC.nc">
+          <from><interface-ref name="Resource" ref="0x2ae8de1df040" scoped=""/></from>
+          <to><interface-ref name="Resource" ref="0x2ae8de239020" scoped=""/></to>
+        </wire>
+        <wire loc="98:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/FcfsArbiterC.nc">
+          <from><interface-ref name="ArbiterInfo" ref="0x2ae8de1dd770" scoped=""/></from>
+          <to><interface-ref name="ArbiterInfo" ref="0x2ae8de2370e0" scoped=""/></to>
+        </wire>
+        <wire loc="93:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/FcfsArbiterC.nc">
+          <from><interface-ref name="SoftwareInit" ref="0x2ae8dd9fd808" scoped=""/></from>
+          <to><interface-ref name="Init" ref="0x2ae8de1d5370" scoped=""/></to>
+        </wire>
+        <wire loc="99:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/FcfsArbiterC.nc">
+          <from><interface-ref name="ResourceConfigure" ref="0x2ae8de237980" scoped=""/></from>
+          <to><interface-ref name="ResourceConfigure" ref="0x2ae8de1dc4d0" scoped=""/></to>
+        </wire>
+        <wire loc="101:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/FcfsArbiterC.nc">
+          <from><interface-ref name="Queue" ref="0x2ae8de236130" scoped=""/></from>
+          <to><interface-ref name="FcfsQueue" ref="0x2ae8de1d5948" scoped=""/></to>
+        </wire>
+      </wiring>
+    <specification><interface loc="82:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/FcfsArbiterC.nc" name="ResourceRequested" provided="1" ref="0x2ae8de1de1c8">
+      <component-ref nicename="tos.system.FcfsArbiterC" qname="FcfsArbiterC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ResourceRequested" ref="0x2ae8de1de1c8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.ResourceRequested" qname="ResourceRequested"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x2ae8dcc94318"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="requested" ref="0x2ae8de1de518" scoped=""/>
+        <function-ref name="immediateRequested" ref="0x2ae8de1de6a0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="86:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/FcfsArbiterC.nc" name="ResourceConfigure" provided="0" ref="0x2ae8de1dc4d0">
+      <component-ref nicename="tos.system.FcfsArbiterC" qname="FcfsArbiterC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ResourceConfigure" ref="0x2ae8de1dc4d0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.ResourceConfigure" qname="ResourceConfigure"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x2ae8dcc94318"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="unconfigure" ref="0x2ae8de1dc820" scoped=""/>
+        <function-ref name="configure" ref="0x2ae8de1dc9a8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="83:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/FcfsArbiterC.nc" name="ResourceDefaultOwner" provided="1" ref="0x2ae8de1d89b0">
+      <component-ref nicename="tos.system.FcfsArbiterC" qname="FcfsArbiterC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ResourceDefaultOwner" ref="0x2ae8de1d89b0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.ResourceDefaultOwner" qname="ResourceDefaultOwner"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="release" ref="0x2ae8de1d8d00" scoped=""/>
+        <function-ref name="requested" ref="0x2ae8de1dd020" scoped=""/>
+        <function-ref name="granted" ref="0x2ae8de1dd1a8" scoped=""/>
+        <function-ref name="isOwner" ref="0x2ae8de1dd330" scoped=""/>
+        <function-ref name="immediateRequested" ref="0x2ae8de1dd4b8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="81:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/FcfsArbiterC.nc" name="Resource" provided="1" ref="0x2ae8de1df040">
+      <component-ref nicename="tos.system.FcfsArbiterC" qname="FcfsArbiterC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Resource" ref="0x2ae8de1df040" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Resource" qname="Resource"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x2ae8dcc94318"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="release" ref="0x2ae8de1df390" scoped=""/>
+        <function-ref name="immediateRequest" ref="0x2ae8de1df518" scoped=""/>
+        <function-ref name="request" ref="0x2ae8de1df6a0" scoped=""/>
+        <function-ref name="granted" ref="0x2ae8de1df828" scoped=""/>
+        <function-ref name="isOwner" ref="0x2ae8de1df9b0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="84:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/FcfsArbiterC.nc" name="ArbiterInfo" provided="1" ref="0x2ae8de1dd770">
+      <component-ref nicename="tos.system.FcfsArbiterC" qname="FcfsArbiterC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ArbiterInfo" ref="0x2ae8de1dd770" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.ArbiterInfo" qname="ArbiterInfo"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="inUse" ref="0x2ae8de1ddac0" scoped=""/>
+        <function-ref name="userId" ref="0x2ae8de1ddc48" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced><interface loc="60:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/ArbiterP.nc" name="ResourceConfigure" provided="0" ref="0x2ae8de237980">
+      <component-ref nicename="tos.system.ArbiterP" qname="FcfsArbiterC.Arbiter"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ResourceConfigure" ref="0x2ae8de237980" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.ResourceConfigure" qname="ResourceConfigure"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x2ae8dcc94318"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="unconfigure" ref="0x2ae8de237cf0" scoped=""/>
+        <function-ref name="configure" ref="0x2ae8de237e78" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="61:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/ArbiterP.nc" name="Queue" provided="0" ref="0x2ae8de236130">
+      <component-ref nicename="tos.system.ArbiterP" qname="FcfsArbiterC.Arbiter"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Queue" ref="0x2ae8de236130" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.ResourceQueue" qname="ResourceQueue"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="enqueue" ref="0x2ae8de236480" scoped=""/>
+        <function-ref name="isEmpty" ref="0x2ae8de236608" scoped=""/>
+        <function-ref name="isEnqueued" ref="0x2ae8de236790" scoped=""/>
+        <function-ref name="dequeue" ref="0x2ae8de236918" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="55:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/ArbiterP.nc" name="ResourceRequested" provided="1" ref="0x2ae8de239d18">
+      <component-ref nicename="tos.system.ArbiterP" qname="FcfsArbiterC.Arbiter"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ResourceRequested" ref="0x2ae8de239d18" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.ResourceRequested" qname="ResourceRequested"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x2ae8dcc94318"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="requested" ref="0x2ae8de2380d8" scoped=""/>
+        <function-ref name="immediateRequested" ref="0x2ae8de238260" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="35:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/FcfsResourceQueueC.nc" name="FcfsQueue" provided="1" ref="0x2ae8de1d5948">
+      <component-ref nicename="tos.system.FcfsResourceQueueC" qname="FcfsArbiterC.Queue"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="FcfsQueue" ref="0x2ae8de1d5948" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.ResourceQueue" qname="ResourceQueue"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="enqueue" ref="0x2ae8de1d5c98" scoped=""/>
+        <function-ref name="isEmpty" ref="0x2ae8de1d5e20" scoped=""/>
+        <function-ref name="isEnqueued" ref="0x2ae8de1fa020" scoped=""/>
+        <function-ref name="dequeue" ref="0x2ae8de1fa1a8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="54:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/ArbiterP.nc" name="Resource" provided="1" ref="0x2ae8de239020">
+      <component-ref nicename="tos.system.ArbiterP" qname="FcfsArbiterC.Arbiter"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Resource" ref="0x2ae8de239020" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Resource" qname="Resource"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x2ae8dcc94318"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="release" ref="0x2ae8de239390" scoped=""/>
+        <function-ref name="immediateRequest" ref="0x2ae8de239518" scoped=""/>
+        <function-ref name="request" ref="0x2ae8de2396a0" scoped=""/>
+        <function-ref name="granted" ref="0x2ae8de239828" scoped=""/>
+        <function-ref name="isOwner" ref="0x2ae8de2399b0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="56:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/ArbiterP.nc" name="ResourceDefaultOwner" provided="1" ref="0x2ae8de2384a8">
+      <component-ref nicename="tos.system.ArbiterP" qname="FcfsArbiterC.Arbiter"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ResourceDefaultOwner" ref="0x2ae8de2384a8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.ResourceDefaultOwner" qname="ResourceDefaultOwner"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="release" ref="0x2ae8de2387f8" scoped=""/>
+        <function-ref name="requested" ref="0x2ae8de238980" scoped=""/>
+        <function-ref name="granted" ref="0x2ae8de238b08" scoped=""/>
+        <function-ref name="isOwner" ref="0x2ae8de238c90" scoped=""/>
+        <function-ref name="immediateRequested" ref="0x2ae8de238e18" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="47:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/lib/printf/MainC.nc" name="SoftwareInit" provided="0" ref="0x2ae8dd9fd808">
+      <component-ref nicename="tos.lib.printf.MainC" qname="MainC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="SoftwareInit" ref="0x2ae8dd9fd808" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x2ae8dd9fdb58" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="57:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/ArbiterP.nc" name="ArbiterInfo" provided="1" ref="0x2ae8de2370e0">
+      <component-ref nicename="tos.system.ArbiterP" qname="FcfsArbiterC.Arbiter"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ArbiterInfo" ref="0x2ae8de2370e0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.ArbiterInfo" qname="ArbiterInfo"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="inUse" ref="0x2ae8de237430" scoped=""/>
+        <function-ref name="userId" ref="0x2ae8de2375b8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="34:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/FcfsResourceQueueC.nc" name="Init" provided="1" ref="0x2ae8de1d5370">
+      <component-ref nicename="tos.system.FcfsResourceQueueC" qname="FcfsArbiterC.Queue"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Init" ref="0x2ae8de1d5370" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x2ae8de1d56c0" scoped=""/>
+      </interface-functions>
+    </interface><component loc="45:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/lib/printf/MainC.nc" nicename="tos.lib.printf.MainC" qname="MainC">
+      <documentation loc="34:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/lib/printf/MainC.nc">
+        <short>
+ MainC is the system interface the TinyOS boot sequence.</short>
+        <long>
+ MainC is the system interface the TinyOS boot sequence. It wires the
+ boot sequence implementation to the scheduler and hardware resources.
+
+ @author Philip Levis
+ @author Kevin Klues
+ @date   August 6 2005
+</long>
+      </documentation>
+      <configuration/>
+      <wiring>
+        <wire loc="59:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/lib/printf/MainC.nc">
+          <from><interface-ref name="Boot" ref="0x2ae8dd9fe3e0" scoped=""/></from>
+          <to><interface-ref name="Boot" ref="0x2ae8ddbae3d8" scoped=""/></to>
+        </wire>
+        <wire loc="53:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/lib/printf/MainC.nc">
+          <from><interface-ref name="Scheduler" ref="0x2ae8ddba3020" scoped=""/></from>
+          <to><interface-ref name="Scheduler" ref="0x2ae8dd4fa0f0" scoped=""/></to>
+        </wire>
+        <wire loc="54:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/lib/printf/MainC.nc">
+          <from><interface-ref name="PlatformInit" ref="0x2ae8ddba39f8" scoped=""/></from>
+          <to><interface-ref name="Init" ref="0x2ae8dda00798" scoped=""/></to>
+        </wire>
+        <wire loc="55:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/lib/printf/MainC.nc">
+          <from><interface-ref name="MainBoot" ref="0x2ae8ddbbd020" scoped=""/></from>
+          <to><interface-ref name="Boot" ref="0x2ae8dd9ff9c0" scoped=""/></to>
+        </wire>
+        <wire loc="58:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/lib/printf/MainC.nc">
+          <from><interface-ref name="SoftwareInit" ref="0x2ae8ddba2140" scoped=""/></from>
+          <to><interface-ref name="SoftwareInit" ref="0x2ae8dd9fd808" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component><component abstract="" loc="52(FcfsArbiterC.Arbiter):/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/ArbiterP.nc" nicename="tos.system.ArbiterP" qname="FcfsArbiterC.Arbiter">
+      <documentation loc="30:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/ArbiterP.nc">
+        <short>
+ Please refer to TEP 108 for more information about this component and its
+ intended use.&lt;br&gt;&lt;br&gt;
+
+ This component provides the Resource, ResourceRequested, ArbiterInfo, 
+ and ResourceDefaultOwner interfaces and uses the ResourceConfigure interface as
+ described in TEP 108.</short>
+        <long>
+ Please refer to TEP 108 for more information about this component and its
+ intended use.&lt;br&gt;&lt;br&gt;
+
+ This component provides the Resource, ResourceRequested, ArbiterInfo, 
+ and ResourceDefaultOwner interfaces and uses the ResourceConfigure interface as
+ described in TEP 108.  It provides arbitration to a shared resource.
+ A Queue is used to keep track of which users have put
+ in requests for the resource.  Upon the release of the resource by one
+ of these users, the queue is checked and the next user
+ that has a pending request will ge granted control of the resource.  If
+ there are no pending requests, then the user of the ResourceDefaultOwner
+ interface gains access to the resource, and holds onto it until
+ another user makes a request.
+
+ @param &lt;b&gt;default_owner_id&lt;/b&gt; -- The id of the default owner of this 
+        resource
+ 
+ @author Kevin Klues (klues@tkn.tu-berlin.de)
+ @author Philip Levis
+</long>
+      </documentation>
+      <instance>
+        <component-ref nicename="tos.system.ArbiterP" qname="ArbiterP"/>
+        <arguments>
+          <value cst="U:">
+            <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned=""/>
+          </value>
+        </arguments>
+      </instance>
+      <module/>
+    </component><component abstract="" loc="32(FcfsArbiterC.Queue):/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/FcfsResourceQueueC.nc" nicename="tos.system.FcfsResourceQueueC" qname="FcfsArbiterC.Queue">
+      <instance>
+        <component-ref nicename="tos.system.FcfsResourceQueueC" qname="FcfsResourceQueueC"/>
+        <arguments>
+          <value cst="U:">
+            <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned=""/>
+          </value>
+        </arguments>
+      </instance>
+      <module/>
+    </component></referenced></component>

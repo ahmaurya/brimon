@@ -1,0 +1,136 @@
+<?xml version="1.0" ?><component loc="39:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/stm25p/Stm25pSpiP.nc" nicename="tos.chips.stm25p.Stm25pSpiP" qname="Stm25pSpiP">
+      <documentation loc="32:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/stm25p/Stm25pSpiP.nc">
+        <short>
+ </short>
+        <long>
+ @author Jonathan Hui &lt;jhui@archrock.com&gt;
+ @version $Revision: 1.4 $ $Date: 2006/12/12 18:23:13 $
+</long>
+      </documentation>
+      <module/>
+    <specification><interface loc="49:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/stm25p/Stm25pSpiP.nc" name="SpiPacket" provided="0" ref="0x2b3677eab480">
+      <component-ref nicename="tos.chips.stm25p.Stm25pSpiP" qname="Stm25pSpiP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="SpiPacket" ref="0x2b3677eab480" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.SpiPacket" qname="SpiPacket"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="send" ref="0x2b3677eab7d0" scoped=""/>
+        <function-ref name="sendDone" ref="0x2b3677eab958" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="48:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/stm25p/Stm25pSpiP.nc" name="SpiByte" provided="0" ref="0x2b3677eb4080">
+      <component-ref nicename="tos.chips.stm25p.Stm25pSpiP" qname="Stm25pSpiP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="SpiByte" ref="0x2b3677eb4080" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.SpiByte" qname="SpiByte"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="write" ref="0x2b3677eb43d0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="46:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/stm25p/Stm25pSpiP.nc" name="CSN" provided="0" ref="0x2b3677eb8e80">
+      <component-ref nicename="tos.chips.stm25p.Stm25pSpiP" qname="Stm25pSpiP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="CSN" ref="0x2b3677eb8e80" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.GeneralIO" qname="GeneralIO"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="makeInput" ref="0x2b3677eb71f8" scoped=""/>
+        <function-ref name="isInput" ref="0x2b3677eb7380" scoped=""/>
+        <function-ref name="toggle" ref="0x2b3677eb7508" scoped=""/>
+        <function-ref name="isOutput" ref="0x2b3677eb7690" scoped=""/>
+        <function-ref name="get" ref="0x2b3677eb7818" scoped=""/>
+        <function-ref name="makeOutput" ref="0x2b3677eb79a0" scoped=""/>
+        <function-ref name="set" ref="0x2b3677eb7b28" scoped=""/>
+        <function-ref name="clr" ref="0x2b3677eb7cb0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="41:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/stm25p/Stm25pSpiP.nc" name="Init" provided="1" ref="0x2b3677ebd4d0">
+      <component-ref nicename="tos.chips.stm25p.Stm25pSpiP" qname="Stm25pSpiP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Init" ref="0x2b3677ebd4d0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x2b3677ebd820" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="43:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/stm25p/Stm25pSpiP.nc" name="Spi" provided="1" ref="0x2b3677eba988">
+      <component-ref nicename="tos.chips.stm25p.Stm25pSpiP" qname="Stm25pSpiP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Spi" ref="0x2b3677eba988" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.stm25p.Stm25pSpi" qname="Stm25pSpi"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="sectorEraseDone" ref="0x2b3677ebacd8" scoped=""/>
+        <function-ref name="bulkErase" ref="0x2b3677ebae60" scoped=""/>
+        <function-ref name="powerDown" ref="0x2b3677eb9020" scoped=""/>
+        <function-ref name="readDone" ref="0x2b3677eb9de8" scoped=""/>
+        <function-ref name="read" ref="0x2b3677eb9330" scoped=""/>
+        <function-ref name="pageProgramDone" ref="0x2b3677eb94b8" scoped=""/>
+        <function-ref name="sectorErase" ref="0x2b3677eb9640" scoped=""/>
+        <function-ref name="computeCrcDone" ref="0x2b3677eb97c8" scoped=""/>
+        <function-ref name="powerUp" ref="0x2b3677eb9950" scoped=""/>
+        <function-ref name="computeCrc" ref="0x2b3677eb9ad8" scoped=""/>
+        <function-ref name="pageProgram" ref="0x2b3677eb9c60" scoped=""/>
+        <function-ref name="bulkEraseDone" ref="0x2b3677eb91a8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="45:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/stm25p/Stm25pSpiP.nc" name="SpiResource" provided="0" ref="0x2b3677eb81c8">
+      <component-ref nicename="tos.chips.stm25p.Stm25pSpiP" qname="Stm25pSpiP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="SpiResource" ref="0x2b3677eb81c8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Resource" qname="Resource"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="release" ref="0x2b3677eb8518" scoped=""/>
+        <function-ref name="immediateRequest" ref="0x2b3677eb86a0" scoped=""/>
+        <function-ref name="request" ref="0x2b3677eb8828" scoped=""/>
+        <function-ref name="granted" ref="0x2b3677eb89b0" scoped=""/>
+        <function-ref name="isOwner" ref="0x2b3677eb8b38" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="50:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/stm25p/Stm25pSpiP.nc" name="Leds" provided="0" ref="0x2b3677eabc10">
+      <component-ref nicename="tos.chips.stm25p.Stm25pSpiP" qname="Stm25pSpiP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Leds" ref="0x2b3677eabc10" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Leds" qname="Leds"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="led0Off" ref="0x2b3677eb3020" scoped=""/>
+        <function-ref name="led0Toggle" ref="0x2b3677eb31a8" scoped=""/>
+        <function-ref name="led1On" ref="0x2b3677eb3330" scoped=""/>
+        <function-ref name="led1Toggle" ref="0x2b3677eb34b8" scoped=""/>
+        <function-ref name="led2Toggle" ref="0x2b3677eb3640" scoped=""/>
+        <function-ref name="get" ref="0x2b3677eb37c8" scoped=""/>
+        <function-ref name="led1Off" ref="0x2b3677eb3950" scoped=""/>
+        <function-ref name="led2Off" ref="0x2b3677eb2020" scoped=""/>
+        <function-ref name="set" ref="0x2b3677eb3ad8" scoped=""/>
+        <function-ref name="led0On" ref="0x2b3677eb3c60" scoped=""/>
+        <function-ref name="led2On" ref="0x2b3677eb3de8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="42:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/stm25p/Stm25pSpiP.nc" name="ClientResource" provided="1" ref="0x2b3677ebdbd0">
+      <component-ref nicename="tos.chips.stm25p.Stm25pSpiP" qname="Stm25pSpiP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ClientResource" ref="0x2b3677ebdbd0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Resource" qname="Resource"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="release" ref="0x2b3677eba020" scoped=""/>
+        <function-ref name="immediateRequest" ref="0x2b3677eba1a8" scoped=""/>
+        <function-ref name="request" ref="0x2b3677eba330" scoped=""/>
+        <function-ref name="granted" ref="0x2b3677eba4b8" scoped=""/>
+        <function-ref name="isOwner" ref="0x2b3677eba640" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="47:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/stm25p/Stm25pSpiP.nc" name="Hold" provided="0" ref="0x2b3677eb6060">
+      <component-ref nicename="tos.chips.stm25p.Stm25pSpiP" qname="Stm25pSpiP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Hold" ref="0x2b3677eb6060" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.GeneralIO" qname="GeneralIO"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="makeInput" ref="0x2b3677eb63b0" scoped=""/>
+        <function-ref name="isInput" ref="0x2b3677eb6538" scoped=""/>
+        <function-ref name="toggle" ref="0x2b3677eb66c0" scoped=""/>
+        <function-ref name="isOutput" ref="0x2b3677eb6848" scoped=""/>
+        <function-ref name="get" ref="0x2b3677eb69d0" scoped=""/>
+        <function-ref name="makeOutput" ref="0x2b3677eb6b58" scoped=""/>
+        <function-ref name="set" ref="0x2b3677eb6ce0" scoped=""/>
+        <function-ref name="clr" ref="0x2b3677eb6e68" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced/></component>

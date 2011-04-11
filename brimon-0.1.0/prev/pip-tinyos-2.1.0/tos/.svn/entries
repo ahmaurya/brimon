@@ -1,0 +1,31 @@
+9
+
+dir
+240
+svn+ssh://vijay@synerg.cse.iitb.ac.in/var/svn/repos/pip-sagar/pip-tinyos-2.1.0/tos
+svn+ssh://vijay@synerg.cse.iitb.ac.in/var/svn/repos
+
+
+
+2009-07-01T02:33:08.784457Z
+234
+sagar
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+a2097bce-8df9-452e-a359-374295b50879
+
+chips
+dir
+

@@ -1,0 +1,190 @@
+<?xml version="1.0" ?><component abstract="" loc="39:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/usart/Msp430SpiNoDmaP.nc" nicename="tos.chips.msp430.usart.Msp430SpiNoDmaP" qname="Msp430SpiNoDmaP">
+      <documentation loc="32:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/usart/Msp430SpiNoDmaP.nc">
+        <short>
+ </short>
+        <long>
+ @author Jonathan Hui &lt;jhui@archedrock.com&gt;
+ @author Jan Hauer &lt;hauer@tkn.tu-berlin.de&gt; (bugfix in continueOp())
+ @version $Revision: 1.6 $ $Date: 2008/06/16 07:31:21 $
+</long>
+      </documentation>
+      <parameters>
+      </parameters>
+      <module/>
+    <specification><interface loc="42:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/usart/Msp430SpiNoDmaP.nc" name="ResourceConfigure" provided="1" ref="0x2ae8de92b208">
+      <component-ref nicename="tos.chips.msp430.usart.Msp430SpiNoDmaP" qname="Msp430SpiNoDmaP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ResourceConfigure" ref="0x2ae8de92b208" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.ResourceConfigure" qname="ResourceConfigure"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x2ae8dcc94318"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="unconfigure" ref="0x2ae8de92b558" scoped=""/>
+        <function-ref name="configure" ref="0x2ae8de92b6e0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="44:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/usart/Msp430SpiNoDmaP.nc" name="SpiPacket" provided="1" ref="0x2ae8de929510">
+      <component-ref nicename="tos.chips.msp430.usart.Msp430SpiNoDmaP" qname="Msp430SpiNoDmaP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="SpiPacket" ref="0x2ae8de929510" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.SpiPacket" qname="SpiPacket"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x2ae8dcc94318"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="send" ref="0x2ae8de929860" scoped=""/>
+        <function-ref name="sendDone" ref="0x2ae8de9299e8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="47:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/usart/Msp430SpiNoDmaP.nc" name="Msp430SpiConfigure" provided="0" ref="0x2ae8de927498">
+      <component-ref nicename="tos.chips.msp430.usart.Msp430SpiNoDmaP" qname="Msp430SpiNoDmaP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Msp430SpiConfigure" ref="0x2ae8de927498" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.usart.Msp430SpiConfigure" qname="Msp430SpiConfigure"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x2ae8dcc94318"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="getConfig" ref="0x2ae8de9277e8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="43:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/usart/Msp430SpiNoDmaP.nc" name="SpiByte" provided="1" ref="0x2ae8de92b9b0">
+      <component-ref nicename="tos.chips.msp430.usart.Msp430SpiNoDmaP" qname="Msp430SpiNoDmaP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="SpiByte" ref="0x2ae8de92b9b0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.SpiByte" qname="SpiByte"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="write" ref="0x2ae8de92bd00" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="48:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/usart/Msp430SpiNoDmaP.nc" name="Usart" provided="0" ref="0x2ae8de927b78">
+      <component-ref nicename="tos.chips.msp430.usart.Msp430SpiNoDmaP" qname="Msp430SpiNoDmaP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Usart" ref="0x2ae8de927b78" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.usart.HplMsp430Usart" qname="HplMsp430Usart"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="isTxEmpty" ref="0x2ae8de926020" scoped=""/>
+        <function-ref name="enableUartRx" ref="0x2ae8de9261a8" scoped=""/>
+        <function-ref name="setUctl" ref="0x2ae8de926330" scoped=""/>
+        <function-ref name="enableUart" ref="0x2ae8de9264b8" scoped=""/>
+        <function-ref name="setUrctl" ref="0x2ae8de926640" scoped=""/>
+        <function-ref name="enableRxIntr" ref="0x2ae8de9267c8" scoped=""/>
+        <function-ref name="clrRxIntr" ref="0x2ae8de926950" scoped=""/>
+        <function-ref name="getUtctl" ref="0x2ae8de926ad8" scoped=""/>
+        <function-ref name="getUrctl" ref="0x2ae8de926c60" scoped=""/>
+        <function-ref name="resetUsart" ref="0x2ae8de926de8" scoped=""/>
+        <function-ref name="getUmctl" ref="0x2ae8de925020" scoped=""/>
+        <function-ref name="disableIntr" ref="0x2ae8de9251a8" scoped=""/>
+        <function-ref name="setUtctl" ref="0x2ae8de925330" scoped=""/>
+        <function-ref name="getUbr" ref="0x2ae8de9255b8" scoped=""/>
+        <function-ref name="enableTxIntr" ref="0x2ae8de925740" scoped=""/>
+        <function-ref name="setUmctl" ref="0x2ae8de9258c8" scoped=""/>
+        <function-ref name="isUartRx" ref="0x2ae8de925a50" scoped=""/>
+        <function-ref name="isUart" ref="0x2ae8de925bd8" scoped=""/>
+        <function-ref name="disableRxIntr" ref="0x2ae8de925d60" scoped=""/>
+        <function-ref name="isSpi" ref="0x2ae8de924020" scoped=""/>
+        <function-ref name="enableUartTx" ref="0x2ae8de9241a8" scoped=""/>
+        <function-ref name="disableTxIntr" ref="0x2ae8de924330" scoped=""/>
+        <function-ref name="disableUartRx" ref="0x2ae8de9244b8" scoped=""/>
+        <function-ref name="enableIntr" ref="0x2ae8de924640" scoped=""/>
+        <function-ref name="getMode" ref="0x2ae8de9247c8" scoped=""/>
+        <function-ref name="isTxIntrPending" ref="0x2ae8de924b50" scoped=""/>
+        <function-ref name="clrIntr" ref="0x2ae8de924cd8" scoped=""/>
+        <function-ref name="setUbr" ref="0x2ae8de924e60" scoped=""/>
+        <function-ref name="tx" ref="0x2ae8de923020" scoped=""/>
+        <function-ref name="getUctl" ref="0x2ae8de9231a8" scoped=""/>
+        <function-ref name="disableUart" ref="0x2ae8de923330" scoped=""/>
+        <function-ref name="enableSpi" ref="0x2ae8de9234b8" scoped=""/>
+        <function-ref name="setModeUart" ref="0x2ae8de923640" scoped=""/>
+        <function-ref name="setModeSpi" ref="0x2ae8de9237c8" scoped=""/>
+        <function-ref name="rx" ref="0x2ae8de923950" scoped=""/>
+        <function-ref name="isRxIntrPending" ref="0x2ae8de923ad8" scoped=""/>
+        <function-ref name="isUartTx" ref="0x2ae8de923c60" scoped=""/>
+        <function-ref name="clrTxIntr" ref="0x2ae8de923de8" scoped=""/>
+        <function-ref name="disableSpi" ref="0x2ae8de922020" scoped=""/>
+        <function-ref name="disableUartTx" ref="0x2ae8de9221a8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="50:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/usart/Msp430SpiNoDmaP.nc" name="Leds" provided="0" ref="0x2ae8de922d90">
+      <component-ref nicename="tos.chips.msp430.usart.Msp430SpiNoDmaP" qname="Msp430SpiNoDmaP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Leds" ref="0x2ae8de922d90" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Leds" qname="Leds"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="led0Off" ref="0x2ae8de921170" scoped=""/>
+        <function-ref name="led0Toggle" ref="0x2ae8de9212f8" scoped=""/>
+        <function-ref name="led1On" ref="0x2ae8de921480" scoped=""/>
+        <function-ref name="led1Toggle" ref="0x2ae8de921608" scoped=""/>
+        <function-ref name="led2Toggle" ref="0x2ae8de921790" scoped=""/>
+        <function-ref name="get" ref="0x2ae8de921918" scoped=""/>
+        <function-ref name="led1Off" ref="0x2ae8de921aa0" scoped=""/>
+        <function-ref name="led2Off" ref="0x2ae8de9201a8" scoped=""/>
+        <function-ref name="set" ref="0x2ae8de921c28" scoped=""/>
+        <function-ref name="led0On" ref="0x2ae8de921db0" scoped=""/>
+        <function-ref name="led2On" ref="0x2ae8de920020" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="46:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/usart/Msp430SpiNoDmaP.nc" name="UsartResource" provided="0" ref="0x2ae8de9282b0">
+      <component-ref nicename="tos.chips.msp430.usart.Msp430SpiNoDmaP" qname="Msp430SpiNoDmaP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="UsartResource" ref="0x2ae8de9282b0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Resource" qname="Resource"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x2ae8dcc94318"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="release" ref="0x2ae8de928600" scoped=""/>
+        <function-ref name="immediateRequest" ref="0x2ae8de928788" scoped=""/>
+        <function-ref name="request" ref="0x2ae8de928910" scoped=""/>
+        <function-ref name="granted" ref="0x2ae8de928a98" scoped=""/>
+        <function-ref name="isOwner" ref="0x2ae8de928c20" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="41:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/usart/Msp430SpiNoDmaP.nc" name="Resource" provided="1" ref="0x2ae8de92c020">
+      <component-ref nicename="tos.chips.msp430.usart.Msp430SpiNoDmaP" qname="Msp430SpiNoDmaP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Resource" ref="0x2ae8de92c020" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Resource" qname="Resource"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x2ae8dcc94318"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="release" ref="0x2ae8de92c370" scoped=""/>
+        <function-ref name="immediateRequest" ref="0x2ae8de92c4f8" scoped=""/>
+        <function-ref name="request" ref="0x2ae8de92c680" scoped=""/>
+        <function-ref name="granted" ref="0x2ae8de92c808" scoped=""/>
+        <function-ref name="isOwner" ref="0x2ae8de92c990" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="49:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/usart/Msp430SpiNoDmaP.nc" name="UsartInterrupts" provided="0" ref="0x2ae8de922600">
+      <component-ref nicename="tos.chips.msp430.usart.Msp430SpiNoDmaP" qname="Msp430SpiNoDmaP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="UsartInterrupts" ref="0x2ae8de922600" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.usart.HplMsp430UsartInterrupts" qname="HplMsp430UsartInterrupts"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="rxDone" ref="0x2ae8de922950" scoped=""/>
+        <function-ref name="txDone" ref="0x2ae8de922ad8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="67:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/usart/Msp430SpiNoDmaP.nc" name="signalDone_task" provided="0" ref="0x2ae8de91c760">
+      <component-ref nicename="tos.chips.msp430.usart.Msp430SpiNoDmaP" qname="Msp430SpiNoDmaP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="signalDone_task" ref="0x2ae8de91c760" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.TaskBasic" qname="TaskBasic"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="postTask" ref="0x2ae8de91cab0" scoped=""/>
+        <function-ref name="runTask" ref="0x2ae8de91cc38" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced/></component>

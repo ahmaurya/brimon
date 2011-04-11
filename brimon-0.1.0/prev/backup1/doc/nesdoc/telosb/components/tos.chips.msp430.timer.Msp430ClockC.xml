@@ -1,0 +1,116 @@
+<?xml version="1.0" ?><component loc="26:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/timer/Msp430ClockC.nc" nicename="tos.chips.msp430.timer.Msp430ClockC" qname="Msp430ClockC">
+      <documentation loc="22:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/timer/Msp430ClockC.nc">
+        <short>
+ </short>
+        <long>
+ @author Cory Sharp &lt;cssharp@eecs.berkeley.edu&gt;
+</long>
+      </documentation>
+      <configuration/>
+      <wiring>
+        <wire loc="36:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/timer/Msp430ClockC.nc">
+          <from><interface-ref name="Msp430ClockInit" ref="0x2ae8dda2f3a8" scoped=""/></from>
+          <to><interface-ref name="Msp430ClockInit" ref="0x2ae8dda40b60" scoped=""/></to>
+        </wire>
+        <wire loc="35:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/timer/Msp430ClockC.nc">
+          <from><interface-ref name="Init" ref="0x2ae8dda16168" scoped=""/></from>
+          <to><interface-ref name="Init" ref="0x2ae8dda404f0" scoped=""/></to>
+        </wire>
+        <wire loc="37:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/timer/Msp430ClockC.nc">
+          <from><interface-ref name="McuPowerOverride" ref="0x2ae8dd6e3020" scoped=""/></from>
+          <to><interface-ref name="McuPowerOverride" ref="0x2ae8dda3fe08" scoped=""/></to>
+        </wire>
+      </wiring>
+    <specification><interface loc="29:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/timer/Msp430ClockC.nc" name="Msp430ClockInit" provided="1" ref="0x2ae8dda2f3a8">
+      <component-ref nicename="tos.chips.msp430.timer.Msp430ClockC" qname="Msp430ClockC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Msp430ClockInit" ref="0x2ae8dda2f3a8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.timer.Msp430ClockInit" qname="Msp430ClockInit"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="defaultInitClocks" ref="0x2ae8dda15330" scoped=""/>
+        <function-ref name="initTimerB" ref="0x2ae8dda2f880" scoped=""/>
+        <function-ref name="defaultInitTimerA" ref="0x2ae8dda2fa08" scoped=""/>
+        <function-ref name="initTimerA" ref="0x2ae8dda2fb90" scoped=""/>
+        <function-ref name="defaultInitTimerB" ref="0x2ae8dda2f6f8" scoped=""/>
+        <function-ref name="defaultSetupDcoCalibrate" ref="0x2ae8dda2fd18" scoped=""/>
+        <function-ref name="setupDcoCalibrate" ref="0x2ae8dda15020" scoped=""/>
+        <function-ref name="initClocks" ref="0x2ae8dda151a8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="28:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/timer/Msp430ClockC.nc" name="Init" provided="1" ref="0x2ae8dda16168">
+      <component-ref nicename="tos.chips.msp430.timer.Msp430ClockC" qname="Msp430ClockC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Init" ref="0x2ae8dda16168" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x2ae8dda164b8" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced><interface loc="36:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/timer/Msp430ClockP.nc" name="McuPowerOverride" provided="1" ref="0x2ae8dda3fe08">
+      <component-ref nicename="tos.chips.msp430.timer.Msp430ClockP" qname="Msp430ClockP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="McuPowerOverride" ref="0x2ae8dda3fe08" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.McuPowerOverride" qname="McuPowerOverride"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="lowestState" ref="0x2ae8dda3e1a8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="47:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/McuSleepC.nc" name="McuPowerOverride" provided="0" ref="0x2ae8dd6e3020">
+      <component-ref nicename="tos.chips.msp430.McuSleepC" qname="McuSleepC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="McuPowerOverride" ref="0x2ae8dd6e3020" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.McuPowerOverride" qname="McuPowerOverride"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="lowestState" ref="0x2ae8dd6e3370" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="34:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/timer/Msp430ClockP.nc" name="Init" provided="1" ref="0x2ae8dda404f0">
+      <component-ref nicename="tos.chips.msp430.timer.Msp430ClockP" qname="Msp430ClockP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Init" ref="0x2ae8dda404f0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x2ae8dda40840" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="35:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/timer/Msp430ClockP.nc" name="Msp430ClockInit" provided="1" ref="0x2ae8dda40b60">
+      <component-ref nicename="tos.chips.msp430.timer.Msp430ClockP" qname="Msp430ClockP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Msp430ClockInit" ref="0x2ae8dda40b60" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.timer.Msp430ClockInit" qname="Msp430ClockInit"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="defaultInitClocks" ref="0x2ae8dda3fad8" scoped=""/>
+        <function-ref name="initTimerB" ref="0x2ae8dda3f1a8" scoped=""/>
+        <function-ref name="defaultInitTimerA" ref="0x2ae8dda3f330" scoped=""/>
+        <function-ref name="initTimerA" ref="0x2ae8dda3f4b8" scoped=""/>
+        <function-ref name="defaultInitTimerB" ref="0x2ae8dda3f020" scoped=""/>
+        <function-ref name="defaultSetupDcoCalibrate" ref="0x2ae8dda3f640" scoped=""/>
+        <function-ref name="setupDcoCalibrate" ref="0x2ae8dda3f7c8" scoped=""/>
+        <function-ref name="initClocks" ref="0x2ae8dda3f950" scoped=""/>
+      </interface-functions>
+    </interface><component loc="32:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/timer/Msp430ClockP.nc" nicename="tos.chips.msp430.timer.Msp430ClockP" qname="Msp430ClockP" safe="">
+      <module/>
+    </component><component loc="41:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/McuSleepC.nc" nicename="tos.chips.msp430.McuSleepC" qname="McuSleepC" safe="">
+      <documentation loc="25:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/McuSleepC.nc">
+        <short>
+ Implementation of TEP 112 (Microcontroller Power Management) for
+ the MSP430.</short>
+        <long>
+ Implementation of TEP 112 (Microcontroller Power Management) for
+ the MSP430. Code for low power calculation copied from older
+ msp430hardware.h by Vlado Handziski, Joe Polastre, and Cory Sharp.
+
+
+ @author Philip Levis
+ @author Vlado Handziski
+ @author Joe Polastre
+ @author Cory Sharp
+ @date   October 26, 2005
+ @see  Please refer to TEP 112 for more information about this component and its
+          intended use.
+
+</long>
+      </documentation>
+      <module/>
+    </component></referenced></component>

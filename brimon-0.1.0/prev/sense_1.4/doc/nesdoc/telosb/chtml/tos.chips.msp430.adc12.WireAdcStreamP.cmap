@@ -1,0 +1,32 @@
+<area shape="rect" href="../chtml/tos.system.ArbitratedReadStreamC.html" title="ArbitratedReadStreamC\n(ArbitrateReadStream)" alt="" coords="203,125,405,173">
+<area shape="poly" href="../ihtml/tos.interfaces.ReadStream.html" title="ReadStream&lt;uint16_t&gt;[uint8_t]" alt="" coords="307,53 307,112 301,112 301,53">
+<area shape="rect" href="../ihtml/tos.interfaces.ReadStream.html" title="ReadStream&lt;uint16_t&gt;[uint8_t]" alt="" coords="300,49,308,57">
+<area shape="rect" href="../ihtml/tos.interfaces.ReadStream.html" title="ReadStream&lt;uint16_t&gt;[uint8_t]" alt="" coords="300,121,308,129">
+<area shape="rect" href="../ihtml/tos.interfaces.ReadStream.html" title="ReadStream&lt;uint16_t&gt;[uint8_t]" alt="" coords="303,78,510,95">
+<area shape="rect" href="../chtml/tos.chips.msp430.adc12.AdcStreamP.html" title="AdcStreamP" alt="" coords="435,245,552,293">
+<area shape="poly" href="../ihtml/tos.interfaces.ReadStream.html" title="ReadStream&lt;uint16_t&gt;[uint8_t]" alt="" coords="323,172 345,196 372,219 423,246 420,250 369,224 342,200 319,175">
+<area shape="rect" href="../ihtml/tos.interfaces.ReadStream.html" title="ReadStream&lt;uint16_t&gt;[uint8_t]" alt="" coords="317,169,325,177">
+<area shape="rect" href="../ihtml/tos.interfaces.ReadStream.html" title="ReadStream&lt;uint16_t&gt;[uint8_t]" alt="" coords="431,248,439,256">
+<area shape="rect" href="../ihtml/tos.interfaces.ReadStream.html" title="ReadStream&lt;uint16_t&gt;[uint8_t]" alt="" coords="370,203,577,221">
+<area shape="poly" href="../ihtml/tos.interfaces.Resource.html" title="Resource[uint8_t]" alt="" coords="262,175 247,188 236,204 229,233 224,231 231,202 243,185 258,171">
+<area shape="rect" href="../ihtml/tos.interfaces.Resource.html" title="Resource[uint8_t]" alt="" coords="256,169,264,177">
+<area shape="rect" href="../ihtml/tos.interfaces.Resource.html" title="Resource[uint8_t]" alt="" coords="224,241,232,249">
+<area shape="rect" href="../ihtml/tos.interfaces.Resource.html" title="Resource[uint8_t]" alt="" coords="237,203,349,221">
+<area shape="poly" href="../ihtml/tos.interfaces.AdcConfigure.html" title="AdcConfigure&lt;msp430adc12_channel_config_t *&gt;[uint8_t]" alt="" coords="435,280 304,296 205,300 150,306 128,311 112,319 101,335 93,353 88,351 96,332 109,315 126,306 149,301 204,295 304,291 434,275">
+<area shape="rect" href="../ihtml/tos.interfaces.AdcConfigure.html" title="AdcConfigure&lt;msp430adc12_channel_config_t *&gt;[uint8_t]" alt="" coords="431,273,439,281">
+<area shape="rect" href="../ihtml/tos.interfaces.AdcConfigure.html" title="AdcConfigure&lt;msp430adc12_channel_config_t *&gt;[uint8_t]" alt="" coords="84,361,92,369">
+<area shape="rect" href="../ihtml/tos.interfaces.AdcConfigure.html" title="AdcConfigure&lt;msp430adc12_channel_config_t *&gt;[uint8_t]" alt="" coords="119,318,497,335">
+<area shape="poly" href="../ihtml/tos.chips.msp430.adc12.Msp430Adc12SingleChannel.html" title="Msp430Adc12SingleChannel[uint8_t]" alt="" coords="496,293 496,352 491,352 491,293">
+<area shape="rect" href="../ihtml/tos.chips.msp430.adc12.Msp430Adc12SingleChannel.html" title="Msp430Adc12SingleChannel[uint8_t]" alt="" coords="489,289,497,297">
+<area shape="rect" href="../ihtml/tos.chips.msp430.adc12.Msp430Adc12SingleChannel.html" title="Msp430Adc12SingleChannel[uint8_t]" alt="" coords="489,361,497,369">
+<area shape="rect" href="../ihtml/tos.chips.msp430.adc12.Msp430Adc12SingleChannel.html" title="Msp430Adc12SingleChannel[uint8_t]" alt="" coords="493,318,728,335">
+<area shape="rect" href="../chtml/tos.chips.msp430.timer.AlarmMilli32C.html" title="AlarmMilli32C\n(Alarm)" alt="" coords="692,360,825,419">
+<area shape="poly" href="../ihtml/tos.lib.timer.Alarm.html" title="Alarm&lt;TMilli, uint32_t&gt;" alt="" coords="552,272 654,288 700,300 731,315 750,345 746,348 728,319 698,305 653,294 552,277">
+<area shape="rect" href="../ihtml/tos.lib.timer.Alarm.html" title="Alarm&lt;TMilli, uint32_t&gt;" alt="" coords="548,271,556,279">
+<area shape="rect" href="../ihtml/tos.lib.timer.Alarm.html" title="Alarm&lt;TMilli, uint32_t&gt;" alt="" coords="749,356,757,364">
+<area shape="rect" href="../ihtml/tos.lib.timer.Alarm.html" title="Alarm&lt;TMilli, uint32_t&gt;" alt="" coords="739,318,890,335">
+<area shape="rect" href="../chtml/tos.lib.printf.MainC.html" title="MainC" alt="" coords="571,120,653,179">
+<area shape="poly" href="../ihtml/tos.interfaces.Init.html" title="Init" alt="" coords="608,180 598,202 585,223 564,239 561,235 581,220 594,200 603,178">
+<area shape="rect" href="../ihtml/tos.interfaces.Init.html" title="Init" alt="" coords="601,175,609,183">
+<area shape="rect" href="../ihtml/tos.interfaces.Init.html" title="Init" alt="" coords="548,241,556,249">
+<area shape="rect" href="../ihtml/tos.interfaces.Init.html" title="Init" alt="" coords="595,203,613,221">

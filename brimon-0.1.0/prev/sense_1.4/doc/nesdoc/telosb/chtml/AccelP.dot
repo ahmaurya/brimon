@@ -1,0 +1,11 @@
+digraph "AccelP" {
+  n0x2b3678235cd8 [shape=ellipse, style=filled, label="ConfigY", fontsize=12];
+  "Msp430AxisYP" [fontsize=12, shape=box, URL="../chtml/Msp430AxisYP.html"];
+  n0x2b36782320a8 [shape=ellipse, style=filled, label="ConfigZ", fontsize=12];
+  "Msp430AxisZP" [fontsize=12, shape=box, URL="../chtml/Msp430AxisZP.html"];
+  n0x2b3678238950 [shape=ellipse, style=filled, label="ConfigX", fontsize=12];
+  "Msp430AxisXP" [fontsize=12, shape=box, URL="../chtml/Msp430AxisXP.html"];
+  "n0x2b3678235cd8" -> "Msp430AxisYP" [label="AdcConfigure<msp430adc12_channel_config_t *>", URL="../ihtml/tos.interfaces.AdcConfigure.html", fontsize=10];
+  "n0x2b36782320a8" -> "Msp430AxisZP" [label="AdcConfigure<msp430adc12_channel_config_t *>", URL="../ihtml/tos.interfaces.AdcConfigure.html", fontsize=10];
+  "n0x2b3678238950" -> "Msp430AxisXP" [label="AdcConfigure<msp430adc12_channel_config_t *>", URL="../ihtml/tos.interfaces.AdcConfigure.html", fontsize=10];
+}

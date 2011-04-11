@@ -1,0 +1,20 @@
+digraph "tos.lib.printf.PrintfC" {
+  n0x2ae8ddbae3d8 [shape=ellipse, style=filled, label="Boot", fontsize=12];
+  "PrintfP" [fontsize=12, shape=box, URL="../chtml/tos.lib.printf.PrintfP.html"];
+  "PrintfP" [fontsize=12, shape=box, URL="../chtml/tos.lib.printf.PrintfP.html"];
+  n0x2ae8ddbbd020 [shape=ellipse, style=filled, label="MainBoot", fontsize=12];
+  "PrintfP" [fontsize=12, shape=box, URL="../chtml/tos.lib.printf.PrintfP.html"];
+  "SerialActiveMessageC" [fontsize=12, shape=box,peripheries=2, URL="../chtml/tos.lib.serial.SerialActiveMessageC.html"];
+  "PrintfP" [fontsize=12, shape=box, URL="../chtml/tos.lib.printf.PrintfP.html"];
+  "PrintfC.QueueC" [fontsize=12, shape=box, style=dashed, label="QueueC", URL="../chtml/tos.system.QueueC.html"];
+  "PrintfP" [fontsize=12, shape=box, URL="../chtml/tos.lib.printf.PrintfP.html"];
+  "PrintfC.SerialAMSenderC" [fontsize=12, shape=box,peripheries=2, style=dashed, label="SerialAMSenderC", URL="../chtml/tos.lib.serial.SerialAMSenderC.html"];
+  "PrintfP" [fontsize=12, shape=box, URL="../chtml/tos.lib.printf.PrintfP.html"];
+  "PrintfC.SerialAMSenderC" [fontsize=12, shape=box,peripheries=2, style=dashed, label="SerialAMSenderC", URL="../chtml/tos.lib.serial.SerialAMSenderC.html"];
+  "n0x2ae8ddbae3d8" -> "PrintfP" [label="Boot", URL="../ihtml/tos.interfaces.Boot.html", fontsize=10];
+  "PrintfP" -> "n0x2ae8ddbbd020" [label="Boot", URL="../ihtml/tos.interfaces.Boot.html", fontsize=10];
+  "PrintfP" -> "SerialActiveMessageC" [label="SplitControl", URL="../ihtml/tos.interfaces.SplitControl.html", fontsize=10];
+  "PrintfP" -> "PrintfC.QueueC" [label="Queue<uint8_t>", URL="../ihtml/tos.interfaces.Queue.html", fontsize=10];
+  "PrintfP" -> "PrintfC.SerialAMSenderC" [label="AMSend", URL="../ihtml/tos.interfaces.AMSend.html", fontsize=10];
+  "PrintfP" -> "PrintfC.SerialAMSenderC" [label="Packet", URL="../ihtml/tos.interfaces.Packet.html", fontsize=10];
+}

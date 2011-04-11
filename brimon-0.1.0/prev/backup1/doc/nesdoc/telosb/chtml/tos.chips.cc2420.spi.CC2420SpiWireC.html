@@ -1,0 +1,125 @@
+<html>
+  <head>
+    <LINK rel="stylesheet" href="nesdoc.css" type="text/css" media="screen"><title>Component: tos.chips.cc2420.spi.CC2420SpiWireC</title>
+  </head>
+  <body>
+    <h2>Component: tos.chips.cc2420.spi.CC2420SpiWireC
+    </h2>
+    <b>configuration CC2420SpiWireC</b>
+    <p>
+ 
+    <p>
+    <dl>
+      <dt><b>Author:</b>
+      <dd>
+        Jonathan Hui &lt;jhui@archrock.com&gt;
+ 
+      </dd>
+      <dt><b>Version:</b>
+      <dd>
+        $Revision: 1.1 $ $Date: 2007/07/04 00:37:16 $
+
+      </dd>
+    </dl>
+    <p><p><div id=heading>Provides</div><div id=funcsig>interface <a href="../ihtml/tos.chips.cc2420.interfaces.ChipSpiResource.html">ChipSpiResource</a></div><div id=funcsig>interface <a href="../ihtml/tos.chips.cc2420.interfaces.CC2420Fifo.html">CC2420Fifo</a> as <b>Fifo</b>[uint8_t]</div><div id=funcsig>interface <a href="../ihtml/tos.chips.cc2420.interfaces.CC2420Ram.html">CC2420Ram</a> as <b>Ram</b>[uint16_t]</div><div id=funcsig>interface <a href="../ihtml/tos.chips.cc2420.interfaces.CC2420Register.html">CC2420Register</a> as <b>Reg</b>[uint8_t]</div><div id=funcsig>interface <a href="../ihtml/tos.interfaces.Resource.html">Resource</a>[uint8_t]</div><div id=funcsig>interface <a href="../ihtml/tos.chips.cc2420.interfaces.CC2420Strobe.html">CC2420Strobe</a> as <b>Strobe</b>[uint8_t]</div><p><div id=heading>Wiring</div><p>
+    <map name="comp">
+      <area shape="rect" href="../chtml/tos.chips.cc2420.spi.CC2420SpiP.html" title="CC2420SpiP" alt="" coords="372,120,487,168">
+
+      <area shape="poly" href="../ihtml/tos.chips.cc2420.interfaces.CC2420Fifo.html" title="CC2420Fifo[uint8_t]" alt="" coords="50,52 61,75 79,94 99,104 128,113 201,126 359,140 358,145 201,131 127,118 97,109 76,98 57,78 46,54">
+
+      <area shape="rect" href="../ihtml/tos.chips.cc2420.interfaces.CC2420Fifo.html" title="CC2420Fifo[uint8_t]" alt="" coords="44,49,52,57">
+
+      <area shape="rect" href="../ihtml/tos.chips.cc2420.interfaces.CC2420Fifo.html" title="CC2420Fifo[uint8_t]" alt="" coords="368,139,376,147">
+
+      <area shape="rect" href="../ihtml/tos.chips.cc2420.interfaces.CC2420Fifo.html" title="CC2420Fifo[uint8_t]" alt="" coords="77,78,203,95">
+
+      <area shape="rect" href="../chtml/tos.system.StateC.html" title="StateC\n(WorkingStateC)" alt="" coords="183,235,343,293">
+
+      <area shape="poly" href="../ihtml/tos.interfaces.State.html" title="State" alt="" coords="373,157 333,171 298,194 277,224 272,221 294,190 330,166 371,152">
+
+      <area shape="rect" href="../ihtml/tos.interfaces.State.html" title="State" alt="" coords="368,151,376,159">
+
+      <area shape="rect" href="../ihtml/tos.interfaces.State.html" title="State" alt="" coords="267,231,275,239">
+
+      <area shape="rect" href="../ihtml/tos.interfaces.State.html" title="State" alt="" coords="296,193,331,210">
+
+      <area shape="rect" href="../chtml/tos.platforms.telosa.chips.cc2420.HplCC2420SpiC.html" title="HplCC2420SpiC" alt="" coords="367,235,519,293">
+
+      <area shape="poly" href="../ihtml/tos.interfaces.Resource.html" title="Resource" alt="" coords="373,166 357,175 345,185 340,197 344,209 358,226 354,230 339,212 334,196 341,182 354,171 371,162">
+
+      <area shape="rect" href="../ihtml/tos.interfaces.Resource.html" title="Resource" alt="" coords="368,160,376,168">
+
+      <area shape="rect" href="../ihtml/tos.interfaces.Resource.html" title="Resource" alt="" coords="363,232,371,240">
+
+      <area shape="rect" href="../ihtml/tos.interfaces.Resource.html" title="Resource" alt="" coords="341,193,400,210">
+
+      <area shape="poly" href="../ihtml/tos.interfaces.SpiByte.html" title="SpiByte" alt="" coords="431,168 433,210 435,221 429,222 428,211 425,168">
+
+      <area shape="rect" href="../ihtml/tos.interfaces.SpiByte.html" title="SpiByte" alt="" coords="424,164,432,172">
+
+      <area shape="rect" href="../ihtml/tos.interfaces.SpiByte.html" title="SpiByte" alt="" coords="431,231,439,239">
+
+      <area shape="rect" href="../ihtml/tos.interfaces.SpiByte.html" title="SpiByte" alt="" coords="430,193,479,210">
+
+      <area shape="poly" href="../ihtml/tos.interfaces.SpiPacket.html" title="SpiPacket" alt="" coords="465,166 482,191 485,208 480,223 475,222 480,208 478,193 461,170">
+
+      <area shape="rect" href="../ihtml/tos.interfaces.SpiPacket.html" title="SpiPacket" alt="" coords="459,164,467,172">
+
+      <area shape="rect" href="../ihtml/tos.interfaces.SpiPacket.html" title="SpiPacket" alt="" coords="467,231,475,239">
+
+      <area shape="rect" href="../ihtml/tos.interfaces.SpiPacket.html" title="SpiPacket" alt="" coords="481,193,543,210">
+
+      <area shape="rect" href="../chtml/tos.system.LedsC.html" title="LedsC" alt="" coords="561,235,644,293">
+
+      <area shape="poly" href="../ihtml/tos.interfaces.Leds.html" title="Leds" alt="" coords="488,158 520,172 551,190 579,222 575,226 548,194 518,176 486,162">
+
+      <area shape="rect" href="../ihtml/tos.interfaces.Leds.html" title="Leds" alt="" coords="483,156,491,164">
+
+      <area shape="rect" href="../ihtml/tos.interfaces.Leds.html" title="Leds" alt="" coords="581,231,589,239">
+
+      <area shape="rect" href="../ihtml/tos.interfaces.Leds.html" title="Leds" alt="" coords="565,193,595,210">
+
+      <area shape="poly" href="../ihtml/tos.chips.cc2420.interfaces.ChipSpiResource.html" title="ChipSpiResource" alt="" coords="204,52 212,75 227,94 249,106 281,116 359,132 358,137 280,121 246,111 224,98 208,77 199,54">
+
+      <area shape="rect" href="../ihtml/tos.chips.cc2420.interfaces.ChipSpiResource.html" title="ChipSpiResource" alt="" coords="197,49,205,57">
+
+      <area shape="rect" href="../ihtml/tos.chips.cc2420.interfaces.ChipSpiResource.html" title="ChipSpiResource" alt="" coords="368,132,376,140">
+
+      <area shape="rect" href="../ihtml/tos.chips.cc2420.interfaces.ChipSpiResource.html" title="ChipSpiResource" alt="" coords="225,78,332,95">
+
+      <area shape="poly" href="../ihtml/tos.chips.cc2420.interfaces.CC2420Ram.html" title="CC2420Ram[uint16_t]" alt="" coords="347,52 343,74 348,95 363,113 359,116 343,97 338,75 341,52">
+
+      <area shape="rect" href="../ihtml/tos.chips.cc2420.interfaces.CC2420Ram.html" title="CC2420Ram[uint16_t]" alt="" coords="340,48,348,56">
+
+      <area shape="rect" href="../ihtml/tos.chips.cc2420.interfaces.CC2420Ram.html" title="CC2420Ram[uint16_t]" alt="" coords="368,119,376,127">
+
+      <area shape="rect" href="../ihtml/tos.chips.cc2420.interfaces.CC2420Ram.html" title="CC2420Ram[uint16_t]" alt="" coords="345,78,487,95">
+
+      <area shape="poly" href="../ihtml/tos.chips.cc2420.interfaces.CC2420Register.html" title="CC2420Register[uint8_t]" alt="" coords="510,55 489,98 475,112 471,109 484,94 506,52">
+
+      <area shape="rect" href="../ihtml/tos.chips.cc2420.interfaces.CC2420Register.html" title="CC2420Register[uint8_t]" alt="" coords="504,49,512,57">
+
+      <area shape="rect" href="../ihtml/tos.chips.cc2420.interfaces.CC2420Register.html" title="CC2420Register[uint8_t]" alt="" coords="459,116,467,124">
+
+      <area shape="rect" href="../ihtml/tos.chips.cc2420.interfaces.CC2420Register.html" title="CC2420Register[uint8_t]" alt="" coords="497,78,652,95">
+
+      <area shape="poly" href="../ihtml/tos.interfaces.Resource.html" title="Resource[uint8_t]" alt="" coords="694,55 680,78 659,98 631,111 591,122 500,139 500,133 590,116 629,106 656,94 676,75 690,52">
+
+      <area shape="rect" href="../ihtml/tos.interfaces.Resource.html" title="Resource[uint8_t]" alt="" coords="688,49,696,57">
+
+      <area shape="rect" href="../ihtml/tos.interfaces.Resource.html" title="Resource[uint8_t]" alt="" coords="483,133,491,141">
+
+      <area shape="rect" href="../ihtml/tos.interfaces.Resource.html" title="Resource[uint8_t]" alt="" coords="677,78,789,95">
+
+      <area shape="poly" href="../ihtml/tos.chips.cc2420.interfaces.CC2420Strobe.html" title="CC2420Strobe[uint8_t]" alt="" coords="834,55 818,78 796,98 773,109 742,118 664,131 500,145 500,140 663,126 741,112 771,104 793,94 814,75 830,52">
+
+      <area shape="rect" href="../ihtml/tos.chips.cc2420.interfaces.CC2420Strobe.html" title="CC2420Strobe[uint8_t]" alt="" coords="828,49,836,57">
+
+      <area shape="rect" href="../ihtml/tos.chips.cc2420.interfaces.CC2420Strobe.html" title="CC2420Strobe[uint8_t]" alt="" coords="483,139,491,147">
+
+      <area shape="rect" href="../ihtml/tos.chips.cc2420.interfaces.CC2420Strobe.html" title="CC2420Strobe[uint8_t]" alt="" coords="816,78,963,95">
+
+    </map>
+    <img src="tos.chips.cc2420.spi.CC2420SpiWireC.png" usemap="#comp" id=imgwiring>
+  </body>
+</html>

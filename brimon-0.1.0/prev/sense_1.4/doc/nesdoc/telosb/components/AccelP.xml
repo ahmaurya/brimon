@@ -1,0 +1,133 @@
+<?xml version="1.0" ?><component loc="19:AccelP.nc" nicename="AccelP" qname="AccelP">
+      <documentation loc="11:AccelP.nc">
+        <short>
+ ADXL202JE accelerometer ADC configuration and power management.</short>
+        <long>
+ ADXL202JE accelerometer ADC configuration and power management.
+ @author David Gay &lt;david.e.gay@intel.com&gt;
+</long>
+      </documentation>
+      <configuration/>
+      <wiring>
+        <wire loc="32:AccelP.nc">
+          <from><interface-ref name="ConfigY" ref="0x2b3678235cd8" scoped=""/></from>
+          <to><interface-ref name="AdcConfigure" ref="0x2b3678228020" scoped=""/></to>
+        </wire>
+        <wire loc="33:AccelP.nc">
+          <from><interface-ref name="ConfigZ" ref="0x2b36782320a8" scoped=""/></from>
+          <to><interface-ref name="AdcConfigure" ref="0x2b3678222438" scoped=""/></to>
+        </wire>
+        <wire loc="31:AccelP.nc">
+          <from><interface-ref name="ConfigX" ref="0x2b3678238950" scoped=""/></from>
+          <to><interface-ref name="AdcConfigure" ref="0x2b3678231b58" scoped=""/></to>
+        </wire>
+      </wiring>
+    <specification><interface loc="23:AccelP.nc" name="ConfigY" provided="1" ref="0x2b3678235cd8">
+      <component-ref nicename="AccelP" qname="AccelP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ConfigY" ref="0x2b3678235cd8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.AdcConfigure" qname="AdcConfigure"/>
+        <arguments>
+          <type-pointer alignment="I:2" size="I:2">
+            <type-qualified const="">
+                <typename><typedef-ref name="msp430adc12_channel_config_t" ref="0x2b36781ed0c8"/></typename>
+              <type-tag alignment="I:2" size="I:4"><struct-ref ref="0x2b36781ee7c8"/></type-tag>
+            </type-qualified>
+          </type-pointer>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="getConfiguration" ref="0x2b36782338f0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="24:AccelP.nc" name="ConfigZ" provided="1" ref="0x2b36782320a8">
+      <component-ref nicename="AccelP" qname="AccelP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ConfigZ" ref="0x2b36782320a8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.AdcConfigure" qname="AdcConfigure"/>
+        <arguments>
+          <type-pointer alignment="I:2" size="I:2">
+            <type-qualified const="">
+                <typename><typedef-ref name="msp430adc12_channel_config_t" ref="0x2b36781ed0c8"/></typename>
+              <type-tag alignment="I:2" size="I:4"><struct-ref ref="0x2b36781ee7c8"/></type-tag>
+            </type-qualified>
+          </type-pointer>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="getConfiguration" ref="0x2b3678232c28" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="22:AccelP.nc" name="ConfigX" provided="1" ref="0x2b3678238950">
+      <component-ref nicename="AccelP" qname="AccelP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ConfigX" ref="0x2b3678238950" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.AdcConfigure" qname="AdcConfigure"/>
+        <arguments>
+          <type-pointer alignment="I:2" size="I:2">
+            <type-qualified const="">
+                <typename><typedef-ref name="msp430adc12_channel_config_t" ref="0x2b36781ed0c8"/></typename>
+              <type-tag alignment="I:2" size="I:4"><struct-ref ref="0x2b36781ee7c8"/></type-tag>
+            </type-qualified>
+          </type-pointer>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="getConfiguration" ref="0x2b3678235560" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced><interface loc="35:Msp430AxisZP.nc" name="AdcConfigure" provided="1" ref="0x2b3678222438">
+      <component-ref nicename="Msp430AxisZP" qname="Msp430AxisZP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="AdcConfigure" ref="0x2b3678222438" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.AdcConfigure" qname="AdcConfigure"/>
+        <arguments>
+          <type-pointer alignment="I:2" size="I:2">
+            <type-qualified const="">
+                <typename><typedef-ref name="msp430adc12_channel_config_t" ref="0x2b36781ed0c8"/></typename>
+              <type-tag alignment="I:2" size="I:4"><struct-ref ref="0x2b36781ee7c8"/></type-tag>
+            </type-qualified>
+          </type-pointer>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="getConfiguration" ref="0x2b3678221020" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="35:Msp430AxisXP.nc" name="AdcConfigure" provided="1" ref="0x2b3678231b58">
+      <component-ref nicename="Msp430AxisXP" qname="Msp430AxisXP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="AdcConfigure" ref="0x2b3678231b58" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.AdcConfigure" qname="AdcConfigure"/>
+        <arguments>
+          <type-pointer alignment="I:2" size="I:2">
+            <type-qualified const="">
+                <typename><typedef-ref name="msp430adc12_channel_config_t" ref="0x2b36781ed0c8"/></typename>
+              <type-tag alignment="I:2" size="I:4"><struct-ref ref="0x2b36781ee7c8"/></type-tag>
+            </type-qualified>
+          </type-pointer>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="getConfiguration" ref="0x2b367822e728" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="35:Msp430AxisYP.nc" name="AdcConfigure" provided="1" ref="0x2b3678228020">
+      <component-ref nicename="Msp430AxisYP" qname="Msp430AxisYP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="AdcConfigure" ref="0x2b3678228020" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.AdcConfigure" qname="AdcConfigure"/>
+        <arguments>
+          <type-pointer alignment="I:2" size="I:2">
+            <type-qualified const="">
+                <typename><typedef-ref name="msp430adc12_channel_config_t" ref="0x2b36781ed0c8"/></typename>
+              <type-tag alignment="I:2" size="I:4"><struct-ref ref="0x2b36781ee7c8"/></type-tag>
+            </type-qualified>
+          </type-pointer>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="getConfiguration" ref="0x2b3678228ba0" scoped=""/>
+      </interface-functions>
+    </interface><component loc="34:Msp430AxisZP.nc" nicename="Msp430AxisZP" qname="Msp430AxisZP">
+      <module/>
+    </component><component loc="34:Msp430AxisYP.nc" nicename="Msp430AxisYP" qname="Msp430AxisYP">
+      <module/>
+    </component><component loc="34:Msp430AxisXP.nc" nicename="Msp430AxisXP" qname="Msp430AxisXP">
+      <module/>
+    </component></referenced></component>

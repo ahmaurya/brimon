@@ -1,0 +1,149 @@
+<?xml version="1.0" ?><component loc="43:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/cc2420/packet/CC2420PacketP.nc" nicename="tos.chips.cc2420.packet.CC2420PacketP" qname="CC2420PacketP" safe="">
+      <documentation loc="32:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/cc2420/packet/CC2420PacketP.nc">
+        <short>
+ </short>
+        <long>
+ @author Jonathan Hui &lt;jhui@archrock.com&gt;
+ @author David Moss
+ @author Chad Metcalf
+</long>
+      </documentation>
+      <module/>
+    <specification><interface loc="49:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/cc2420/packet/CC2420PacketP.nc" name="LinkPacketMetadata" provided="1" ref="0x2ae8ded4c858">
+      <component-ref nicename="tos.chips.cc2420.packet.CC2420PacketP" qname="CC2420PacketP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="LinkPacketMetadata" ref="0x2ae8ded4c858" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.LinkPacketMetadata" qname="LinkPacketMetadata"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="highChannelQuality" ref="0x2ae8ded4cba8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="46:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/cc2420/packet/CC2420PacketP.nc" name="CC2420Packet" provided="1" ref="0x2ae8ded50820">
+      <component-ref nicename="tos.chips.cc2420.packet.CC2420PacketP" qname="CC2420PacketP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="CC2420Packet" ref="0x2ae8ded50820" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.cc2420.interfaces.CC2420Packet" qname="CC2420Packet"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="setPower" ref="0x2ae8ded50b70" scoped=""/>
+        <function-ref name="setNetwork" ref="0x2ae8ded50cf8" scoped=""/>
+        <function-ref name="getRssi" ref="0x2ae8ded50e80" scoped=""/>
+        <function-ref name="getNetwork" ref="0x2ae8ded4d030" scoped=""/>
+        <function-ref name="getPower" ref="0x2ae8ded4d1b8" scoped=""/>
+        <function-ref name="getLqi" ref="0x2ae8ded4d340" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="56:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/cc2420/packet/CC2420PacketP.nc" name="Packet" provided="0" ref="0x2ae8ded437a0">
+      <component-ref nicename="tos.chips.cc2420.packet.CC2420PacketP" qname="CC2420PacketP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Packet" ref="0x2ae8ded437a0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Packet" qname="Packet"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="clear" ref="0x2ae8ded43af0" scoped=""/>
+        <function-ref name="payloadLength" ref="0x2ae8ded43c78" scoped=""/>
+        <function-ref name="getPayload" ref="0x2ae8ded43e00" scoped=""/>
+        <function-ref name="maxPayloadLength" ref="0x2ae8ded42020" scoped=""/>
+        <function-ref name="setPayloadLength" ref="0x2ae8ded421a8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="51:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/cc2420/packet/CC2420PacketP.nc" name="PacketTimeStamp32khz" provided="1" ref="0x2ae8ded4b298">
+      <component-ref nicename="tos.chips.cc2420.packet.CC2420PacketP" qname="CC2420PacketP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="PacketTimeStamp32khz" ref="0x2ae8ded4b298" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.PacketTimeStamp" qname="PacketTimeStamp"/>
+        <arguments>
+          <type-tag alignment="I:2" size="I:2"><struct-ref ref="0x2ae8dde41bc0"/>
+            <typename><typedef-ref name="T32khz" ref="0x2ae8dde3b020"/></typename>
+          </type-tag>
+          <type-int alignment="I:2" cname="unsigned long" size="I:4" unsigned="">
+            <typename><typedef-ref name="uint32_t" ref="0x2ae8dcc96120"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="timestamp" ref="0x2ae8ded4a700" scoped=""/>
+        <function-ref name="clear" ref="0x2ae8ded4ade0" scoped=""/>
+        <function-ref name="isValid" ref="0x2ae8ded4a020" scoped=""/>
+        <function-ref name="set" ref="0x2ae8ded484f8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="48:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/cc2420/packet/CC2420PacketP.nc" name="CC2420PacketBody" provided="1" ref="0x2ae8ded4c080">
+      <component-ref nicename="tos.chips.cc2420.packet.CC2420PacketP" qname="CC2420PacketP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="CC2420PacketBody" ref="0x2ae8ded4c080" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.cc2420.interfaces.CC2420PacketBody" qname="CC2420PacketBody"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getHeader" ref="0x2ae8ded4c3d0" scoped=""/>
+        <function-ref name="getMetadata" ref="0x2ae8ded4c558" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="53:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/cc2420/packet/CC2420PacketP.nc" name="PacketTimeSyncOffset" provided="1" ref="0x2ae8ded44bd0">
+      <component-ref nicename="tos.chips.cc2420.packet.CC2420PacketP" qname="CC2420PacketP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="PacketTimeSyncOffset" ref="0x2ae8ded44bd0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.cc2420.interfaces.PacketTimeSyncOffset" qname="PacketTimeSyncOffset"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="get" ref="0x2ae8ded43020" scoped=""/>
+        <function-ref name="isSet" ref="0x2ae8ded431a8" scoped=""/>
+        <function-ref name="cancel" ref="0x2ae8ded43330" scoped=""/>
+        <function-ref name="set" ref="0x2ae8ded434b8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="57:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/cc2420/packet/CC2420PacketP.nc" name="LocalTime32khz" provided="0" ref="0x2ae8ded426a8">
+      <component-ref nicename="tos.chips.cc2420.packet.CC2420PacketP" qname="CC2420PacketP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="LocalTime32khz" ref="0x2ae8ded426a8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.timer.LocalTime" qname="LocalTime"/>
+        <arguments>
+          <type-tag alignment="I:2" size="I:2"><struct-ref ref="0x2ae8dde41bc0"/>
+            <typename><typedef-ref name="T32khz" ref="0x2ae8dde3b020"/></typename>
+          </type-tag>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="get" ref="0x2ae8ded413a8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="58:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/cc2420/packet/CC2420PacketP.nc" name="LocalTimeMilli" provided="0" ref="0x2ae8ded41a38">
+      <component-ref nicename="tos.chips.cc2420.packet.CC2420PacketP" qname="CC2420PacketP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="LocalTimeMilli" ref="0x2ae8ded41a38" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.timer.LocalTime" qname="LocalTime"/>
+        <arguments>
+          <type-tag alignment="I:2" size="I:2"><struct-ref ref="0x2ae8dde41388"/>
+            <typename><typedef-ref name="TMilli" ref="0x2ae8dde416e0"/></typename>
+          </type-tag>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="get" ref="0x2ae8ded40658" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="52:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/cc2420/packet/CC2420PacketP.nc" name="PacketTimeStampMilli" provided="1" ref="0x2ae8ded47130">
+      <component-ref nicename="tos.chips.cc2420.packet.CC2420PacketP" qname="CC2420PacketP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="PacketTimeStampMilli" ref="0x2ae8ded47130" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.PacketTimeStamp" qname="PacketTimeStamp"/>
+        <arguments>
+          <type-tag alignment="I:2" size="I:2"><struct-ref ref="0x2ae8dde41388"/>
+            <typename><typedef-ref name="TMilli" ref="0x2ae8dde416e0"/></typename>
+          </type-tag>
+          <type-int alignment="I:2" cname="unsigned long" size="I:4" unsigned="">
+            <typename><typedef-ref name="uint32_t" ref="0x2ae8dcc96120"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="timestamp" ref="0x2ae8ded46588" scoped=""/>
+        <function-ref name="clear" ref="0x2ae8ded46c68" scoped=""/>
+        <function-ref name="isValid" ref="0x2ae8ded47e80" scoped=""/>
+        <function-ref name="set" ref="0x2ae8ded44380" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="47:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/cc2420/packet/CC2420PacketP.nc" name="Acks" provided="1" ref="0x2ae8ded4d6d8">
+      <component-ref nicename="tos.chips.cc2420.packet.CC2420PacketP" qname="CC2420PacketP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Acks" ref="0x2ae8ded4d6d8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.PacketAcknowledgements" qname="PacketAcknowledgements"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="requestAck" ref="0x2ae8ded4da28" scoped=""/>
+        <function-ref name="noAck" ref="0x2ae8ded4dbb0" scoped=""/>
+        <function-ref name="wasAcked" ref="0x2ae8ded4dd38" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced/></component>

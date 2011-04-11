@@ -1,0 +1,37 @@
+<?xml version="1.0" ?><component loc="38:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/cc2420/link/PacketLinkDummyP.nc" nicename="tos.chips.cc2420.link.PacketLinkDummyP" qname="PacketLinkDummyP">
+      <documentation loc="32:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/cc2420/link/PacketLinkDummyP.nc">
+        <short>
+ Dummy module for Packet Link layer
+ </short>
+        <long>
+ Dummy module for Packet Link layer
+ @author David Moss
+ @author Jon Wyant
+</long>
+      </documentation>
+      <module/>
+    <specification><interface loc="44:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/cc2420/link/PacketLinkDummyP.nc" name="PacketAcknowledgements" provided="0" ref="0x2ae8def6d9e8">
+      <component-ref nicename="tos.chips.cc2420.link.PacketLinkDummyP" qname="PacketLinkDummyP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="PacketAcknowledgements" ref="0x2ae8def6d9e8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.PacketAcknowledgements" qname="PacketAcknowledgements"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="requestAck" ref="0x2ae8def6dd38" scoped=""/>
+        <function-ref name="noAck" ref="0x2ae8def6c020" scoped=""/>
+        <function-ref name="wasAcked" ref="0x2ae8def6c1a8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="40:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/cc2420/link/PacketLinkDummyP.nc" name="PacketLink" provided="1" ref="0x2ae8def70bd0">
+      <component-ref nicename="tos.chips.cc2420.link.PacketLinkDummyP" qname="PacketLinkDummyP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="PacketLink" ref="0x2ae8def70bd0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.PacketLink" qname="PacketLink"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getRetryDelay" ref="0x2ae8def6d020" scoped=""/>
+        <function-ref name="setRetries" ref="0x2ae8def6d1a8" scoped=""/>
+        <function-ref name="getRetries" ref="0x2ae8def6d330" scoped=""/>
+        <function-ref name="setRetryDelay" ref="0x2ae8def6d4b8" scoped=""/>
+        <function-ref name="wasDelivered" ref="0x2ae8def6d640" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced/></component>

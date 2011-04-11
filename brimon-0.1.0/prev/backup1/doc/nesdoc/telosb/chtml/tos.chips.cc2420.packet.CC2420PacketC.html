@@ -1,0 +1,120 @@
+<html>
+  <head>
+    <LINK rel="stylesheet" href="nesdoc.css" type="text/css" media="screen"><title>Component: tos.chips.cc2420.packet.CC2420PacketC</title>
+  </head>
+  <body>
+    <h2>Component: tos.chips.cc2420.packet.CC2420PacketC
+    </h2>
+    <b>configuration CC2420PacketC</b>
+    <p>
+ 
+    <p>
+    <dl>
+      <dt><b>Author:</b>
+      <dd>
+        Jonathan Hui &lt;jhui@archrock.com&gt;
+ 
+      </dd>
+      <dd>
+        David Moss
+ 
+      </dd>
+      <dd>
+        Chad Metcalf
+
+      </dd>
+    </dl>
+    <p><p><div id=heading>Provides</div><div id=funcsig>interface <a href="../ihtml/tos.interfaces.PacketAcknowledgements.html">PacketAcknowledgements</a> as <b>Acks</b></div><div id=funcsig>interface <a href="../ihtml/tos.chips.cc2420.interfaces.CC2420Packet.html">CC2420Packet</a></div><div id=funcsig>interface <a href="../ihtml/tos.chips.cc2420.interfaces.CC2420PacketBody.html">CC2420PacketBody</a></div><div id=funcsig>interface <a href="../ihtml/tos.interfaces.LinkPacketMetadata.html">LinkPacketMetadata</a></div><div id=funcsig>interface <a href="../ihtml/tos.interfaces.PacketTimeStamp.html">PacketTimeStamp</a>&lt;T32khz, uint32_t&gt; as <b>PacketTimeStamp32khz</b></div><div id=funcsig>interface <a href="../ihtml/tos.interfaces.PacketTimeStamp.html">PacketTimeStamp</a>&lt;TMilli, uint32_t&gt; as <b>PacketTimeStampMilli</b></div><div id=funcsig>interface <a href="../ihtml/tos.chips.cc2420.interfaces.PacketTimeSyncOffset.html">PacketTimeSyncOffset</a></div><p><div id=heading>Wiring</div><p>
+    <map name="comp">
+      <area shape="rect" href="../chtml/tos.chips.cc2420.packet.CC2420PacketP.html" title="CC2420PacketP" alt="" coords="771,120,915,168">
+
+      <area shape="poly" href="../ihtml/tos.interfaces.LinkPacketMetadata.html" title="LinkPacketMetadata" alt="" coords="161,50 220,73 286,93 378,108 505,120 758,136 757,141 504,125 377,113 285,99 218,79 159,54">
+
+      <area shape="rect" href="../ihtml/tos.interfaces.LinkPacketMetadata.html" title="LinkPacketMetadata" alt="" coords="156,48,164,56">
+
+      <area shape="rect" href="../ihtml/tos.interfaces.LinkPacketMetadata.html" title="LinkPacketMetadata" alt="" coords="767,136,775,144">
+
+      <area shape="rect" href="../ihtml/tos.interfaces.LinkPacketMetadata.html" title="LinkPacketMetadata" alt="" coords="285,78,413,95">
+
+      <area shape="rect" href="../chtml/tos.lib.timer.CounterToLocalTimeC.html" title="CounterToLocalTimeC" alt="" coords="649,240,836,288">
+
+      <area shape="poly" href="../ihtml/tos.lib.timer.LocalTime.html" title="LocalTime&lt;T32khz&gt;" alt="" coords="775,170 750,194 743,210 741,227 736,226 738,208 746,190 771,166">
+
+      <area shape="rect" href="../ihtml/tos.lib.timer.LocalTime.html" title="LocalTime&lt;T32khz&gt;" alt="" coords="769,164,777,172">
+
+      <area shape="rect" href="../ihtml/tos.lib.timer.LocalTime.html" title="LocalTime&lt;T32khz&gt;" alt="" coords="735,236,743,244">
+
+      <area shape="rect" href="../ihtml/tos.lib.timer.LocalTime.html" title="LocalTime&lt;T32khz&gt;" alt="" coords="748,193,879,210">
+
+      <area shape="rect" href="../chtml/tos.chips.msp430.timer.HilTimerMilliC.html" title="HilTimerMilliC" alt="" coords="860,235,988,293">
+
+      <area shape="poly" href="../ihtml/tos.lib.timer.LocalTime.html" title="LocalTime&lt;TMilli&gt;" alt="" coords="870,166 890,190 908,221 903,224 886,194 866,170">
+
+      <area shape="rect" href="../ihtml/tos.lib.timer.LocalTime.html" title="LocalTime&lt;TMilli&gt;" alt="" coords="864,164,872,172">
+
+      <area shape="rect" href="../ihtml/tos.lib.timer.LocalTime.html" title="LocalTime&lt;TMilli&gt;" alt="" coords="908,231,916,239">
+
+      <area shape="rect" href="../ihtml/tos.lib.timer.LocalTime.html" title="LocalTime&lt;TMilli&gt;" alt="" coords="895,193,1011,210">
+
+      <area shape="poly" href="../ihtml/tos.chips.cc2420.interfaces.CC2420Packet.html" title="CC2420Packet" alt="" coords="371,48 420,73 475,93 549,112 623,124 758,137 757,143 623,130 548,117 474,99 417,78 368,53">
+
+      <area shape="rect" href="../ihtml/tos.chips.cc2420.interfaces.CC2420Packet.html" title="CC2420Packet" alt="" coords="365,47,373,55">
+
+      <area shape="rect" href="../ihtml/tos.chips.cc2420.interfaces.CC2420Packet.html" title="CC2420Packet" alt="" coords="767,137,775,145">
+
+      <area shape="rect" href="../ihtml/tos.chips.cc2420.interfaces.CC2420Packet.html" title="CC2420Packet" alt="" coords="474,78,566,95">
+
+      <area shape="poly" href="../ihtml/tos.interfaces.PacketTimeStamp.html" title="PacketTimeStamp&lt;T32khz, uint32_t&gt;" alt="" coords="572,53 576,75 589,94 615,109 657,121 758,135 757,140 656,126 613,114 585,98 572,77 567,54">
+
+      <area shape="rect" href="../ihtml/tos.interfaces.PacketTimeStamp.html" title="PacketTimeStamp&lt;T32khz, uint32_t&gt;" alt="" coords="565,49,573,57">
+
+      <area shape="rect" href="../ihtml/tos.interfaces.PacketTimeStamp.html" title="PacketTimeStamp&lt;T32khz, uint32_t&gt;" alt="" coords="767,135,775,143">
+
+      <area shape="rect" href="../ihtml/tos.interfaces.PacketTimeStamp.html" title="PacketTimeStamp&lt;T32khz, uint32_t&gt;" alt="" coords="587,78,829,95">
+
+      <area shape="poly" href="../ihtml/tos.chips.cc2420.interfaces.CC2420PacketBody.html" title="CC2420PacketBody" alt="" coords="837,53 841,106 836,107 832,54">
+
+      <area shape="rect" href="../ihtml/tos.chips.cc2420.interfaces.CC2420PacketBody.html" title="CC2420PacketBody" alt="" coords="831,49,839,57">
+
+      <area shape="rect" href="../ihtml/tos.chips.cc2420.interfaces.CC2420PacketBody.html" title="CC2420PacketBody" alt="" coords="836,116,844,124">
+
+      <area shape="rect" href="../ihtml/tos.chips.cc2420.interfaces.CC2420PacketBody.html" title="CC2420PacketBody" alt="" coords="837,78,961,95">
+
+      <area shape="poly" href="../ihtml/tos.chips.cc2420.interfaces.PacketTimeSyncOffset.html" title="PacketTimeSyncOffset" alt="" coords="1051,54 968,98 924,117 922,112 966,94 1048,50">
+
+      <area shape="rect" href="../ihtml/tos.chips.cc2420.interfaces.PacketTimeSyncOffset.html" title="PacketTimeSyncOffset" alt="" coords="1045,48,1053,56">
+
+      <area shape="rect" href="../ihtml/tos.chips.cc2420.interfaces.PacketTimeSyncOffset.html" title="PacketTimeSyncOffset" alt="" coords="905,116,913,124">
+
+      <area shape="rect" href="../ihtml/tos.chips.cc2420.interfaces.PacketTimeSyncOffset.html" title="PacketTimeSyncOffset" alt="" coords="1007,78,1150,95">
+
+      <area shape="poly" href="../ihtml/tos.interfaces.PacketTimeStamp.html" title="PacketTimeStamp&lt;TMilli, uint32_t&gt;" alt="" coords="1294,53 1230,77 1157,99 1038,123 928,139 928,133 1037,117 1155,93 1228,72 1292,48">
+
+      <area shape="rect" href="../ihtml/tos.interfaces.PacketTimeStamp.html" title="PacketTimeStamp&lt;TMilli, uint32_t&gt;" alt="" coords="1289,47,1297,55">
+
+      <area shape="rect" href="../ihtml/tos.interfaces.PacketTimeStamp.html" title="PacketTimeStamp&lt;TMilli, uint32_t&gt;" alt="" coords="911,133,919,141">
+
+      <area shape="rect" href="../ihtml/tos.interfaces.PacketTimeStamp.html" title="PacketTimeStamp&lt;TMilli, uint32_t&gt;" alt="" coords="1222,78,1450,95">
+
+      <area shape="poly" href="../ihtml/tos.interfaces.PacketAcknowledgements.html" title="PacketAcknowledgements" alt="" coords="1543,50 1504,76 1457,99 1412,109 1354,118 1211,131 928,145 928,140 1210,126 1353,113 1411,104 1455,93 1501,72 1540,46">
+
+      <area shape="rect" href="../ihtml/tos.interfaces.PacketAcknowledgements.html" title="PacketAcknowledgements" alt="" coords="1537,44,1545,52">
+
+      <area shape="rect" href="../ihtml/tos.interfaces.PacketAcknowledgements.html" title="PacketAcknowledgements" alt="" coords="911,139,919,147">
+
+      <area shape="rect" href="../ihtml/tos.interfaces.PacketAcknowledgements.html" title="PacketAcknowledgements" alt="" coords="1498,78,1665,95">
+
+      <area shape="rect" href="../chtml/tos.chips.msp430.timer.Counter32khz32C.html" title="Counter32khz32C" alt="" coords="656,360,829,419">
+
+      <area shape="poly" href="../ihtml/tos.lib.timer.Counter.html" title="Counter&lt;T32khz, uint32_t&gt;" alt="" coords="745,288 745,347 740,347 740,288">
+
+      <area shape="rect" href="../ihtml/tos.lib.timer.Counter.html" title="Counter&lt;T32khz, uint32_t&gt;" alt="" coords="739,284,747,292">
+
+      <area shape="rect" href="../ihtml/tos.lib.timer.Counter.html" title="Counter&lt;T32khz, uint32_t&gt;" alt="" coords="739,356,747,364">
+
+      <area shape="rect" href="../ihtml/tos.lib.timer.Counter.html" title="Counter&lt;T32khz, uint32_t&gt;" alt="" coords="743,318,921,335">
+
+    </map>
+    <img src="tos.chips.cc2420.packet.CC2420PacketC.png" usemap="#comp" id=imgwiring>
+  </body>
+</html>

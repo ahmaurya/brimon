@@ -1,0 +1,39 @@
+<area shape="rect" href="../chtml/tos.chips.msp430.usart.Msp430SpiNoDmaP.html" title="Msp430SpiNoDmaP\n(SpiP)" alt="" coords="460,120,633,168">
+<area shape="poly" href="../ihtml/tos.interfaces.ResourceConfigure.html" title="ResourceConfigure[uint8_t]" alt="" coords="273,53 278,75 290,94 315,108 353,119 447,133 446,139 352,125 312,113 286,98 273,77 268,54">
+<area shape="rect" href="../ihtml/tos.interfaces.ResourceConfigure.html" title="ResourceConfigure[uint8_t]" alt="" coords="267,49,275,57">
+<area shape="rect" href="../ihtml/tos.interfaces.ResourceConfigure.html" title="ResourceConfigure[uint8_t]" alt="" coords="456,133,464,141">
+<area shape="rect" href="../ihtml/tos.interfaces.ResourceConfigure.html" title="ResourceConfigure[uint8_t]" alt="" coords="288,78,461,95">
+<area shape="poly" href="../ihtml/tos.chips.msp430.usart.Msp430SpiConfigure.html" title="Msp430SpiConfigure[uint8_t]" alt="" coords="460,155 321,171 258,182 213,194 183,212 156,233 153,229 180,208 211,190 257,176 321,165 460,149">
+<area shape="rect" href="../ihtml/tos.chips.msp430.usart.Msp430SpiConfigure.html" title="Msp430SpiConfigure[uint8_t]" alt="" coords="456,148,464,156">
+<area shape="rect" href="../ihtml/tos.chips.msp430.usart.Msp430SpiConfigure.html" title="Msp430SpiConfigure[uint8_t]" alt="" coords="140,236,148,244">
+<area shape="rect" href="../ihtml/tos.chips.msp430.usart.Msp430SpiConfigure.html" title="Msp430SpiConfigure[uint8_t]" alt="" coords="225,193,410,210">
+<area shape="poly" href="../ihtml/tos.interfaces.Resource.html" title="Resource[uint8_t]" alt="" coords="479,170 431,194 379,234 376,230 428,190 476,166">
+<area shape="rect" href="../ihtml/tos.interfaces.Resource.html" title="Resource[uint8_t]" alt="" coords="473,164,481,172">
+<area shape="rect" href="../ihtml/tos.interfaces.Resource.html" title="Resource[uint8_t]" alt="" coords="364,237,372,245">
+<area shape="rect" href="../ihtml/tos.interfaces.Resource.html" title="Resource[uint8_t]" alt="" coords="433,193,545,210">
+<area shape="poly" href="../ihtml/tos.chips.msp430.usart.HplMsp430UsartInterrupts.html" title="HplMsp430UsartInterrupts" alt="" coords="549,168 549,227 544,227 544,168">
+<area shape="rect" href="../ihtml/tos.chips.msp430.usart.HplMsp430UsartInterrupts.html" title="HplMsp430UsartInterrupts" alt="" coords="543,164,551,172">
+<area shape="rect" href="../ihtml/tos.chips.msp430.usart.HplMsp430UsartInterrupts.html" title="HplMsp430UsartInterrupts" alt="" coords="543,236,551,244">
+<area shape="rect" href="../ihtml/tos.chips.msp430.usart.HplMsp430UsartInterrupts.html" title="HplMsp430UsartInterrupts" alt="" coords="547,193,715,210">
+<area shape="rect" href="../chtml/tos.chips.msp430.usart.HplMsp430Usart0C.html" title="HplMsp430Usart0C" alt="" coords="661,235,843,293">
+<area shape="poly" href="../ihtml/tos.chips.msp430.usart.HplMsp430Usart.html" title="HplMsp430Usart" alt="" coords="634,159 686,173 722,190 742,221 738,224 718,194 684,178 633,164">
+<area shape="rect" href="../ihtml/tos.chips.msp430.usart.HplMsp430Usart.html" title="HplMsp430Usart" alt="" coords="629,157,637,165">
+<area shape="rect" href="../ihtml/tos.chips.msp430.usart.HplMsp430Usart.html" title="HplMsp430Usart" alt="" coords="741,231,749,239">
+<area shape="rect" href="../ihtml/tos.chips.msp430.usart.HplMsp430Usart.html" title="HplMsp430Usart" alt="" coords="731,193,837,210">
+<area shape="rect" href="../chtml/tos.system.LedsC.html" title="LedsC" alt="" coords="867,235,949,293">
+<area shape="poly" href="../ihtml/tos.interfaces.Leds.html" title="Leds" alt="" coords="634,149 753,165 807,176 844,190 865,204 882,222 878,226 861,209 841,194 805,182 753,171 633,155">
+<area shape="rect" href="../ihtml/tos.interfaces.Leds.html" title="Leds" alt="" coords="629,148,637,156">
+<area shape="rect" href="../ihtml/tos.interfaces.Leds.html" title="Leds" alt="" coords="884,231,892,239">
+<area shape="rect" href="../ihtml/tos.interfaces.Leds.html" title="Leds" alt="" coords="862,193,893,210">
+<area shape="poly" href="../ihtml/tos.interfaces.SpiPacket.html" title="SpiPacket[uint8_t]" alt="" coords="471,53 471,75 477,95 487,109 483,112 472,97 466,76 465,53">
+<area shape="rect" href="../ihtml/tos.interfaces.SpiPacket.html" title="SpiPacket[uint8_t]" alt="" coords="464,49,472,57">
+<area shape="rect" href="../ihtml/tos.interfaces.SpiPacket.html" title="SpiPacket[uint8_t]" alt="" coords="492,116,500,124">
+<area shape="rect" href="../ihtml/tos.interfaces.SpiPacket.html" title="SpiPacket[uint8_t]" alt="" coords="474,78,590,95">
+<area shape="poly" href="../ihtml/tos.interfaces.SpiByte.html" title="SpiByte" alt="" coords="614,55 593,97 584,111 579,108 588,95 610,52">
+<area shape="rect" href="../ihtml/tos.interfaces.SpiByte.html" title="SpiByte" alt="" coords="608,49,616,57">
+<area shape="rect" href="../ihtml/tos.interfaces.SpiByte.html" title="SpiByte" alt="" coords="568,116,576,124">
+<area shape="rect" href="../ihtml/tos.interfaces.SpiByte.html" title="SpiByte" alt="" coords="599,78,649,95">
+<area shape="poly" href="../ihtml/tos.interfaces.Resource.html" title="Resource[uint8_t]" alt="" coords="727,53 656,98 619,117 616,112 653,94 724,48">
+<area shape="rect" href="../ihtml/tos.interfaces.Resource.html" title="Resource[uint8_t]" alt="" coords="721,47,729,55">
+<area shape="rect" href="../ihtml/tos.interfaces.Resource.html" title="Resource[uint8_t]" alt="" coords="601,116,609,124">
+<area shape="rect" href="../ihtml/tos.interfaces.Resource.html" title="Resource[uint8_t]" alt="" coords="689,78,801,95">

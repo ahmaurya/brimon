@@ -1,0 +1,121 @@
+<?xml version="1.0" ?><component loc="64:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/StateImplC.nc" nicename="tos.system.StateImplC" qname="StateImplC">
+      <documentation loc="32:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/types/State.h">
+        <short>
+ </short>
+        <long>
+ @author David Moss
+</long>
+      </documentation>
+      <configuration/>
+      <wiring>
+        <wire loc="75:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/StateImplC.nc">
+          <from><interface-ref name="State" ref="0x2ae8de8aec10" scoped=""/></from>
+          <to><interface-ref name="State" ref="0x2ae8de901498" scoped=""/></to>
+        </wire>
+        <wire loc="74:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/StateImplC.nc">
+          <from><interface-ref name="SoftwareInit" ref="0x2ae8dd9fd808" scoped=""/></from>
+          <to><interface-ref name="Init" ref="0x2ae8de904938" scoped=""/></to>
+        </wire>
+      </wiring>
+    <specification><interface loc="66:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/StateImplC.nc" name="State" provided="1" ref="0x2ae8de8aec10">
+      <component-ref nicename="tos.system.StateImplC" qname="StateImplC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="State" ref="0x2ae8de8aec10" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.State" qname="State"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x2ae8dcc94318"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="getState" ref="0x2ae8de905020" scoped=""/>
+        <function-ref name="toIdle" ref="0x2ae8de9051a8" scoped=""/>
+        <function-ref name="isState" ref="0x2ae8de905330" scoped=""/>
+        <function-ref name="isIdle" ref="0x2ae8de9054b8" scoped=""/>
+        <function-ref name="requestState" ref="0x2ae8de905640" scoped=""/>
+        <function-ref name="forceState" ref="0x2ae8de9057c8" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced><interface loc="66:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/StateImplP.nc" name="Init" provided="1" ref="0x2ae8de904938">
+      <component-ref nicename="tos.system.StateImplP" qname="StateImplP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Init" ref="0x2ae8de904938" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x2ae8de904c88" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="67:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/StateImplP.nc" name="State" provided="1" ref="0x2ae8de901498">
+      <component-ref nicename="tos.system.StateImplP" qname="StateImplP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="State" ref="0x2ae8de901498" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.State" qname="State"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x2ae8dcc94318"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="getState" ref="0x2ae8de9017e8" scoped=""/>
+        <function-ref name="toIdle" ref="0x2ae8de901970" scoped=""/>
+        <function-ref name="isState" ref="0x2ae8de901af8" scoped=""/>
+        <function-ref name="isIdle" ref="0x2ae8de901c80" scoped=""/>
+        <function-ref name="requestState" ref="0x2ae8de901e08" scoped=""/>
+        <function-ref name="forceState" ref="0x2ae8de900020" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="47:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/lib/printf/MainC.nc" name="SoftwareInit" provided="0" ref="0x2ae8dd9fd808">
+      <component-ref nicename="tos.lib.printf.MainC" qname="MainC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="SoftwareInit" ref="0x2ae8dd9fd808" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x2ae8dd9fdb58" scoped=""/>
+      </interface-functions>
+    </interface><component loc="45:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/lib/printf/MainC.nc" nicename="tos.lib.printf.MainC" qname="MainC">
+      <documentation loc="34:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/lib/printf/MainC.nc">
+        <short>
+ MainC is the system interface the TinyOS boot sequence.</short>
+        <long>
+ MainC is the system interface the TinyOS boot sequence. It wires the
+ boot sequence implementation to the scheduler and hardware resources.
+
+ @author Philip Levis
+ @author Kevin Klues
+ @date   August 6 2005
+</long>
+      </documentation>
+      <configuration/>
+      <wiring>
+        <wire loc="59:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/lib/printf/MainC.nc">
+          <from><interface-ref name="Boot" ref="0x2ae8dd9fe3e0" scoped=""/></from>
+          <to><interface-ref name="Boot" ref="0x2ae8ddbae3d8" scoped=""/></to>
+        </wire>
+        <wire loc="53:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/lib/printf/MainC.nc">
+          <from><interface-ref name="Scheduler" ref="0x2ae8ddba3020" scoped=""/></from>
+          <to><interface-ref name="Scheduler" ref="0x2ae8dd4fa0f0" scoped=""/></to>
+        </wire>
+        <wire loc="54:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/lib/printf/MainC.nc">
+          <from><interface-ref name="PlatformInit" ref="0x2ae8ddba39f8" scoped=""/></from>
+          <to><interface-ref name="Init" ref="0x2ae8dda00798" scoped=""/></to>
+        </wire>
+        <wire loc="55:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/lib/printf/MainC.nc">
+          <from><interface-ref name="MainBoot" ref="0x2ae8ddbbd020" scoped=""/></from>
+          <to><interface-ref name="Boot" ref="0x2ae8dd9ff9c0" scoped=""/></to>
+        </wire>
+        <wire loc="58:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/lib/printf/MainC.nc">
+          <from><interface-ref name="SoftwareInit" ref="0x2ae8ddba2140" scoped=""/></from>
+          <to><interface-ref name="SoftwareInit" ref="0x2ae8dd9fd808" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component><component loc="64:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/StateImplP.nc" nicename="tos.system.StateImplP" qname="StateImplP" safe="">
+      <documentation loc="32:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/types/State.h">
+        <short>
+ </short>
+        <long>
+ @author David Moss
+</long>
+      </documentation>
+      <module/>
+    </component></referenced></component>

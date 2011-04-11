@@ -1,0 +1,455 @@
+<?xml version="1.0" ?><component loc="38:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/usart/Msp430UsartShare1P.nc" nicename="tos.chips.msp430.usart.Msp430UsartShare1P" qname="Msp430UsartShare1P">
+      <documentation loc="32:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/usart/Msp430UsartShare1P.nc">
+        <short>
+ </short>
+        <long>
+ @author Vlado Handziski &lt;handzisk@tkn.tu-berlin.de&gt;
+ @author Jonathan Hui &lt;jhui@archedrock.com&gt;
+ @version $Revision: 1.6 $ $Date: 2008/05/21 22:11:57 $
+</long>
+      </documentation>
+      <configuration/>
+      <wiring>
+        <wire loc="56:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/usart/Msp430UsartShare1P.nc">
+          <from><interface-ref name="ResourceRequested" ref="0x2ae8de1be208" scoped=""/></from>
+          <to><interface-ref name="ResourceRequested" ref="0x2ae8de22ed18" scoped=""/></to>
+        </wire>
+        <wire loc="51:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/usart/Msp430UsartShare1P.nc">
+          <from><interface-ref name="Interrupts" ref="0x2ae8de1c0300" scoped=""/></from>
+          <to><interface-ref name="Interrupts" ref="0x2ae8de1b9020" scoped=""/></to>
+        </wire>
+        <wire loc="55:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/usart/Msp430UsartShare1P.nc">
+          <from><interface-ref name="Resource" ref="0x2ae8de1bf020" scoped=""/></from>
+          <to><interface-ref name="Resource" ref="0x2ae8de22e020" scoped=""/></to>
+        </wire>
+        <wire loc="58:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/usart/Msp430UsartShare1P.nc">
+          <from><interface-ref name="ArbiterInfo" ref="0x2ae8de1be9d8" scoped=""/></from>
+          <to><interface-ref name="ArbiterInfo" ref="0x2ae8de22c0e0" scoped=""/></to>
+        </wire>
+        <wire loc="52:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/usart/Msp430UsartShare1P.nc">
+          <from><interface-ref name="RawInterrupts" ref="0x2ae8de1e6020" scoped=""/></from>
+          <to><interface-ref name="HplMsp430UsartInterrupts" ref="0x2ae8dded1528" scoped=""/></to>
+        </wire>
+        <wire loc="57:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/usart/Msp430UsartShare1P.nc">
+          <from><interface-ref name="ResourceConfigure" ref="0x2ae8de22c960" scoped=""/></from>
+          <to><interface-ref name="ResourceConfigure" ref="0x2ae8de1bc848" scoped=""/></to>
+        </wire>
+        <wire loc="59:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/usart/Msp430UsartShare1P.nc">
+          <from><interface-ref name="ArbiterInfo" ref="0x2ae8de1e6d98" scoped=""/></from>
+          <to><interface-ref name="ArbiterInfo" ref="0x2ae8de22c0e0" scoped=""/></to>
+        </wire>
+        <wire loc="62:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/usart/Msp430UsartShare1P.nc">
+          <from><interface-ref name="ResourceDefaultOwner" ref="0x2ae8de251268" scoped=""/></from>
+          <to><interface-ref name="ResourceDefaultOwner" ref="0x2ae8de22d4a8" scoped=""/></to>
+        </wire>
+        <wire loc="65:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/usart/Msp430UsartShare1P.nc">
+          <from><interface-ref name="AsyncStdControl" ref="0x2ae8de267478" scoped=""/></from>
+          <to><interface-ref name="AsyncStdControl" ref="0x2ae8dded44f0" scoped=""/></to>
+        </wire>
+      </wiring>
+    <specification><interface loc="42:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/usart/Msp430UsartShare1P.nc" name="ResourceRequested" provided="1" ref="0x2ae8de1be208">
+      <component-ref nicename="tos.chips.msp430.usart.Msp430UsartShare1P" qname="Msp430UsartShare1P"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ResourceRequested" ref="0x2ae8de1be208" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.ResourceRequested" qname="ResourceRequested"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x2ae8dcc94318"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="requested" ref="0x2ae8de1be558" scoped=""/>
+        <function-ref name="immediateRequested" ref="0x2ae8de1be6e0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="45:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/usart/Msp430UsartShare1P.nc" name="ResourceConfigure" provided="0" ref="0x2ae8de1bc848">
+      <component-ref nicename="tos.chips.msp430.usart.Msp430UsartShare1P" qname="Msp430UsartShare1P"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ResourceConfigure" ref="0x2ae8de1bc848" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.ResourceConfigure" qname="ResourceConfigure"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x2ae8dcc94318"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="unconfigure" ref="0x2ae8de1bcb98" scoped=""/>
+        <function-ref name="configure" ref="0x2ae8de1bcd20" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="40:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/usart/Msp430UsartShare1P.nc" name="Interrupts" provided="1" ref="0x2ae8de1c0300">
+      <component-ref nicename="tos.chips.msp430.usart.Msp430UsartShare1P" qname="Msp430UsartShare1P"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Interrupts" ref="0x2ae8de1c0300" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.usart.HplMsp430UsartInterrupts" qname="HplMsp430UsartInterrupts"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x2ae8dcc94318"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="rxDone" ref="0x2ae8de1c0650" scoped=""/>
+        <function-ref name="txDone" ref="0x2ae8de1c07d8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="41:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/usart/Msp430UsartShare1P.nc" name="Resource" provided="1" ref="0x2ae8de1bf020">
+      <component-ref nicename="tos.chips.msp430.usart.Msp430UsartShare1P" qname="Msp430UsartShare1P"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Resource" ref="0x2ae8de1bf020" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Resource" qname="Resource"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x2ae8dcc94318"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="release" ref="0x2ae8de1bf370" scoped=""/>
+        <function-ref name="immediateRequest" ref="0x2ae8de1bf4f8" scoped=""/>
+        <function-ref name="request" ref="0x2ae8de1bf680" scoped=""/>
+        <function-ref name="granted" ref="0x2ae8de1bf808" scoped=""/>
+        <function-ref name="isOwner" ref="0x2ae8de1bf990" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="43:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/usart/Msp430UsartShare1P.nc" name="ArbiterInfo" provided="1" ref="0x2ae8de1be9d8">
+      <component-ref nicename="tos.chips.msp430.usart.Msp430UsartShare1P" qname="Msp430UsartShare1P"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ArbiterInfo" ref="0x2ae8de1be9d8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.ArbiterInfo" qname="ArbiterInfo"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="inUse" ref="0x2ae8de1bed28" scoped=""/>
+        <function-ref name="userId" ref="0x2ae8de1bc020" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced><interface loc="86:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/FcfsArbiterC.nc" name="ResourceConfigure" provided="0" ref="0x2ae8de22c960">
+      <component-ref nicename="tos.system.FcfsArbiterC" qname="Msp430UsartShare1P.ArbiterC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ResourceConfigure" ref="0x2ae8de22c960" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.ResourceConfigure" qname="ResourceConfigure"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x2ae8dcc94318"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="unconfigure" ref="0x2ae8de22ccd0" scoped=""/>
+        <function-ref name="configure" ref="0x2ae8de22ce58" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="70:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/usart/HplMsp430Usart1C.nc" name="HplMsp430UsartInterrupts" provided="1" ref="0x2ae8dded1528">
+      <component-ref nicename="tos.chips.msp430.usart.HplMsp430Usart1C" qname="HplMsp430Usart1C"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="HplMsp430UsartInterrupts" ref="0x2ae8dded1528" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.usart.HplMsp430UsartInterrupts" qname="HplMsp430UsartInterrupts"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="rxDone" ref="0x2ae8dded1878" scoped=""/>
+        <function-ref name="txDone" ref="0x2ae8dded1a00" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="82:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/FcfsArbiterC.nc" name="ResourceRequested" provided="1" ref="0x2ae8de22ed18">
+      <component-ref nicename="tos.system.FcfsArbiterC" qname="Msp430UsartShare1P.ArbiterC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ResourceRequested" ref="0x2ae8de22ed18" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.ResourceRequested" qname="ResourceRequested"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x2ae8dcc94318"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="requested" ref="0x2ae8de22d0d8" scoped=""/>
+        <function-ref name="immediateRequested" ref="0x2ae8de22d260" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="83:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/FcfsArbiterC.nc" name="ResourceDefaultOwner" provided="1" ref="0x2ae8de22d4a8">
+      <component-ref nicename="tos.system.FcfsArbiterC" qname="Msp430UsartShare1P.ArbiterC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ResourceDefaultOwner" ref="0x2ae8de22d4a8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.ResourceDefaultOwner" qname="ResourceDefaultOwner"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="release" ref="0x2ae8de22d7f8" scoped=""/>
+        <function-ref name="requested" ref="0x2ae8de22d980" scoped=""/>
+        <function-ref name="granted" ref="0x2ae8de22db08" scoped=""/>
+        <function-ref name="isOwner" ref="0x2ae8de22dc90" scoped=""/>
+        <function-ref name="immediateRequested" ref="0x2ae8de22de18" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="84:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/FcfsArbiterC.nc" name="ArbiterInfo" provided="1" ref="0x2ae8de22c0e0">
+      <component-ref nicename="tos.system.FcfsArbiterC" qname="Msp430UsartShare1P.ArbiterC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ArbiterInfo" ref="0x2ae8de22c0e0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.ArbiterInfo" qname="ArbiterInfo"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="inUse" ref="0x2ae8de22c430" scoped=""/>
+        <function-ref name="userId" ref="0x2ae8de22c5b8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="81:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/FcfsArbiterC.nc" name="Resource" provided="1" ref="0x2ae8de22e020">
+      <component-ref nicename="tos.system.FcfsArbiterC" qname="Msp430UsartShare1P.ArbiterC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Resource" ref="0x2ae8de22e020" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Resource" qname="Resource"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x2ae8dcc94318"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="release" ref="0x2ae8de22e390" scoped=""/>
+        <function-ref name="immediateRequest" ref="0x2ae8de22e518" scoped=""/>
+        <function-ref name="request" ref="0x2ae8de22e6a0" scoped=""/>
+        <function-ref name="granted" ref="0x2ae8de22e828" scoped=""/>
+        <function-ref name="isOwner" ref="0x2ae8de22e9b0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="39:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/usart/Msp430UsartShareP.nc" name="Interrupts" provided="1" ref="0x2ae8de1b9020">
+      <component-ref nicename="tos.chips.msp430.usart.Msp430UsartShareP" qname="Msp430UsartShare1P.UsartShareP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Interrupts" ref="0x2ae8de1b9020" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.usart.HplMsp430UsartInterrupts" qname="HplMsp430UsartInterrupts"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x2ae8dcc94318"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="rxDone" ref="0x2ae8de1b9390" scoped=""/>
+        <function-ref name="txDone" ref="0x2ae8de1b9518" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="68:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/usart/HplMsp430Usart1C.nc" name="AsyncStdControl" provided="1" ref="0x2ae8dded44f0">
+      <component-ref nicename="tos.chips.msp430.usart.HplMsp430Usart1C" qname="HplMsp430Usart1C"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="AsyncStdControl" ref="0x2ae8dded44f0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.AsyncStdControl" qname="AsyncStdControl"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="start" ref="0x2ae8dded4840" scoped=""/>
+        <function-ref name="stop" ref="0x2ae8dded49c8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="60:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/lib/power/AsyncStdControlPowerManagerC.nc" name="AsyncStdControl" provided="0" ref="0x2ae8de267478">
+      <component-ref nicename="tos.lib.power.AsyncStdControlPowerManagerC" qname="Msp430UsartShare1P.PowerManagerC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="AsyncStdControl" ref="0x2ae8de267478" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.AsyncStdControl" qname="AsyncStdControl"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="start" ref="0x2ae8de2677c8" scoped=""/>
+        <function-ref name="stop" ref="0x2ae8de267950" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="43:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/usart/Msp430UsartShareP.nc" name="ArbiterInfo" provided="0" ref="0x2ae8de1e6d98">
+      <component-ref nicename="tos.chips.msp430.usart.Msp430UsartShareP" qname="Msp430UsartShare1P.UsartShareP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ArbiterInfo" ref="0x2ae8de1e6d98" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.ArbiterInfo" qname="ArbiterInfo"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="inUse" ref="0x2ae8de1e4170" scoped=""/>
+        <function-ref name="userId" ref="0x2ae8de1e42f8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="41:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/usart/Msp430UsartShareP.nc" name="RawInterrupts" provided="0" ref="0x2ae8de1e6020">
+      <component-ref nicename="tos.chips.msp430.usart.Msp430UsartShareP" qname="Msp430UsartShare1P.UsartShareP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="RawInterrupts" ref="0x2ae8de1e6020" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.usart.HplMsp430UsartInterrupts" qname="HplMsp430UsartInterrupts"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="rxDone" ref="0x2ae8de1e6370" scoped=""/>
+        <function-ref name="txDone" ref="0x2ae8de1e64f8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="63:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/lib/power/AsyncStdControlPowerManagerC.nc" name="ResourceDefaultOwner" provided="0" ref="0x2ae8de251268">
+      <component-ref nicename="tos.lib.power.AsyncStdControlPowerManagerC" qname="Msp430UsartShare1P.PowerManagerC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ResourceDefaultOwner" ref="0x2ae8de251268" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.ResourceDefaultOwner" qname="ResourceDefaultOwner"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="release" ref="0x2ae8de2515b8" scoped=""/>
+        <function-ref name="requested" ref="0x2ae8de251740" scoped=""/>
+        <function-ref name="granted" ref="0x2ae8de2518c8" scoped=""/>
+        <function-ref name="isOwner" ref="0x2ae8de251a50" scoped=""/>
+        <function-ref name="immediateRequested" ref="0x2ae8de251bd8" scoped=""/>
+      </interface-functions>
+    </interface><component loc="66:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/usart/HplMsp430Usart1C.nc" nicename="tos.chips.msp430.usart.HplMsp430Usart1C" qname="HplMsp430Usart1C">
+      <documentation loc="31:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/usart/msp430usart.h">
+        <short>
+ </short>
+        <long>
+ @author Vlado Handziski &lt;handzisk@tkn.tu-berlin.de&gt;
+ @author Philipp Huppertz &lt;huppertz@tkn.tu-berlin.de&gt;
+</long>
+      </documentation>
+      <configuration/>
+      <wiring>
+        <wire loc="81:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/usart/HplMsp430Usart1C.nc">
+          <from><interface-ref name="HplMsp430UsartInterrupts" ref="0x2ae8dded1528" scoped=""/></from>
+          <to><interface-ref name="Interrupts" ref="0x2ae8ddefaa68" scoped=""/></to>
+        </wire>
+        <wire loc="79:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/usart/HplMsp430Usart1C.nc">
+          <from><interface-ref name="AsyncStdControl" ref="0x2ae8dded44f0" scoped=""/></from>
+          <to><interface-ref name="AsyncStdControl" ref="0x2ae8ddecf7f0" scoped=""/></to>
+        </wire>
+        <wire loc="80:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/usart/HplMsp430Usart1C.nc">
+          <from><interface-ref name="HplMsp430Usart" ref="0x2ae8dded4ce0" scoped=""/></from>
+          <to><interface-ref name="Usart" ref="0x2ae8ddecc098" scoped=""/></to>
+        </wire>
+        <wire loc="83:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/usart/HplMsp430Usart1C.nc">
+          <from><interface-ref name="SIMO" ref="0x2ae8ddef0860" scoped=""/></from>
+          <to><interface-ref name="SIMO1" ref="0x2ae8ddfb4020" scoped=""/></to>
+        </wire>
+        <wire loc="84:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/usart/HplMsp430Usart1C.nc">
+          <from><interface-ref name="SOMI" ref="0x2ae8ddef74d0" scoped=""/></from>
+          <to><interface-ref name="SOMI1" ref="0x2ae8ddfb3af8" scoped=""/></to>
+        </wire>
+        <wire loc="85:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/usart/HplMsp430Usart1C.nc">
+          <from><interface-ref name="UCLK" ref="0x2ae8ddeee020" scoped=""/></from>
+          <to><interface-ref name="UCLK1" ref="0x2ae8ddfe7660" scoped=""/></to>
+        </wire>
+        <wire loc="86:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/usart/HplMsp430Usart1C.nc">
+          <from><interface-ref name="URXD" ref="0x2ae8ddeedaf0" scoped=""/></from>
+          <to><interface-ref name="URXD1" ref="0x2ae8ddfe4c80" scoped=""/></to>
+        </wire>
+        <wire loc="87:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/usart/HplMsp430Usart1C.nc">
+          <from><interface-ref name="UTXD" ref="0x2ae8ddeeb658" scoped=""/></from>
+          <to><interface-ref name="UTXD1" ref="0x2ae8ddfe5138" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component><component loc="79(Msp430UsartShare1P.ArbiterC):/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/FcfsArbiterC.nc" nicename="tos.system.FcfsArbiterC" qname="Msp430UsartShare1P.ArbiterC">
+      <documentation loc="59:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/FcfsArbiterC.nc">
+        <short>
+ Please refer to TEP 108 for more information about this component and its
+ intended use.&lt;br&gt;&lt;br&gt;
+
+ This component provides the Resource, ArbiterInfo, and ResourceDefaultOwner
+ interfaces and uses the ResourceConfigure interface as
+ described in TEP 108.</short>
+        <long>
+ Please refer to TEP 108 for more information about this component and its
+ intended use.&lt;br&gt;&lt;br&gt;
+
+ This component provides the Resource, ArbiterInfo, and ResourceDefaultOwner
+ interfaces and uses the ResourceConfigure interface as
+ described in TEP 108.  It provides arbitration to a shared resource in
+ an FCFS fashion.  An array is used to keep track of which users have put
+ in requests for the resource.  Upon the release of the resource by one
+ of these users, the array is checked and the next user (in FCFS order)
+ that has a pending request will ge granted control of the resource.  If
+ there are no pending requests, then the resource is granted to the default 
+ user.  If a new request is made, the default user will release the resource, 
+ and it will be granted to the requesting cleint.
+
+ @param &lt;b&gt;resourceName&lt;/b&gt; -- The name of the Resource being shared
+ 
+ @author Kevin Klues (klues@tkn.tu-berlin.de)
+</long>
+      </documentation>
+      <instance number="0">
+        <component-ref nicename="tos.system.FcfsArbiterC" qname="FcfsArbiterC"/>
+        <arguments>
+          <value cst="S:Msp430Usart1.Resource">
+            <type-pointer alignment="I:2" size="I:2">
+              <type-int alignment="I:1" cname="char" size="I:1"/>
+            </type-pointer>
+          </value>
+        </arguments>
+      </instance>
+      <configuration/>
+      <wiring>
+        <wire>
+          <from><interface-ref name="ResourceRequested" ref="0x2ae8de22ed18" scoped=""/></from>
+          <to><interface-ref name="ResourceRequested" ref="0x2ae8df6439a8" scoped=""/></to>
+        </wire>
+        <wire>
+          <from><interface-ref name="ResourceDefaultOwner" ref="0x2ae8de22d4a8" scoped=""/></from>
+          <to><interface-ref name="ResourceDefaultOwner" ref="0x2ae8df642268" scoped=""/></to>
+        </wire>
+        <wire>
+          <from><interface-ref name="Resource" ref="0x2ae8de22e020" scoped=""/></from>
+          <to><interface-ref name="Resource" ref="0x2ae8df644bb8" scoped=""/></to>
+        </wire>
+        <wire>
+          <from><interface-ref name="ArbiterInfo" ref="0x2ae8de22c0e0" scoped=""/></from>
+          <to><interface-ref name="ArbiterInfo" ref="0x2ae8df642e20" scoped=""/></to>
+        </wire>
+        <wire>
+          <from><interface-ref name="SoftwareInit" ref="0x2ae8dd9fd808" scoped=""/></from>
+          <to><interface-ref name="Init" ref="0x2ae8df646550" scoped=""/></to>
+        </wire>
+        <wire>
+          <from><interface-ref name="ResourceConfigure" ref="0x2ae8df6416f8" scoped=""/></from>
+          <to><interface-ref name="ResourceConfigure" ref="0x2ae8de22c960" scoped=""/></to>
+        </wire>
+        <wire>
+          <from><interface-ref name="Queue" ref="0x2ae8df641e78" scoped=""/></from>
+          <to><interface-ref name="FcfsQueue" ref="0x2ae8df646b28" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component><component loc="37(Msp430UsartShare1P.UsartShareP):/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/usart/Msp430UsartShareP.nc" nicename="tos.chips.msp430.usart.Msp430UsartShareP" qname="Msp430UsartShare1P.UsartShareP">
+      <documentation loc="32:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/usart/Msp430UsartShareP.nc">
+        <short>
+ </short>
+        <long>
+ @author Jonathan Hui &lt;jhui@archrock.com&gt;
+ @version $Revision: 1.5 $ $Date: 2008/06/26 04:39:08 $
+</long>
+      </documentation>
+      <instance number="0">
+        <component-ref nicename="tos.chips.msp430.usart.Msp430UsartShareP" qname="Msp430UsartShareP"/>
+      </instance>
+      <module/>
+    </component><component loc="57(Msp430UsartShare1P.PowerManagerC):/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/lib/power/AsyncStdControlPowerManagerC.nc" nicename="tos.lib.power.AsyncStdControlPowerManagerC" qname="Msp430UsartShare1P.PowerManagerC">
+      <documentation loc="31:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/lib/power/AsyncStdControlPowerManagerC.nc">
+        <short>
+ Please refer to TEP 115 for more information about this component and its
+ intended use.&lt;br&gt;&lt;br&gt;
+
+ This is the internal implementation of the standard power management
+ policy for managing the power states of non-virtualized devices.</short>
+        <long>
+ Please refer to TEP 115 for more information about this component and its
+ intended use.&lt;br&gt;&lt;br&gt;
+
+ This is the internal implementation of the standard power management
+ policy for managing the power states of non-virtualized devices.
+ Non-virtualized devices are shared using a parameterized Resource
+ interface, and are powered down according to some policy whenever there
+ are no more pending requests to that Resource.  The policy implemented
+ by this component is to power down a device as soon as it becomes free.
+ Such a policy is useful whenever a device has a negligible wake-up
+ latency.  There is no cost associated with waiting for the device to
+ power up, so it can be powered on and off as often as possible.&lt;br&gt;&lt;br&gt;
+
+ Powerdown of the device is done through the &lt;code&gt;AsyncStdControl&lt;/code&gt;
+ interface, so this component can only be used with those devices that
+ provide that interface.&lt;br&gt;&lt;br&gt;
+
+ For devices providing either the &lt;code&gt;StdControl&lt;/code&gt; or
+ &lt;code&gt;SplitControl&lt;/code&gt; interfaces, please use either the
+ &lt;code&gt;StdControlPowerManagerC&lt;/code&gt; component or the
+ &lt;code&gt;SplitControlPowerManagerC&lt;/code&gt; component respectively.
+ 
+ @author Kevin Klues (klueska@cs.wustl.edu)
+</long>
+      </documentation>
+      <instance number="0">
+        <component-ref nicename="tos.lib.power.AsyncStdControlPowerManagerC" qname="AsyncStdControlPowerManagerC"/>
+      </instance>
+      <configuration/>
+      <wiring>
+        <wire>
+          <from><interface-ref name="AsyncStdControl" ref="0x2ae8df610340" scoped=""/></from>
+          <to><interface-ref name="AsyncStdControl" ref="0x2ae8de267478" scoped=""/></to>
+        </wire>
+        <wire>
+          <from><interface-ref name="PowerDownCleanup" ref="0x2ae8df610a60" scoped=""/></from>
+          <to><interface-ref name="PowerDownCleanup" ref="0x2ae8de267b98" scoped=""/></to>
+        </wire>
+        <wire>
+          <from><interface-ref name="ResourceDefaultOwner" ref="0x2ae8df60f020" scoped=""/></from>
+          <to><interface-ref name="ResourceDefaultOwner" ref="0x2ae8de251268" scoped=""/></to>
+        </wire>
+        <wire>
+          <from><interface-ref name="ArbiterInfo" ref="0x2ae8df60fbd8" scoped=""/></from>
+          <to><interface-ref name="ArbiterInfo" ref="0x2ae8de251e20" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component></referenced></component>

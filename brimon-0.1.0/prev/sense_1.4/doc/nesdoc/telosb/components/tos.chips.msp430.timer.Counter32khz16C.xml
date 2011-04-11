@@ -1,0 +1,83 @@
+<?xml version="1.0" ?><component loc="30:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/timer/Counter32khz16C.nc" nicename="tos.chips.msp430.timer.Counter32khz16C" qname="Counter32khz16C">
+      <documentation loc="22:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/timer/Counter32khz16C.nc">
+        <short>
+ Counter32khz16C provides at 16-bit counter at 32768 ticks per second.</short>
+        <long>
+ Counter32khz16C provides at 16-bit counter at 32768 ticks per second.
+
+ @author Cory Sharp &lt;cssharp@eecs.berkeley.edu&gt;
+ @see  Please refer to TEP 102 for more information about this component and its
+          intended use.
+</long>
+      </documentation>
+      <configuration/>
+      <wiring>
+        <wire loc="38:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/timer/Counter32khz16C.nc">
+          <from><interface-ref name="Counter" ref="0x2b367792fda0" scoped=""/></from>
+          <to><interface-ref name="Msp430Counter32khz" ref="0x2b367792abb8" scoped=""/></to>
+        </wire>
+      </wiring>
+    <specification><interface loc="32:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/timer/Counter32khz16C.nc" name="Counter" provided="1" ref="0x2b367792fda0">
+      <component-ref nicename="tos.chips.msp430.timer.Counter32khz16C" qname="Counter32khz16C"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Counter" ref="0x2b367792fda0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.timer.Counter" qname="Counter"/>
+        <arguments>
+          <type-tag alignment="I:2" size="I:2"><struct-ref ref="0x2b36770a2150"/>
+            <typename><typedef-ref name="T32khz" ref="0x2b36770a24a8"/></typename>
+          </type-tag>
+          <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned="">
+            <typename><typedef-ref name="uint16_t" ref="0x2b36763969f0"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="get" ref="0x2b367792cb38" scoped=""/>
+        <function-ref name="clearOverflow" ref="0x2b367792b4a8" scoped=""/>
+        <function-ref name="isOverflowPending" ref="0x2b367792b020" scoped=""/>
+        <function-ref name="overflow" ref="0x2b367792b930" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced><interface loc="32:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/timer/Msp430Counter32khzC.nc" name="Msp430Counter32khz" provided="1" ref="0x2b367792abb8">
+      <component-ref nicename="tos.chips.msp430.timer.Msp430Counter32khzC" qname="Msp430Counter32khzC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Msp430Counter32khz" ref="0x2b367792abb8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.timer.Counter" qname="Counter"/>
+        <arguments>
+          <type-tag alignment="I:2" size="I:2"><struct-ref ref="0x2b36770a2150"/>
+            <typename><typedef-ref name="T32khz" ref="0x2b36770a24a8"/></typename>
+          </type-tag>
+          <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned="">
+            <typename><typedef-ref name="uint16_t" ref="0x2b36763969f0"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="get" ref="0x2b3677926930" scoped=""/>
+        <function-ref name="clearOverflow" ref="0x2b3677925270" scoped=""/>
+        <function-ref name="isOverflowPending" ref="0x2b3677926db8" scoped=""/>
+        <function-ref name="overflow" ref="0x2b36779256f8" scoped=""/>
+      </interface-functions>
+    </interface><component loc="30:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/timer/Msp430Counter32khzC.nc" nicename="tos.chips.msp430.timer.Msp430Counter32khzC" qname="Msp430Counter32khzC">
+      <documentation loc="22:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/timer/Msp430Counter32khzC.nc">
+        <short>
+ Msp430Counter32khC provides the standard 32khz counter for the MSP430.</short>
+        <long>
+ Msp430Counter32khC provides the standard 32khz counter for the MSP430.
+
+ @author Cory Sharp &lt;cssharp@eecs.berkeley.edu&gt;
+ @see  Please refer to TEP 102 for more information about this component and its
+          intended use.
+</long>
+      </documentation>
+      <configuration/>
+      <wiring>
+        <wire loc="39:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/timer/Msp430Counter32khzC.nc">
+          <from><interface-ref name="Msp430Counter32khz" ref="0x2b367792abb8" scoped=""/></from>
+          <to><interface-ref name="Counter" ref="0x2b3677922020" scoped=""/></to>
+        </wire>
+        <wire loc="40:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/timer/Msp430Counter32khzC.nc">
+          <from><interface-ref name="Msp430Timer" ref="0x2b367795f020" scoped=""/></from>
+          <to><interface-ref name="TimerB" ref="0x2b367728c520" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component></referenced></component>

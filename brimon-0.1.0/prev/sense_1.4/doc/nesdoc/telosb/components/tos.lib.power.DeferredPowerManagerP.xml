@@ -1,0 +1,137 @@
+<?xml version="1.0" ?><component abstract="" loc="52:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/lib/power/DeferredPowerManagerP.nc" nicename="tos.lib.power.DeferredPowerManagerP" qname="DeferredPowerManagerP">
+      <documentation loc="31:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/lib/power/DeferredPowerManagerP.nc">
+        <short>
+ Please refer to TEP 115 for more information about this component and its
+ intended use.&lt;br&gt;&lt;br&gt;
+
+ This is the internal implementation of the deffered power management
+ policy for managing the power states of non-virtualized devices.</short>
+        <long>
+ Please refer to TEP 115 for more information about this component and its
+ intended use.&lt;br&gt;&lt;br&gt;
+
+ This is the internal implementation of the deffered power management
+ policy for managing the power states of non-virtualized devices.
+ Non-virtualized devices are shared using a parameterized Resource
+ interface, and are powered down according to some policy whenever there
+ are no more pending requests to that Resource.  The policy implemented
+ by this component is to delay the power down of a device by some contant
+ factor.  Such a policy is useful whenever a device has a long wake-up
+ latency.  The cost of waiting for the device to power up can be
+ avoided if the device is requested again before some predetermined
+ amount of time.
+
+ @param &lt;b&gt;delay&lt;/b&gt; -- The amount of time the power manager should wait
+                        before shutting down the device once it is free.
+ 
+ @author Kevin Klues (klueska@cs.wustl.edu)
+</long>
+      </documentation>
+      <parameters>
+        <constant loc="52:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/lib/power/DeferredPowerManagerP.nc" name="delay" ref="0x2b3677e53bb0">
+          <component-ref nicename="tos.lib.power.DeferredPowerManagerP" qname="DeferredPowerManagerP"/>
+          <type-int alignment="I:2" cname="unsigned long" size="I:4" unsigned="">
+            <typename><typedef-ref name="uint32_t" ref="0x2b3676398120"/></typename>
+          </type-int>
+        </constant>
+      </parameters>
+      <module/>
+    <specification><interface loc="55:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/lib/power/DeferredPowerManagerP.nc" name="SplitControl" provided="0" ref="0x2b3677ea4820">
+      <component-ref nicename="tos.lib.power.DeferredPowerManagerP" qname="DeferredPowerManagerP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="SplitControl" ref="0x2b3677ea4820" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.SplitControl" qname="SplitControl"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="startDone" ref="0x2b3677ea4b70" scoped=""/>
+        <function-ref name="stopDone" ref="0x2b3677ea4cf8" scoped=""/>
+        <function-ref name="start" ref="0x2b3677ea4e80" scoped=""/>
+        <function-ref name="stop" ref="0x2b3677ea3030" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="60:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/lib/power/DeferredPowerManagerP.nc" name="TimerMilli" provided="0" ref="0x2b3677ea1020">
+      <component-ref nicename="tos.lib.power.DeferredPowerManagerP" qname="DeferredPowerManagerP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="TimerMilli" ref="0x2b3677ea1020" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.timer.Timer" qname="Timer"/>
+        <arguments>
+          <type-tag alignment="I:2" size="I:2"><struct-ref ref="0x2b36770a5970"/>
+            <typename><typedef-ref name="TMilli" ref="0x2b36770a5cc8"/></typename>
+          </type-tag>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="getNow" ref="0x2b3677e9d2b8" scoped=""/>
+        <function-ref name="fired" ref="0x2b3677e9f978" scoped=""/>
+        <function-ref name="startPeriodicAt" ref="0x2b3677e9e6c8" scoped=""/>
+        <function-ref name="isOneShot" ref="0x2b3677e9e278" scoped=""/>
+        <function-ref name="getdt" ref="0x2b3677e9db58" scoped=""/>
+        <function-ref name="gett0" ref="0x2b3677e9d708" scoped=""/>
+        <function-ref name="isRunning" ref="0x2b3677e9fdc8" scoped=""/>
+        <function-ref name="startPeriodic" ref="0x2b3677ea1b68" scoped=""/>
+        <function-ref name="startOneShotAt" ref="0x2b3677e9ec98" scoped=""/>
+        <function-ref name="startOneShot" ref="0x2b3677e9f088" scoped=""/>
+        <function-ref name="stop" ref="0x2b3677e9f528" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="57:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/lib/power/DeferredPowerManagerP.nc" name="PowerDownCleanup" provided="0" ref="0x2b3677ea3320">
+      <component-ref nicename="tos.lib.power.DeferredPowerManagerP" qname="DeferredPowerManagerP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="PowerDownCleanup" ref="0x2b3677ea3320" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.power.PowerDownCleanup" qname="PowerDownCleanup"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="cleanup" ref="0x2b3677ea3670" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="77:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/lib/power/DeferredPowerManagerP.nc" name="timerTask" provided="0" ref="0x2b3677e971c8">
+      <component-ref nicename="tos.lib.power.DeferredPowerManagerP" qname="DeferredPowerManagerP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="timerTask" ref="0x2b3677e971c8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.TaskBasic" qname="TaskBasic"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="postTask" ref="0x2b3677e97518" scoped=""/>
+        <function-ref name="runTask" ref="0x2b3677e976a0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="58:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/lib/power/DeferredPowerManagerP.nc" name="ResourceDefaultOwner" provided="0" ref="0x2b3677ea3988">
+      <component-ref nicename="tos.lib.power.DeferredPowerManagerP" qname="DeferredPowerManagerP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ResourceDefaultOwner" ref="0x2b3677ea3988" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.ResourceDefaultOwner" qname="ResourceDefaultOwner"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="release" ref="0x2b3677ea3cd8" scoped=""/>
+        <function-ref name="requested" ref="0x2b3677ea3e60" scoped=""/>
+        <function-ref name="granted" ref="0x2b3677ea2020" scoped=""/>
+        <function-ref name="isOwner" ref="0x2b3677ea21a8" scoped=""/>
+        <function-ref name="immediateRequested" ref="0x2b3677ea2330" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="69:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/lib/power/DeferredPowerManagerP.nc" name="startTask" provided="0" ref="0x2b3677e9a900">
+      <component-ref nicename="tos.lib.power.DeferredPowerManagerP" qname="DeferredPowerManagerP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="startTask" ref="0x2b3677e9a900" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.TaskBasic" qname="TaskBasic"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="postTask" ref="0x2b3677e9ac50" scoped=""/>
+        <function-ref name="runTask" ref="0x2b3677e9add8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="54:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/lib/power/DeferredPowerManagerP.nc" name="StdControl" provided="0" ref="0x2b3677ea4080">
+      <component-ref nicename="tos.lib.power.DeferredPowerManagerP" qname="DeferredPowerManagerP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="StdControl" ref="0x2b3677ea4080" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.StdControl" qname="StdControl"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="start" ref="0x2b3677ea43d0" scoped=""/>
+        <function-ref name="stop" ref="0x2b3677ea4558" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="59:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/lib/power/DeferredPowerManagerP.nc" name="ArbiterInfo" provided="0" ref="0x2b3677ea25e8">
+      <component-ref nicename="tos.lib.power.DeferredPowerManagerP" qname="DeferredPowerManagerP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ArbiterInfo" ref="0x2b3677ea25e8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.ArbiterInfo" qname="ArbiterInfo"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="inUse" ref="0x2b3677ea2938" scoped=""/>
+        <function-ref name="userId" ref="0x2b3677ea2ac0" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced/></component>

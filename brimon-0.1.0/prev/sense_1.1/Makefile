@@ -1,0 +1,2 @@
+COMPONENT=FlashSamplerAppC
+include $(MAKERULES)

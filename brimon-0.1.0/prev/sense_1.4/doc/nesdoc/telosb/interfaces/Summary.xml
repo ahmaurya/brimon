@@ -1,0 +1,30 @@
+<?xml version="1.0" ?><interfacedef loc="11:Summary.nc" nicename="Summary" qname="Summary">
+      <function command="" loc="13:Summary.nc" name="summarize" provided="0" ref="0x2b36770b2850">
+        <interfacedef-ref nicename="Summary" qname="Summary"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+        <parameters>
+        </parameters>
+      </function>
+      <function event="" loc="14:Summary.nc" name="summarized" provided="0" ref="0x2b36770ad290">
+        <interfacedef-ref nicename="Summary" qname="Summary"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="error_t" ref="0x2b3676c015d8"/></typename>
+            </type-int>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="14:Summary.nc" name="ok" ref="0x2b36770ad020">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="error_t" ref="0x2b3676c015d8"/></typename>
+            </type-int>
+          </variable>
+        </parameters>
+      </function>
+    </interfacedef>

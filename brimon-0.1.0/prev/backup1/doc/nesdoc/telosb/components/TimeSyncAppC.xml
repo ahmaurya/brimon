@@ -1,0 +1,1726 @@
+<?xml version="1.0" ?><component loc="4:TimeSyncAppC.nc" nicename="TimeSyncAppC" qname="TimeSyncAppC">
+      <configuration/>
+      <wiring>
+        <wire loc="17:TimeSyncAppC.nc">
+          <from><interface-ref name="Boot" ref="0x2ae8de356020" scoped=""/></from>
+          <to><interface-ref name="Boot" ref="0x2ae8dd9fe3e0" scoped=""/></to>
+        </wire>
+        <wire loc="18:TimeSyncAppC.nc">
+          <from><interface-ref name="Leds" ref="0x2ae8de358850" scoped=""/></from>
+          <to><interface-ref name="Leds" ref="0x2ae8de10d760" scoped=""/></to>
+        </wire>
+        <wire loc="19:TimeSyncAppC.nc">
+          <from><interface-ref name="Timer0" ref="0x2ae8de3917f8" scoped=""/></from>
+          <to><interface-ref name="Alarm" ref="0x2ae8de4d49b8" scoped=""/></to>
+        </wire>
+        <wire loc="20:TimeSyncAppC.nc">
+          <from><interface-ref name="AMControl" ref="0x2ae8de3b1e28" scoped=""/></from>
+          <to><interface-ref name="SplitControl" ref="0x2ae8df00b2c0" scoped=""/></to>
+        </wire>
+        <wire loc="21:TimeSyncAppC.nc">
+          <from><interface-ref name="Receive" ref="0x2ae8de3b1770" scoped=""/></from>
+          <to><interface-ref name="Receive" ref="0x2ae8de4ccab0" scoped=""/></to>
+        </wire>
+        <wire loc="22:TimeSyncAppC.nc">
+          <from><interface-ref name="TimeSyncAMSendI" ref="0x2ae8de3b9a70" scoped=""/></from>
+          <to><interface-ref name="TimeSyncAMSend32khz" ref="0x2ae8de4c7d18" scoped=""/>
+          <arguments>
+            <value cst="I:0">
+              <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned=""/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="23:TimeSyncAppC.nc">
+          <from><interface-ref name="TimeSyncPacket" ref="0x2ae8de3b2b78" scoped=""/></from>
+          <to><interface-ref name="TimeSyncPacket32khz" ref="0x2ae8de4bec78" scoped=""/></to>
+        </wire>
+        <wire loc="24:TimeSyncAppC.nc">
+          <from><interface-ref name="PacketTimeStamp32khz" ref="0x2ae8de3a5968" scoped=""/></from>
+          <to><interface-ref name="PacketTimeStamp32khz" ref="0x2ae8decee510" scoped=""/></to>
+        </wire>
+        <wire loc="25:TimeSyncAppC.nc">
+          <from><interface-ref name="PacketTimeSyncOffset" ref="0x2ae8de3d9ac0" scoped=""/></from>
+          <to><interface-ref name="PacketTimeSyncOffset" ref="0x2ae8ded51020" scoped=""/></to>
+        </wire>
+        <wire loc="26:TimeSyncAppC.nc">
+          <from><interface-ref name="CC2420PacketBody" ref="0x2ae8de399020" scoped=""/></from>
+          <to><interface-ref name="CC2420PacketBody" ref="0x2ae8decef310" scoped=""/></to>
+        </wire>
+        <wire loc="28:TimeSyncAppC.nc">
+          <from><interface-ref name="Timer1" ref="0x2ae8de384dd0" scoped=""/></from>
+          <to><interface-ref name="Timer" ref="0x2ae8df0458d8" scoped=""/></to>
+        </wire>
+        <wire loc="29:TimeSyncAppC.nc">
+          <from><interface-ref name="Timer2" ref="0x2ae8de380100" scoped=""/></from>
+          <to><interface-ref name="Alarm" ref="0x2ae8df03d538" scoped=""/></to>
+        </wire>
+        <wire loc="31:TimeSyncAppC.nc">
+          <from><interface-ref name="CaptureSFD" ref="0x2ae8de3a0d68" scoped=""/></from>
+          <to><interface-ref name="CaptureSFD" ref="0x2ae8de71e388" scoped=""/></to>
+        </wire>
+        <wire loc="34:TimeSyncAppC.nc">
+          <from><interface-ref name="CSN" ref="0x2ae8de3a3890" scoped=""/></from>
+          <to><interface-ref name="CSN" ref="0x2ae8de6af1a0" scoped=""/></to>
+        </wire>
+        <wire loc="38:TimeSyncAppC.nc">
+          <from><interface-ref name="TXFIFO_RAM" ref="0x2ae8de39adc8" scoped=""/></from>
+          <to><interface-ref name="TXFIFO_RAM" ref="0x2ae8df095470" scoped=""/></to>
+        </wire>
+        <wire loc="40:TimeSyncAppC.nc">
+          <from><interface-ref name="RadioControl" ref="0x2ae8de399880" scoped=""/></from>
+          <to><interface-ref name="SplitControl" ref="0x2ae8de57d590" scoped=""/></to>
+        </wire>
+      </wiring>
+    <specification/><referenced><interface loc="46:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/cc2420/packet/CC2420PacketC.nc" name="PacketTimeStamp32khz" provided="1" ref="0x2ae8decee510">
+      <component-ref nicename="tos.chips.cc2420.packet.CC2420PacketC" qname="CC2420PacketC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="PacketTimeStamp32khz" ref="0x2ae8decee510" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.PacketTimeStamp" qname="PacketTimeStamp"/>
+        <arguments>
+          <type-tag alignment="I:2" size="I:2"><struct-ref ref="0x2ae8dde41bc0"/>
+            <typename><typedef-ref name="T32khz" ref="0x2ae8dde3b020"/></typename>
+          </type-tag>
+          <type-int alignment="I:2" cname="unsigned long" size="I:4" unsigned="">
+            <typename><typedef-ref name="uint32_t" ref="0x2ae8dcc96120"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="timestamp" ref="0x2ae8deceda88" scoped=""/>
+        <function-ref name="clear" ref="0x2ae8decec190" scoped=""/>
+        <function-ref name="isValid" ref="0x2ae8deced3a8" scoped=""/>
+        <function-ref name="set" ref="0x2ae8decec870" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="33:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/timer/Alarm32khz32C.nc" name="Alarm" provided="1" ref="0x2ae8df03d538">
+      <component-ref nicename="tos.chips.msp430.timer.Alarm32khz32C" qname="TimeSyncAppC.Timer2"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Alarm" ref="0x2ae8df03d538" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.timer.Alarm" qname="Alarm"/>
+        <arguments>
+          <type-tag alignment="I:2" size="I:2"><struct-ref ref="0x2ae8dde41bc0"/>
+            <typename><typedef-ref name="T32khz" ref="0x2ae8dde3b020"/></typename>
+          </type-tag>
+          <type-int alignment="I:2" cname="unsigned long" size="I:4" unsigned="">
+            <typename><typedef-ref name="uint32_t" ref="0x2ae8dcc96120"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="getNow" ref="0x2ae8df0b3c88" scoped=""/>
+        <function-ref name="fired" ref="0x2ae8df0b4d08" scoped=""/>
+        <function-ref name="startAt" ref="0x2ae8df0b3680" scoped=""/>
+        <function-ref name="isRunning" ref="0x2ae8df0b31f8" scoped=""/>
+        <function-ref name="getAlarm" ref="0x2ae8df0b2150" scoped=""/>
+        <function-ref name="start" ref="0x2ae8df0b43a8" scoped=""/>
+        <function-ref name="stop" ref="0x2ae8df0b4880" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="35:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/LedsC.nc" name="Leds" provided="1" ref="0x2ae8de10d760">
+      <component-ref nicename="tos.system.LedsC" qname="LedsC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Leds" ref="0x2ae8de10d760" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Leds" qname="Leds"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="led0Off" ref="0x2ae8de10dab0" scoped=""/>
+        <function-ref name="led0Toggle" ref="0x2ae8de10dc38" scoped=""/>
+        <function-ref name="led1On" ref="0x2ae8de10ddc0" scoped=""/>
+        <function-ref name="led1Toggle" ref="0x2ae8de171020" scoped=""/>
+        <function-ref name="led2Toggle" ref="0x2ae8de1711a8" scoped=""/>
+        <function-ref name="get" ref="0x2ae8de171330" scoped=""/>
+        <function-ref name="led1Off" ref="0x2ae8de1714b8" scoped=""/>
+        <function-ref name="led2Off" ref="0x2ae8de171ad8" scoped=""/>
+        <function-ref name="set" ref="0x2ae8de171640" scoped=""/>
+        <function-ref name="led0On" ref="0x2ae8de1717c8" scoped=""/>
+        <function-ref name="led2On" ref="0x2ae8de171950" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="23:TimeSyncC.nc" name="PacketTimeSyncOffset" provided="0" ref="0x2ae8de3d9ac0">
+      <component-ref nicename="TimeSyncC" qname="TimeSyncC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="PacketTimeSyncOffset" ref="0x2ae8de3d9ac0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.cc2420.interfaces.PacketTimeSyncOffset" qname="PacketTimeSyncOffset"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="get" ref="0x2ae8de3d9e10" scoped=""/>
+        <function-ref name="isSet" ref="0x2ae8de39e020" scoped=""/>
+        <function-ref name="cancel" ref="0x2ae8de39e1a8" scoped=""/>
+        <function-ref name="set" ref="0x2ae8de39e330" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="46:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/lib/printf/MainC.nc" name="Boot" provided="1" ref="0x2ae8dd9fe3e0">
+      <component-ref nicename="tos.lib.printf.MainC" qname="MainC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Boot" ref="0x2ae8dd9fe3e0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Boot" qname="Boot"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="booted" ref="0x2ae8dd9fe730" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="21:TimeSyncC.nc" name="CSN" provided="0" ref="0x2ae8de3a3890">
+      <component-ref nicename="TimeSyncC" qname="TimeSyncC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="CSN" ref="0x2ae8de3a3890" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.GeneralIO" qname="GeneralIO"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="makeInput" ref="0x2ae8de3a3ce0" scoped=""/>
+        <function-ref name="isInput" ref="0x2ae8de3a3e68" scoped=""/>
+        <function-ref name="toggle" ref="0x2ae8de3a2020" scoped=""/>
+        <function-ref name="isOutput" ref="0x2ae8de3a21a8" scoped=""/>
+        <function-ref name="get" ref="0x2ae8de3a2330" scoped=""/>
+        <function-ref name="makeOutput" ref="0x2ae8de3a24b8" scoped=""/>
+        <function-ref name="set" ref="0x2ae8de3a2640" scoped=""/>
+        <function-ref name="clr" ref="0x2ae8de3a27c8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="43:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/cc2420/CC2420RadioC.nc" name="SplitControl" provided="1" ref="0x2ae8de57d590">
+      <component-ref nicename="tos.chips.cc2420.CC2420RadioC" qname="CC2420RadioC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="SplitControl" ref="0x2ae8de57d590" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.SplitControl" qname="SplitControl"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="startDone" ref="0x2ae8de57d8e0" scoped=""/>
+        <function-ref name="stopDone" ref="0x2ae8de57da68" scoped=""/>
+        <function-ref name="start" ref="0x2ae8de57dbf0" scoped=""/>
+        <function-ref name="stop" ref="0x2ae8de57dd78" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="43:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/platforms/telosa/chips/cc2420/HplCC2420PinsC.nc" name="CSN" provided="1" ref="0x2ae8de6af1a0">
+      <component-ref nicename="tos.platforms.telosa.chips.cc2420.HplCC2420PinsC" qname="HplCC2420PinsC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="CSN" ref="0x2ae8de6af1a0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.GeneralIO" qname="GeneralIO"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="makeInput" ref="0x2ae8de6af4f0" scoped=""/>
+        <function-ref name="isInput" ref="0x2ae8de6af678" scoped=""/>
+        <function-ref name="toggle" ref="0x2ae8de6af800" scoped=""/>
+        <function-ref name="isOutput" ref="0x2ae8de6af988" scoped=""/>
+        <function-ref name="get" ref="0x2ae8de6afb10" scoped=""/>
+        <function-ref name="makeOutput" ref="0x2ae8de6afc98" scoped=""/>
+        <function-ref name="set" ref="0x2ae8de6afe20" scoped=""/>
+        <function-ref name="clr" ref="0x2ae8de6ae020" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="10:TimeSyncC.nc" name="Boot" provided="0" ref="0x2ae8de356020">
+      <component-ref nicename="TimeSyncC" qname="TimeSyncC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Boot" ref="0x2ae8de356020" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Boot" qname="Boot"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="booted" ref="0x2ae8de356370" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="25:TimeSyncC.nc" name="RadioControl" provided="0" ref="0x2ae8de399880">
+      <component-ref nicename="TimeSyncC" qname="TimeSyncC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="RadioControl" ref="0x2ae8de399880" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.SplitControl" qname="SplitControl"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="startDone" ref="0x2ae8de399bd0" scoped=""/>
+        <function-ref name="stopDone" ref="0x2ae8de399d58" scoped=""/>
+        <function-ref name="start" ref="0x2ae8de3d8020" scoped=""/>
+        <function-ref name="stop" ref="0x2ae8de3d81a8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="42:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/platforms/telosa/chips/cc2420/HplCC2420InterruptsC.nc" name="CaptureSFD" provided="1" ref="0x2ae8de71e388">
+      <component-ref nicename="tos.platforms.telosa.chips.cc2420.HplCC2420InterruptsC" qname="HplCC2420InterruptsC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="CaptureSFD" ref="0x2ae8de71e388" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.GpioCapture" qname="GpioCapture"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="captureFallingEdge" ref="0x2ae8de71e6d8" scoped=""/>
+        <function-ref name="disable" ref="0x2ae8de71e860" scoped=""/>
+        <function-ref name="captured" ref="0x2ae8de71e9e8" scoped=""/>
+        <function-ref name="captureRisingEdge" ref="0x2ae8de71eb70" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="17:TimeSyncC.nc" name="AMControl" provided="0" ref="0x2ae8de3b1e28">
+      <component-ref nicename="TimeSyncC" qname="TimeSyncC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="AMControl" ref="0x2ae8de3b1e28" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.SplitControl" qname="SplitControl"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="startDone" ref="0x2ae8de3b01a8" scoped=""/>
+        <function-ref name="stopDone" ref="0x2ae8de3b0330" scoped=""/>
+        <function-ref name="start" ref="0x2ae8de3b04b8" scoped=""/>
+        <function-ref name="stop" ref="0x2ae8de3b0640" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="11:TimeSyncC.nc" name="Timer0" provided="0" ref="0x2ae8de3917f8">
+      <component-ref nicename="TimeSyncC" qname="TimeSyncC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Timer0" ref="0x2ae8de3917f8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.timer.Alarm" qname="Alarm"/>
+        <arguments>
+          <type-tag alignment="I:2" size="I:2"><struct-ref ref="0x2ae8dde41bc0"/>
+            <typename><typedef-ref name="T32khz" ref="0x2ae8dde3b020"/></typename>
+          </type-tag>
+          <type-int alignment="I:2" cname="unsigned long" size="I:4" unsigned="">
+            <typename><typedef-ref name="uint32_t" ref="0x2ae8dcc96120"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="getNow" ref="0x2ae8de38f020" scoped=""/>
+        <function-ref name="fired" ref="0x2ae8de390020" scoped=""/>
+        <function-ref name="startAt" ref="0x2ae8de390930" scoped=""/>
+        <function-ref name="isRunning" ref="0x2ae8de3904a8" scoped=""/>
+        <function-ref name="getAlarm" ref="0x2ae8de38f4a8" scoped=""/>
+        <function-ref name="start" ref="0x2ae8de355578" scoped=""/>
+        <function-ref name="stop" ref="0x2ae8de355a50" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="12:TimeSyncC.nc" name="Timer1" provided="0" ref="0x2ae8de384dd0">
+      <component-ref nicename="TimeSyncC" qname="TimeSyncC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Timer1" ref="0x2ae8de384dd0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.timer.Timer" qname="Timer"/>
+        <arguments>
+          <type-tag alignment="I:2" size="I:2"><struct-ref ref="0x2ae8dde41388"/>
+            <typename><typedef-ref name="TMilli" ref="0x2ae8dde416e0"/></typename>
+          </type-tag>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="getNow" ref="0x2ae8de3810c0" scoped=""/>
+        <function-ref name="fired" ref="0x2ae8de38d798" scoped=""/>
+        <function-ref name="startPeriodicAt" ref="0x2ae8de3824d8" scoped=""/>
+        <function-ref name="isOneShot" ref="0x2ae8de382088" scoped=""/>
+        <function-ref name="getdt" ref="0x2ae8de381960" scoped=""/>
+        <function-ref name="gett0" ref="0x2ae8de381510" scoped=""/>
+        <function-ref name="isRunning" ref="0x2ae8de38dbe8" scoped=""/>
+        <function-ref name="startPeriodic" ref="0x2ae8de38e9e0" scoped=""/>
+        <function-ref name="startOneShotAt" ref="0x2ae8de382aa8" scoped=""/>
+        <function-ref name="startOneShot" ref="0x2ae8de38ee80" scoped=""/>
+        <function-ref name="stop" ref="0x2ae8de38d348" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="37:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/TimerMilliC.nc" name="Timer" provided="1" ref="0x2ae8df0458d8">
+      <component-ref nicename="tos.system.TimerMilliC" qname="TimeSyncAppC.Timer1"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Timer" ref="0x2ae8df0458d8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.timer.Timer" qname="Timer"/>
+        <arguments>
+          <type-tag alignment="I:2" size="I:2"><struct-ref ref="0x2ae8dde41388"/>
+            <typename><typedef-ref name="TMilli" ref="0x2ae8dde416e0"/></typename>
+          </type-tag>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="getNow" ref="0x2ae8df041bc0" scoped=""/>
+        <function-ref name="fired" ref="0x2ae8df042238" scoped=""/>
+        <function-ref name="startPeriodicAt" ref="0x2ae8df041020" scoped=""/>
+        <function-ref name="isOneShot" ref="0x2ae8df042ad8" scoped=""/>
+        <function-ref name="getdt" ref="0x2ae8df0404d8" scoped=""/>
+        <function-ref name="gett0" ref="0x2ae8df040088" scoped=""/>
+        <function-ref name="isRunning" ref="0x2ae8df042688" scoped=""/>
+        <function-ref name="startPeriodic" ref="0x2ae8df044458" scoped=""/>
+        <function-ref name="startOneShotAt" ref="0x2ae8df0415f0" scoped=""/>
+        <function-ref name="startOneShot" ref="0x2ae8df0448f8" scoped=""/>
+        <function-ref name="stop" ref="0x2ae8df044d98" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="50:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/platforms/telosa/ActiveMessageC.nc" name="SplitControl" provided="1" ref="0x2ae8df00b2c0">
+      <component-ref nicename="tos.platforms.telosa.ActiveMessageC" qname="ActiveMessageC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="SplitControl" ref="0x2ae8df00b2c0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.SplitControl" qname="SplitControl"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="startDone" ref="0x2ae8df00b610" scoped=""/>
+        <function-ref name="stopDone" ref="0x2ae8df00b798" scoped=""/>
+        <function-ref name="start" ref="0x2ae8df00b920" scoped=""/>
+        <function-ref name="stop" ref="0x2ae8df00baa8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="48:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/cc2420/CC2420TimeSyncMessageC.nc" name="TimeSyncPacket32khz" provided="1" ref="0x2ae8de4bec78">
+      <component-ref nicename="tos.chips.cc2420.CC2420TimeSyncMessageC" qname="CC2420TimeSyncMessageC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="TimeSyncPacket32khz" ref="0x2ae8de4bec78" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.TimeSyncPacket" qname="TimeSyncPacket"/>
+        <arguments>
+          <type-tag alignment="I:2" size="I:2"><struct-ref ref="0x2ae8dde41bc0"/>
+            <typename><typedef-ref name="T32khz" ref="0x2ae8dde3b020"/></typename>
+          </type-tag>
+          <type-int alignment="I:2" cname="unsigned long" size="I:4" unsigned="">
+            <typename><typedef-ref name="uint32_t" ref="0x2ae8dcc96120"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="isValid" ref="0x2ae8de4bc9b8" scoped=""/>
+        <function-ref name="eventTime" ref="0x2ae8de4bb020" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="16:TimeSyncC.nc" name="Receive" provided="0" ref="0x2ae8de3b1770">
+      <component-ref nicename="TimeSyncC" qname="TimeSyncC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Receive" ref="0x2ae8de3b1770" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Receive" qname="Receive"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="am_id_t" ref="0x2ae8dd9db970"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="receive" ref="0x2ae8de3b1ac0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="48:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/cc2420/packet/CC2420PacketC.nc" name="PacketTimeSyncOffset" provided="1" ref="0x2ae8ded51020">
+      <component-ref nicename="tos.chips.cc2420.packet.CC2420PacketC" qname="CC2420PacketC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="PacketTimeSyncOffset" ref="0x2ae8ded51020" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.cc2420.interfaces.PacketTimeSyncOffset" qname="PacketTimeSyncOffset"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="get" ref="0x2ae8ded51370" scoped=""/>
+        <function-ref name="isSet" ref="0x2ae8ded514f8" scoped=""/>
+        <function-ref name="cancel" ref="0x2ae8ded51680" scoped=""/>
+        <function-ref name="set" ref="0x2ae8ded51808" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="15:TimeSyncC.nc" name="TimeSyncPacket" provided="0" ref="0x2ae8de3b2b78">
+      <component-ref nicename="TimeSyncC" qname="TimeSyncC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="TimeSyncPacket" ref="0x2ae8de3b2b78" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.TimeSyncPacket" qname="TimeSyncPacket"/>
+        <arguments>
+          <type-tag alignment="I:2" size="I:2"><struct-ref ref="0x2ae8dde41bc0"/>
+            <typename><typedef-ref name="T32khz" ref="0x2ae8dde3b020"/></typename>
+          </type-tag>
+          <type-int alignment="I:2" cname="unsigned long" size="I:4" unsigned="">
+            <typename><typedef-ref name="uint32_t" ref="0x2ae8dcc96120"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="isValid" ref="0x2ae8de3b58c0" scoped=""/>
+        <function-ref name="eventTime" ref="0x2ae8de3b5d98" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="19:TimeSyncC.nc" name="PacketTimeStamp32khz" provided="0" ref="0x2ae8de3a5968">
+      <component-ref nicename="TimeSyncC" qname="TimeSyncC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="PacketTimeStamp32khz" ref="0x2ae8de3a5968" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.PacketTimeStamp" qname="PacketTimeStamp"/>
+        <arguments>
+          <type-tag alignment="I:2" size="I:2"><struct-ref ref="0x2ae8dde41bc0"/>
+            <typename><typedef-ref name="T32khz" ref="0x2ae8dde3b020"/></typename>
+          </type-tag>
+          <type-int alignment="I:2" cname="unsigned long" size="I:4" unsigned="">
+            <typename><typedef-ref name="uint32_t" ref="0x2ae8dcc96120"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="timestamp" ref="0x2ae8de3aee10" scoped=""/>
+        <function-ref name="clear" ref="0x2ae8de3ad558" scoped=""/>
+        <function-ref name="isValid" ref="0x2ae8de3ae730" scoped=""/>
+        <function-ref name="set" ref="0x2ae8de3adc38" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="33:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/timer/Alarm32khz32C.nc" name="Alarm" provided="1" ref="0x2ae8de4d49b8">
+      <component-ref nicename="tos.chips.msp430.timer.Alarm32khz32C" qname="TimeSyncAppC.Alarm32khz32C"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Alarm" ref="0x2ae8de4d49b8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.timer.Alarm" qname="Alarm"/>
+        <arguments>
+          <type-tag alignment="I:2" size="I:2"><struct-ref ref="0x2ae8dde41bc0"/>
+            <typename><typedef-ref name="T32khz" ref="0x2ae8dde3b020"/></typename>
+          </type-tag>
+          <type-int alignment="I:2" cname="unsigned long" size="I:4" unsigned="">
+            <typename><typedef-ref name="uint32_t" ref="0x2ae8dcc96120"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="getNow" ref="0x2ae8de4d0020" scoped=""/>
+        <function-ref name="fired" ref="0x2ae8de4d10c0" scoped=""/>
+        <function-ref name="startAt" ref="0x2ae8de4d19d0" scoped=""/>
+        <function-ref name="isRunning" ref="0x2ae8de4d1548" scoped=""/>
+        <function-ref name="getAlarm" ref="0x2ae8de4d04a8" scoped=""/>
+        <function-ref name="start" ref="0x2ae8de4d3730" scoped=""/>
+        <function-ref name="stop" ref="0x2ae8de4d3c08" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="20:TimeSyncC.nc" name="CaptureSFD" provided="0" ref="0x2ae8de3a0d68">
+      <component-ref nicename="TimeSyncC" qname="TimeSyncC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="CaptureSFD" ref="0x2ae8de3a0d68" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.GpioCapture" qname="GpioCapture"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="captureFallingEdge" ref="0x2ae8de3a30f0" scoped=""/>
+        <function-ref name="disable" ref="0x2ae8de3a3278" scoped=""/>
+        <function-ref name="captured" ref="0x2ae8de3a3400" scoped=""/>
+        <function-ref name="captureRisingEdge" ref="0x2ae8de3a3588" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="47:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/cc2420/CC2420TimeSyncMessageC.nc" name="TimeSyncAMSend32khz" provided="1" ref="0x2ae8de4c7d18">
+      <component-ref nicename="tos.chips.cc2420.CC2420TimeSyncMessageC" qname="CC2420TimeSyncMessageC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="TimeSyncAMSend32khz" ref="0x2ae8de4c7d18" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.TimeSyncAMSend" qname="TimeSyncAMSend"/>
+        <arguments>
+          <type-tag alignment="I:2" size="I:2"><struct-ref ref="0x2ae8dde41bc0"/>
+            <typename><typedef-ref name="T32khz" ref="0x2ae8dde3b020"/></typename>
+          </type-tag>
+          <type-int alignment="I:2" cname="unsigned long" size="I:4" unsigned="">
+            <typename><typedef-ref name="uint32_t" ref="0x2ae8dcc96120"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="am_id_t" ref="0x2ae8dd9db970"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="send" ref="0x2ae8de4c6a88" scoped=""/>
+        <function-ref name="getPayload" ref="0x2ae8de4be278" scoped=""/>
+        <function-ref name="maxPayloadLength" ref="0x2ae8de4c0e00" scoped=""/>
+        <function-ref name="cancel" ref="0x2ae8de4c0320" scoped=""/>
+        <function-ref name="sendDone" ref="0x2ae8de4c07f8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="9:TimeSyncC.nc" name="Leds" provided="0" ref="0x2ae8de358850">
+      <component-ref nicename="TimeSyncC" qname="TimeSyncC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Leds" ref="0x2ae8de358850" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Leds" qname="Leds"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="led0Off" ref="0x2ae8de358ba0" scoped=""/>
+        <function-ref name="led0Toggle" ref="0x2ae8de358d28" scoped=""/>
+        <function-ref name="led1On" ref="0x2ae8de357020" scoped=""/>
+        <function-ref name="led1Toggle" ref="0x2ae8de3571a8" scoped=""/>
+        <function-ref name="led2Toggle" ref="0x2ae8de357330" scoped=""/>
+        <function-ref name="get" ref="0x2ae8de3574b8" scoped=""/>
+        <function-ref name="led1Off" ref="0x2ae8de357640" scoped=""/>
+        <function-ref name="led2Off" ref="0x2ae8de357c60" scoped=""/>
+        <function-ref name="set" ref="0x2ae8de3577c8" scoped=""/>
+        <function-ref name="led0On" ref="0x2ae8de357950" scoped=""/>
+        <function-ref name="led2On" ref="0x2ae8de357ad8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="22:TimeSyncC.nc" name="TXFIFO_RAM" provided="0" ref="0x2ae8de39adc8">
+      <component-ref nicename="TimeSyncC" qname="TimeSyncC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="TXFIFO_RAM" ref="0x2ae8de39adc8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.cc2420.interfaces.CC2420Ram" qname="CC2420Ram"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="read" ref="0x2ae8de39f170" scoped=""/>
+        <function-ref name="write" ref="0x2ae8de39f2f8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="40:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/cc2420/CC2420TimeSyncMessageC.nc" name="Receive" provided="1" ref="0x2ae8de4ccab0">
+      <component-ref nicename="tos.chips.cc2420.CC2420TimeSyncMessageC" qname="CC2420TimeSyncMessageC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Receive" ref="0x2ae8de4ccab0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Receive" qname="Receive"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="am_id_t" ref="0x2ae8dd9db970"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="receive" ref="0x2ae8de4cce00" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="43:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/cc2420/packet/CC2420PacketC.nc" name="CC2420PacketBody" provided="1" ref="0x2ae8decef310">
+      <component-ref nicename="tos.chips.cc2420.packet.CC2420PacketC" qname="CC2420PacketC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="CC2420PacketBody" ref="0x2ae8decef310" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.cc2420.interfaces.CC2420PacketBody" qname="CC2420PacketBody"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getHeader" ref="0x2ae8decef660" scoped=""/>
+        <function-ref name="getMetadata" ref="0x2ae8decef7e8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="24:TimeSyncC.nc" name="CC2420PacketBody" provided="0" ref="0x2ae8de399020">
+      <component-ref nicename="TimeSyncC" qname="TimeSyncC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="CC2420PacketBody" ref="0x2ae8de399020" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.cc2420.interfaces.CC2420PacketBody" qname="CC2420PacketBody"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getHeader" ref="0x2ae8de399370" scoped=""/>
+        <function-ref name="getMetadata" ref="0x2ae8de3994f8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="13:TimeSyncC.nc" name="Timer2" provided="0" ref="0x2ae8de380100">
+      <component-ref nicename="TimeSyncC" qname="TimeSyncC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Timer2" ref="0x2ae8de380100" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.timer.Alarm" qname="Alarm"/>
+        <arguments>
+          <type-tag alignment="I:2" size="I:2"><struct-ref ref="0x2ae8dde41bc0"/>
+            <typename><typedef-ref name="T32khz" ref="0x2ae8dde3b020"/></typename>
+          </type-tag>
+          <type-int alignment="I:2" cname="unsigned long" size="I:4" unsigned="">
+            <typename><typedef-ref name="uint32_t" ref="0x2ae8dcc96120"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="getNow" ref="0x2ae8de37d738" scoped=""/>
+        <function-ref name="fired" ref="0x2ae8de37e7d8" scoped=""/>
+        <function-ref name="startAt" ref="0x2ae8de37d130" scoped=""/>
+        <function-ref name="isRunning" ref="0x2ae8de37ec60" scoped=""/>
+        <function-ref name="getAlarm" ref="0x2ae8de37dbc0" scoped=""/>
+        <function-ref name="start" ref="0x2ae8de380e50" scoped=""/>
+        <function-ref name="stop" ref="0x2ae8de37e350" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="88:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/cc2420/spi/CC2420SpiC.nc" name="TXFIFO_RAM" provided="1" ref="0x2ae8df095470">
+      <component-ref nicename="tos.chips.cc2420.spi.CC2420SpiC" qname="TimeSyncAppC.Spi"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="TXFIFO_RAM" ref="0x2ae8df095470" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.cc2420.interfaces.CC2420Ram" qname="CC2420Ram"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="read" ref="0x2ae8df0957c0" scoped=""/>
+        <function-ref name="write" ref="0x2ae8df095948" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="14:TimeSyncC.nc" name="TimeSyncAMSendI" provided="0" ref="0x2ae8de3b9a70">
+      <component-ref nicename="TimeSyncC" qname="TimeSyncC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="TimeSyncAMSendI" ref="0x2ae8de3b9a70" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.TimeSyncAMSend" qname="TimeSyncAMSend"/>
+        <arguments>
+          <type-tag alignment="I:2" size="I:2"><struct-ref ref="0x2ae8dde41bc0"/>
+            <typename><typedef-ref name="T32khz" ref="0x2ae8dde3b020"/></typename>
+          </type-tag>
+          <type-int alignment="I:2" cname="unsigned long" size="I:4" unsigned="">
+            <typename><typedef-ref name="uint32_t" ref="0x2ae8dcc96120"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="send" ref="0x2ae8de37b7f0" scoped=""/>
+        <function-ref name="getPayload" ref="0x2ae8de3b7020" scoped=""/>
+        <function-ref name="maxPayloadLength" ref="0x2ae8de37ab68" scoped=""/>
+        <function-ref name="cancel" ref="0x2ae8de37a088" scoped=""/>
+        <function-ref name="sendDone" ref="0x2ae8de37a560" scoped=""/>
+      </interface-functions>
+    </interface><component loc="30(TimeSyncAppC.Alarm32khz32C):/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/timer/Alarm32khz32C.nc" nicename="tos.chips.msp430.timer.Alarm32khz32C" qname="TimeSyncAppC.Alarm32khz32C">
+      <documentation loc="22:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/timer/Alarm32khz32C.nc">
+        <short>
+ Alarm32khzC is the alarm for async 32khz alarms
+
+ </short>
+        <long>
+ Alarm32khzC is the alarm for async 32khz alarms
+
+ @author Cory Sharp &lt;cssharp@eecs.berkeley.edu&gt;
+ @see  Please refer to TEP 102 for more information about this component and its
+          intended use.
+</long>
+      </documentation>
+      <instance number="0">
+        <component-ref nicename="tos.chips.msp430.timer.Alarm32khz32C" qname="Alarm32khz32C"/>
+      </instance>
+      <configuration/>
+      <wiring>
+        <wire>
+          <from><interface-ref name="Alarm" ref="0x2ae8de4d49b8" scoped=""/></from>
+          <to><interface-ref name="Alarm" ref="0x2ae8df6cb830" scoped=""/></to>
+        </wire>
+        <wire>
+          <from><interface-ref name="Init" ref="0x2ae8de4d41d0" scoped=""/></from>
+          <to><interface-ref name="Init" ref="0x2ae8df6d1020" scoped=""/></to>
+        </wire>
+        <wire>
+          <from><interface-ref name="AlarmFrom" ref="0x2ae8df6c5ce8" scoped=""/></from>
+          <to><interface-ref name="Alarm" ref="0x2ae8df6d1808" scoped=""/></to>
+        </wire>
+        <wire>
+          <from><interface-ref name="Counter" ref="0x2ae8df6c8ad0" scoped=""/></from>
+          <to><interface-ref name="Counter" ref="0x2ae8de45abf0" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component><component loc="35:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/cc2420/CC2420TimeSyncMessageC.nc" nicename="tos.chips.cc2420.CC2420TimeSyncMessageC" qname="CC2420TimeSyncMessageC">
+      <documentation loc="22:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/cc2420/CC2420TimeSyncMessageC.nc">
+        <short>
+ The Active Message layer for the CC2420 radio with timesync support.</short>
+        <long>
+ The Active Message layer for the CC2420 radio with timesync support. This
+ configuration is just layer above CC2420ActiveMessageC that supports
+ TimeSyncPacket and TimeSyncAMSend interfaces (TEP 133)
+
+ @author: Miklos Maroti
+ @author: Brano Kusy (CC2420 port)
+</long>
+      </documentation>
+      <configuration/>
+      <wiring>
+        <wire loc="82:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/cc2420/CC2420TimeSyncMessageC.nc">
+          <from><interface-ref name="SplitControl" ref="0x2ae8de4cfaf0" scoped=""/></from>
+          <to><interface-ref name="SplitControl" ref="0x2ae8de554290" scoped=""/></to>
+        </wire>
+        <wire loc="63:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/cc2420/CC2420TimeSyncMessageC.nc">
+          <from><interface-ref name="TimeSyncPacketMilli" ref="0x2ae8de4b7cf8" scoped=""/></from>
+          <to><interface-ref name="TimeSyncPacketMilli" ref="0x2ae8de4ed958" scoped=""/></to>
+        </wire>
+        <wire loc="65:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/cc2420/CC2420TimeSyncMessageC.nc">
+          <from><interface-ref name="Packet" ref="0x2ae8de4cbc00" scoped=""/></from>
+          <to><interface-ref name="Packet" ref="0x2ae8de4f2800" scoped=""/></to>
+        </wire>
+        <wire loc="87:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/cc2420/CC2420TimeSyncMessageC.nc">
+          <from><interface-ref name="Snoop" ref="0x2ae8de4cb628" scoped=""/></from>
+          <to><interface-ref name="Snoop" ref="0x2ae8de4e91c8" scoped=""/></to>
+        </wire>
+        <wire loc="84:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/cc2420/CC2420TimeSyncMessageC.nc">
+          <from><interface-ref name="LowPowerListening" ref="0x2ae8de4c1848" scoped=""/></from>
+          <to><interface-ref name="LowPowerListening" ref="0x2ae8de54ce10" scoped=""/></to>
+        </wire>
+        <wire loc="62:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/cc2420/CC2420TimeSyncMessageC.nc">
+          <from><interface-ref name="TimeSyncAMSendMilli" ref="0x2ae8de4bbda8" scoped=""/></from>
+          <to><interface-ref name="TimeSyncAMSendMilli" ref="0x2ae8de4f6c40" scoped=""/></to>
+        </wire>
+        <wire loc="86:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/cc2420/CC2420TimeSyncMessageC.nc">
+          <from><interface-ref name="Receive" ref="0x2ae8de4ccab0" scoped=""/></from>
+          <to><interface-ref name="Receive" ref="0x2ae8de4ea5b0" scoped=""/></to>
+        </wire>
+        <wire loc="83:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/cc2420/CC2420TimeSyncMessageC.nc">
+          <from><interface-ref name="PacketAcknowledgements" ref="0x2ae8de4c8020" scoped=""/></from>
+          <to><interface-ref name="PacketAcknowledgements" ref="0x2ae8de54d1a0" scoped=""/></to>
+        </wire>
+        <wire loc="59:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/cc2420/CC2420TimeSyncMessageC.nc">
+          <from><interface-ref name="TimeSyncAMSend32khz" ref="0x2ae8de4c7d18" scoped=""/></from>
+          <to><interface-ref name="TimeSyncAMSend32khz" ref="0x2ae8de4fa740" scoped=""/></to>
+        </wire>
+        <wire loc="88:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/cc2420/CC2420TimeSyncMessageC.nc">
+          <from><interface-ref name="AMPacket" ref="0x2ae8de4ca8e0" scoped=""/></from>
+          <to><interface-ref name="AMPacket" ref="0x2ae8de4f1448" scoped=""/></to>
+        </wire>
+        <wire loc="60:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/cc2420/CC2420TimeSyncMessageC.nc">
+          <from><interface-ref name="TimeSyncPacket32khz" ref="0x2ae8de4bec78" scoped=""/></from>
+          <to><interface-ref name="TimeSyncPacket32khz" ref="0x2ae8de4f0e48" scoped=""/></to>
+        </wire>
+        <wire loc="68:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/cc2420/CC2420TimeSyncMessageC.nc">
+          <from><interface-ref name="SubSend" ref="0x2ae8de4e98c8" scoped=""/></from>
+          <to><interface-ref name="AMSend" ref="0x2ae8df061080" scoped=""/></to>
+        </wire>
+        <wire loc="69:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/cc2420/CC2420TimeSyncMessageC.nc">
+          <from><interface-ref name="SubAMPacket" ref="0x2ae8de4e7370" scoped=""/></from>
+          <to><interface-ref name="AMPacket" ref="0x2ae8df060888" scoped=""/></to>
+        </wire>
+        <wire loc="70:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/cc2420/CC2420TimeSyncMessageC.nc">
+          <from><interface-ref name="SubPacket" ref="0x2ae8de4e8658" scoped=""/></from>
+          <to><interface-ref name="Packet" ref="0x2ae8df061c38" scoped=""/></to>
+        </wire>
+        <wire loc="72:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/cc2420/CC2420TimeSyncMessageC.nc">
+          <from><interface-ref name="PacketTimeStamp32khz" ref="0x2ae8de4e5b08" scoped=""/></from>
+          <to><interface-ref name="PacketTimeStamp32khz" ref="0x2ae8decee510" scoped=""/></to>
+        </wire>
+        <wire loc="73:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/cc2420/CC2420TimeSyncMessageC.nc">
+          <from><interface-ref name="PacketTimeStampMilli" ref="0x2ae8de4e19d8" scoped=""/></from>
+          <to><interface-ref name="PacketTimeStampMilli" ref="0x2ae8decea478" scoped=""/></to>
+        </wire>
+        <wire loc="74:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/cc2420/CC2420TimeSyncMessageC.nc">
+          <from><interface-ref name="PacketTimeSyncOffset" ref="0x2ae8de4dd4e0" scoped=""/></from>
+          <to><interface-ref name="PacketTimeSyncOffset" ref="0x2ae8ded51020" scoped=""/></to>
+        </wire>
+        <wire loc="76:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/cc2420/CC2420TimeSyncMessageC.nc">
+          <from><interface-ref name="Counter" ref="0x2ae8df0586b0" scoped=""/></from>
+          <to><interface-ref name="Counter" ref="0x2ae8de45abf0" scoped=""/></to>
+        </wire>
+        <wire loc="77:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/cc2420/CC2420TimeSyncMessageC.nc">
+          <from><interface-ref name="LocalTime32khz" ref="0x2ae8de5235a8" scoped=""/></from>
+          <to><interface-ref name="LocalTime" ref="0x2ae8df05a4a8" scoped=""/></to>
+        </wire>
+        <wire loc="78:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/cc2420/CC2420TimeSyncMessageC.nc">
+          <from><interface-ref name="LocalTimeMilli" ref="0x2ae8de5257a0" scoped=""/></from>
+          <to><interface-ref name="LocalTime" ref="0x2ae8df0558e8" scoped=""/></to>
+        </wire>
+        <wire loc="79:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/cc2420/CC2420TimeSyncMessageC.nc">
+          <from><interface-ref name="Leds" ref="0x2ae8de5227b0" scoped=""/></from>
+          <to><interface-ref name="Leds" ref="0x2ae8de10d760" scoped=""/></to>
+        </wire>
+        <wire loc="89:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/cc2420/CC2420TimeSyncMessageC.nc">
+          <from><interface-ref name="SubReceive" ref="0x2ae8de4e6978" scoped=""/></from>
+          <to><interface-ref name="Receive" ref="0x2ae8df0093c8" scoped=""/>
+          <arguments>
+            <value cst="I:61">
+              <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned=""/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="90:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/cc2420/CC2420TimeSyncMessageC.nc">
+          <from><interface-ref name="SubSnoop" ref="0x2ae8de4e5020" scoped=""/></from>
+          <to><interface-ref name="Snoop" ref="0x2ae8df008020" scoped=""/>
+          <arguments>
+            <value cst="I:61">
+              <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned=""/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+      </wiring>
+    </component><component loc="40:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/platforms/telosa/chips/cc2420/HplCC2420PinsC.nc" nicename="tos.platforms.telosa.chips.cc2420.HplCC2420PinsC" qname="HplCC2420PinsC">
+      <documentation loc="32:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/platforms/telosa/chips/cc2420/HplCC2420PinsC.nc">
+        <short>
+ HPL implementation of general-purpose I/O for the ChipCon CC2420
+ radio connected to a TI MSP430 processor.</short>
+        <long>
+ HPL implementation of general-purpose I/O for the ChipCon CC2420
+ radio connected to a TI MSP430 processor.
+
+ @author Jonathan Hui &lt;jhui@archrock.com&gt;
+ @version $Revision: 1.4 $ $Date: 2006/12/12 18:23:44 $
+</long>
+      </documentation>
+      <configuration/>
+      <wiring>
+        <wire loc="73:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/platforms/telosa/chips/cc2420/HplCC2420PinsC.nc">
+          <from><interface-ref name="FIFO" ref="0x2ae8de6ae378" scoped=""/></from>
+          <to><interface-ref name="GeneralIO" ref="0x2ae8de6f01a8" scoped=""/></to>
+        </wire>
+        <wire loc="74:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/platforms/telosa/chips/cc2420/HplCC2420PinsC.nc">
+          <from><interface-ref name="FIFOP" ref="0x2ae8de6ff508" scoped=""/></from>
+          <to><interface-ref name="GeneralIO" ref="0x2ae8de6ec610" scoped=""/></to>
+        </wire>
+        <wire loc="75:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/platforms/telosa/chips/cc2420/HplCC2420PinsC.nc">
+          <from><interface-ref name="RSTN" ref="0x2ae8de6fe698" scoped=""/></from>
+          <to><interface-ref name="GeneralIO" ref="0x2ae8de6e89d0" scoped=""/></to>
+        </wire>
+        <wire loc="72:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/platforms/telosa/chips/cc2420/HplCC2420PinsC.nc">
+          <from><interface-ref name="CSN" ref="0x2ae8de6af1a0" scoped=""/></from>
+          <to><interface-ref name="GeneralIO" ref="0x2ae8de6f5e70" scoped=""/></to>
+        </wire>
+        <wire loc="77:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/platforms/telosa/chips/cc2420/HplCC2420PinsC.nc">
+          <from><interface-ref name="VREN" ref="0x2ae8de6fc998" scoped=""/></from>
+          <to><interface-ref name="GeneralIO" ref="0x2ae8de6de1a8" scoped=""/></to>
+        </wire>
+        <wire loc="71:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/platforms/telosa/chips/cc2420/HplCC2420PinsC.nc">
+          <from><interface-ref name="CCA" ref="0x2ae8de6b0020" scoped=""/></from>
+          <to><interface-ref name="GeneralIO" ref="0x2ae8de6faad0" scoped=""/></to>
+        </wire>
+        <wire loc="76:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/platforms/telosa/chips/cc2420/HplCC2420PinsC.nc">
+          <from><interface-ref name="SFD" ref="0x2ae8de6fd810" scoped=""/></from>
+          <to><interface-ref name="GeneralIO" ref="0x2ae8de6e4e70" scoped=""/></to>
+        </wire>
+        <wire loc="63:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/platforms/telosa/chips/cc2420/HplCC2420PinsC.nc">
+          <from><interface-ref name="HplGeneralIO" ref="0x2ae8de6f9c18" scoped=""/></from>
+          <to><interface-ref name="Port14" ref="0x2ae8ddf724e0" scoped=""/></to>
+        </wire>
+        <wire loc="64:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/platforms/telosa/chips/cc2420/HplCC2420PinsC.nc">
+          <from><interface-ref name="HplGeneralIO" ref="0x2ae8de6f3020" scoped=""/></from>
+          <to><interface-ref name="Port42" ref="0x2ae8ddf7f020" scoped=""/></to>
+        </wire>
+        <wire loc="65:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/platforms/telosa/chips/cc2420/HplCC2420PinsC.nc">
+          <from><interface-ref name="HplGeneralIO" ref="0x2ae8de6ef2e8" scoped=""/></from>
+          <to><interface-ref name="Port13" ref="0x2ae8ddf74978" scoped=""/></to>
+        </wire>
+        <wire loc="66:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/platforms/telosa/chips/cc2420/HplCC2420PinsC.nc">
+          <from><interface-ref name="HplGeneralIO" ref="0x2ae8de6eb780" scoped=""/></from>
+          <to><interface-ref name="Port10" ref="0x2ae8ddf7b7c8" scoped=""/></to>
+        </wire>
+        <wire loc="67:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/platforms/telosa/chips/cc2420/HplCC2420PinsC.nc">
+          <from><interface-ref name="HplGeneralIO" ref="0x2ae8de6e7c18" scoped=""/></from>
+          <to><interface-ref name="Port46" ref="0x2ae8ddfaec88" scoped=""/></to>
+        </wire>
+        <wire loc="68:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/platforms/telosa/chips/cc2420/HplCC2420PinsC.nc">
+          <from><interface-ref name="HplGeneralIO" ref="0x2ae8de6e1020" scoped=""/></from>
+          <to><interface-ref name="Port41" ref="0x2ae8ddf814e0" scoped=""/></to>
+        </wire>
+        <wire loc="69:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/platforms/telosa/chips/cc2420/HplCC2420PinsC.nc">
+          <from><interface-ref name="HplGeneralIO" ref="0x2ae8de6dd2e8" scoped=""/></from>
+          <to><interface-ref name="Port45" ref="0x2ae8ddfaf140" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component><component loc="30(TimeSyncAppC.Timer2):/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/timer/Alarm32khz32C.nc" nicename="tos.chips.msp430.timer.Alarm32khz32C" qname="TimeSyncAppC.Timer2">
+      <documentation loc="22:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/timer/Alarm32khz32C.nc">
+        <short>
+ Alarm32khzC is the alarm for async 32khz alarms
+
+ </short>
+        <long>
+ Alarm32khzC is the alarm for async 32khz alarms
+
+ @author Cory Sharp &lt;cssharp@eecs.berkeley.edu&gt;
+ @see  Please refer to TEP 102 for more information about this component and its
+          intended use.
+</long>
+      </documentation>
+      <instance number="1">
+        <component-ref nicename="tos.chips.msp430.timer.Alarm32khz32C" qname="Alarm32khz32C"/>
+      </instance>
+      <configuration/>
+      <wiring>
+        <wire>
+          <from><interface-ref name="Alarm" ref="0x2ae8df03d538" scoped=""/></from>
+          <to><interface-ref name="Alarm" ref="0x2ae8dfa73c78" scoped=""/></to>
+        </wire>
+        <wire>
+          <from><interface-ref name="Init" ref="0x2ae8df03fcc0" scoped=""/></from>
+          <to><interface-ref name="Init" ref="0x2ae8dfa79450" scoped=""/></to>
+        </wire>
+        <wire>
+          <from><interface-ref name="AlarmFrom" ref="0x2ae8dfa6c1e8" scoped=""/></from>
+          <to><interface-ref name="Alarm" ref="0x2ae8dfa79c38" scoped=""/></to>
+        </wire>
+        <wire>
+          <from><interface-ref name="Counter" ref="0x2ae8dfa6f020" scoped=""/></from>
+          <to><interface-ref name="Counter" ref="0x2ae8de45abf0" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component><component loc="48:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/platforms/telosa/ActiveMessageC.nc" nicename="tos.platforms.telosa.ActiveMessageC" qname="ActiveMessageC">
+      <documentation loc="38:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/platforms/telosa/ActiveMessageC.nc">
+        <short>
+
+ The Active Message layer on the Telos platform.</short>
+        <long>
+
+ The Active Message layer on the Telos platform. This is a naming wrapper
+ around the CC2420 Active Message layer.
+
+ @author Philip Levis
+ @version $Revision: 1.8 $ $Date: 2009/09/16 00:51:51 $
+</long>
+      </documentation>
+      <configuration/>
+      <wiring>
+        <wire loc="67:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/platforms/telosa/ActiveMessageC.nc">
+          <from><interface-ref name="SplitControl" ref="0x2ae8df00b2c0" scoped=""/></from>
+          <to><interface-ref name="SplitControl" ref="0x2ae8de554290" scoped=""/></to>
+        </wire>
+        <wire loc="69:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/platforms/telosa/ActiveMessageC.nc">
+          <from><interface-ref name="AMSend" ref="0x2ae8df00a270" scoped=""/></from>
+          <to><interface-ref name="AMSend" ref="0x2ae8de553270" scoped=""/></to>
+        </wire>
+        <wire loc="71:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/platforms/telosa/ActiveMessageC.nc">
+          <from><interface-ref name="Snoop" ref="0x2ae8df008020" scoped=""/></from>
+          <to><interface-ref name="Snoop" ref="0x2ae8de550020" scoped=""/></to>
+        </wire>
+        <wire loc="72:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/platforms/telosa/ActiveMessageC.nc">
+          <from><interface-ref name="Packet" ref="0x2ae8df0085f8" scoped=""/></from>
+          <to><interface-ref name="Packet" ref="0x2ae8de54fbd8" scoped=""/></to>
+        </wire>
+        <wire loc="78:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/platforms/telosa/ActiveMessageC.nc">
+          <from><interface-ref name="PacketTimeStamp32khz" ref="0x2ae8df0046b8" scoped=""/></from>
+          <to><interface-ref name="PacketTimeStamp32khz" ref="0x2ae8decee510" scoped=""/></to>
+        </wire>
+        <wire loc="75:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/platforms/telosa/ActiveMessageC.nc">
+          <from><interface-ref name="LowPowerListening" ref="0x2ae8df075170" scoped=""/></from>
+          <to><interface-ref name="LowPowerListening" ref="0x2ae8de54ce10" scoped=""/></to>
+        </wire>
+        <wire loc="70:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/platforms/telosa/ActiveMessageC.nc">
+          <from><interface-ref name="Receive" ref="0x2ae8df0093c8" scoped=""/></from>
+          <to><interface-ref name="Receive" ref="0x2ae8de5523c8" scoped=""/></to>
+        </wire>
+        <wire loc="74:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/platforms/telosa/ActiveMessageC.nc">
+          <from><interface-ref name="PacketAcknowledgements" ref="0x2ae8df006968" scoped=""/></from>
+          <to><interface-ref name="PacketAcknowledgements" ref="0x2ae8de54d1a0" scoped=""/></to>
+        </wire>
+        <wire loc="73:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/platforms/telosa/ActiveMessageC.nc">
+          <from><interface-ref name="AMPacket" ref="0x2ae8df0072c0" scoped=""/></from>
+          <to><interface-ref name="AMPacket" ref="0x2ae8de550610" scoped=""/></to>
+        </wire>
+        <wire loc="79:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/platforms/telosa/ActiveMessageC.nc">
+          <from><interface-ref name="PacketTimeStampMilli" ref="0x2ae8df000670" scoped=""/></from>
+          <to><interface-ref name="PacketTimeStampMilli" ref="0x2ae8decea478" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component><component loc="41:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/cc2420/CC2420RadioC.nc" nicename="tos.chips.cc2420.CC2420RadioC" qname="CC2420RadioC">
+      <documentation loc="24:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/cc2420/CC2420RadioC.nc">
+        <short>
+ Radio wiring for the CC2420.</short>
+        <long>
+ Radio wiring for the CC2420.  This layer seperates the common
+ wiring of the lower-layer components of the CC2420 stack and makes
+ them available to clients like the AM stack and the IEEE802.15.4
+ stack.
+
+ This component provides the highest-level internal interface to
+ other components of the CC2420 stack.
+
+ @author Philip Levis
+ @author David Moss
+ @author Stephen Dawson-Haggerty
+ @version $Revision: 1.2 $ $Date: 2009/08/20 01:37:44 $
+</long>
+      </documentation>
+      <configuration/>
+      <wiring>
+        <wire loc="94:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/cc2420/CC2420RadioC.nc">
+          <from><interface-ref name="SplitControl" ref="0x2ae8de57d590" scoped=""/></from>
+          <to><interface-ref name="SplitControl" ref="0x2ae8def85020" scoped=""/></to>
+        </wire>
+        <wire loc="83:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/cc2420/CC2420RadioC.nc">
+          <from><interface-ref name="CC2420Packet" ref="0x2ae8de5739a0" scoped=""/></from>
+          <to><interface-ref name="CC2420Packet" ref="0x2ae8decf38c0" scoped=""/></to>
+        </wire>
+        <wire loc="88:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/cc2420/CC2420RadioC.nc">
+          <from><interface-ref name="Send" ref="0x2ae8de576298" scoped=""/></from>
+          <to><interface-ref name="Send" ref="0x2ae8deef6a08" scoped=""/></to>
+        </wire>
+        <wire loc="90:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/cc2420/CC2420RadioC.nc">
+          <from><interface-ref name="ActiveSend" ref="0x2ae8de575690" scoped=""/></from>
+          <to><interface-ref name="ActiveSend" ref="0x2ae8deef5db8" scoped=""/></to>
+        </wire>
+        <wire loc="82:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/cc2420/CC2420RadioC.nc">
+          <from><interface-ref name="LowPowerListening" ref="0x2ae8de5be7c0" scoped=""/></from>
+          <to><interface-ref name="LowPowerListening" ref="0x2ae8def86468" scoped=""/></to>
+        </wire>
+        <wire loc="89:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/cc2420/CC2420RadioC.nc">
+          <from><interface-ref name="Receive" ref="0x2ae8de575020" scoped=""/></from>
+          <to><interface-ref name="Receive" ref="0x2ae8deef5748" scoped=""/></to>
+        </wire>
+        <wire loc="84:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/cc2420/CC2420RadioC.nc">
+          <from><interface-ref name="PacketAcknowledgements" ref="0x2ae8de5727f0" scoped=""/></from>
+          <to><interface-ref name="Acks" ref="0x2ae8decf0850" scoped=""/></to>
+        </wire>
+        <wire loc="87:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/cc2420/CC2420RadioC.nc">
+          <from><interface-ref name="Resource" ref="0x2ae8de5775b0" scoped=""/></from>
+          <to><interface-ref name="Resource" ref="0x2ae8deea9d80" scoped=""/></to>
+        </wire>
+        <wire loc="91:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/cc2420/CC2420RadioC.nc">
+          <from><interface-ref name="ActiveReceive" ref="0x2ae8de573388" scoped=""/></from>
+          <to><interface-ref name="ActiveReceive" ref="0x2ae8deef4ae8" scoped=""/></to>
+        </wire>
+        <wire loc="81:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/cc2420/CC2420RadioC.nc">
+          <from><interface-ref name="PacketLink" ref="0x2ae8de5bd2d0" scoped=""/></from>
+          <to><interface-ref name="PacketLink" ref="0x2ae8def72768" scoped=""/></to>
+        </wire>
+        <wire loc="85:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/cc2420/CC2420RadioC.nc">
+          <from><interface-ref name="LinkPacketMetadata" ref="0x2ae8de5be178" scoped=""/></from>
+          <to><interface-ref name="LinkPacketMetadata" ref="0x2ae8decefae8" scoped=""/></to>
+        </wire>
+        <wire loc="95:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/cc2420/CC2420RadioC.nc">
+          <from><interface-ref name="SubControl" ref="0x2ae8def82020" scoped=""/></from>
+          <to><interface-ref name="SplitControl" ref="0x2ae8de5b6880" scoped=""/></to>
+        </wire>
+        <wire loc="98:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/cc2420/CC2420RadioC.nc">
+          <from><interface-ref name="SubSend" ref="0x2ae8deef3880" scoped=""/></from>
+          <to><interface-ref name="Send" ref="0x2ae8deec99a0" scoped=""/></to>
+        </wire>
+        <wire loc="99:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/cc2420/CC2420RadioC.nc">
+          <from><interface-ref name="SubSend" ref="0x2ae8deec66c0" scoped=""/></from>
+          <to><interface-ref name="Send" ref="0x2ae8def88af8" scoped=""/></to>
+        </wire>
+        <wire loc="100:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/cc2420/CC2420RadioC.nc">
+          <from><interface-ref name="SubSend" ref="0x2ae8def71528" scoped=""/></from>
+          <to><interface-ref name="Send" ref="0x2ae8def871f0" scoped=""/></to>
+        </wire>
+        <wire loc="101:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/cc2420/CC2420RadioC.nc">
+          <from><interface-ref name="SubSend" ref="0x2ae8def849d0" scoped=""/></from>
+          <to><interface-ref name="Send" ref="0x2ae8de5b5460" scoped=""/></to>
+        </wire>
+        <wire loc="104:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/cc2420/CC2420RadioC.nc">
+          <from><interface-ref name="SubReceive" ref="0x2ae8deef3230" scoped=""/></from>
+          <to><interface-ref name="Receive" ref="0x2ae8def87df0" scoped=""/></to>
+        </wire>
+        <wire loc="105:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/cc2420/CC2420RadioC.nc">
+          <from><interface-ref name="SubReceive" ref="0x2ae8def837f0" scoped=""/></from>
+          <to><interface-ref name="Receive" ref="0x2ae8deec7b38" scoped=""/></to>
+        </wire>
+        <wire loc="106:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/cc2420/CC2420RadioC.nc">
+          <from><interface-ref name="SubReceive" ref="0x2ae8deea8aa0" scoped=""/></from>
+          <to><interface-ref name="Receive" ref="0x2ae8de5b4108" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component><component loc="34:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/LedsC.nc" nicename="tos.system.LedsC" qname="LedsC">
+      <documentation loc="23:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/LedsC.nc">
+        <short>
+
+ The basic TinyOS LEDs abstraction.</short>
+        <long>
+
+ The basic TinyOS LEDs abstraction.
+
+ @author Phil Buonadonna
+ @author David Gay
+ @author Philip Levis
+ @author Joe Polastre
+</long>
+      </documentation>
+      <configuration/>
+      <wiring>
+        <wire loc="40:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/LedsC.nc">
+          <from><interface-ref name="Leds" ref="0x2ae8de10d760" scoped=""/></from>
+          <to><interface-ref name="Leds" ref="0x2ae8de16c020" scoped=""/></to>
+        </wire>
+        <wire loc="42:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/LedsC.nc">
+          <from><interface-ref name="Init" ref="0x2ae8de181020" scoped=""/></from>
+          <to><interface-ref name="Init" ref="0x2ae8de1709e0" scoped=""/></to>
+        </wire>
+        <wire loc="43:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/LedsC.nc">
+          <from><interface-ref name="Led0" ref="0x2ae8de164348" scoped=""/></from>
+          <to><interface-ref name="Led0" ref="0x2ae8de16dab8" scoped=""/></to>
+        </wire>
+        <wire loc="44:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/LedsC.nc">
+          <from><interface-ref name="Led1" ref="0x2ae8de16a4c0" scoped=""/></from>
+          <to><interface-ref name="Led1" ref="0x2ae8de184ca8" scoped=""/></to>
+        </wire>
+        <wire loc="45:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/LedsC.nc">
+          <from><interface-ref name="Led2" ref="0x2ae8de169648" scoped=""/></from>
+          <to><interface-ref name="Led2" ref="0x2ae8de183e30" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component><component loc="40:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/platforms/telosa/chips/cc2420/HplCC2420InterruptsC.nc" nicename="tos.platforms.telosa.chips.cc2420.HplCC2420InterruptsC" qname="HplCC2420InterruptsC">
+      <documentation loc="32:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/platforms/telosa/chips/cc2420/HplCC2420InterruptsC.nc">
+        <short>
+ HPL implementation of interrupts and captures for the ChipCon
+ CC2420 radio connected to a TI MSP430 processor.</short>
+        <long>
+ HPL implementation of interrupts and captures for the ChipCon
+ CC2420 radio connected to a TI MSP430 processor.
+
+ @author Jonathan Hui &lt;jhui@archrock.com&gt;
+ @version $Revision: 1.4 $ $Date: 2006/12/12 18:23:44 $
+</long>
+      </documentation>
+      <configuration/>
+      <wiring>
+        <wire loc="63:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/platforms/telosa/chips/cc2420/HplCC2420InterruptsC.nc">
+          <from><interface-ref name="CaptureSFD" ref="0x2ae8de71e388" scoped=""/></from>
+          <to><interface-ref name="Capture" ref="0x2ae8de71adf0" scoped=""/></to>
+        </wire>
+        <wire loc="64:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/platforms/telosa/chips/cc2420/HplCC2420InterruptsC.nc">
+          <from><interface-ref name="InterruptCCA" ref="0x2ae8de71d020" scoped=""/></from>
+          <to><interface-ref name="Interrupt" ref="0x2ae8de80cdf8" scoped=""/></to>
+        </wire>
+        <wire loc="65:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/platforms/telosa/chips/cc2420/HplCC2420InterruptsC.nc">
+          <from><interface-ref name="InterruptFIFOP" ref="0x2ae8de71dbe8" scoped=""/></from>
+          <to><interface-ref name="Interrupt" ref="0x2ae8de853bb8" scoped=""/></to>
+        </wire>
+        <wire loc="53:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/platforms/telosa/chips/cc2420/HplCC2420InterruptsC.nc">
+          <from><interface-ref name="Msp430TimerControl" ref="0x2ae8de719890" scoped=""/></from>
+          <to><interface-ref name="ControlB1" ref="0x2ae8dda8c060" scoped=""/></to>
+        </wire>
+        <wire loc="54:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/platforms/telosa/chips/cc2420/HplCC2420InterruptsC.nc">
+          <from><interface-ref name="Msp430Capture" ref="0x2ae8de707bd8" scoped=""/></from>
+          <to><interface-ref name="CaptureB1" ref="0x2ae8dda9e020" scoped=""/></to>
+        </wire>
+        <wire loc="55:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/platforms/telosa/chips/cc2420/HplCC2420InterruptsC.nc">
+          <from><interface-ref name="GeneralIO" ref="0x2ae8de706a90" scoped=""/></from>
+          <to><interface-ref name="Port41" ref="0x2ae8ddf814e0" scoped=""/></to>
+        </wire>
+        <wire loc="60:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/platforms/telosa/chips/cc2420/HplCC2420InterruptsC.nc">
+          <from><interface-ref name="HplInterrupt" ref="0x2ae8de8558d0" scoped=""/></from>
+          <to><interface-ref name="Port14" ref="0x2ae8de74c3e0" scoped=""/></to>
+        </wire>
+        <wire loc="61:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/platforms/telosa/chips/cc2420/HplCC2420InterruptsC.nc">
+          <from><interface-ref name="HplInterrupt" ref="0x2ae8de852780" scoped=""/></from>
+          <to><interface-ref name="Port10" ref="0x2ae8de74e3c0" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component><component loc="38:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/cc2420/packet/CC2420PacketC.nc" nicename="tos.chips.cc2420.packet.CC2420PacketC" qname="CC2420PacketC">
+      <documentation loc="32:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/cc2420/packet/CC2420PacketC.nc">
+        <short>
+ </short>
+        <long>
+ @author Jonathan Hui &lt;jhui@archrock.com&gt;
+ @author David Moss
+ @author Chad Metcalf
+</long>
+      </documentation>
+      <configuration/>
+      <wiring>
+        <wire loc="58:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/cc2420/packet/CC2420PacketC.nc">
+          <from><interface-ref name="LinkPacketMetadata" ref="0x2ae8decefae8" scoped=""/></from>
+          <to><interface-ref name="LinkPacketMetadata" ref="0x2ae8ded4c858" scoped=""/></to>
+        </wire>
+        <wire loc="55:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/cc2420/packet/CC2420PacketC.nc">
+          <from><interface-ref name="CC2420Packet" ref="0x2ae8decf38c0" scoped=""/></from>
+          <to><interface-ref name="CC2420Packet" ref="0x2ae8ded50820" scoped=""/></to>
+        </wire>
+        <wire loc="59:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/cc2420/packet/CC2420PacketC.nc">
+          <from><interface-ref name="PacketTimeStamp32khz" ref="0x2ae8decee510" scoped=""/></from>
+          <to><interface-ref name="PacketTimeStamp32khz" ref="0x2ae8ded4b298" scoped=""/></to>
+        </wire>
+        <wire loc="57:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/cc2420/packet/CC2420PacketC.nc">
+          <from><interface-ref name="CC2420PacketBody" ref="0x2ae8decef310" scoped=""/></from>
+          <to><interface-ref name="CC2420PacketBody" ref="0x2ae8ded4c080" scoped=""/></to>
+        </wire>
+        <wire loc="61:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/cc2420/packet/CC2420PacketC.nc">
+          <from><interface-ref name="PacketTimeSyncOffset" ref="0x2ae8ded51020" scoped=""/></from>
+          <to><interface-ref name="PacketTimeSyncOffset" ref="0x2ae8ded44bd0" scoped=""/></to>
+        </wire>
+        <wire loc="60:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/cc2420/packet/CC2420PacketC.nc">
+          <from><interface-ref name="PacketTimeStampMilli" ref="0x2ae8decea478" scoped=""/></from>
+          <to><interface-ref name="PacketTimeStampMilli" ref="0x2ae8ded47130" scoped=""/></to>
+        </wire>
+        <wire loc="56:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/cc2420/packet/CC2420PacketC.nc">
+          <from><interface-ref name="Acks" ref="0x2ae8decf0850" scoped=""/></from>
+          <to><interface-ref name="Acks" ref="0x2ae8ded4d6d8" scoped=""/></to>
+        </wire>
+        <wire loc="64:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/cc2420/packet/CC2420PacketC.nc">
+          <from><interface-ref name="Counter" ref="0x2ae8ded63330" scoped=""/></from>
+          <to><interface-ref name="Counter" ref="0x2ae8de45abf0" scoped=""/></to>
+        </wire>
+        <wire loc="65:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/cc2420/packet/CC2420PacketC.nc">
+          <from><interface-ref name="LocalTime32khz" ref="0x2ae8ded426a8" scoped=""/></from>
+          <to><interface-ref name="LocalTime" ref="0x2ae8ded6c128" scoped=""/></to>
+        </wire>
+        <wire loc="69:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/cc2420/packet/CC2420PacketC.nc">
+          <from><interface-ref name="LocalTimeMilli" ref="0x2ae8ded41a38" scoped=""/></from>
+          <to><interface-ref name="LocalTime" ref="0x2ae8ded578a8" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component><component loc="45:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/lib/printf/MainC.nc" nicename="tos.lib.printf.MainC" qname="MainC">
+      <documentation loc="34:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/lib/printf/MainC.nc">
+        <short>
+ MainC is the system interface the TinyOS boot sequence.</short>
+        <long>
+ MainC is the system interface the TinyOS boot sequence. It wires the
+ boot sequence implementation to the scheduler and hardware resources.
+
+ @author Philip Levis
+ @author Kevin Klues
+ @date   August 6 2005
+</long>
+      </documentation>
+      <configuration/>
+      <wiring>
+        <wire loc="59:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/lib/printf/MainC.nc">
+          <from><interface-ref name="Boot" ref="0x2ae8dd9fe3e0" scoped=""/></from>
+          <to><interface-ref name="Boot" ref="0x2ae8ddbae3d8" scoped=""/></to>
+        </wire>
+        <wire loc="53:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/lib/printf/MainC.nc">
+          <from><interface-ref name="Scheduler" ref="0x2ae8ddba3020" scoped=""/></from>
+          <to><interface-ref name="Scheduler" ref="0x2ae8dd4fa0f0" scoped=""/></to>
+        </wire>
+        <wire loc="54:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/lib/printf/MainC.nc">
+          <from><interface-ref name="PlatformInit" ref="0x2ae8ddba39f8" scoped=""/></from>
+          <to><interface-ref name="Init" ref="0x2ae8dda00798" scoped=""/></to>
+        </wire>
+        <wire loc="55:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/lib/printf/MainC.nc">
+          <from><interface-ref name="MainBoot" ref="0x2ae8ddbbd020" scoped=""/></from>
+          <to><interface-ref name="Boot" ref="0x2ae8dd9ff9c0" scoped=""/></to>
+        </wire>
+        <wire loc="58:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/lib/printf/MainC.nc">
+          <from><interface-ref name="SoftwareInit" ref="0x2ae8ddba2140" scoped=""/></from>
+          <to><interface-ref name="SoftwareInit" ref="0x2ae8dd9fd808" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component><component loc="7:TimeSyncC.nc" nicename="TimeSyncC" qname="TimeSyncC">
+      <module/>
+    </component><component loc="39(TimeSyncAppC.Spi):/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/cc2420/spi/CC2420SpiC.nc" nicename="tos.chips.cc2420.spi.CC2420SpiC" qname="TimeSyncAppC.Spi">
+      <documentation loc="32:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/cc2420/spi/CC2420SpiC.nc">
+        <short>
+ Implementation of basic SPI primitives for the ChipCon CC2420 radio.</short>
+        <long>
+ Implementation of basic SPI primitives for the ChipCon CC2420 radio.
+
+ @author Jonathan Hui &lt;jhui@archrock.com&gt;
+ @version $Revision: 1.4 $ $Date: 2009/08/14 20:33:43 $
+</long>
+      </documentation>
+      <instance number="5">
+        <component-ref nicename="tos.chips.cc2420.spi.CC2420SpiC" qname="CC2420SpiC"/>
+      </instance>
+      <configuration/>
+      <wiring>
+        <wire>
+          <from><interface-ref name="RXCTRL1" ref="0x2ae8df09fa88" scoped=""/></from>
+          <to><interface-ref name="Reg" ref="0x2ae8de8715d0" scoped=""/>
+          <arguments>
+            <value cst="I:23">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire>
+          <from><interface-ref name="STXCAL" ref="0x2ae8df0a9020" scoped=""/></from>
+          <to><interface-ref name="Strobe" ref="0x2ae8de86f348" scoped=""/>
+          <arguments>
+            <value cst="I:2">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire>
+          <from><interface-ref name="MDMCTRL0" ref="0x2ae8df0a3a88" scoped=""/></from>
+          <to><interface-ref name="Reg" ref="0x2ae8de8715d0" scoped=""/>
+          <arguments>
+            <value cst="I:17">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire>
+          <from><interface-ref name="SECCTRL1" ref="0x2ae8df09d470" scoped=""/></from>
+          <to><interface-ref name="Reg" ref="0x2ae8de8715d0" scoped=""/>
+          <arguments>
+            <value cst="I:26">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire>
+          <from><interface-ref name="BATTMON" ref="0x2ae8df09dc10" scoped=""/></from>
+          <to><interface-ref name="Reg" ref="0x2ae8de8715d0" scoped=""/>
+          <arguments>
+            <value cst="I:27">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire>
+          <from><interface-ref name="RXNONCE" ref="0x2ae8df091470" scoped=""/></from>
+          <to><interface-ref name="Ram" ref="0x2ae8de872868" scoped=""/>
+          <arguments>
+            <value cst="I:272">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire>
+          <from><interface-ref name="KEY0" ref="0x2ae8df094470" scoped=""/></from>
+          <to><interface-ref name="Ram" ref="0x2ae8de872868" scoped=""/>
+          <arguments>
+            <value cst="I:256">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire>
+          <from><interface-ref name="STXONCCA" ref="0x2ae8df0a82e8" scoped=""/></from>
+          <to><interface-ref name="Strobe" ref="0x2ae8de86f348" scoped=""/>
+          <arguments>
+            <value cst="I:5">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire>
+          <from><interface-ref name="TXFIFO_RAM" ref="0x2ae8df095470" scoped=""/></from>
+          <to><interface-ref name="Ram" ref="0x2ae8de872868" scoped=""/>
+          <arguments>
+            <value cst="I:0">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire>
+          <from><interface-ref name="RSSI" ref="0x2ae8df0a2a88" scoped=""/></from>
+          <to><interface-ref name="Reg" ref="0x2ae8de8715d0" scoped=""/>
+          <arguments>
+            <value cst="I:19">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire>
+          <from><interface-ref name="TXCTRL" ref="0x2ae8df0a1a88" scoped=""/></from>
+          <to><interface-ref name="Reg" ref="0x2ae8de8715d0" scoped=""/>
+          <arguments>
+            <value cst="I:21">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire>
+          <from><interface-ref name="MANAND" ref="0x2ae8df09ac10" scoped=""/></from>
+          <to><interface-ref name="Reg" ref="0x2ae8de8715d0" scoped=""/>
+          <arguments>
+            <value cst="I:33">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire>
+          <from><interface-ref name="IOCFG0" ref="0x2ae8df09c470" scoped=""/></from>
+          <to><interface-ref name="Reg" ref="0x2ae8de8715d0" scoped=""/>
+          <arguments>
+            <value cst="I:28">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire>
+          <from><interface-ref name="ChipSpiResource" ref="0x2ae8df0ab8c8" scoped=""/></from>
+          <to><interface-ref name="ChipSpiResource" ref="0x2ae8de874650" scoped=""/></to>
+        </wire>
+        <wire>
+          <from><interface-ref name="SFLUSHTX" ref="0x2ae8df0a7c50" scoped=""/></from>
+          <to><interface-ref name="Strobe" ref="0x2ae8de86f348" scoped=""/>
+          <arguments>
+            <value cst="I:9">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire>
+          <from><interface-ref name="SACK" ref="0x2ae8df0a52e8" scoped=""/></from>
+          <to><interface-ref name="Strobe" ref="0x2ae8de86f348" scoped=""/>
+          <arguments>
+            <value cst="I:10">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire>
+          <from><interface-ref name="SACKPEND" ref="0x2ae8df0a5a00" scoped=""/></from>
+          <to><interface-ref name="Strobe" ref="0x2ae8de86f348" scoped=""/>
+          <arguments>
+            <value cst="I:11">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire>
+          <from><interface-ref name="RXFIFO_RAM" ref="0x2ae8df095c10" scoped=""/></from>
+          <to><interface-ref name="Ram" ref="0x2ae8de872868" scoped=""/>
+          <arguments>
+            <value cst="I:128">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire>
+          <from><interface-ref name="SXOSCOFF" ref="0x2ae8df0a7020" scoped=""/></from>
+          <to><interface-ref name="Strobe" ref="0x2ae8de86f348" scoped=""/>
+          <arguments>
+            <value cst="I:7">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire>
+          <from><interface-ref name="SYNCWORD" ref="0x2ae8df0a12e8" scoped=""/></from>
+          <to><interface-ref name="Reg" ref="0x2ae8de8715d0" scoped=""/>
+          <arguments>
+            <value cst="I:20">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire>
+          <from><interface-ref name="MDMCTRL1" ref="0x2ae8df0a22e8" scoped=""/></from>
+          <to><interface-ref name="Reg" ref="0x2ae8de8715d0" scoped=""/>
+          <arguments>
+            <value cst="I:18">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire>
+          <from><interface-ref name="SXOSCON" ref="0x2ae8df0aa900" scoped=""/></from>
+          <to><interface-ref name="Strobe" ref="0x2ae8de86f348" scoped=""/>
+          <arguments>
+            <value cst="I:1">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire>
+          <from><interface-ref name="TXNONCE" ref="0x2ae8df093c10" scoped=""/></from>
+          <to><interface-ref name="Ram" ref="0x2ae8de872868" scoped=""/>
+          <arguments>
+            <value cst="I:320">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire>
+          <from><interface-ref name="KEY1" ref="0x2ae8df094c10" scoped=""/></from>
+          <to><interface-ref name="Ram" ref="0x2ae8de872868" scoped=""/>
+          <arguments>
+            <value cst="I:304">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire>
+          <from><interface-ref name="MANOR" ref="0x2ae8df098470" scoped=""/></from>
+          <to><interface-ref name="Reg" ref="0x2ae8de8715d0" scoped=""/>
+          <arguments>
+            <value cst="I:34">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire>
+          <from><interface-ref name="SHORTADR" ref="0x2ae8df096c10" scoped=""/></from>
+          <to><interface-ref name="Ram" ref="0x2ae8de872868" scoped=""/>
+          <arguments>
+            <value cst="I:362">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire>
+          <from><interface-ref name="MANFIDL" ref="0x2ae8df09b470" scoped=""/></from>
+          <to><interface-ref name="Reg" ref="0x2ae8de8715d0" scoped=""/>
+          <arguments>
+            <value cst="I:30">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire>
+          <from><interface-ref name="RXFIFO" ref="0x2ae8df091c10" scoped=""/></from>
+          <to><interface-ref name="Fifo" ref="0x2ae8de873550" scoped=""/>
+          <arguments>
+            <value cst="I:63">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire>
+          <from><interface-ref name="SNOP" ref="0x2ae8df0aa2e8" scoped=""/></from>
+          <to><interface-ref name="Strobe" ref="0x2ae8de86f348" scoped=""/>
+          <arguments>
+            <value cst="I:0">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire>
+          <from><interface-ref name="MAIN" ref="0x2ae8df0a32e8" scoped=""/></from>
+          <to><interface-ref name="Reg" ref="0x2ae8de8715d0" scoped=""/>
+          <arguments>
+            <value cst="I:16">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire>
+          <from><interface-ref name="RXCTRL0" ref="0x2ae8df09f2e8" scoped=""/></from>
+          <to><interface-ref name="Reg" ref="0x2ae8de8715d0" scoped=""/>
+          <arguments>
+            <value cst="I:22">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire>
+          <from><interface-ref name="IOCFG1" ref="0x2ae8df09cc10" scoped=""/></from>
+          <to><interface-ref name="Reg" ref="0x2ae8de8715d0" scoped=""/>
+          <arguments>
+            <value cst="I:29">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire>
+          <from><interface-ref name="FSCTRL" ref="0x2ae8df09e470" scoped=""/></from>
+          <to><interface-ref name="Reg" ref="0x2ae8de8715d0" scoped=""/>
+          <arguments>
+            <value cst="I:24">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire>
+          <from><interface-ref name="SRXON" ref="0x2ae8df0a9638" scoped=""/></from>
+          <to><interface-ref name="Strobe" ref="0x2ae8de86f348" scoped=""/>
+          <arguments>
+            <value cst="I:3">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire>
+          <from><interface-ref name="SECCTRL0" ref="0x2ae8df09ec10" scoped=""/></from>
+          <to><interface-ref name="Reg" ref="0x2ae8de8715d0" scoped=""/>
+          <arguments>
+            <value cst="I:25">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire>
+          <from><interface-ref name="Resource" ref="0x2ae8df0acb98" scoped=""/></from>
+          <to><interface-ref name="Resource" ref="0x2ae8de877828" scoped=""/>
+          <arguments>
+            <value cst="I:5">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire>
+          <from><interface-ref name="SRXDEC" ref="0x2ae8df0a4060" scoped=""/></from>
+          <to><interface-ref name="Strobe" ref="0x2ae8de86f348" scoped=""/>
+          <arguments>
+            <value cst="I:12">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire>
+          <from><interface-ref name="SAES" ref="0x2ae8df0a4c90" scoped=""/></from>
+          <to><interface-ref name="Strobe" ref="0x2ae8de86f348" scoped=""/>
+          <arguments>
+            <value cst="I:14">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire>
+          <from><interface-ref name="PANID" ref="0x2ae8df096470" scoped=""/></from>
+          <to><interface-ref name="Ram" ref="0x2ae8de872868" scoped=""/>
+          <arguments>
+            <value cst="I:360">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire>
+          <from><interface-ref name="IEEEADR" ref="0x2ae8df097c10" scoped=""/></from>
+          <to><interface-ref name="Ram" ref="0x2ae8de872868" scoped=""/>
+          <arguments>
+            <value cst="I:352">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire>
+          <from><interface-ref name="SFLUSHRX" ref="0x2ae8df0a7638" scoped=""/></from>
+          <to><interface-ref name="Strobe" ref="0x2ae8de86f348" scoped=""/>
+          <arguments>
+            <value cst="I:8">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire>
+          <from><interface-ref name="RXFIFO_REGISTER" ref="0x2ae8df097470" scoped=""/></from>
+          <to><interface-ref name="Reg" ref="0x2ae8de8715d0" scoped=""/>
+          <arguments>
+            <value cst="I:63">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire>
+          <from><interface-ref name="SABUF" ref="0x2ae8df093470" scoped=""/></from>
+          <to><interface-ref name="Ram" ref="0x2ae8de872868" scoped=""/>
+          <arguments>
+            <value cst="I:288">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire>
+          <from><interface-ref name="AGCCTRL" ref="0x2ae8df098c10" scoped=""/></from>
+          <to><interface-ref name="Reg" ref="0x2ae8de8715d0" scoped=""/>
+          <arguments>
+            <value cst="I:35">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire>
+          <from><interface-ref name="STXON" ref="0x2ae8df0a9c50" scoped=""/></from>
+          <to><interface-ref name="Strobe" ref="0x2ae8de86f348" scoped=""/>
+          <arguments>
+            <value cst="I:4">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire>
+          <from><interface-ref name="FSMTC" ref="0x2ae8df09a470" scoped=""/></from>
+          <to><interface-ref name="Reg" ref="0x2ae8de8715d0" scoped=""/>
+          <arguments>
+            <value cst="I:32">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire>
+          <from><interface-ref name="SRFOFF" ref="0x2ae8df0a8900" scoped=""/></from>
+          <to><interface-ref name="Strobe" ref="0x2ae8de86f348" scoped=""/>
+          <arguments>
+            <value cst="I:6">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire>
+          <from><interface-ref name="MANFIDH" ref="0x2ae8df09bc10" scoped=""/></from>
+          <to><interface-ref name="Reg" ref="0x2ae8de8715d0" scoped=""/>
+          <arguments>
+            <value cst="I:31">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire>
+          <from><interface-ref name="STXENC" ref="0x2ae8df0a4678" scoped=""/></from>
+          <to><interface-ref name="Strobe" ref="0x2ae8de86f348" scoped=""/>
+          <arguments>
+            <value cst="I:13">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire>
+          <from><interface-ref name="TXFIFO" ref="0x2ae8df08f020" scoped=""/></from>
+          <to><interface-ref name="Fifo" ref="0x2ae8de873550" scoped=""/>
+          <arguments>
+            <value cst="I:62">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+      </wiring>
+    </component><component loc="36(TimeSyncAppC.Timer1):/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/TimerMilliC.nc" nicename="tos.system.TimerMilliC" qname="TimeSyncAppC.Timer1">
+      <documentation loc="25:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/TimerMilliC.nc">
+        <short>
+ The virtualized millisecond timer abstraction.</short>
+        <long>
+ The virtualized millisecond timer abstraction. Instantiating this 
+ component gives an independent millisecond granularity timer.
+
+ @author Philip Levis
+ @date   January 16 2006
+ @see    TEP 102: Timers
+</long>
+      </documentation>
+      <instance number="1">
+        <component-ref nicename="tos.system.TimerMilliC" qname="TimerMilliC"/>
+      </instance>
+      <configuration/>
+      <wiring>
+        <wire>
+          <from><interface-ref name="Timer" ref="0x2ae8df0458d8" scoped=""/></from>
+          <to><interface-ref name="TimerMilli" ref="0x2ae8dee4a5b8" scoped=""/>
+          <arguments>
+            <value cst="I:1">
+              <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned=""/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+      </wiring>
+    </component></referenced></component>

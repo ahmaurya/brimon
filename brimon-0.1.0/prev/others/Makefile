@@ -1,0 +1,3 @@
+COMPONENT=DummyOneAppC
+include $(MAKERULES)
+

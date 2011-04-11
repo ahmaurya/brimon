@@ -1,0 +1,41 @@
+<?xml version="1.0" ?><component loc="12:SummarizerC.nc" nicename="SummarizerC" qname="SummarizerC">
+      <module/>
+    <specification><interface loc="13:SummarizerC.nc" name="Summary" provided="1" ref="0x2b36770d7020">
+      <component-ref nicename="SummarizerC" qname="SummarizerC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Summary" ref="0x2b36770d7020" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="Summary" qname="Summary"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="summarize" ref="0x2b36770d7370" scoped=""/>
+        <function-ref name="summarized" ref="0x2b36770d74f8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="14:SummarizerC.nc" name="BlockRead" provided="0" ref="0x2b36770d6020">
+      <component-ref nicename="SummarizerC" qname="SummarizerC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="BlockRead" ref="0x2b36770d6020" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.BlockRead" qname="BlockRead"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="read" ref="0x2b36770d6370" scoped=""/>
+        <function-ref name="computeCrcDone" ref="0x2b36770d64f8" scoped=""/>
+        <function-ref name="computeCrc" ref="0x2b36770d6680" scoped=""/>
+        <function-ref name="getSize" ref="0x2b36770d6808" scoped=""/>
+        <function-ref name="readDone" ref="0x2b36770d6990" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="15:SummarizerC.nc" name="LogWrite" provided="0" ref="0x2b36770d5020">
+      <component-ref nicename="SummarizerC" qname="SummarizerC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="LogWrite" ref="0x2b36770d5020" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.LogWrite" qname="LogWrite"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="currentOffset" ref="0x2b36770d5370" scoped=""/>
+        <function-ref name="syncDone" ref="0x2b36770d54f8" scoped=""/>
+        <function-ref name="erase" ref="0x2b36770d5680" scoped=""/>
+        <function-ref name="eraseDone" ref="0x2b36770d5808" scoped=""/>
+        <function-ref name="appendDone" ref="0x2b36770d5990" scoped=""/>
+        <function-ref name="append" ref="0x2b36770d5b18" scoped=""/>
+        <function-ref name="sync" ref="0x2b36770d5ca0" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced/></component>

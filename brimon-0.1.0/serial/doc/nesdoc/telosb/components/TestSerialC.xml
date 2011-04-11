@@ -1,0 +1,102 @@
+<?xml version="1.0" ?><component loc="46:TestSerialC.nc" nicename="TestSerialC" qname="TestSerialC">
+      <module/>
+    <specification><interface loc="50:TestSerialC.nc" name="Boot" provided="0" ref="0x2af767b160d0">
+      <component-ref nicename="TestSerialC" qname="TestSerialC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Boot" ref="0x2af767b160d0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Boot" qname="Boot"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="booted" ref="0x2af767b16420" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="52:TestSerialC.nc" name="AMSend" provided="0" ref="0x2af767b70278">
+      <component-ref nicename="TestSerialC" qname="TestSerialC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="AMSend" ref="0x2af767b70278" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.AMSend" qname="AMSend"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="send" ref="0x2af767b705c8" scoped=""/>
+        <function-ref name="getPayload" ref="0x2af767b70750" scoped=""/>
+        <function-ref name="maxPayloadLength" ref="0x2af767b708d8" scoped=""/>
+        <function-ref name="cancel" ref="0x2af767b70a60" scoped=""/>
+        <function-ref name="sendDone" ref="0x2af767b70be8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="54:TestSerialC.nc" name="Packet" provided="0" ref="0x2af767b79488">
+      <component-ref nicename="TestSerialC" qname="TestSerialC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Packet" ref="0x2af767b79488" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Packet" qname="Packet"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="clear" ref="0x2af767b797d8" scoped=""/>
+        <function-ref name="payloadLength" ref="0x2af767b79960" scoped=""/>
+        <function-ref name="getPayload" ref="0x2af767b79ae8" scoped=""/>
+        <function-ref name="maxPayloadLength" ref="0x2af767b79c70" scoped=""/>
+        <function-ref name="setPayloadLength" ref="0x2af767b79df8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="51:TestSerialC.nc" name="Receive" provided="0" ref="0x2af767b5a7d0">
+      <component-ref nicename="TestSerialC" qname="TestSerialC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Receive" ref="0x2af767b5a7d0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Receive" qname="Receive"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="receive" ref="0x2af767b5ab20" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="53:TestSerialC.nc" name="MilliTimer" provided="0" ref="0x2af767b875a0">
+      <component-ref nicename="TestSerialC" qname="TestSerialC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="MilliTimer" ref="0x2af767b875a0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.timer.Timer" qname="Timer"/>
+        <arguments>
+          <type-tag alignment="I:2" size="I:2"><struct-ref ref="0x2af767af2eb0"/>
+            <typename><typedef-ref name="TMilli" ref="0x2af767b0d230"/></typename>
+          </type-tag>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="getNow" ref="0x2af767b858f0" scoped=""/>
+        <function-ref name="fired" ref="0x2af767b71020" scoped=""/>
+        <function-ref name="startPeriodicAt" ref="0x2af767b71d10" scoped=""/>
+        <function-ref name="isOneShot" ref="0x2af767b718c0" scoped=""/>
+        <function-ref name="getdt" ref="0x2af767b841c0" scoped=""/>
+        <function-ref name="gett0" ref="0x2af767b85d40" scoped=""/>
+        <function-ref name="isRunning" ref="0x2af767b71470" scoped=""/>
+        <function-ref name="startPeriodic" ref="0x2af767b5c118" scoped=""/>
+        <function-ref name="startOneShotAt" ref="0x2af767b85320" scoped=""/>
+        <function-ref name="startOneShot" ref="0x2af767b5c5b8" scoped=""/>
+        <function-ref name="stop" ref="0x2af767b5ca58" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="49:TestSerialC.nc" name="Leds" provided="0" ref="0x2af767b1ac38">
+      <component-ref nicename="TestSerialC" qname="TestSerialC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Leds" ref="0x2af767b1ac38" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Leds" qname="Leds"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="led0Off" ref="0x2af767b0a020" scoped=""/>
+        <function-ref name="led0Toggle" ref="0x2af767b0a1a8" scoped=""/>
+        <function-ref name="led1On" ref="0x2af767b0a330" scoped=""/>
+        <function-ref name="led1Toggle" ref="0x2af767b0a4b8" scoped=""/>
+        <function-ref name="led2Toggle" ref="0x2af767b0a640" scoped=""/>
+        <function-ref name="get" ref="0x2af767b0a7c8" scoped=""/>
+        <function-ref name="led1Off" ref="0x2af767b0a950" scoped=""/>
+        <function-ref name="led2Off" ref="0x2af767b05020" scoped=""/>
+        <function-ref name="set" ref="0x2af767b0aad8" scoped=""/>
+        <function-ref name="led0On" ref="0x2af767b0ac60" scoped=""/>
+        <function-ref name="led2On" ref="0x2af767b0ade8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="48:TestSerialC.nc" name="Control" provided="0" ref="0x2af767b066b8">
+      <component-ref nicename="TestSerialC" qname="TestSerialC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Control" ref="0x2af767b066b8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.SplitControl" qname="SplitControl"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="startDone" ref="0x2af767b06a08" scoped=""/>
+        <function-ref name="stopDone" ref="0x2af767b06b90" scoped=""/>
+        <function-ref name="start" ref="0x2af767b06d18" scoped=""/>
+        <function-ref name="stop" ref="0x2af767b0b020" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced/></component>

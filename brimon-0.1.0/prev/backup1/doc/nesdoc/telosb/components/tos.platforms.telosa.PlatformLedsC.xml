@@ -1,0 +1,647 @@
+<?xml version="1.0" ?><component loc="29:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/platforms/telosa/PlatformLedsC.nc" nicename="tos.platforms.telosa.PlatformLedsC" qname="PlatformLedsC">
+      <documentation loc="23:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/platforms/telosa/PlatformLedsC.nc">
+        <short>
+ </short>
+        <long>
+ @author Joe Polastre
+ @version $Revision: 1.4 $ $Date: 2006/12/12 18:23:44 $
+</long>
+      </documentation>
+      <configuration/>
+      <wiring>
+        <wire loc="47:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/platforms/telosa/PlatformLedsC.nc">
+          <from><interface-ref name="Led0" ref="0x2ae8de16dab8" scoped=""/></from>
+          <to><interface-ref name="GeneralIO" ref="0x2ae8de17fc30" scoped=""/></to>
+        </wire>
+        <wire loc="50:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/platforms/telosa/PlatformLedsC.nc">
+          <from><interface-ref name="Led1" ref="0x2ae8de184ca8" scoped=""/></from>
+          <to><interface-ref name="GeneralIO" ref="0x2ae8de1a8020" scoped=""/></to>
+        </wire>
+        <wire loc="53:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/platforms/telosa/PlatformLedsC.nc">
+          <from><interface-ref name="Led2" ref="0x2ae8de183e30" scoped=""/></from>
+          <to><interface-ref name="GeneralIO" ref="0x2ae8de1a4368" scoped=""/></to>
+        </wire>
+        <wire loc="45:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/platforms/telosa/PlatformLedsC.nc">
+          <from><interface-ref name="LedsInit" ref="0x2ae8dd9f8d60" scoped=""/></from>
+          <to><interface-ref name="Init" ref="0x2ae8de181020" scoped=""/></to>
+        </wire>
+        <wire loc="48:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/platforms/telosa/PlatformLedsC.nc">
+          <from><interface-ref name="HplGeneralIO" ref="0x2ae8de17eda0" scoped=""/></from>
+          <to><interface-ref name="Port54" ref="0x2ae8ddfa3020" scoped=""/></to>
+        </wire>
+        <wire loc="51:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/platforms/telosa/PlatformLedsC.nc">
+          <from><interface-ref name="HplGeneralIO" ref="0x2ae8de1a7120" scoped=""/></from>
+          <to><interface-ref name="Port55" ref="0x2ae8ddfa2b00" scoped=""/></to>
+        </wire>
+        <wire loc="54:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/platforms/telosa/PlatformLedsC.nc">
+          <from><interface-ref name="HplGeneralIO" ref="0x2ae8de1a3470" scoped=""/></from>
+          <to><interface-ref name="Port56" ref="0x2ae8ddfa0668" scoped=""/></to>
+        </wire>
+      </wiring>
+    <specification><interface loc="30:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/platforms/telosa/PlatformLedsC.nc" name="Led0" provided="1" ref="0x2ae8de16dab8">
+      <component-ref nicename="tos.platforms.telosa.PlatformLedsC" qname="PlatformLedsC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Led0" ref="0x2ae8de16dab8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.GeneralIO" qname="GeneralIO"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="makeInput" ref="0x2ae8de16de08" scoped=""/>
+        <function-ref name="isInput" ref="0x2ae8de184020" scoped=""/>
+        <function-ref name="toggle" ref="0x2ae8de1841a8" scoped=""/>
+        <function-ref name="isOutput" ref="0x2ae8de184330" scoped=""/>
+        <function-ref name="get" ref="0x2ae8de1844b8" scoped=""/>
+        <function-ref name="makeOutput" ref="0x2ae8de184640" scoped=""/>
+        <function-ref name="set" ref="0x2ae8de1847c8" scoped=""/>
+        <function-ref name="clr" ref="0x2ae8de184950" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="31:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/platforms/telosa/PlatformLedsC.nc" name="Led1" provided="1" ref="0x2ae8de184ca8">
+      <component-ref nicename="tos.platforms.telosa.PlatformLedsC" qname="PlatformLedsC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Led1" ref="0x2ae8de184ca8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.GeneralIO" qname="GeneralIO"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="makeInput" ref="0x2ae8de183020" scoped=""/>
+        <function-ref name="isInput" ref="0x2ae8de1831a8" scoped=""/>
+        <function-ref name="toggle" ref="0x2ae8de183330" scoped=""/>
+        <function-ref name="isOutput" ref="0x2ae8de1834b8" scoped=""/>
+        <function-ref name="get" ref="0x2ae8de183640" scoped=""/>
+        <function-ref name="makeOutput" ref="0x2ae8de1837c8" scoped=""/>
+        <function-ref name="set" ref="0x2ae8de183950" scoped=""/>
+        <function-ref name="clr" ref="0x2ae8de183ad8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="33:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/platforms/telosa/PlatformLedsC.nc" name="Init" provided="0" ref="0x2ae8de181020">
+      <component-ref nicename="tos.platforms.telosa.PlatformLedsC" qname="PlatformLedsC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Init" ref="0x2ae8de181020" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x2ae8de181370" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="32:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/platforms/telosa/PlatformLedsC.nc" name="Led2" provided="1" ref="0x2ae8de183e30">
+      <component-ref nicename="tos.platforms.telosa.PlatformLedsC" qname="PlatformLedsC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Led2" ref="0x2ae8de183e30" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.GeneralIO" qname="GeneralIO"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="makeInput" ref="0x2ae8de1821a8" scoped=""/>
+        <function-ref name="isInput" ref="0x2ae8de182330" scoped=""/>
+        <function-ref name="toggle" ref="0x2ae8de1824b8" scoped=""/>
+        <function-ref name="isOutput" ref="0x2ae8de182640" scoped=""/>
+        <function-ref name="get" ref="0x2ae8de1827c8" scoped=""/>
+        <function-ref name="makeOutput" ref="0x2ae8de182950" scoped=""/>
+        <function-ref name="set" ref="0x2ae8de182ad8" scoped=""/>
+        <function-ref name="clr" ref="0x2ae8de182c60" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced><interface loc="32:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/pins/Msp430GpioC.nc" name="GeneralIO" provided="1" ref="0x2ae8de1a8020">
+      <component-ref nicename="tos.chips.msp430.pins.Msp430GpioC" qname="PlatformLedsC.Led1Impl"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="GeneralIO" ref="0x2ae8de1a8020" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.GeneralIO" qname="GeneralIO"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="makeInput" ref="0x2ae8de1a8370" scoped=""/>
+        <function-ref name="isInput" ref="0x2ae8de1a84f8" scoped=""/>
+        <function-ref name="toggle" ref="0x2ae8de1a8680" scoped=""/>
+        <function-ref name="isOutput" ref="0x2ae8de1a8808" scoped=""/>
+        <function-ref name="get" ref="0x2ae8de1a8990" scoped=""/>
+        <function-ref name="makeOutput" ref="0x2ae8de1a8b18" scoped=""/>
+        <function-ref name="set" ref="0x2ae8de1a8ca0" scoped=""/>
+        <function-ref name="clr" ref="0x2ae8de1a8e28" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="32:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/pins/Msp430GpioC.nc" name="GeneralIO" provided="1" ref="0x2ae8de17fc30">
+      <component-ref nicename="tos.chips.msp430.pins.Msp430GpioC" qname="PlatformLedsC.Led0Impl"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="GeneralIO" ref="0x2ae8de17fc30" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.GeneralIO" qname="GeneralIO"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="makeInput" ref="0x2ae8de17e020" scoped=""/>
+        <function-ref name="isInput" ref="0x2ae8de17e1a8" scoped=""/>
+        <function-ref name="toggle" ref="0x2ae8de17e330" scoped=""/>
+        <function-ref name="isOutput" ref="0x2ae8de17e4b8" scoped=""/>
+        <function-ref name="get" ref="0x2ae8de17e640" scoped=""/>
+        <function-ref name="makeOutput" ref="0x2ae8de17e7c8" scoped=""/>
+        <function-ref name="set" ref="0x2ae8de17e950" scoped=""/>
+        <function-ref name="clr" ref="0x2ae8de17ead8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="33:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/pins/Msp430GpioC.nc" name="HplGeneralIO" provided="0" ref="0x2ae8de1a3470">
+      <component-ref nicename="tos.chips.msp430.pins.Msp430GpioC" qname="PlatformLedsC.Led2Impl"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="HplGeneralIO" ref="0x2ae8de1a3470" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.pins.HplMsp430GeneralIO" qname="HplMsp430GeneralIO"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="makeInput" ref="0x2ae8de1a37c0" scoped=""/>
+        <function-ref name="isInput" ref="0x2ae8de1a3948" scoped=""/>
+        <function-ref name="toggle" ref="0x2ae8de1a3ad0" scoped=""/>
+        <function-ref name="isOutput" ref="0x2ae8de1a3c58" scoped=""/>
+        <function-ref name="makeOutput" ref="0x2ae8de1a3de0" scoped=""/>
+        <function-ref name="get" ref="0x2ae8de1a2020" scoped=""/>
+        <function-ref name="selectIOFunc" ref="0x2ae8de1a21a8" scoped=""/>
+        <function-ref name="getRaw" ref="0x2ae8de1a2330" scoped=""/>
+        <function-ref name="set" ref="0x2ae8de1a24b8" scoped=""/>
+        <function-ref name="selectModuleFunc" ref="0x2ae8de1a2640" scoped=""/>
+        <function-ref name="isIOFunc" ref="0x2ae8de1a27c8" scoped=""/>
+        <function-ref name="isModuleFunc" ref="0x2ae8de1a2950" scoped=""/>
+        <function-ref name="clr" ref="0x2ae8de1a2ad8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="32:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/pins/Msp430GpioC.nc" name="GeneralIO" provided="1" ref="0x2ae8de1a4368">
+      <component-ref nicename="tos.chips.msp430.pins.Msp430GpioC" qname="PlatformLedsC.Led2Impl"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="GeneralIO" ref="0x2ae8de1a4368" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.GeneralIO" qname="GeneralIO"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="makeInput" ref="0x2ae8de1a46b8" scoped=""/>
+        <function-ref name="isInput" ref="0x2ae8de1a4840" scoped=""/>
+        <function-ref name="toggle" ref="0x2ae8de1a49c8" scoped=""/>
+        <function-ref name="isOutput" ref="0x2ae8de1a4b50" scoped=""/>
+        <function-ref name="get" ref="0x2ae8de1a4cd8" scoped=""/>
+        <function-ref name="makeOutput" ref="0x2ae8de1a4e60" scoped=""/>
+        <function-ref name="set" ref="0x2ae8de1a3020" scoped=""/>
+        <function-ref name="clr" ref="0x2ae8de1a31a8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="83:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc" name="Port56" provided="1" ref="0x2ae8ddfa0668">
+      <component-ref nicename="tos.chips.msp430.pins.HplMsp430GeneralIOC" qname="HplMsp430GeneralIOC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Port56" ref="0x2ae8ddfa0668" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.pins.HplMsp430GeneralIO" qname="HplMsp430GeneralIO"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="makeInput" ref="0x2ae8ddfa09b8" scoped=""/>
+        <function-ref name="isInput" ref="0x2ae8ddfa0b40" scoped=""/>
+        <function-ref name="toggle" ref="0x2ae8ddfa0cc8" scoped=""/>
+        <function-ref name="isOutput" ref="0x2ae8ddfa0e50" scoped=""/>
+        <function-ref name="makeOutput" ref="0x2ae8ddf9f020" scoped=""/>
+        <function-ref name="get" ref="0x2ae8ddf9f1a8" scoped=""/>
+        <function-ref name="selectIOFunc" ref="0x2ae8ddf9f330" scoped=""/>
+        <function-ref name="getRaw" ref="0x2ae8ddf9f4b8" scoped=""/>
+        <function-ref name="set" ref="0x2ae8ddf9f640" scoped=""/>
+        <function-ref name="selectModuleFunc" ref="0x2ae8ddf9f7c8" scoped=""/>
+        <function-ref name="isIOFunc" ref="0x2ae8ddf9f950" scoped=""/>
+        <function-ref name="isModuleFunc" ref="0x2ae8ddf9fad8" scoped=""/>
+        <function-ref name="clr" ref="0x2ae8ddf9fc60" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="7:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/platforms/telosa/PlatformP.nc" name="LedsInit" provided="0" ref="0x2ae8dd9f8d60">
+      <component-ref nicename="tos.platforms.telosa.PlatformP" qname="PlatformP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="LedsInit" ref="0x2ae8dd9f8d60" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x2ae8dd9f70d8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="33:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/pins/Msp430GpioC.nc" name="HplGeneralIO" provided="0" ref="0x2ae8de1a7120">
+      <component-ref nicename="tos.chips.msp430.pins.Msp430GpioC" qname="PlatformLedsC.Led1Impl"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="HplGeneralIO" ref="0x2ae8de1a7120" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.pins.HplMsp430GeneralIO" qname="HplMsp430GeneralIO"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="makeInput" ref="0x2ae8de1a7470" scoped=""/>
+        <function-ref name="isInput" ref="0x2ae8de1a75f8" scoped=""/>
+        <function-ref name="toggle" ref="0x2ae8de1a7780" scoped=""/>
+        <function-ref name="isOutput" ref="0x2ae8de1a7908" scoped=""/>
+        <function-ref name="makeOutput" ref="0x2ae8de1a7a90" scoped=""/>
+        <function-ref name="get" ref="0x2ae8de1a7c18" scoped=""/>
+        <function-ref name="selectIOFunc" ref="0x2ae8de1a7da0" scoped=""/>
+        <function-ref name="getRaw" ref="0x2ae8de1a6020" scoped=""/>
+        <function-ref name="set" ref="0x2ae8de1a61a8" scoped=""/>
+        <function-ref name="selectModuleFunc" ref="0x2ae8de1a6330" scoped=""/>
+        <function-ref name="isIOFunc" ref="0x2ae8de1a64b8" scoped=""/>
+        <function-ref name="isModuleFunc" ref="0x2ae8de1a6640" scoped=""/>
+        <function-ref name="clr" ref="0x2ae8de1a67c8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="82:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc" name="Port55" provided="1" ref="0x2ae8ddfa2b00">
+      <component-ref nicename="tos.chips.msp430.pins.HplMsp430GeneralIOC" qname="HplMsp430GeneralIOC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Port55" ref="0x2ae8ddfa2b00" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.pins.HplMsp430GeneralIO" qname="HplMsp430GeneralIO"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="makeInput" ref="0x2ae8ddfa2e50" scoped=""/>
+        <function-ref name="isInput" ref="0x2ae8ddfa1020" scoped=""/>
+        <function-ref name="toggle" ref="0x2ae8ddfa11a8" scoped=""/>
+        <function-ref name="isOutput" ref="0x2ae8ddfa1330" scoped=""/>
+        <function-ref name="makeOutput" ref="0x2ae8ddfa14b8" scoped=""/>
+        <function-ref name="get" ref="0x2ae8ddfa1640" scoped=""/>
+        <function-ref name="selectIOFunc" ref="0x2ae8ddfa17c8" scoped=""/>
+        <function-ref name="getRaw" ref="0x2ae8ddfa1950" scoped=""/>
+        <function-ref name="set" ref="0x2ae8ddfa1ad8" scoped=""/>
+        <function-ref name="selectModuleFunc" ref="0x2ae8ddfa1c60" scoped=""/>
+        <function-ref name="isIOFunc" ref="0x2ae8ddfa1de8" scoped=""/>
+        <function-ref name="isModuleFunc" ref="0x2ae8ddfa0020" scoped=""/>
+        <function-ref name="clr" ref="0x2ae8ddfa01a8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="81:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc" name="Port54" provided="1" ref="0x2ae8ddfa3020">
+      <component-ref nicename="tos.chips.msp430.pins.HplMsp430GeneralIOC" qname="HplMsp430GeneralIOC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Port54" ref="0x2ae8ddfa3020" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.pins.HplMsp430GeneralIO" qname="HplMsp430GeneralIO"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="makeInput" ref="0x2ae8ddfa3370" scoped=""/>
+        <function-ref name="isInput" ref="0x2ae8ddfa34f8" scoped=""/>
+        <function-ref name="toggle" ref="0x2ae8ddfa3680" scoped=""/>
+        <function-ref name="isOutput" ref="0x2ae8ddfa3808" scoped=""/>
+        <function-ref name="makeOutput" ref="0x2ae8ddfa3990" scoped=""/>
+        <function-ref name="get" ref="0x2ae8ddfa3b18" scoped=""/>
+        <function-ref name="selectIOFunc" ref="0x2ae8ddfa3ca0" scoped=""/>
+        <function-ref name="getRaw" ref="0x2ae8ddfa3e28" scoped=""/>
+        <function-ref name="set" ref="0x2ae8ddfa2020" scoped=""/>
+        <function-ref name="selectModuleFunc" ref="0x2ae8ddfa21a8" scoped=""/>
+        <function-ref name="isIOFunc" ref="0x2ae8ddfa2330" scoped=""/>
+        <function-ref name="isModuleFunc" ref="0x2ae8ddfa24b8" scoped=""/>
+        <function-ref name="clr" ref="0x2ae8ddfa2640" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="33:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/pins/Msp430GpioC.nc" name="HplGeneralIO" provided="0" ref="0x2ae8de17eda0">
+      <component-ref nicename="tos.chips.msp430.pins.Msp430GpioC" qname="PlatformLedsC.Led0Impl"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="HplGeneralIO" ref="0x2ae8de17eda0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.pins.HplMsp430GeneralIO" qname="HplMsp430GeneralIO"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="makeInput" ref="0x2ae8de1ab170" scoped=""/>
+        <function-ref name="isInput" ref="0x2ae8de1ab2f8" scoped=""/>
+        <function-ref name="toggle" ref="0x2ae8de1ab480" scoped=""/>
+        <function-ref name="isOutput" ref="0x2ae8de1ab608" scoped=""/>
+        <function-ref name="makeOutput" ref="0x2ae8de1ab790" scoped=""/>
+        <function-ref name="get" ref="0x2ae8de1ab918" scoped=""/>
+        <function-ref name="selectIOFunc" ref="0x2ae8de1abaa0" scoped=""/>
+        <function-ref name="getRaw" ref="0x2ae8de1abc28" scoped=""/>
+        <function-ref name="set" ref="0x2ae8de1abdb0" scoped=""/>
+        <function-ref name="selectModuleFunc" ref="0x2ae8de1aa020" scoped=""/>
+        <function-ref name="isIOFunc" ref="0x2ae8de1aa1a8" scoped=""/>
+        <function-ref name="isModuleFunc" ref="0x2ae8de1aa330" scoped=""/>
+        <function-ref name="clr" ref="0x2ae8de1aa4b8" scoped=""/>
+      </interface-functions>
+    </interface><component loc="31(PlatformLedsC.Led0Impl):/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/pins/Msp430GpioC.nc" nicename="tos.chips.msp430.pins.Msp430GpioC" qname="PlatformLedsC.Led0Impl">
+      <documentation loc="22:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/pins/Msp430GpioC.nc">
+        <short>
+ Implementation of the general-purpose I/O abstraction
+ for the TI MSP430 microcontroller.</short>
+        <long>
+ Implementation of the general-purpose I/O abstraction
+ for the TI MSP430 microcontroller.
+
+ @author Joe Polastre
+ @see  Please refer to TEP 117 for more information about this component and its
+          intended use.
+</long>
+      </documentation>
+      <instance number="0">
+        <component-ref nicename="tos.chips.msp430.pins.Msp430GpioC" qname="Msp430GpioC"/>
+      </instance>
+      <module/>
+    </component><component loc="3:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/platforms/telosa/PlatformP.nc" nicename="tos.platforms.telosa.PlatformP" qname="PlatformP" safe="">
+      <module/>
+    </component><component loc="31(PlatformLedsC.Led1Impl):/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/pins/Msp430GpioC.nc" nicename="tos.chips.msp430.pins.Msp430GpioC" qname="PlatformLedsC.Led1Impl">
+      <documentation loc="22:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/pins/Msp430GpioC.nc">
+        <short>
+ Implementation of the general-purpose I/O abstraction
+ for the TI MSP430 microcontroller.</short>
+        <long>
+ Implementation of the general-purpose I/O abstraction
+ for the TI MSP430 microcontroller.
+
+ @author Joe Polastre
+ @see  Please refer to TEP 117 for more information about this component and its
+          intended use.
+</long>
+      </documentation>
+      <instance number="1">
+        <component-ref nicename="tos.chips.msp430.pins.Msp430GpioC" qname="Msp430GpioC"/>
+      </instance>
+      <module/>
+    </component><component loc="29:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc" nicename="tos.chips.msp430.pins.HplMsp430GeneralIOC" qname="HplMsp430GeneralIOC">
+      <documentation loc="22:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+        <short>
+ HPL for the TI MSP430 family of microprocessors.</short>
+        <long>
+ HPL for the TI MSP430 family of microprocessors. This provides an
+ abstraction for general-purpose I/O.
+
+ @author Joe Polastre
+</long>
+      </documentation>
+      <configuration/>
+      <wiring>
+        <wire loc="234:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="Port14" ref="0x2ae8ddf724e0" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x2ae8de0043d8" scoped=""/></to>
+        </wire>
+        <wire loc="247:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="Port26" ref="0x2ae8ddf95668" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x2ae8de049020" scoped=""/></to>
+        </wire>
+        <wire loc="323:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="SDA" ref="0x2ae8ddfc0120" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x2ae8de03d6a0" scoped=""/></to>
+        </wire>
+        <wire loc="343:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="ADC6" ref="0x2ae8ddfd7af0" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x2ae8de0dd6a0" scoped=""/></to>
+        </wire>
+        <wire loc="324:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="SOMI0" ref="0x2ae8ddfbfc80" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x2ae8de071968" scoped=""/></to>
+        </wire>
+        <wire loc="252:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="Port30" ref="0x2ae8ddf92c88" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x2ae8de0413d8" scoped=""/></to>
+        </wire>
+        <wire loc="265:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="Port42" ref="0x2ae8ddf7f020" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x2ae8de086180" scoped=""/></to>
+        </wire>
+        <wire loc="278:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="Port54" ref="0x2ae8ddfa3020" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x2ae8de094c30" scoped=""/></to>
+        </wire>
+        <wire loc="289:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="Port64" ref="0x2ae8ddfcc978" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x2ae8de0e5180" scoped=""/></to>
+        </wire>
+        <wire loc="327:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="UTXD0" ref="0x2ae8ddfbae08" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x2ae8de067020" scoped=""/></to>
+        </wire>
+        <wire loc="337:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="ADC0" ref="0x2ae8ddfe27e0" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x2ae8de0bd6a0" scoped=""/></to>
+        </wire>
+        <wire loc="349:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="SVSIN" ref="0x2ae8ddfd07e8" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x2ae8de0d9968" scoped=""/></to>
+        </wire>
+        <wire loc="237:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="Port17" ref="0x2ae8ddf6d668" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x2ae8de030c30" scoped=""/></to>
+        </wire>
+        <wire loc="328:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="URXD0" ref="0x2ae8ddfb8970" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x2ae8de063180" scoped=""/></to>
+        </wire>
+        <wire loc="242:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="Port21" ref="0x2ae8ddf6ac88" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x2ae8de027180" scoped=""/></to>
+        </wire>
+        <wire loc="255:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="Port33" ref="0x2ae8ddf8de10" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x2ae8de06cc30" scoped=""/></to>
+        </wire>
+        <wire loc="268:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="Port45" ref="0x2ae8ddfaf140" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x2ae8de079968" scoped=""/></to>
+        </wire>
+        <wire loc="281:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="Port57" ref="0x2ae8ddf9e140" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x2ae8de0c13d8" scoped=""/></to>
+        </wire>
+        <wire loc="292:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="Port67" ref="0x2ae8ddfc6b00" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x2ae8de0d9968" scoped=""/></to>
+        </wire>
+        <wire loc="232:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="Port12" ref="0x2ae8ddf76e10" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x2ae8de00d020" scoped=""/></to>
+        </wire>
+        <wire loc="245:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="Port24" ref="0x2ae8ddf65e10" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x2ae8de052a68" scoped=""/></to>
+        </wire>
+        <wire loc="258:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="Port36" ref="0x2ae8ddf86020" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x2ae8de05f3d8" scoped=""/></to>
+        </wire>
+        <wire loc="322:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="SIMO0" ref="0x2ae8ddfc2660" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x2ae8de03d6a0" scoped=""/></to>
+        </wire>
+        <wire loc="340:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="ADC3" ref="0x2ae8ddfdd968" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x2ae8de0af020" scoped=""/></to>
+        </wire>
+        <wire loc="347:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="DAC1" ref="0x2ae8ddfd2c78" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x2ae8de0d9968" scoped=""/></to>
+        </wire>
+        <wire loc="333:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="UCLK1" ref="0x2ae8ddfe7660" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x2ae8de098968" scoped=""/></to>
+        </wire>
+        <wire loc="263:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="Port40" ref="0x2ae8ddf83668" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x2ae8de057c30" scoped=""/></to>
+        </wire>
+        <wire loc="276:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="Port52" ref="0x2ae8ddfa7978" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x2ae8de09c6a0" scoped=""/></to>
+        </wire>
+        <wire loc="287:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="Port62" ref="0x2ae8ddf99358" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x2ae8de0b4c30" scoped=""/></to>
+        </wire>
+        <wire loc="341:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="ADC4" ref="0x2ae8ddfdb4d0" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x2ae8de0e5180" scoped=""/></to>
+        </wire>
+        <wire loc="330:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="STE1" ref="0x2ae8ddfb64d0" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x2ae8de0a5180" scoped=""/></to>
+        </wire>
+        <wire loc="235:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="Port15" ref="0x2ae8ddf70020" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x2ae8de0386a0" scoped=""/></to>
+        </wire>
+        <wire loc="248:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="Port27" ref="0x2ae8ddf93140" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x2ae8de045180" scoped=""/></to>
+        </wire>
+        <wire loc="285:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="Port60" ref="0x2ae8ddf9dc88" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x2ae8de0bd6a0" scoped=""/></to>
+        </wire>
+        <wire loc="253:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="Port31" ref="0x2ae8ddf907f0" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x2ae8de03d6a0" scoped=""/></to>
+        </wire>
+        <wire loc="266:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="Port43" ref="0x2ae8ddf7eb00" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x2ae8de0813d8" scoped=""/></to>
+        </wire>
+        <wire loc="279:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="Port55" ref="0x2ae8ddfa2b00" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x2ae8de08f020" scoped=""/></to>
+        </wire>
+        <wire loc="290:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="Port65" ref="0x2ae8ddfc94e0" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x2ae8de0e13d8" scoped=""/></to>
+        </wire>
+        <wire loc="332:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="SOMI1" ref="0x2ae8ddfb3af8" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x2ae8de09c6a0" scoped=""/></to>
+        </wire>
+        <wire loc="230:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="Port10" ref="0x2ae8ddf7b7c8" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x2ae8de0009d0" scoped=""/></to>
+        </wire>
+        <wire loc="243:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="Port22" ref="0x2ae8ddf687f0" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x2ae8de0233d8" scoped=""/></to>
+        </wire>
+        <wire loc="256:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="Port34" ref="0x2ae8ddf8b978" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x2ae8de067020" scoped=""/></to>
+        </wire>
+        <wire loc="269:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="Port46" ref="0x2ae8ddfaec88" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x2ae8de075c30" scoped=""/></to>
+        </wire>
+        <wire loc="334:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="UTXD1" ref="0x2ae8ddfe5138" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x2ae8de05f3d8" scoped=""/></to>
+        </wire>
+        <wire loc="338:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="ADC1" ref="0x2ae8ddfe0348" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x2ae8de0b9968" scoped=""/></to>
+        </wire>
+        <wire loc="344:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="ADC7" ref="0x2ae8ddfd5658" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x2ae8de0d9968" scoped=""/></to>
+        </wire>
+        <wire loc="274:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="Port50" ref="0x2ae8ddfaa358" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x2ae8de0a5180" scoped=""/></to>
+        </wire>
+        <wire loc="335:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="URXD1" ref="0x2ae8ddfe4c80" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x2ae8de05b6a0" scoped=""/></to>
+        </wire>
+        <wire loc="233:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="Port13" ref="0x2ae8ddf74978" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x2ae8de009180" scoped=""/></to>
+        </wire>
+        <wire loc="246:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="Port25" ref="0x2ae8ddf63b00" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x2ae8de04ec98" scoped=""/></to>
+        </wire>
+        <wire loc="259:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="Port37" ref="0x2ae8ddf85b00" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x2ae8de05b6a0" scoped=""/></to>
+        </wire>
+        <wire loc="331:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="SIMO1" ref="0x2ae8ddfb4020" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x2ae8de0a13d8" scoped=""/></to>
+        </wire>
+        <wire loc="342:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="ADC5" ref="0x2ae8ddfd8020" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x2ae8de0e13d8" scoped=""/></to>
+        </wire>
+        <wire loc="264:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="Port41" ref="0x2ae8ddf814e0" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x2ae8de08a020" scoped=""/></to>
+        </wire>
+        <wire loc="277:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="Port53" ref="0x2ae8ddfa54e0" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x2ae8de098968" scoped=""/></to>
+        </wire>
+        <wire loc="288:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="Port63" ref="0x2ae8ddf98e10" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x2ae8de0af020" scoped=""/></to>
+        </wire>
+        <wire loc="236:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="Port16" ref="0x2ae8ddf6fb00" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x2ae8de034968" scoped=""/></to>
+        </wire>
+        <wire loc="286:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="Port61" ref="0x2ae8ddf9b7f0" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x2ae8de0b9968" scoped=""/></to>
+        </wire>
+        <wire loc="241:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="Port20" ref="0x2ae8ddf6b140" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x2ae8de02b020" scoped=""/></to>
+        </wire>
+        <wire loc="254:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="Port32" ref="0x2ae8ddf8e358" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x2ae8de071968" scoped=""/></to>
+        </wire>
+        <wire loc="267:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="Port44" ref="0x2ae8ddfb1668" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x2ae8de07d6a0" scoped=""/></to>
+        </wire>
+        <wire loc="280:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="Port56" ref="0x2ae8ddfa0668" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x2ae8de0c5180" scoped=""/></to>
+        </wire>
+        <wire loc="291:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="Port66" ref="0x2ae8ddfc7020" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x2ae8de0dd6a0" scoped=""/></to>
+        </wire>
+        <wire loc="231:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="Port11" ref="0x2ae8ddf77358" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x2ae8de012c98" scoped=""/></to>
+        </wire>
+        <wire loc="244:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="Port23" ref="0x2ae8ddf66358" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x2ae8de0566a0" scoped=""/></to>
+        </wire>
+        <wire loc="257:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="Port35" ref="0x2ae8ddf894e0" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x2ae8de063180" scoped=""/></to>
+        </wire>
+        <wire loc="270:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="Port47" ref="0x2ae8ddfac7f0" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x2ae8de0a9020" scoped=""/></to>
+        </wire>
+        <wire loc="326:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="SCL" ref="0x2ae8ddfbb338" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x2ae8de06cc30" scoped=""/></to>
+        </wire>
+        <wire loc="339:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="ADC2" ref="0x2ae8ddfdfe00" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x2ae8de0b4c30" scoped=""/></to>
+        </wire>
+        <wire loc="325:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="UCLK0" ref="0x2ae8ddfbd7e8" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x2ae8de06cc30" scoped=""/></to>
+        </wire>
+        <wire loc="275:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="Port51" ref="0x2ae8ddfa9e10" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x2ae8de0a13d8" scoped=""/></to>
+        </wire>
+        <wire loc="346:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="DAC0" ref="0x2ae8ddfd3130" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x2ae8de0dd6a0" scoped=""/></to>
+        </wire>
+        <wire loc="350:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="SVSOUT" ref="0x2ae8ddfce358" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x2ae8de0c13d8" scoped=""/></to>
+        </wire>
+        <wire loc="321:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="STE0" ref="0x2ae8ddfc46b8" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x2ae8de0413d8" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component><component loc="31(PlatformLedsC.Led2Impl):/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/pins/Msp430GpioC.nc" nicename="tos.chips.msp430.pins.Msp430GpioC" qname="PlatformLedsC.Led2Impl">
+      <documentation loc="22:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/pins/Msp430GpioC.nc">
+        <short>
+ Implementation of the general-purpose I/O abstraction
+ for the TI MSP430 microcontroller.</short>
+        <long>
+ Implementation of the general-purpose I/O abstraction
+ for the TI MSP430 microcontroller.
+
+ @author Joe Polastre
+ @see  Please refer to TEP 117 for more information about this component and its
+          intended use.
+</long>
+      </documentation>
+      <instance number="2">
+        <component-ref nicename="tos.chips.msp430.pins.Msp430GpioC" qname="Msp430GpioC"/>
+      </instance>
+      <module/>
+    </component></referenced></component>

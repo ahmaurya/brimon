@@ -1,0 +1,50 @@
+<area shape="rect" href="../chtml/tos.chips.stm25p.Stm25pSectorP.html" title="Stm25pSectorP" alt="" coords="356,136,500,184">
+<area shape="poly" href="../ihtml/tos.chips.stm25p.Stm25pSector.html" title="Stm25pSector[uint8_t]" alt="" coords="722,60 704,86 679,109 514,145 513,140 676,104 700,82 718,57">
+<area shape="rect" href="../ihtml/tos.chips.stm25p.Stm25pSector.html" title="Stm25pSector[uint8_t]" alt="" coords="716,55,724,63">
+<area shape="rect" href="../ihtml/tos.chips.stm25p.Stm25pSector.html" title="Stm25pSector[uint8_t]" alt="" coords="496,141,504,149">
+<area shape="rect" href="../ihtml/tos.chips.stm25p.Stm25pSector.html" title="Stm25pSector[uint8_t]" alt="" coords="699,89,845,106">
+<area shape="rect" href="../chtml/tos.system.FcfsArbiterC.html" title="FcfsArbiterC\n(ArbiterC)" alt="" coords="120,256,248,315">
+<area shape="poly" href="../ihtml/tos.interfaces.Resource.html" title="Resource[uint8_t]" alt="" coords="357,185 334,192 289,201 271,205 249,216 214,247 210,243 247,211 269,200 288,196 333,187 355,180">
+<area shape="rect" href="../ihtml/tos.interfaces.Resource.html" title="Resource[uint8_t]" alt="" coords="352,179,360,187">
+<area shape="rect" href="../ihtml/tos.interfaces.Resource.html" title="Resource[uint8_t]" alt="" coords="200,252,208,260">
+<area shape="rect" href="../ihtml/tos.interfaces.Resource.html" title="Resource[uint8_t]" alt="" coords="252,214,364,231">
+<area shape="rect" href="../chtml/tos.chips.stm25p.Stm25pSpiC.html" title="Stm25pSpiC" alt="" coords="471,256,596,315">
+<area shape="poly" href="../ihtml/tos.interfaces.Resource.html" title="Resource" alt="" coords="472,182 506,212 522,241 518,244 502,215 469,186">
+<area shape="rect" href="../ihtml/tos.interfaces.Resource.html" title="Resource" alt="" coords="467,180,475,188">
+<area shape="rect" href="../ihtml/tos.interfaces.Resource.html" title="Resource" alt="" coords="521,252,529,260">
+<area shape="rect" href="../ihtml/tos.interfaces.Resource.html" title="Resource" alt="" coords="512,214,571,231">
+<area shape="poly" href="../ihtml/tos.chips.stm25p.Stm25pSpi.html" title="Stm25pSpi" alt="" coords="423,184 420,208 426,231 441,248 460,262 457,266 438,252 422,233 414,209 417,184">
+<area shape="rect" href="../ihtml/tos.chips.stm25p.Stm25pSpi.html" title="Stm25pSpi" alt="" coords="416,180,424,188">
+<area shape="rect" href="../ihtml/tos.chips.stm25p.Stm25pSpi.html" title="Stm25pSpi" alt="" coords="467,265,475,273">
+<area shape="rect" href="../ihtml/tos.chips.stm25p.Stm25pSpi.html" title="Stm25pSpi" alt="" coords="423,214,494,231">
+<area shape="rect" href="../chtml/tos.system.LedsC.html" title="LedsC" alt="" coords="329,256,412,315">
+<area shape="poly" href="../ihtml/tos.interfaces.Leds.html" title="Leds" alt="" coords="397,186 374,214 368,243 363,242 370,212 393,182">
+<area shape="rect" href="../ihtml/tos.interfaces.Leds.html" title="Leds" alt="" coords="391,180,399,188">
+<area shape="rect" href="../ihtml/tos.interfaces.Leds.html" title="Leds" alt="" coords="361,252,369,260">
+<area shape="rect" href="../ihtml/tos.interfaces.Leds.html" title="Leds" alt="" coords="371,214,402,231">
+<area shape="poly" href="../ihtml/tos.chips.stm25p.Stm25pVolume.html" title="Stm25pVolume[uint8_t]" alt="" coords="393,58 397,106 404,123 399,125 392,107 388,59">
+<area shape="rect" href="../ihtml/tos.chips.stm25p.Stm25pVolume.html" title="Stm25pVolume[uint8_t]" alt="" coords="387,55,395,63">
+<area shape="rect" href="../ihtml/tos.chips.stm25p.Stm25pVolume.html" title="Stm25pVolume[uint8_t]" alt="" coords="404,132,412,140">
+<area shape="rect" href="../ihtml/tos.chips.stm25p.Stm25pVolume.html" title="Stm25pVolume[uint8_t]" alt="" coords="394,89,547,106">
+<area shape="poly" href="../ihtml/tos.interfaces.Resource.html" title="Resource[uint8_t]" alt="" coords="575,60 566,85 550,109 514,134 510,130 546,105 561,82 569,58">
+<area shape="rect" href="../ihtml/tos.interfaces.Resource.html" title="Resource[uint8_t]" alt="" coords="568,55,576,63">
+<area shape="rect" href="../ihtml/tos.interfaces.Resource.html" title="Resource[uint8_t]" alt="" coords="496,135,504,143">
+<area shape="rect" href="../ihtml/tos.interfaces.Resource.html" title="Resource[uint8_t]" alt="" coords="560,89,672,106">
+<area shape="rect" href="../chtml/tos.lib.power.SplitControlDeferredPowerManagerC.html" title="SplitControlDeferredPowerManagerC\n(PowerManagerC)" alt="" coords="5,5,320,64">
+<area shape="poly" href="../ihtml/tos.interfaces.SplitControl.html" title="SplitControl" alt="" coords="222,62 310,104 361,128 359,133 308,109 220,66">
+<area shape="rect" href="../ihtml/tos.interfaces.SplitControl.html" title="SplitControl" alt="" coords="217,60,225,68">
+<area shape="rect" href="../ihtml/tos.interfaces.SplitControl.html" title="SplitControl" alt="" coords="368,132,376,140">
+<area shape="rect" href="../ihtml/tos.interfaces.SplitControl.html" title="SplitControl" alt="" coords="309,89,384,106">
+<area shape="poly" href="../ihtml/tos.interfaces.ResourceDefaultOwner.html" title="ResourceDefaultOwner" alt="" coords="168,64 183,242 177,243 163,64">
+<area shape="rect" href="../ihtml/tos.interfaces.ResourceDefaultOwner.html" title="ResourceDefaultOwner" alt="" coords="161,60,169,68">
+<area shape="rect" href="../ihtml/tos.interfaces.ResourceDefaultOwner.html" title="ResourceDefaultOwner" alt="" coords="177,252,185,260">
+<area shape="rect" href="../ihtml/tos.interfaces.ResourceDefaultOwner.html" title="ResourceDefaultOwner" alt="" coords="177,151,321,169">
+<area shape="poly" href="../ihtml/tos.interfaces.ArbiterInfo.html" title="ArbiterInfo" alt="" coords="140,65 118,97 103,131 97,160 103,188 119,219 141,245 137,248 114,221 97,190 92,161 97,130 114,94 135,63">
+<area shape="rect" href="../ihtml/tos.interfaces.ArbiterInfo.html" title="ArbiterInfo" alt="" coords="133,60,141,68">
+<area shape="rect" href="../ihtml/tos.interfaces.ArbiterInfo.html" title="ArbiterInfo" alt="" coords="144,252,152,260">
+<area shape="rect" href="../ihtml/tos.interfaces.ArbiterInfo.html" title="ArbiterInfo" alt="" coords="104,151,171,169">
+<area shape="rect" href="../chtml/tos.lib.printf.MainC.html" title="MainC" alt="" coords="581,131,664,189">
+<area shape="poly" href="../ihtml/tos.interfaces.Init.html" title="Init" alt="" coords="616,190 596,233 583,248 579,245 591,231 611,188">
+<area shape="rect" href="../ihtml/tos.interfaces.Init.html" title="Init" alt="" coords="609,185,617,193">
+<area shape="rect" href="../ihtml/tos.interfaces.Init.html" title="Init" alt="" coords="568,252,576,260">
+<area shape="rect" href="../ihtml/tos.interfaces.Init.html" title="Init" alt="" coords="603,214,621,231">

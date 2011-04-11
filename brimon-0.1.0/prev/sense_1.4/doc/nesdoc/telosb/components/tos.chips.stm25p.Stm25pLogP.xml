@@ -1,0 +1,168 @@
+<?xml version="1.0" ?><component loc="39:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/stm25p/Stm25pLogP.nc" nicename="tos.chips.stm25p.Stm25pLogP" qname="Stm25pLogP">
+      <documentation loc="1:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/stm25p/Stm25p.h">
+        <short>
+ Copyright (c) 2005-2006 Arch Rock Corporation
+ All rights reserved.</short>
+        <long>
+ Copyright (c) 2005-2006 Arch Rock Corporation
+ All rights reserved.
+
+ Redistribution and use in source and binary forms, with or without
+ modification, are permitted provided that the following conditions
+ are met:
+ - Redistributions of source code must retain the above copyright
+   notice, this list of conditions and the following disclaimer.
+ - Redistributions in binary form must reproduce the above copyright
+   notice, this list of conditions and the following disclaimer in the
+   documentation and/or other materials provided with the
+   distribution.
+ - Neither the name of the Arch Rock Corporation nor the names of
+   its contributors may be used to endorse or promote products derived
+   from this software without specific prior written permission.
+
+ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+ ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+ LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
+ FOR A PARTICULAR PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE
+ ARCHED ROCK OR ITS CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
+ INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+ (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+ SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+ HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT,
+ STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED
+ OF THE POSSIBILITY OF SUCH DAMAGE
+
+ @author Jonathan Hui &lt;jhui@archrock.com&gt;
+ @version $Revision: 1.4 $ $Date: 2006/12/12 18:23:12 $
+</long>
+      </documentation>
+      <module/>
+    <specification><interface loc="45:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/stm25p/Stm25pLogP.nc" name="Sector" provided="0" ref="0x2b3677d2c610">
+      <component-ref nicename="tos.chips.stm25p.Stm25pLogP" qname="Stm25pLogP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Sector" ref="0x2b3677d2c610" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.stm25p.Stm25pSector" qname="Stm25pSector"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x2b3676396318"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="getPhysicalAddress" ref="0x2b3677d2c960" scoped=""/>
+        <function-ref name="read" ref="0x2b3677d2cae8" scoped=""/>
+        <function-ref name="writeDone" ref="0x2b3677d2cc70" scoped=""/>
+        <function-ref name="erase" ref="0x2b3677d2cdf8" scoped=""/>
+        <function-ref name="eraseDone" ref="0x2b3677d2b020" scoped=""/>
+        <function-ref name="computeCrcDone" ref="0x2b3677d2b1a8" scoped=""/>
+        <function-ref name="computeCrc" ref="0x2b3677d2b330" scoped=""/>
+        <function-ref name="write" ref="0x2b3677d2b4b8" scoped=""/>
+        <function-ref name="getNumSectors" ref="0x2b3677d2b640" scoped=""/>
+        <function-ref name="readDone" ref="0x2b3677d2b7c8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="42:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/stm25p/Stm25pLogP.nc" name="Read" provided="1" ref="0x2b3677d2f348">
+      <component-ref nicename="tos.chips.stm25p.Stm25pLogP" qname="Stm25pLogP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Read" ref="0x2b3677d2f348" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.LogRead" qname="LogRead"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x2b3676396318"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="readDone" ref="0x2b3677d2fe40" scoped=""/>
+        <function-ref name="currentOffset" ref="0x2b3677d2f820" scoped=""/>
+        <function-ref name="read" ref="0x2b3677d2f9a8" scoped=""/>
+        <function-ref name="seekDone" ref="0x2b3677d2fb30" scoped=""/>
+        <function-ref name="getSize" ref="0x2b3677d2fcb8" scoped=""/>
+        <function-ref name="seek" ref="0x2b3677d2f698" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="47:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/stm25p/Stm25pLogP.nc" name="Circular" provided="0" ref="0x2b3677d19690">
+      <component-ref nicename="tos.chips.stm25p.Stm25pLogP" qname="Stm25pLogP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Circular" ref="0x2b3677d19690" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Get" qname="Get"/>
+        <arguments>
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="bool" ref="0x2b3676bf7178"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x2b3676396318"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="get" ref="0x2b3677d18370" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="41:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/stm25p/Stm25pLogP.nc" name="Init" provided="1" ref="0x2b3677d30778">
+      <component-ref nicename="tos.chips.stm25p.Stm25pLogP" qname="Stm25pLogP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Init" ref="0x2b3677d30778" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x2b3677d30ac8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="48:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/stm25p/Stm25pLogP.nc" name="Leds" provided="0" ref="0x2b3677d187b8">
+      <component-ref nicename="tos.chips.stm25p.Stm25pLogP" qname="Stm25pLogP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Leds" ref="0x2b3677d187b8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Leds" qname="Leds"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="led0Off" ref="0x2b3677d18b08" scoped=""/>
+        <function-ref name="led0Toggle" ref="0x2b3677d18c90" scoped=""/>
+        <function-ref name="led1On" ref="0x2b3677d18e18" scoped=""/>
+        <function-ref name="led1Toggle" ref="0x2b3677d17020" scoped=""/>
+        <function-ref name="led2Toggle" ref="0x2b3677d171a8" scoped=""/>
+        <function-ref name="get" ref="0x2b3677d17330" scoped=""/>
+        <function-ref name="led1Off" ref="0x2b3677d174b8" scoped=""/>
+        <function-ref name="led2Off" ref="0x2b3677d17ad8" scoped=""/>
+        <function-ref name="set" ref="0x2b3677d17640" scoped=""/>
+        <function-ref name="led0On" ref="0x2b3677d177c8" scoped=""/>
+        <function-ref name="led2On" ref="0x2b3677d17950" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="43:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/stm25p/Stm25pLogP.nc" name="Write" provided="1" ref="0x2b3677d2e6e0">
+      <component-ref nicename="tos.chips.stm25p.Stm25pLogP" qname="Stm25pLogP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Write" ref="0x2b3677d2e6e0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.LogWrite" qname="LogWrite"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x2b3676396318"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="currentOffset" ref="0x2b3677d2ea30" scoped=""/>
+        <function-ref name="syncDone" ref="0x2b3677d2ebb8" scoped=""/>
+        <function-ref name="erase" ref="0x2b3677d2ed40" scoped=""/>
+        <function-ref name="eraseDone" ref="0x2b3677d2d020" scoped=""/>
+        <function-ref name="appendDone" ref="0x2b3677d2d1a8" scoped=""/>
+        <function-ref name="append" ref="0x2b3677d2d330" scoped=""/>
+        <function-ref name="sync" ref="0x2b3677d2d4b8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="46:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/stm25p/Stm25pLogP.nc" name="ClientResource" provided="0" ref="0x2b3677d1b1c8">
+      <component-ref nicename="tos.chips.stm25p.Stm25pLogP" qname="Stm25pLogP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ClientResource" ref="0x2b3677d1b1c8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Resource" qname="Resource"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x2b3676396318"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="release" ref="0x2b3677d1b518" scoped=""/>
+        <function-ref name="immediateRequest" ref="0x2b3677d1b6a0" scoped=""/>
+        <function-ref name="request" ref="0x2b3677d1b828" scoped=""/>
+        <function-ref name="granted" ref="0x2b3677d1b9b0" scoped=""/>
+        <function-ref name="isOwner" ref="0x2b3677d1bb38" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced/></component>

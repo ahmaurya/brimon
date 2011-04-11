@@ -1,0 +1,490 @@
+<?xml version="1.0" ?><component loc="3:AccelReadStreamP.nc" nicename="AccelReadStreamP" qname="AccelReadStreamP">
+      <configuration/>
+      <wiring>
+        <wire loc="30:AccelReadStreamP.nc">
+          <from><interface-ref name="ReadStreamY" ref="0x2b3678207d08" scoped=""/></from>
+          <to><interface-ref name="ReadStream" ref="0x2b367827f060" scoped=""/></to>
+        </wire>
+        <wire loc="34:AccelReadStreamP.nc">
+          <from><interface-ref name="ReadStreamZ" ref="0x2b3678203e00" scoped=""/></from>
+          <to><interface-ref name="ReadStream" ref="0x2b36782d9568" scoped=""/></to>
+        </wire>
+        <wire loc="26:AccelReadStreamP.nc">
+          <from><interface-ref name="ReadStreamX" ref="0x2b367820db70" scoped=""/></from>
+          <to><interface-ref name="ReadStream" ref="0x2b367824eb90" scoped=""/></to>
+        </wire>
+        <wire loc="27:AccelReadStreamP.nc">
+          <from><interface-ref name="Resource" ref="0x2b36782823c8" scoped=""/></from>
+          <to><interface-ref name="Resource" ref="0x2b367823f1c8" scoped=""/></to>
+        </wire>
+        <wire loc="28:AccelReadStreamP.nc">
+          <from><interface-ref name="Service" ref="0x2b3678287860" scoped=""/></from>
+          <to><interface-ref name="ActualX" ref="0x2b36781fe020" scoped=""/></to>
+        </wire>
+        <wire loc="31:AccelReadStreamP.nc">
+          <from><interface-ref name="Resource" ref="0x2b36782dd830" scoped=""/></from>
+          <to><interface-ref name="Resource" ref="0x2b367823f1c8" scoped=""/></to>
+        </wire>
+        <wire loc="32:AccelReadStreamP.nc">
+          <from><interface-ref name="Service" ref="0x2b367827ccd0" scoped=""/></from>
+          <to><interface-ref name="ActualY" ref="0x2b36781fa1c8" scoped=""/></to>
+        </wire>
+        <wire loc="35:AccelReadStreamP.nc">
+          <from><interface-ref name="Resource" ref="0x2b36782d2da8" scoped=""/></from>
+          <to><interface-ref name="Resource" ref="0x2b367823f1c8" scoped=""/></to>
+        </wire>
+        <wire loc="36:AccelReadStreamP.nc">
+          <from><interface-ref name="Service" ref="0x2b36782d52e8" scoped=""/></from>
+          <to><interface-ref name="ActualZ" ref="0x2b36781f62b0" scoped=""/></to>
+        </wire>
+      </wiring>
+    <specification><interface loc="7:AccelReadStreamP.nc" name="ReadStreamY" provided="1" ref="0x2b3678207d08">
+      <component-ref nicename="AccelReadStreamP" qname="AccelReadStreamP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ReadStreamY" ref="0x2b3678207d08" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.ReadStream" qname="ReadStream"/>
+        <arguments>
+          <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned="">
+            <typename><typedef-ref name="uint16_t" ref="0x2b36763969f0"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x2b3676396318"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="bufferDone" ref="0x2b36782056a0" scoped=""/>
+        <function-ref name="postBuffer" ref="0x2b36782068b8" scoped=""/>
+        <function-ref name="read" ref="0x2b3678205200" scoped=""/>
+        <function-ref name="readDone" ref="0x2b3678203118" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="12:AccelReadStreamP.nc" name="ActualY" provided="0" ref="0x2b36781fa1c8">
+      <component-ref nicename="AccelReadStreamP" qname="AccelReadStreamP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ActualY" ref="0x2b36781fa1c8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.ReadStream" qname="ReadStream"/>
+        <arguments>
+          <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned="">
+            <typename><typedef-ref name="uint16_t" ref="0x2b36763969f0"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x2b3676396318"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="bufferDone" ref="0x2b36781f9b10" scoped=""/>
+        <function-ref name="postBuffer" ref="0x2b36781fad10" scoped=""/>
+        <function-ref name="read" ref="0x2b36781f9670" scoped=""/>
+        <function-ref name="readDone" ref="0x2b36781f7598" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="13:AccelReadStreamP.nc" name="ActualZ" provided="0" ref="0x2b36781f62b0">
+      <component-ref nicename="AccelReadStreamP" qname="AccelReadStreamP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ActualZ" ref="0x2b36781f62b0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.ReadStream" qname="ReadStream"/>
+        <arguments>
+          <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned="">
+            <typename><typedef-ref name="uint16_t" ref="0x2b36763969f0"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x2b3676396318"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="bufferDone" ref="0x2b36781f5c10" scoped=""/>
+        <function-ref name="postBuffer" ref="0x2b36781f6df8" scoped=""/>
+        <function-ref name="read" ref="0x2b36781f5770" scoped=""/>
+        <function-ref name="readDone" ref="0x2b36781f3670" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="8:AccelReadStreamP.nc" name="ReadStreamZ" provided="1" ref="0x2b3678203e00">
+      <component-ref nicename="AccelReadStreamP" qname="AccelReadStreamP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ReadStreamZ" ref="0x2b3678203e00" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.ReadStream" qname="ReadStream"/>
+        <arguments>
+          <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned="">
+            <typename><typedef-ref name="uint16_t" ref="0x2b36763969f0"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x2b3676396318"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="bufferDone" ref="0x2b36782017d0" scoped=""/>
+        <function-ref name="postBuffer" ref="0x2b36782029e0" scoped=""/>
+        <function-ref name="read" ref="0x2b3678201330" scoped=""/>
+        <function-ref name="readDone" ref="0x2b36781ff238" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="6:AccelReadStreamP.nc" name="ReadStreamX" provided="1" ref="0x2b367820db70">
+      <component-ref nicename="AccelReadStreamP" qname="AccelReadStreamP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ReadStreamX" ref="0x2b367820db70" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.ReadStream" qname="ReadStream"/>
+        <arguments>
+          <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned="">
+            <typename><typedef-ref name="uint16_t" ref="0x2b36763969f0"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x2b3676396318"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="bufferDone" ref="0x2b36782094c0" scoped=""/>
+        <function-ref name="postBuffer" ref="0x2b367820a6f0" scoped=""/>
+        <function-ref name="read" ref="0x2b3678209020" scoped=""/>
+        <function-ref name="readDone" ref="0x2b3678207020" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="11:AccelReadStreamP.nc" name="ActualX" provided="0" ref="0x2b36781fe020">
+      <component-ref nicename="AccelReadStreamP" qname="AccelReadStreamP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ActualX" ref="0x2b36781fe020" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.ReadStream" qname="ReadStream"/>
+        <arguments>
+          <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned="">
+            <typename><typedef-ref name="uint16_t" ref="0x2b36763969f0"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x2b3676396318"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="bufferDone" ref="0x2b36781fd970" scoped=""/>
+        <function-ref name="postBuffer" ref="0x2b36781feb68" scoped=""/>
+        <function-ref name="read" ref="0x2b36781fd4d0" scoped=""/>
+        <function-ref name="readDone" ref="0x2b36781fb408" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced><interface loc="27:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/ArbitratedReadStreamC.nc" name="Resource" provided="0" ref="0x2b36782dd830">
+      <component-ref nicename="tos.system.ArbitratedReadStreamC" qname="AccelReadStreamP.MultiplexY"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Resource" ref="0x2b36782dd830" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Resource" qname="Resource"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x2b3676396318"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="release" ref="0x2b36782ddba0" scoped=""/>
+        <function-ref name="immediateRequest" ref="0x2b36782ddd28" scoped=""/>
+        <function-ref name="request" ref="0x2b36782dc020" scoped=""/>
+        <function-ref name="granted" ref="0x2b36782dc1a8" scoped=""/>
+        <function-ref name="isOwner" ref="0x2b36782dc330" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="26:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/ArbitratedReadStreamC.nc" name="Service" provided="0" ref="0x2b36782d52e8">
+      <component-ref nicename="tos.system.ArbitratedReadStreamC" qname="AccelReadStreamP.MultiplexZ"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Service" ref="0x2b36782d52e8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.ReadStream" qname="ReadStream"/>
+        <arguments>
+          <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned="">
+            <typename><typedef-ref name="uint16_t" ref="0x2b36763969f0"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x2b3676396318"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="bufferDone" ref="0x2b36782d4c60" scoped=""/>
+        <function-ref name="postBuffer" ref="0x2b36782d5e50" scoped=""/>
+        <function-ref name="read" ref="0x2b36782d47a0" scoped=""/>
+        <function-ref name="readDone" ref="0x2b36782d2710" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="27:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/ArbitratedReadStreamC.nc" name="Resource" provided="0" ref="0x2b36782d2da8">
+      <component-ref nicename="tos.system.ArbitratedReadStreamC" qname="AccelReadStreamP.MultiplexZ"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Resource" ref="0x2b36782d2da8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Resource" qname="Resource"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x2b3676396318"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="release" ref="0x2b36782d1170" scoped=""/>
+        <function-ref name="immediateRequest" ref="0x2b36782d12f8" scoped=""/>
+        <function-ref name="request" ref="0x2b36782d1480" scoped=""/>
+        <function-ref name="granted" ref="0x2b36782d1608" scoped=""/>
+        <function-ref name="isOwner" ref="0x2b36782d1790" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="24:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/ArbitratedReadStreamC.nc" name="ReadStream" provided="1" ref="0x2b367824eb90">
+      <component-ref nicename="tos.system.ArbitratedReadStreamC" qname="AccelReadStreamP.MultiplexX"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ReadStream" ref="0x2b367824eb90" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.ReadStream" qname="ReadStream"/>
+        <arguments>
+          <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned="">
+            <typename><typedef-ref name="uint16_t" ref="0x2b36763969f0"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x2b3676396318"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="bufferDone" ref="0x2b3678288548" scoped=""/>
+        <function-ref name="postBuffer" ref="0x2b3678289728" scoped=""/>
+        <function-ref name="read" ref="0x2b3678288088" scoped=""/>
+        <function-ref name="readDone" ref="0x2b3678287020" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="23:AccelConfigP.nc" name="Resource" provided="1" ref="0x2b367823f1c8">
+      <component-ref nicename="AccelConfigP" qname="AccelConfigP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Resource" ref="0x2b367823f1c8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Resource" qname="Resource"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x2b3676396318"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="release" ref="0x2b367823f518" scoped=""/>
+        <function-ref name="immediateRequest" ref="0x2b367823f6a0" scoped=""/>
+        <function-ref name="request" ref="0x2b367823f828" scoped=""/>
+        <function-ref name="granted" ref="0x2b367823f9b0" scoped=""/>
+        <function-ref name="isOwner" ref="0x2b367823fb38" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="24:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/ArbitratedReadStreamC.nc" name="ReadStream" provided="1" ref="0x2b367827f060">
+      <component-ref nicename="tos.system.ArbitratedReadStreamC" qname="AccelReadStreamP.MultiplexY"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ReadStream" ref="0x2b367827f060" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.ReadStream" qname="ReadStream"/>
+        <arguments>
+          <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned="">
+            <typename><typedef-ref name="uint16_t" ref="0x2b36763969f0"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x2b3676396318"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="bufferDone" ref="0x2b367827d9d8" scoped=""/>
+        <function-ref name="postBuffer" ref="0x2b367827fbc8" scoped=""/>
+        <function-ref name="read" ref="0x2b367827d518" scoped=""/>
+        <function-ref name="readDone" ref="0x2b367827c490" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="26:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/ArbitratedReadStreamC.nc" name="Service" provided="0" ref="0x2b3678287860">
+      <component-ref nicename="tos.system.ArbitratedReadStreamC" qname="AccelReadStreamP.MultiplexX"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Service" ref="0x2b3678287860" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.ReadStream" qname="ReadStream"/>
+        <arguments>
+          <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned="">
+            <typename><typedef-ref name="uint16_t" ref="0x2b36763969f0"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x2b3676396318"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="bufferDone" ref="0x2b3678284278" scoped=""/>
+        <function-ref name="postBuffer" ref="0x2b3678285458" scoped=""/>
+        <function-ref name="read" ref="0x2b3678285d80" scoped=""/>
+        <function-ref name="readDone" ref="0x2b3678284cd0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="24:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/ArbitratedReadStreamC.nc" name="ReadStream" provided="1" ref="0x2b36782d9568">
+      <component-ref nicename="tos.system.ArbitratedReadStreamC" qname="AccelReadStreamP.MultiplexZ"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ReadStream" ref="0x2b36782d9568" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.ReadStream" qname="ReadStream"/>
+        <arguments>
+          <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned="">
+            <typename><typedef-ref name="uint16_t" ref="0x2b36763969f0"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x2b3676396318"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="bufferDone" ref="0x2b36782d7020" scoped=""/>
+        <function-ref name="postBuffer" ref="0x2b36782d80f8" scoped=""/>
+        <function-ref name="read" ref="0x2b36782d8a20" scoped=""/>
+        <function-ref name="readDone" ref="0x2b36782d7a78" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="27:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/ArbitratedReadStreamC.nc" name="Resource" provided="0" ref="0x2b36782823c8">
+      <component-ref nicename="tos.system.ArbitratedReadStreamC" qname="AccelReadStreamP.MultiplexX"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Resource" ref="0x2b36782823c8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Resource" qname="Resource"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x2b3676396318"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="release" ref="0x2b3678282738" scoped=""/>
+        <function-ref name="immediateRequest" ref="0x2b36782828c0" scoped=""/>
+        <function-ref name="request" ref="0x2b3678282a48" scoped=""/>
+        <function-ref name="granted" ref="0x2b3678282bd0" scoped=""/>
+        <function-ref name="isOwner" ref="0x2b3678282d58" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="26:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/ArbitratedReadStreamC.nc" name="Service" provided="0" ref="0x2b367827ccd0">
+      <component-ref nicename="tos.system.ArbitratedReadStreamC" qname="AccelReadStreamP.MultiplexY"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Service" ref="0x2b367827ccd0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.ReadStream" qname="ReadStream"/>
+        <arguments>
+          <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned="">
+            <typename><typedef-ref name="uint16_t" ref="0x2b36763969f0"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x2b3676396318"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="bufferDone" ref="0x2b36782796f8" scoped=""/>
+        <function-ref name="postBuffer" ref="0x2b367827b8b8" scoped=""/>
+        <function-ref name="read" ref="0x2b3678279238" scoped=""/>
+        <function-ref name="readDone" ref="0x2b36782dd198" scoped=""/>
+      </interface-functions>
+    </interface><component loc="21:AccelConfigP.nc" nicename="AccelConfigP" qname="AccelConfigP">
+      <configuration/>
+      <wiring>
+        <wire loc="34:AccelConfigP.nc">
+          <from><interface-ref name="ConfigY" ref="0x2b367823d998" scoped=""/></from>
+          <to><interface-ref name="ConfigY" ref="0x2b3678235cd8" scoped=""/></to>
+        </wire>
+        <wire loc="35:AccelConfigP.nc">
+          <from><interface-ref name="ConfigZ" ref="0x2b367823acd8" scoped=""/></from>
+          <to><interface-ref name="ConfigZ" ref="0x2b36782320a8" scoped=""/></to>
+        </wire>
+        <wire loc="33:AccelConfigP.nc">
+          <from><interface-ref name="ConfigX" ref="0x2b367823b630" scoped=""/></from>
+          <to><interface-ref name="ConfigX" ref="0x2b3678238950" scoped=""/></to>
+        </wire>
+        <wire loc="32:AccelConfigP.nc">
+          <from><interface-ref name="Resource" ref="0x2b367823f1c8" scoped=""/></from>
+          <to><interface-ref name="Resource" ref="0x2b3678254020" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component><component loc="23(AccelReadStreamP.MultiplexY):/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/ArbitratedReadStreamC.nc" nicename="tos.system.ArbitratedReadStreamC" qname="AccelReadStreamP.MultiplexY">
+      <documentation loc="10:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/ArbitratedReadStreamC.nc">
+        <short>
+ Implement arbitrated access to a Read interface, based on an
+ underlying arbitrated Resource interface.</short>
+        <long>
+ Implement arbitrated access to a Read interface, based on an
+ underlying arbitrated Resource interface.
+
+ Note that this code does not deal with unexpected events: it assumes
+ that all events it receives are in response to commands that it
+ made. See tos/chips/atm128/adc for an example of using
+ ArbitratedReadStreamC in a safe way.
+
+ @param width_t Width of the underlying ReadStream interface.
+
+ @author David Gay
+</long>
+      </documentation>
+      <instance number="1">
+        <component-ref nicename="tos.system.ArbitratedReadStreamC" qname="ArbitratedReadStreamC"/>
+        <arguments>
+          <value cst="I:3">
+            <type-int alignment="I:2" cname="int" size="I:2"/>
+          </value>
+          <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned="">
+            <typename><typedef-ref name="uint16_t" ref="0x2b36763969f0"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <module/>
+    </component><component loc="23(AccelReadStreamP.MultiplexX):/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/ArbitratedReadStreamC.nc" nicename="tos.system.ArbitratedReadStreamC" qname="AccelReadStreamP.MultiplexX">
+      <documentation loc="10:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/ArbitratedReadStreamC.nc">
+        <short>
+ Implement arbitrated access to a Read interface, based on an
+ underlying arbitrated Resource interface.</short>
+        <long>
+ Implement arbitrated access to a Read interface, based on an
+ underlying arbitrated Resource interface.
+
+ Note that this code does not deal with unexpected events: it assumes
+ that all events it receives are in response to commands that it
+ made. See tos/chips/atm128/adc for an example of using
+ ArbitratedReadStreamC in a safe way.
+
+ @param width_t Width of the underlying ReadStream interface.
+
+ @author David Gay
+</long>
+      </documentation>
+      <instance number="0">
+        <component-ref nicename="tos.system.ArbitratedReadStreamC" qname="ArbitratedReadStreamC"/>
+        <arguments>
+          <value cst="I:3">
+            <type-int alignment="I:2" cname="int" size="I:2"/>
+          </value>
+          <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned="">
+            <typename><typedef-ref name="uint16_t" ref="0x2b36763969f0"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <module/>
+    </component><component loc="23(AccelReadStreamP.MultiplexZ):/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/ArbitratedReadStreamC.nc" nicename="tos.system.ArbitratedReadStreamC" qname="AccelReadStreamP.MultiplexZ">
+      <documentation loc="10:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/ArbitratedReadStreamC.nc">
+        <short>
+ Implement arbitrated access to a Read interface, based on an
+ underlying arbitrated Resource interface.</short>
+        <long>
+ Implement arbitrated access to a Read interface, based on an
+ underlying arbitrated Resource interface.
+
+ Note that this code does not deal with unexpected events: it assumes
+ that all events it receives are in response to commands that it
+ made. See tos/chips/atm128/adc for an example of using
+ ArbitratedReadStreamC in a safe way.
+
+ @param width_t Width of the underlying ReadStream interface.
+
+ @author David Gay
+</long>
+      </documentation>
+      <instance number="2">
+        <component-ref nicename="tos.system.ArbitratedReadStreamC" qname="ArbitratedReadStreamC"/>
+        <arguments>
+          <value cst="I:3">
+            <type-int alignment="I:2" cname="int" size="I:2"/>
+          </value>
+          <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned="">
+            <typename><typedef-ref name="uint16_t" ref="0x2b36763969f0"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <module/>
+    </component></referenced></component>

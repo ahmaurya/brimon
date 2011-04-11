@@ -1,0 +1,203 @@
+<?xml version="1.0" ?><component loc="14:SamplerC.nc" nicename="SamplerC" qname="SamplerC">
+      <module/>
+    <specification><interface loc="30:SamplerC.nc" name="BlockWriteZ" provided="0" ref="0x2b367716c858">
+      <component-ref nicename="SamplerC" qname="SamplerC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="BlockWriteZ" ref="0x2b367716c858" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.BlockWrite" qname="BlockWrite"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="syncDone" ref="0x2b367716cba8" scoped=""/>
+        <function-ref name="writeDone" ref="0x2b367716cd30" scoped=""/>
+        <function-ref name="erase" ref="0x2b3677183020" scoped=""/>
+        <function-ref name="eraseDone" ref="0x2b36771831a8" scoped=""/>
+        <function-ref name="write" ref="0x2b3677183330" scoped=""/>
+        <function-ref name="sync" ref="0x2b36771834b8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="24:SamplerC.nc" name="BlockReadX" provided="0" ref="0x2b3677170388">
+      <component-ref nicename="SamplerC" qname="SamplerC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="BlockReadX" ref="0x2b3677170388" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.BlockRead" qname="BlockRead"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="read" ref="0x2b36771706d8" scoped=""/>
+        <function-ref name="computeCrcDone" ref="0x2b3677170860" scoped=""/>
+        <function-ref name="computeCrc" ref="0x2b36771709e8" scoped=""/>
+        <function-ref name="getSize" ref="0x2b3677170b70" scoped=""/>
+        <function-ref name="readDone" ref="0x2b3677170cf8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="20:SamplerC.nc" name="AccelX" provided="0" ref="0x2b36771611d0">
+      <component-ref nicename="SamplerC" qname="SamplerC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="AccelX" ref="0x2b36771611d0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.ReadStream" qname="ReadStream"/>
+        <arguments>
+          <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned="">
+            <typename><typedef-ref name="uint16_t" ref="0x2b36763969f0"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="bufferDone" ref="0x2b3677160b10" scoped=""/>
+        <function-ref name="postBuffer" ref="0x2b3677161d18" scoped=""/>
+        <function-ref name="read" ref="0x2b3677160670" scoped=""/>
+        <function-ref name="readDone" ref="0x2b3677158598" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="28:SamplerC.nc" name="BlockWriteX" provided="0" ref="0x2b3677165948">
+      <component-ref nicename="SamplerC" qname="SamplerC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="BlockWriteX" ref="0x2b3677165948" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.BlockWrite" qname="BlockWrite"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="syncDone" ref="0x2b3677165c98" scoped=""/>
+        <function-ref name="writeDone" ref="0x2b3677165e20" scoped=""/>
+        <function-ref name="erase" ref="0x2b367716d020" scoped=""/>
+        <function-ref name="eraseDone" ref="0x2b367716d1a8" scoped=""/>
+        <function-ref name="write" ref="0x2b367716d330" scoped=""/>
+        <function-ref name="sync" ref="0x2b367716d4b8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="25:SamplerC.nc" name="BlockReadY" provided="0" ref="0x2b367716f0c8">
+      <component-ref nicename="SamplerC" qname="SamplerC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="BlockReadY" ref="0x2b367716f0c8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.BlockRead" qname="BlockRead"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="read" ref="0x2b367716f418" scoped=""/>
+        <function-ref name="computeCrcDone" ref="0x2b367716f5a0" scoped=""/>
+        <function-ref name="computeCrc" ref="0x2b367716f728" scoped=""/>
+        <function-ref name="getSize" ref="0x2b367716f8b0" scoped=""/>
+        <function-ref name="readDone" ref="0x2b367716fa38" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="16:SamplerC.nc" name="Sample" provided="1" ref="0x2b3677149c80">
+      <component-ref nicename="SamplerC" qname="SamplerC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Sample" ref="0x2b3677149c80" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="Sample" qname="Sample"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="sampled" ref="0x2b3677148020" scoped=""/>
+        <function-ref name="sample" ref="0x2b36771481a8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="21:SamplerC.nc" name="AccelY" provided="0" ref="0x2b3677158d78">
+      <component-ref nicename="SamplerC" qname="SamplerC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="AccelY" ref="0x2b3677158d78" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.ReadStream" qname="ReadStream"/>
+        <arguments>
+          <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned="">
+            <typename><typedef-ref name="uint16_t" ref="0x2b36763969f0"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="bufferDone" ref="0x2b36771556d8" scoped=""/>
+        <function-ref name="postBuffer" ref="0x2b36771578f0" scoped=""/>
+        <function-ref name="read" ref="0x2b3677155238" scoped=""/>
+        <function-ref name="readDone" ref="0x2b3677174158" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="29:SamplerC.nc" name="BlockWriteY" provided="0" ref="0x2b367716d858">
+      <component-ref nicename="SamplerC" qname="SamplerC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="BlockWriteY" ref="0x2b367716d858" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.BlockWrite" qname="BlockWrite"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="syncDone" ref="0x2b367716dba8" scoped=""/>
+        <function-ref name="writeDone" ref="0x2b367716dd30" scoped=""/>
+        <function-ref name="erase" ref="0x2b367716c020" scoped=""/>
+        <function-ref name="eraseDone" ref="0x2b367716c1a8" scoped=""/>
+        <function-ref name="write" ref="0x2b367716c330" scoped=""/>
+        <function-ref name="sync" ref="0x2b367716c4b8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="17:SamplerC.nc" name="Leds" provided="0" ref="0x2b3677148460">
+      <component-ref nicename="SamplerC" qname="SamplerC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Leds" ref="0x2b3677148460" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Leds" qname="Leds"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="led0Off" ref="0x2b36771487b0" scoped=""/>
+        <function-ref name="led0Toggle" ref="0x2b3677148938" scoped=""/>
+        <function-ref name="led1On" ref="0x2b3677148ac0" scoped=""/>
+        <function-ref name="led1Toggle" ref="0x2b3677148c48" scoped=""/>
+        <function-ref name="led2Toggle" ref="0x2b3677148dd0" scoped=""/>
+        <function-ref name="get" ref="0x2b3677147020" scoped=""/>
+        <function-ref name="led1Off" ref="0x2b36771471a8" scoped=""/>
+        <function-ref name="led2Off" ref="0x2b36771477c8" scoped=""/>
+        <function-ref name="set" ref="0x2b3677147330" scoped=""/>
+        <function-ref name="led0On" ref="0x2b36771474b8" scoped=""/>
+        <function-ref name="led2On" ref="0x2b3677147640" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="26:SamplerC.nc" name="BlockReadZ" provided="0" ref="0x2b367716fdc8">
+      <component-ref nicename="SamplerC" qname="SamplerC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="BlockReadZ" ref="0x2b367716fdc8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.BlockRead" qname="BlockRead"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="read" ref="0x2b367716e170" scoped=""/>
+        <function-ref name="computeCrcDone" ref="0x2b367716e2f8" scoped=""/>
+        <function-ref name="computeCrc" ref="0x2b367716e480" scoped=""/>
+        <function-ref name="getSize" ref="0x2b367716e608" scoped=""/>
+        <function-ref name="readDone" ref="0x2b367716e790" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="22:SamplerC.nc" name="AccelZ" provided="0" ref="0x2b3677174938">
+      <component-ref nicename="SamplerC" qname="SamplerC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="AccelZ" ref="0x2b3677174938" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.ReadStream" qname="ReadStream"/>
+        <arguments>
+          <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned="">
+            <typename><typedef-ref name="uint16_t" ref="0x2b36763969f0"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="bufferDone" ref="0x2b3677171278" scoped=""/>
+        <function-ref name="postBuffer" ref="0x2b36771734a8" scoped=""/>
+        <function-ref name="read" ref="0x2b3677173db0" scoped=""/>
+        <function-ref name="readDone" ref="0x2b3677171cb0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="18:SamplerC.nc" name="Timer" provided="0" ref="0x2b3677147bd0">
+      <component-ref nicename="SamplerC" qname="SamplerC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Timer" ref="0x2b3677147bd0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.timer.Timer" qname="Timer"/>
+        <arguments>
+          <type-tag alignment="I:2" size="I:2"><struct-ref ref="0x2b36770a5970"/>
+            <typename><typedef-ref name="TMilli" ref="0x2b36770a5cc8"/></typename>
+          </type-tag>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="getNow" ref="0x2b3677163dd8" scoped=""/>
+        <function-ref name="fired" ref="0x2b3677145510" scoped=""/>
+        <function-ref name="startPeriodicAt" ref="0x2b3677163238" scoped=""/>
+        <function-ref name="isOneShot" ref="0x2b3677145db0" scoped=""/>
+        <function-ref name="getdt" ref="0x2b36771626c8" scoped=""/>
+        <function-ref name="gett0" ref="0x2b3677162278" scoped=""/>
+        <function-ref name="isRunning" ref="0x2b3677145960" scoped=""/>
+        <function-ref name="startPeriodic" ref="0x2b3677146740" scoped=""/>
+        <function-ref name="startOneShotAt" ref="0x2b3677163808" scoped=""/>
+        <function-ref name="startOneShot" ref="0x2b3677146be0" scoped=""/>
+        <function-ref name="stop" ref="0x2b36771450c0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="32:SamplerC.nc" name="LogWrite" provided="0" ref="0x2b3677183798">
+      <component-ref nicename="SamplerC" qname="SamplerC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="LogWrite" ref="0x2b3677183798" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.LogWrite" qname="LogWrite"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="currentOffset" ref="0x2b3677183be8" scoped=""/>
+        <function-ref name="syncDone" ref="0x2b3677183d70" scoped=""/>
+        <function-ref name="erase" ref="0x2b3677182020" scoped=""/>
+        <function-ref name="eraseDone" ref="0x2b36771821a8" scoped=""/>
+        <function-ref name="appendDone" ref="0x2b3677182330" scoped=""/>
+        <function-ref name="append" ref="0x2b36771824b8" scoped=""/>
+        <function-ref name="sync" ref="0x2b3677182640" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced/></component>

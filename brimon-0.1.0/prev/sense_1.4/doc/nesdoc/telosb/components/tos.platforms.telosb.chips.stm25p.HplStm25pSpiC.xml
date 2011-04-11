@@ -1,0 +1,170 @@
+<?xml version="1.0" ?><component loc="40:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/platforms/telosb/chips/stm25p/HplStm25pSpiC.nc" nicename="tos.platforms.telosb.chips.stm25p.HplStm25pSpiC" qname="HplStm25pSpiC">
+      <documentation loc="32:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/platforms/telosb/chips/stm25p/HplStm25pSpiC.nc">
+        <short>
+ HPL implementation of the Spi bus for a ST M25P chip connected to a
+ TI MSP430.</short>
+        <long>
+ HPL implementation of the Spi bus for a ST M25P chip connected to a
+ TI MSP430.
+
+ @author Jonathan Hui &lt;jhui@archrock.com&gt;
+ @version $Revision: 1.4 $ $Date: 2006/12/12 18:23:45 $
+</long>
+      </documentation>
+      <configuration/>
+      <wiring>
+        <wire loc="53:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/platforms/telosb/chips/stm25p/HplStm25pSpiC.nc">
+          <from><interface-ref name="SpiPacket" ref="0x2b3677f0f308" scoped=""/></from>
+          <to><interface-ref name="SpiPacket" ref="0x2b3678149b58" scoped=""/></to>
+        </wire>
+        <wire loc="52:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/platforms/telosb/chips/stm25p/HplStm25pSpiC.nc">
+          <from><interface-ref name="SpiByte" ref="0x2b3677f10c60" scoped=""/></from>
+          <to><interface-ref name="SpiByte" ref="0x2b3678149580" scoped=""/></to>
+        </wire>
+        <wire loc="51:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/platforms/telosb/chips/stm25p/HplStm25pSpiC.nc">
+          <from><interface-ref name="Resource" ref="0x2b3677f10020" scoped=""/></from>
+          <to><interface-ref name="Resource" ref="0x2b367814a1a8" scoped=""/></to>
+        </wire>
+      </wiring>
+    <specification><interface loc="44:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/platforms/telosb/chips/stm25p/HplStm25pSpiC.nc" name="SpiPacket" provided="1" ref="0x2b3677f0f308">
+      <component-ref nicename="tos.platforms.telosb.chips.stm25p.HplStm25pSpiC" qname="HplStm25pSpiC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="SpiPacket" ref="0x2b3677f0f308" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.SpiPacket" qname="SpiPacket"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="send" ref="0x2b3677f0f658" scoped=""/>
+        <function-ref name="sendDone" ref="0x2b3677f0f7e0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="43:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/platforms/telosb/chips/stm25p/HplStm25pSpiC.nc" name="SpiByte" provided="1" ref="0x2b3677f10c60">
+      <component-ref nicename="tos.platforms.telosb.chips.stm25p.HplStm25pSpiC" qname="HplStm25pSpiC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="SpiByte" ref="0x2b3677f10c60" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.SpiByte" qname="SpiByte"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="write" ref="0x2b3677f0f020" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="42:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/platforms/telosb/chips/stm25p/HplStm25pSpiC.nc" name="Resource" provided="1" ref="0x2b3677f10020">
+      <component-ref nicename="tos.platforms.telosb.chips.stm25p.HplStm25pSpiC" qname="HplStm25pSpiC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Resource" ref="0x2b3677f10020" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Resource" qname="Resource"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="release" ref="0x2b3677f10370" scoped=""/>
+        <function-ref name="immediateRequest" ref="0x2b3677f104f8" scoped=""/>
+        <function-ref name="request" ref="0x2b3677f10680" scoped=""/>
+        <function-ref name="granted" ref="0x2b3677f10808" scoped=""/>
+        <function-ref name="isOwner" ref="0x2b3677f10990" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced><interface loc="47:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/usart/Msp430Spi0C.nc" name="Resource" provided="1" ref="0x2b367814a1a8">
+      <component-ref nicename="tos.chips.msp430.usart.Msp430Spi0C" qname="HplStm25pSpiC.SpiC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Resource" ref="0x2b367814a1a8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Resource" qname="Resource"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="release" ref="0x2b367814a4f8" scoped=""/>
+        <function-ref name="immediateRequest" ref="0x2b367814a680" scoped=""/>
+        <function-ref name="request" ref="0x2b367814a808" scoped=""/>
+        <function-ref name="granted" ref="0x2b367814a990" scoped=""/>
+        <function-ref name="isOwner" ref="0x2b367814ab18" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="50:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/usart/Msp430Spi0C.nc" name="SpiPacket" provided="1" ref="0x2b3678149b58">
+      <component-ref nicename="tos.chips.msp430.usart.Msp430Spi0C" qname="HplStm25pSpiC.SpiC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="SpiPacket" ref="0x2b3678149b58" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.SpiPacket" qname="SpiPacket"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="send" ref="0x2b3678148020" scoped=""/>
+        <function-ref name="sendDone" ref="0x2b36781481a8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="49:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/usart/Msp430Spi0C.nc" name="SpiByte" provided="1" ref="0x2b3678149580">
+      <component-ref nicename="tos.chips.msp430.usart.Msp430Spi0C" qname="HplStm25pSpiC.SpiC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="SpiByte" ref="0x2b3678149580" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.SpiByte" qname="SpiByte"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="write" ref="0x2b36781498d0" scoped=""/>
+      </interface-functions>
+    </interface><component loc="45(HplStm25pSpiC.SpiC):/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/usart/Msp430Spi0C.nc" nicename="tos.chips.msp430.usart.Msp430Spi0C" qname="HplStm25pSpiC.SpiC">
+      <documentation loc="31:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/chips/msp430/usart/msp430usart.h">
+        <short>
+ </short>
+        <long>
+ @author Vlado Handziski &lt;handzisk@tkn.tu-berlin.de&gt;
+ @author Philipp Huppertz &lt;huppertz@tkn.tu-berlin.de&gt;
+</long>
+      </documentation>
+      <instance number="0">
+        <component-ref nicename="tos.chips.msp430.usart.Msp430Spi0C" qname="Msp430Spi0C"/>
+      </instance>
+      <configuration/>
+      <wiring>
+        <wire>
+          <from><interface-ref name="ResourceRequested" ref="0x2b367814ada0" scoped=""/></from>
+          <to><interface-ref name="ResourceRequested" ref="0x2b3678cc7da0" scoped=""/></to>
+        </wire>
+        <wire>
+          <from><interface-ref name="SpiPacket" ref="0x2b3678149b58" scoped=""/></from>
+          <to><interface-ref name="SpiPacket" ref="0x2b3677f01e18" scoped=""/>
+          <arguments>
+            <value cst="I:0">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire>
+          <from><interface-ref name="SpiByte" ref="0x2b3678149580" scoped=""/></from>
+          <to><interface-ref name="SpiByte" ref="0x2b3677f012f0" scoped=""/></to>
+        </wire>
+        <wire>
+          <from><interface-ref name="Resource" ref="0x2b367814a1a8" scoped=""/></from>
+          <to><interface-ref name="Resource" ref="0x2b3677f036d8" scoped=""/>
+          <arguments>
+            <value cst="I:0">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire>
+          <from><interface-ref name="Msp430SpiConfigure" ref="0x2b3677effe70" scoped=""/>
+          <arguments>
+            <value cst="I:0">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </from>
+          <to><interface-ref name="Msp430SpiConfigure" ref="0x2b3678148430" scoped=""/></to>
+        </wire>
+        <wire>
+          <from><interface-ref name="ResourceConfigure" ref="0x2b3678cb9d60" scoped=""/></from>
+          <to><interface-ref name="ResourceConfigure" ref="0x2b3677f029d0" scoped=""/>
+          <arguments>
+            <value cst="I:0">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire>
+          <from><interface-ref name="UsartResource" ref="0x2b3677f00bc8" scoped=""/>
+          <arguments>
+            <value cst="I:0">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </from>
+          <to><interface-ref name="Resource" ref="0x2b3678cc71a8" scoped=""/></to>
+        </wire>
+        <wire>
+          <from><interface-ref name="UsartInterrupts" ref="0x2b3677efd640" scoped=""/></from>
+          <to><interface-ref name="HplMsp430UsartInterrupts" ref="0x2b3678cc1430" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component></referenced></component>

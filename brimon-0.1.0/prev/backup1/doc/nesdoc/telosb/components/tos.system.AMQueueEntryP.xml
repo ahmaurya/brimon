@@ -1,0 +1,68 @@
+<?xml version="1.0" ?><component abstract="" loc="35:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/AMQueueEntryP.nc" nicename="tos.system.AMQueueEntryP" qname="AMQueueEntryP" safe="">
+      <documentation loc="25:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/AMQueueEntryP.nc">
+        <short>
+ Internal AM component that fills in needed packet fields for the 
+ AMSend -&gt; Send transformation.</short>
+        <long>
+ Internal AM component that fills in needed packet fields for the 
+ AMSend -&gt; Send transformation.
+
+ @author Philip Levis
+ @date   Jan 16 2006
+</long>
+      </documentation>
+      <parameters>
+        <constant loc="35:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/AMQueueEntryP.nc" name="amId" ref="0x2ae8de28eb78">
+          <component-ref nicename="tos.system.AMQueueEntryP" qname="AMQueueEntryP"/>
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="am_id_t" ref="0x2ae8dd9db970"/></typename>
+          </type-int>
+        </constant>
+      </parameters>
+      <module/>
+    <specification><interface loc="36:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/AMQueueEntryP.nc" name="AMSend" provided="1" ref="0x2ae8de2cd3d0">
+      <component-ref nicename="tos.system.AMQueueEntryP" qname="AMQueueEntryP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="AMSend" ref="0x2ae8de2cd3d0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.AMSend" qname="AMSend"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="send" ref="0x2ae8de2cd720" scoped=""/>
+        <function-ref name="getPayload" ref="0x2ae8de2cd8a8" scoped=""/>
+        <function-ref name="maxPayloadLength" ref="0x2ae8de2cda30" scoped=""/>
+        <function-ref name="cancel" ref="0x2ae8de2cdbb8" scoped=""/>
+        <function-ref name="sendDone" ref="0x2ae8de2cdd40" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="38:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/AMQueueEntryP.nc" name="Send" provided="0" ref="0x2ae8de2cc080">
+      <component-ref nicename="tos.system.AMQueueEntryP" qname="AMQueueEntryP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Send" ref="0x2ae8de2cc080" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Send" qname="Send"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="send" ref="0x2ae8de2cc3d0" scoped=""/>
+        <function-ref name="getPayload" ref="0x2ae8de2cc558" scoped=""/>
+        <function-ref name="maxPayloadLength" ref="0x2ae8de2cc6e0" scoped=""/>
+        <function-ref name="cancel" ref="0x2ae8de2cc868" scoped=""/>
+        <function-ref name="sendDone" ref="0x2ae8de2cc9f0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="39:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/system/AMQueueEntryP.nc" name="AMPacket" provided="0" ref="0x2ae8de2ccc90">
+      <component-ref nicename="tos.system.AMQueueEntryP" qname="AMQueueEntryP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="AMPacket" ref="0x2ae8de2ccc90" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.AMPacket" qname="AMPacket"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="group" ref="0x2ae8de2cb020" scoped=""/>
+        <function-ref name="source" ref="0x2ae8de2cb1a8" scoped=""/>
+        <function-ref name="address" ref="0x2ae8de2cb330" scoped=""/>
+        <function-ref name="destination" ref="0x2ae8de2cb4b8" scoped=""/>
+        <function-ref name="setSource" ref="0x2ae8de2cb640" scoped=""/>
+        <function-ref name="setDestination" ref="0x2ae8de2cb7c8" scoped=""/>
+        <function-ref name="type" ref="0x2ae8de2cb950" scoped=""/>
+        <function-ref name="setType" ref="0x2ae8de2cbad8" scoped=""/>
+        <function-ref name="isForMe" ref="0x2ae8de2cbc60" scoped=""/>
+        <function-ref name="setGroup" ref="0x2ae8de2cbde8" scoped=""/>
+        <function-ref name="localGroup" ref="0x2ae8de2ca020" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced/></component>

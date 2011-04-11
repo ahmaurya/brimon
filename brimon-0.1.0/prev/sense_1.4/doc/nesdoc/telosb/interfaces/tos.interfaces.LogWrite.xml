@@ -1,0 +1,248 @@
+<?xml version="1.0" ?><interfacedef loc="42:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/interfaces/LogWrite.nc" nicename="tos.interfaces.LogWrite" qname="LogWrite">
+      <documentation loc="32:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/interfaces/LogWrite.nc">
+        <short>
+ Write interface for the log storage abstraction described in
+ TEP103.</short>
+        <long>
+ Write interface for the log storage abstraction described in
+ TEP103.
+
+ @author Jonathan Hui &lt;jhui@archrock.com&gt;
+ @version $Revision: 1.5 $ $Date: 2008/06/04 03:00:29 $
+</long>
+      </documentation>
+      <function command="" loc="82:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/interfaces/LogWrite.nc" name="currentOffset" provided="0" ref="0x2b36770e1760">
+        <documentation loc="71:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/interfaces/LogWrite.nc">
+          <short>
+ Return a &quot;cookie&quot; representing the current append offset within the
+ log.</short>
+          <long>
+ Return a &quot;cookie&quot; representing the current append offset within the
+ log. This cookie can be used in a subsequent seek operation (see
+ &lt;code&gt;LogRead&lt;/code&gt; to start reading from this place in the log (if
+ it hasn't been overwritten).
+
+ The current write position is not known before the first read, append,
+ seek, erase or sync.
+
+ @return Cookie representing current offset. 
+</long>
+        </documentation>
+        <interfacedef-ref nicename="tos.interfaces.LogWrite" qname="LogWrite"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:2" cname="unsigned long" size="I:4" unsigned="">
+            <typename><typedef-ref name="storage_cookie_t" ref="0x2b36770d3a00"/></typename>
+          </type-int>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+        <parameters>
+        </parameters>
+      </function>
+      <function event="" loc="118:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/interfaces/LogWrite.nc" name="syncDone" provided="0" ref="0x2b36770dfc78">
+        <documentation loc="113:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/interfaces/LogWrite.nc">
+          <short>
+ Signals the successful or unsuccessful completion of a sync operation.</short>
+          <long>
+ Signals the successful or unsuccessful completion of a sync operation. 
+
+ @param error SUCCESS if the log was synchronised, FAIL otherwise.
+</long>
+        </documentation>
+        <interfacedef-ref nicename="tos.interfaces.LogWrite" qname="LogWrite"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="error_t" ref="0x2b3676c015d8"/></typename>
+            </type-int>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="118:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/interfaces/LogWrite.nc" name="error" ref="0x2b36770dfa08">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="error_t" ref="0x2b3676c015d8"/></typename>
+            </type-int>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="93:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/interfaces/LogWrite.nc" name="erase" provided="0" ref="0x2b36770e0020">
+        <documentation loc="84:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/interfaces/LogWrite.nc">
+          <short>
+ Initiate an erase operation.</short>
+          <long>
+ Initiate an erase operation. On SUCCESS, the
+ &lt;code&gt;eraseDone&lt;/code&gt; event will signal completion of the
+ operation.
+
+ @return 
+   &lt;li&gt;SUCCESS if the request was accepted, 
+   &lt;li&gt;EBUSY if a request is already being processed.
+</long>
+        </documentation>
+        <interfacedef-ref nicename="tos.interfaces.LogWrite" qname="LogWrite"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="error_t" ref="0x2b3676c015d8"/></typename>
+          </type-int>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+        <parameters>
+        </parameters>
+      </function>
+      <function event="" loc="100:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/interfaces/LogWrite.nc" name="eraseDone" provided="0" ref="0x2b36770e0a18">
+        <documentation loc="95:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/interfaces/LogWrite.nc">
+          <short>
+ Signals the completion of an erase operation.</short>
+          <long>
+ Signals the completion of an erase operation.
+
+ @param error SUCCESS if the log was erased, FAIL otherwise.
+</long>
+        </documentation>
+        <interfacedef-ref nicename="tos.interfaces.LogWrite" qname="LogWrite"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="error_t" ref="0x2b3676c015d8"/></typename>
+            </type-int>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="100:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/interfaces/LogWrite.nc" name="error" ref="0x2b36770e07a8">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="error_t" ref="0x2b3676c015d8"/></typename>
+            </type-int>
+          </variable>
+        </parameters>
+      </function>
+      <function event="" loc="68:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/interfaces/LogWrite.nc" name="appendDone" provided="0" ref="0x2b36770e4760">
+        <documentation loc="56:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/interfaces/LogWrite.nc">
+          <short>
+ Signals the completion of an append operation.</short>
+          <long>
+ Signals the completion of an append operation. However, data is not
+ guaranteed to survive a power-cycle unless a commit operation has
+ been completed.
+
+ @param 'void* COUNT(len) buf' buffer that written data was read from.
+ @param len number of bytes actually written (valid even in case of error)
+ @param records_lost TRUE if this append destroyed some old records from
+   the beginning of the log (only possible for circular logs).
+ @param error SUCCESS if append was possible, ESIZE if the (linear) log
+    is full and FAIL for other errors.
+</long>
+        </documentation>
+        <interfacedef-ref nicename="tos.interfaces.LogWrite" qname="LogWrite"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+            <type-pointer alignment="I:2" size="I:2">
+              <type-void alignment="I:1" size="I:1"/>
+            </type-pointer>
+            <type-int alignment="I:2" cname="unsigned long" size="I:4" unsigned="">
+              <typename><typedef-ref name="storage_len_t" ref="0x2b36770d3600"/></typename>
+            </type-int>
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="bool" ref="0x2b3676bf7178"/></typename>
+            </type-int>
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="error_t" ref="0x2b3676c015d8"/></typename>
+            </type-int>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="68:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/interfaces/LogWrite.nc" name="buf" ref="0x2b36770e3a68">
+            <type-pointer alignment="I:2" size="I:2">
+              <type-void alignment="I:1" size="I:1"/>
+            </type-pointer>
+          </variable>
+          <variable loc="68:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/interfaces/LogWrite.nc" name="len" ref="0x2b36770e3db8">
+            <type-int alignment="I:2" cname="unsigned long" size="I:4" unsigned="">
+              <typename><typedef-ref name="storage_len_t" ref="0x2b36770d3600"/></typename>
+            </type-int>
+          </variable>
+          <variable loc="68:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/interfaces/LogWrite.nc" name="recordsLost" ref="0x2b36770e4178">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="bool" ref="0x2b3676bf7178"/></typename>
+            </type-int>
+          </variable>
+          <variable loc="69:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/interfaces/LogWrite.nc" name="error" ref="0x2b36770e44c0">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="error_t" ref="0x2b3676c015d8"/></typename>
+            </type-int>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="54:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/interfaces/LogWrite.nc" name="append" provided="0" ref="0x2b36770e6c38">
+        <documentation loc="43:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/interfaces/LogWrite.nc">
+          <short>
+ Append data to a given volume.</short>
+          <long>
+ Append data to a given volume. On SUCCESS, the &lt;code&gt;appendDone&lt;/code&gt; 
+ event will signal completion of the operation.
+ 
+ @param 'void* COUNT(len) buf' buffer to write data from.
+ @param len number of bytes to write.
+ @return 
+   &lt;li&gt;SUCCESS if the request was accepted, 
+   &lt;li&gt;EINVAL if the request is invalid (len too large).
+   &lt;li&gt;EBUSY if a request is already being processed.
+</long>
+        </documentation>
+        <interfacedef-ref nicename="tos.interfaces.LogWrite" qname="LogWrite"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="error_t" ref="0x2b3676c015d8"/></typename>
+          </type-int>
+          <function-parameters>
+            <type-pointer alignment="I:2" size="I:2">
+              <type-void alignment="I:1" size="I:1"/>
+            </type-pointer>
+            <type-int alignment="I:2" cname="unsigned long" size="I:4" unsigned="">
+              <typename><typedef-ref name="storage_len_t" ref="0x2b36770d3600"/></typename>
+            </type-int>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="54:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/interfaces/LogWrite.nc" name="buf" ref="0x2b36770e6668">
+            <type-pointer alignment="I:2" size="I:2">
+              <type-void alignment="I:1" size="I:1"/>
+            </type-pointer>
+          </variable>
+          <variable loc="54:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/interfaces/LogWrite.nc" name="len" ref="0x2b36770e69b8">
+            <type-int alignment="I:2" cname="unsigned long" size="I:4" unsigned="">
+              <typename><typedef-ref name="storage_len_t" ref="0x2b36770d3600"/></typename>
+            </type-int>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="111:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/interfaces/LogWrite.nc" name="sync" provided="0" ref="0x2b36770df1d8">
+        <documentation loc="102:/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1/tos/interfaces/LogWrite.nc">
+          <short>
+ Ensure all writes are present on flash, and that failure in subsequent
+ writes cannot cause loss of earlier writes.</short>
+          <long>
+ Ensure all writes are present on flash, and that failure in subsequent
+ writes cannot cause loss of earlier writes. On SUCCES, the 
+ &lt;code&gt;commitDone&lt;/code&gt; event will signal completion of the operation.
+
+ @return 
+   &lt;li&gt;SUCCESS if the request was accepted, 
+   &lt;li&gt;EBUSY if a request is already being processed.
+</long>
+        </documentation>
+        <interfacedef-ref nicename="tos.interfaces.LogWrite" qname="LogWrite"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="error_t" ref="0x2b3676c015d8"/></typename>
+          </type-int>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+        <parameters>
+        </parameters>
+      </function>
+    </interfacedef>

@@ -1,0 +1,2 @@
+1)You can change the No. of packets sent by modifying the macro NO_OF_PACKETS defined in the RadioCountToLeds.h file present in the Sender/ folder. It is currently set to 300 packets.
+2)Whenever you want to conduct your runs, just plug-out the sender and plug it in again so that the packet transmission starts from seq=0. Make sure that the receiver is started before the sender so that you dont miss out any packet. 
