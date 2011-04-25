@@ -1,0 +1,491 @@
+/**
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * Written (W) 2011 Abhinav Maurya
+ * Copyright (C) 2011 Abhinav Maurya
+ */
+
+#include "Command.h"
+#include "Sense.h"
+
+/** provides the implementation for the commands of the Command interface
+ * provided by CommandC. Include CommandC for using various functionalities
+ */
+
+module CommandP
+{
+	provides interface Init;
+	provides interface Command;
+	//uses interface Routing;
+	//uses interface TimeSync;
+	provides interface Sense;
+	//uses interface Collect;
+	//uses interface Transfer;
+
+	  uses {
+  interface Timer<TMilli>;
+  interface Leds;
+  //interface Boot;
+  interface LogWrite;
+
+  interface Resource as ResourceX;
+  interface Resource as ResourceY;
+  interface Resource as ResourceZ;
+
+  interface ReadNow<uint16_t> as AccelX;
+  interface ReadNow<uint16_t> as AccelY;
+  interface ReadNow<uint16_t> as AccelZ;
+
+  interface Receive;
+  interface AMSend;
+  interface Timer<TMilli> as SendTimer;
+  interface Timer<TMilli> as AppTimer;
+  interface SplitControl as AMControl;
+  interface Packet;
+  interface CC2420Packet;
+  interface PacketAcknowledgements;
+  interface CC2420Config;
+  //interface Routing;
+  interface Resource;
+  }
+
+}
+
+implementation
+{
+
+
+
+
+  uint8_t state = NOT_ERASED;
+  uint8_t bufferIndex = B1;
+  uint16_t bufferSampleIndex = 0;
+  uint16_t globalSampleIndex = 0;
+  uint16_t globalBufferIndex = 0;
+  uint32_t bufferTimer;
+  uint32_t bufferTimerDiff;
+  uint32_t logStartOffset;
+  uint8_t locked=FALSE;
+  message_t packet;
+
+  uint8_t parent[] = {0,1};
+  uint8_t sentStatus[] = {0, 0};
+  int8_t sentSuccess = 0;
+
+  uint16_t buffer[NUM_BUFFER][NUM_AXIS][BUFFER_SIZE];
+  uint16_t bufferStartTimers[TOTAL_BUFFERS];
+  struct sample samples[SUMMARY_BUFFER_SIZE];
+
+  void startSampling();
+  void sample();
+  task void checkCompletion();
+  task void doCompletion();
+  void summarize(uint8_t x);
+  void eraseLog();
+  void resetParameters();
+  void start_sense();
+  task void sendToChildren();
+
+    command error_t Init.init() {
+		call AMControl.start();
+    }
+
+	/** Executed when a previously set timer fires.
+	 * Checks if the log has been completely transferred.
+	 * If yes, then it signals successfully finished transfer operation.
+	 * Else, it continues with the next execution of transfer_actual().
+	 */
+	event void AppTimer.fired() {
+		if(TOS_NODE_ID==1)
+			start_sense();
+	}
+
+  /** reinitialize all parameters */
+  void resetParameters() {
+  atomic {
+	bufferIndex = B1;
+	bufferSampleIndex = 0;
+	globalSampleIndex = 0;
+	globalBufferIndex = 0;
+	}
+  }
+
+  /** send the sense command to children over radio via broadcast */
+  task void sendToChildren() {
+		if (locked) {
+			post sendToChildren();
+		}
+		else {
+			sense_msg_t* rcm = (sense_msg_t*)call Packet.getPayload(&packet, sizeof(sense_msg_t));
+			if (rcm == NULL) {post sendToChildren(); return;}
+			if (call Packet.maxPayloadLength() < sizeof(sense_msg_t)) {post sendToChildren(); return;}
+			rcm->type = SENSE_PACKET;
+			rcm->src=TOS_NODE_ID;
+			if (call AMSend.send(AM_BROADCAST_ADDR, &packet, sizeof(sense_msg_t)) == SUCCESS) {
+				locked = TRUE;
+				//sentSuccess = 1;
+			}
+			else {
+				post sendToChildren();
+			}
+		}
+  }
+
+  /**
+   * signalled when a sense command is received over radio
+   * starts the start_sense() function if command is received from parent in the routing tree
+   */
+  event message_t* Receive.receive(message_t* bufPtr,void* payload, uint8_t len) {
+		if (len != sizeof(sense_msg_t))
+			return bufPtr;
+		else {
+			sense_msg_t* rcm = (sense_msg_t*)payload;
+			if(rcm->type==SENSE_PACKET && rcm->src==parent[TOS_NODE_ID-1])		//rcm->src==call Routing.getParent(TOS_NODE_ID)
+			{
+				start_sense();
+			}
+			return bufPtr;
+		}
+  }
+
+  /**
+   * just calls start_sense()
+   * used when the component is used via the Sense interface by other components
+   */
+  command void Sense.sense() {
+	start_sense();
+  }
+
+  /**
+   * send the sense command to children by posting a task
+   * sets a timer that will fire the actual sensing operation
+   */
+  void start_sense() {
+	call AMControl.start();
+	post sendToChildren();
+	call SendTimer.startOneShot(2000);
+  }
+
+  event void Resource.granted() {}
+
+  /**
+   * The actual sensing task at the heart of the component is initiated
+   * Sampling requested, decide course of action based on current state
+   */
+  void sense() {
+	switch(state) {
+	case NOT_ERASED:
+		atomic state = ERASING;
+		eraseLog();
+		signal Sense.senseDone(ERASING);
+		break;
+	case ERASING:
+		signal Sense.senseDone(ERASING);
+		break;
+	case ERASED:
+		atomic state = SAMPLING;
+		startSampling();
+		break;
+	case SAMPLING:
+		signal Sense.senseDone(SAMPLING);
+		break;
+	case SUMMARIZING:
+		signal Sense.senseDone(SUMMARIZING);
+		break;
+    }
+  }
+
+  /** returns size of the log generated by sensing */
+  command uint16_t Sense.getLogSize() {
+	return TOTAL_BUFFERS*(sizeof(bufferTimer) + sizeof(samples));
+  }
+
+  /** initiates erasing of flash */
+  void eraseLog() {
+	//call LogWrite.erase();
+	signal LogWrite.eraseDone(SUCCESS);
+  }
+
+  /** signalled when an append operation on the log is finished */
+  event void LogWrite.appendDone(void* buf, storage_len_t len, bool recordsLost, error_t error) {
+	printf("Writing done: %u\n\n", globalBufferIndex - 1);
+	printfflush();
+  }
+
+  /** signalled when an erase operation on the log is finished */
+  event void LogWrite.eraseDone(error_t error) {
+	atomic state = ERASED;
+	call Leds.set(2);
+  }
+
+  /** signalled when a sync operation on the log is finished */
+  event void LogWrite.syncDone(error_t error) {
+    // Summary saved!
+    call Leds.set(7);
+	atomic state = ERASING;
+	eraseLog();
+	signal Sense.senseDone(error);
+	//call AMControl.start();
+  }
+
+  //event void RadioControl.startDone(error_t err) {}
+
+  //event void RadioControl.stopDone(error_t err) {}
+
+  /**
+   * starts the sampling process by initializing required parameters
+   * and periodic setting the timer that fires the taking of each sample
+   */
+  void startSampling() {
+	resetParameters();
+	//call AMControl.stop();
+	call Leds.set(2);
+	logStartOffset = call LogWrite.currentOffset();
+	call Timer.startPeriodic(SAMPLE_PERIOD);
+  }
+
+  /**
+   * do the sampling when the sampling timer is fired
+   */
+  event void Timer.fired() {
+	if(bufferSampleIndex == 0) {
+		bufferTimerDiff = (call Timer.getNow()) - bufferTimer;
+		bufferTimer = call Timer.getNow();
+		}
+	sample();
+  }
+
+  /**
+   * request the use of ADC for sampling acceleration on axis X
+   */
+  void sample() {
+	call ResourceX.request();
+  }
+
+  /**
+   * signalled when the request for the use of ADC for sampling acceleration on axis X is granted
+   */
+  event void ResourceX.granted() {
+	call AccelX.read();
+  }
+
+  /**
+   * signalled when the acceleration on axis X is sampled and converted by ADC into a discrete value
+   */
+  async event void AccelX.readDone( error_t result, uint16_t val ) {
+		buffer[bufferIndex][X][bufferSampleIndex] = val;
+		atomic {
+			call ResourceX.release();
+			call ResourceY.request();
+			}
+  }
+
+  /**
+   * signalled when the request for the use of ADC for sampling acceleration on axis Y is granted
+   */
+  event void ResourceY.granted() {
+	call AccelY.read();
+  }
+
+  /**
+   * signalled when the acceleration on axis Y is sampled and converted by ADC into a discrete value
+   */
+  async event void AccelY.readDone( error_t result, uint16_t val ) {
+		buffer[bufferIndex][Y][bufferSampleIndex] = val;
+		atomic {
+			call ResourceY.release();
+			call ResourceZ.request();
+			}
+  }
+
+  /**
+   * signalled when the request for the use of ADC for sampling acceleration on axis Z is granted
+   */
+  event void ResourceZ.granted() {
+	call AccelZ.read();
+  }
+
+  /**
+   * signalled when the acceleration on axis Z is sampled and converted by ADC into a discrete value
+   * also posts checkCompletion() to check for summarization and termination of sampling conditions
+   */
+  async event void AccelZ.readDone( error_t result, uint16_t val ) {
+		buffer[bufferIndex][Z][bufferSampleIndex] = val;
+		atomic {
+			call ResourceZ.release();
+			post checkCompletion();
+			}
+  }
+
+  /**
+   * Check for summarization and termination of sampling conditions
+   * If termination condition is reached, post doCompletion()
+   * If summarization condition is reached, call summarize on the buffer that is full
+   */
+
+  task void checkCompletion() {
+	globalSampleIndex++;
+	if(globalSampleIndex == TOTAL_SAMPLES)
+		post doCompletion();
+	atomic bufferSampleIndex++;
+	if(bufferSampleIndex == BUFFER_SIZE) {
+		summarize(bufferIndex);
+		atomic bufferIndex = (bufferIndex+1)%NUM_BUFFER;
+		globalBufferIndex++;
+		atomic bufferSampleIndex = 0;
+	}
+  }
+
+  /**
+   * stop the sampling timer that triggers taking of each sample
+   */
+  task void doCompletion() {
+	call Timer.stop();
+	//call Timer.startPeriodic(999999999L);
+	//call LogWrite.sync();
+  }
+
+  /**
+   * summarize a given buffer and write it to flash
+   * also write the timer value of when the first sample in the buffer was taken
+   */
+  void summarize(uint8_t bufferIndexToSum) {
+    uint32_t sumX = 0, sumY = 0, sumZ = 0, temp;
+    uint16_t i, j, k = 0;
+    call Leds.set(7);
+	for (i = 0; i < SUMMARY_BUFFER_SIZE; i++) {
+		sumX = sumY = sumZ = 0;
+		for (j = 0; j < DFACTOR; j++) {
+		atomic {
+			sumX += buffer[bufferIndexToSum][X][k];
+			sumY += buffer[bufferIndexToSum][Y][k];
+			sumZ += buffer[bufferIndexToSum][Z][k];
+			k++;
+			}
+		}
+		samples[i].x = sumX / DFACTOR;
+		samples[i].y = sumY / DFACTOR;
+		samples[i].z = sumZ / DFACTOR;
+		printf("%u ... %u ... %u ... %u\n\n", i, samples[i].x, samples[i].y, samples[i].z); printfflush();
+	}
+	call LogWrite.append(&bufferTimer, sizeof bufferTimer);
+	call LogWrite.append(samples, sizeof samples);
+	printf("%lu :: ", bufferTimer);
+	temp = bufferTimer-1;
+	printf("%lu :: ", temp);
+	temp = bufferTimer+bufferTimerDiff;
+	printf("%lu :: ", temp);
+	printf("%lu :: ", bufferTimerDiff);
+	printf("writing the %u buffer to the logfile\n\n", globalBufferIndex);
+	printfflush();
+	call Leds.set(1);
+	if(globalBufferIndex == TOTAL_BUFFERS - 1)
+		//call LogWrite.sync();
+		signal LogWrite.syncDone(SUCCESS);
+  }
+
+  /**
+   * call actual sense() to start sampling
+   * called from start_sense()
+   */
+  event void SendTimer.fired(){
+	sense();
+  }
+
+  /** signalled when AMSend finished sending a packet on air */
+  event void AMSend.sendDone(message_t* bufPtr, error_t error) {
+ 		if (&packet == bufPtr)
+			locked = FALSE;
+  }
+
+  /** signalled when AMControl has finished starting the radio */
+  event void AMControl.startDone(error_t err){}
+
+  /** signalled when AMControl has finished stopping the radio */
+  event void AMControl.stopDone(error_t err) {}
+
+  /** signalled when RoutingC signals the routeDone() event to signal that routing operation is completed */
+  //event void Routing.routeDone(error_t err) {}
+
+  /** signalled when CC2420Config has finished sync operation */
+  event void CC2420Config.syncDone(error_t error) {
+	if(error != SUCCESS){
+		call CC2420Config.sync();
+	}
+  }
+
+
+
+
+
+	/** a simple switch case for calling various functionalities
+	 * as per the command to be executed
+	 */
+	command void Command.execCommand(uint16_t commType)
+	{
+		switch(commType)
+		{
+			//case ROUTING: call Routing.route(); break;
+			//case TIMESYNC_START: call TimeSync.start(); break;
+			//case TIMESYNC_STOP: call TimeSync.stop(); break;
+			case SENSE: start_sense(); break;
+			//case COLLECT: call Collect.collect(); break;
+			//case TRANSFER: call Transfer.transfer(); break;
+		}
+	}
+
+	/**
+	 * On receiving routeDone, signal that the command has finished execution
+	 * as per the Command interface
+	 */
+	/*
+	event void Routing.routeDone(error_t error)
+	{
+		signal Command.execCommandDone(error, ROUTING);
+	}
+
+	event void TimeSync.startDone(error_t error)
+	{
+		signal Command.execCommandDone(error, TIMESYNC_START);
+	}
+
+	event void TimeSync.stopDone(error_t error)
+	{
+		signal Command.execCommandDone(error, TIMESYNC_STOP);
+	}
+	*/
+
+	/**
+	 * On receiving senseDone, signal that the command has finished execution
+	 * as per the Command interface
+	 */
+	/*
+	event void Sense.senseDone(error_t error)
+	{
+		signal Command.execCommandDone(error, SENSE);
+	}
+	*/
+
+	/**
+	 * On receiving collectDone, signal that the command has finished execution
+	 * as per the Command interface
+	 */
+	/*
+	event void Collect.collectDone(error_t error)
+	{
+		signal Command.execCommandDone(error, COLLECT);
+	}
+	*/
+
+/*
+	event void Transfer.transferDone(error_t error)
+	{
+		signal Command.execCommandDone(error, TRANSFER);
+	}
+*/
+
+
+}

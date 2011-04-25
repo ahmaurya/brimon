@@ -1,10 +1,22 @@
 #! /usr/bin/env bash
+
+
+# This program is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation; either version 3 of the License, or
+# (at your option) any later version.
+#
+# Written (W) 2011 Abhinav Maurya
+# Copyright (C) 2011 Abhinav Maurya
+
+
 # Here we run the following:-
 # the setup script to setup environment variables
 # the make telosb command to build the application
 # the make command to burn the binary to mote
+# set the five variables given below as per the path of these repositories on your system
 
-APPROOT="/home/ahmaurya/Dropbox/Courses/CS691/brimon/brimon-0.1.0/signal"
+APPROOT="/home/ahmaurya/Dropbox/Courses/CS691/brimon/brimon-0.1.0/application"
 TOSROOT="/home/ahmaurya/Dropbox/Courses/CS691/brimon/tinyos-2.1.1"
 TOSDIR="$TOSROOT/tos"
 CLASSPATH="$CLASSPATH:/home/ahmaurya/bin/java:$TOSROOT/support/sdk/java/tinyos.jar:."

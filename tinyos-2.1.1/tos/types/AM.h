@@ -30,7 +30,7 @@ enum {
 
 #define UQ_AMQUEUE_SEND "amqueue.send"
 
-//#define TOSH_DATA_LENGTH 200
+#define TOSH_DATA_LENGTH 40
 
 #endif
 

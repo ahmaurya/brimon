@@ -1,4 +1,4 @@
-/*
+/**
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation; either version 3 of the License, or
@@ -17,6 +17,7 @@ module SenseAppP
     interface Leds;
     interface Timer<TMilli>;
     interface Sense;
+    //interface SplitControl as AMControl;
   }
 }
 
@@ -24,11 +25,13 @@ implementation
 {
   event void Boot.booted() {
     call Timer.startPeriodic(SAMPLE_INTERVAL);
+    //call AMControl.start();
   }
 
   event void Timer.fired() {
     //call Leds.led0On();
-    call Sense.sense();
+    if(TOS_NODE_ID==1)
+		call Sense.sense();
   }
 
   event void Sense.senseDone(error_t error) {
@@ -39,4 +42,12 @@ implementation
     //if(error == SUCCESS)
 	//	call Leds.set(7);
   }
+
+  /*event void AMControl.startDone(error_t err){
+	if (err != SUCCESS){
+		call AMControl.start();
+	}
+  }*/
+
+  //event void AMControl.stopDone(error_t err) {}
 }

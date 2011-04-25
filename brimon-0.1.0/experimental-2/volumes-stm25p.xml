@@ -1,0 +1,4 @@
+<volume_table>
+    <volume name="SAMPLELOG" size="65536"/>
+    <volume name="COLLECTLOG" size="65536"/>
+</volume_table>

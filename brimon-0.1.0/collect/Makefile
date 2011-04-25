@@ -1,0 +1,6 @@
+COMPONENT=CollectAppC
+include $(MAKERULES)
+
+CFLAGS += -I$(TOSDIR)/lib/printf
+CFLAGS += -I$(TOSDIR)/chips/stm25p
+CFLAGS += -I../routing

@@ -8,6 +8,6 @@
  * Copyright (C) 2011 Abhinav Maurya
  */
 
-int printf(const char *__fmt, ...){}
+int printf(const char *__fmt, ...) {return 0;}
 
-int printfflush(){}
+int printfflush() {return 0;}
